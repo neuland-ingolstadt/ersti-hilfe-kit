@@ -1,0 +1,251 @@
+[
+  {
+    "title": "Klenzepark",
+    "description": "Eine Parkanlage die für die Landesgartenschau 1992 gebaut wurde.",
+    "category": "chill",
+    "lat": 48.76098,
+    "lon": 11.43284
+  },
+  {
+    "title": "Donaustrand",
+    "description": "Merkel mach Shisha auf.",
+    "category": "chill",
+    "lat": 48.76231,
+    "lon": 11.43202
+  },
+  {
+    "title": "Baggersee",
+    "category": "chill",
+    "lat": 48.74927,
+    "lon": 11.39480
+  },
+  {
+    "title": "Auwaldsee",
+    "category": "chill",
+    "lat": 48.75128,
+    "lon": 11.46857
+  },
+  {
+    "title": "Paradeplatz",
+    "category": "chill",
+    "lat": 48.76489,
+    "lon": 11.42971
+  },
+  {
+    "title": "Scherbelberg",
+    "category": "chill",
+    "lat": 48.76226,
+    "lon": 11.41839
+  },
+  {
+    "title": "District Five",
+    "category": "gastro",
+    "lat": 48.76187,
+    "lon": 11.42549
+  },
+  {
+    "title": "Café am Schloss",
+    "category": "gastro",
+    "lat": 48.76536,
+    "lon": 11.42923
+  },
+  {
+    "title": "Tagtraum",
+    "category": "gastro",
+    "lat": 48.76440,
+    "lon": 11.42940
+  },
+  {
+    "title": "Rosengasse 2",
+    "category": "gastro",
+    "lat": 48.76600,
+    "lon": 11.42920
+  },
+  {
+    "title": "Postwagen",
+    "category": "gastro",
+    "lat": 48.76505,
+    "lon": 11.42534
+  },
+  {
+    "title": "Golden",
+    "category": "gastro",
+    "lat": 48.76489,
+    "lon": 11.42161
+  },
+  {
+    "title": "Baby & Bombe",
+    "category": "gastro",
+    "lat": 48.76387,
+    "lon": 11.42055
+  },
+  {
+    "title": "Tam Tam",
+    "category": "gastro",
+    "lat": 48.76407,
+    "lon": 11.42133
+  },
+  {
+    "title": "Suxul",
+    "category": "gastro",
+    "lat": 48.76417,
+    "lon": 11.42129
+  },
+  {
+    "title": "Shamrock Irish Pub",
+    "category": "gastro",
+    "lat": 48.76421,
+    "lon": 11.42151
+  },
+  {
+    "title": "Griesmüllers Altstadtbrauerei",
+    "category": "gastro",
+    "lat": 48.76472,
+    "lon": 11.42184
+  },
+  {
+    "title": "Bar Centrale",
+    "category": "gastro",
+    "lat": 48.76177,
+    "lon": 11.42624
+  },
+  {
+    "title": "Dollstraße",
+    "category": "gastro",
+    "lat": 48.76328,
+    "lon": 11.42362
+  },
+  {
+    "title": "Touch Down",
+    "category": "gastro",
+    "lat": 48.76388,
+    "lon": 11.41861
+  },
+  {
+    "title": "Eiskeller",
+    "category": "gastro",
+    "lat": 48.76606,
+    "lon": 11.41803
+  },
+  {
+    "title": "Forty Nine",
+    "category": "gastro",
+    "lat": 48.76583,
+    "lon": 11.42016
+  },
+  {
+    "title": "Bibliothek",
+    "category": "hochschule",
+    "lat": 48.76667,
+    "lon": 11.43192
+  },
+  {
+    "title": "Aula",
+    "category": "hochschule",
+    "lat": 48.76674,
+    "lon": 11.43207
+  },
+  {
+    "title": "Drucker in Gebäude C",
+    "category": "hochschule",
+    "lat": 48.76747,
+    "lon": 11.43262
+  },
+  {
+    "title": "Mensa",
+    "category": "hochschule",
+    "lat": 48.76733,
+    "lon": 11.43170
+  },
+  {
+    "title": "Dekanat I",
+    "category": "hochschule",
+    "lat": 48.76734,
+    "lon": 11.43156
+  },
+  {
+    "title": "Studierendenhaus",
+    "category": "hochschule",
+    "lat": 48.76760,
+    "lon": 11.43344
+  },
+  {
+    "title": "Campuswiese",
+    "description": "Eine Wiese mit Sitzgelegenheiten.",
+    "category": "hochschule",
+    "lat": 48.76687,
+    "lon": 11.43352
+  },
+  {
+    "title": "Neues Schloss",
+    "category": "sehenswuerdig",
+    "lat": 48.76442,
+    "lon": 11.43116
+  },
+  {
+    "title": "Stadttheater",
+    "category": "sehenswuerdig",
+    "lat": 48.76328,
+    "lon": 11.42830
+  },
+  {
+    "title": "Rathausplatz",
+    "category": "sehenswuerdig",
+    "lat": 48.76283,
+    "lon": 11.42567
+  },
+  {
+    "title": "Viktualienmarkt",
+    "category": "sehenswuerdig",
+    "lat": 48.76296,
+    "lon": 11.42679
+  },
+  {
+    "title": "Münster",
+    "category": "sehenswuerdig",
+    "lat": 48.76429,
+    "lon": 11.42038
+  },
+  {
+    "title": "Asamkirche Maria de Victoria",
+    "category": "sehenswuerdig",
+    "lat": 48.76611,
+    "lon": 11.42027
+  },
+  {
+    "title": "Ickstatthaus",
+    "category": "sehenswuerdig",
+    "lat": 48.76429,
+    "lon": 11.42492
+  },
+  {
+    "title": "Theresienstraße 23",
+    "category": "sehenswuerdig",
+    "lat": 48.76420,
+    "lon": 11.42238
+  },
+  {
+    "title": "Alte Anatomie",
+    "category": "sehenswuerdig",
+    "lat": 48.76242,
+    "lon": 11.41952
+  },
+  {
+    "title": "Hohe Schule",
+    "category": "sehenswuerdig",
+    "lat": 48.76306,
+    "lon": 11.42117
+  },
+  {
+    "title": "Herzogskasten",
+    "category": "sehenswuerdig",
+    "lat": 48.76352,
+    "lon": 11.42747
+  },
+  {
+    "title": "Kreuztor",
+    "category": "sehenswuerdig",
+    "lat": 48.76422,
+    "lon": 11.41797
+  }
+]
