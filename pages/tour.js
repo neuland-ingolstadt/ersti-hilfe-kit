@@ -25,18 +25,28 @@ const ZoomControl = dynamic(() => import('react-leaflet').then(x => x.ZoomContro
 const Marker = dynamic(() => import('react-leaflet').then(x => x.Marker), { ssr: false })
 const Popup = dynamic(() => import('react-leaflet').then(x => x.Popup), { ssr: false })
 
+const ICONS = {
+  'gastro': '/pin_green.svg',
+  'hochschule': '/pin_indigo.svg',
+  'chill': '/pin_orange.svg',
+  'sehenswuerdig': '/pin_red.svg'
+}
+
 export default function Map() {
-  const [icon, setIcon] = useState(null)
+  const [icons, setIcons] = useState({})
   const [showModal, setShowModal] = useState(true)
 
   useEffect(() => {
-    const iconUrl = '/pin.svg';
-    const icon = require('leaflet').icon;
-    setIcon(icon({
-      iconUrl,
-      iconSize: [20, 35],
-      iconAnchor: [10, 35]
-    }));
+    const { icon } = require('leaflet');
+    const icons = {}
+    for (const category of Object.keys(ICONS)) {
+      icons[category] = icon({
+        iconUrl: ICONS[category],
+        iconSize: [20, 35],
+        iconAnchor: [10, 35]
+      })
+    }
+    setIcons(icons)
   }, []);
 
   return (
@@ -77,7 +87,7 @@ export default function Map() {
           <Marker
             key={elem.id}
             position={[elem.lat, elem.lon]}
-            icon={icon}
+            icon={icons[elem.category]}
           >
             <Popup
               maxWidth="auto"
