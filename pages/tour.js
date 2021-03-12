@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import Container from 'react-bootstrap/Container'
 import Modal from 'react-bootstrap/Modal'
@@ -15,7 +14,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 import styles from '../styles/Map.module.css'
-import { useEffect } from 'react'
 
 import data from '../data/tour.json'
 
@@ -26,18 +24,18 @@ const Marker = dynamic(() => import('react-leaflet').then(x => x.Marker), { ssr:
 const Popup = dynamic(() => import('react-leaflet').then(x => x.Popup), { ssr: false })
 
 const ICONS = {
-  'gastro': '/pin_green.svg',
-  'hochschule': '/pin_indigo.svg',
-  'chill': '/pin_orange.svg',
-  'sehenswuerdig': '/pin_red.svg'
+  gastro: '/pin_green.svg',
+  hochschule: '/pin_indigo.svg',
+  chill: '/pin_orange.svg',
+  sehenswuerdig: '/pin_red.svg'
 }
 
-export default function Map() {
+export default function Map () {
   const [icons, setIcons] = useState({})
   const [showModal, setShowModal] = useState(true)
 
   useEffect(() => {
-    const { icon } = require('leaflet');
+    const { icon } = require('leaflet')
     const icons = {}
     for (const category of Object.keys(ICONS)) {
       icons[category] = icon({
@@ -47,7 +45,7 @@ export default function Map() {
       })
     }
     setIcons(icons)
-  }, []);
+  }, [])
 
   return (
     <Container className={styles.container}>
@@ -68,7 +66,7 @@ export default function Map() {
           <Button variant="primary" onClick={() => setShowModal(false)}>OK</Button>
         </Modal.Footer>
       </Modal>
-      
+
       <MapContainer
         center={[48.76415, 11.42434]}
         zoom={16}
@@ -82,8 +80,8 @@ export default function Map() {
           maxZoom={19}
         />
         <ZoomControl position="bottomright" />
-        
-        {data.map(elem => 
+
+        {data.map(elem =>
           <Marker
             key={elem.id}
             position={[elem.lat, elem.lon]}

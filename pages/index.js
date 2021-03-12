@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
@@ -16,7 +17,7 @@ import {
 import calendar from '../data/calendar.json'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home () {
   return (
     <Container className={styles.container}>
       <Head>
@@ -47,8 +48,8 @@ export default function Home() {
             </h2>
 
             <div className={styles.calendar}>
-              {calendar.map(event =>
-                <p>
+              {calendar.map((event, idx) =>
+                <p key={idx}>
                   <div className={styles.calendarTitle}>{event.title}</div>
                   <div className={styles.calendarDate}>am {new Date(event.date).toLocaleString()}</div>
                   <div className={styles.calendarDescription}>{event.description}</div>
@@ -70,7 +71,7 @@ export default function Home() {
         </p>
 
         <p>
-          <a href="https://discord.gg/pTvQEZpga7" target="_blank" rel="noopener">
+          <a href="https://discord.gg/pTvQEZpga7" target="_blank" rel="noreferrer">
             <Button variant="primary">
               Discord-Server beitreten
             </Button>
@@ -94,10 +95,10 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <p>
-          Ein Projekt der <a href="https://www.thi.de/hochschule/ueber-uns/hochschulgremien/studierendenvertretung" target="_blank" rel="noopener">Fachschaft Informatik</a> und von <a href="https://neuland-ingolstadt.de" target="_blank" rel="noopener">Neuland Ingolstadt e.V.</a>
+          Ein Projekt der <a href="https://www.thi.de/hochschule/ueber-uns/hochschulgremien/studierendenvertretung" target="_blank" rel="noreferrer">Fachschaft Informatik</a> und von <a href="https://neuland-ingolstadt.de" target="_blank" rel="noreferrer">Neuland Ingolstadt e.V.</a>
         </p>
         <p>
-          <a href="https://neuland-ingolstadt.de/impressum.htm" target="_blank" rel="noopener">Impressum und Datenschutz</a>
+          <a href="https://neuland-ingolstadt.de/impressum.htm" target="_blank" rel="noreferrer">Impressum und Datenschutz</a>
         </p>
       </footer>
     </Container>
