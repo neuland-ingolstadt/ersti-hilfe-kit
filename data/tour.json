@@ -3,6 +3,7 @@
     "title": "Klenzepark",
     "description": "Eine Parkanlage die für die Landesgartenschau 1992 gebaut wurde.",
     "category": "chill",
+    "video": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     "lat": 48.76098,
     "lon": 11.43284
   },
@@ -175,6 +176,13 @@
     "category": "hochschule",
     "lat": 48.76687,
     "lon": 11.43352
+  },
+  {
+    "title": "Packstation",
+    "description": "Packstation 195  \n85049 Ingolstadt",
+    "category": "nuetzlich",
+    "lat": 48.766474,
+    "lon": 11.433385
   },
   {
     "title": "Neues Schloss",

@@ -26,18 +26,26 @@ export default function Home () {
       </Head>
 
       <img
-        src="https://www.thi.de/fileadmin/daten/hkom/StudentischeVereine_Aktivitaeten/Logo_Studierendenvertretung_final_CMYK.png"
+        src="https://assets.neuland.app/StudVer_Logo_2020_CMYK.svg"
         alt="Studierendenvertretung TH Ingolstadt"
         className={styles.logo}
       />
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Willkommen an der Technischen Hochschule Ingolstadt
+          Digitale Orientierungsphase
         </h1>
 
         <p>
-          Bavaria ipsum dolor sit amet da, hog di hi Xaver des is a gmahde Wiesn, Schorsch i hob di liab Prosd zwoa a Prosit der Gmiadlichkeit bittschön. Hob Musi Baamwach dahoam, hawadere midananda weida Wiesn Bradwurschtsemmal measi sei.
+          Willkommen an der Technischen Hochschule Ingolstadt!
+        </p>
+
+        <p>
+          Um euch die Ankunft in Ingolstadt und den Studienbeginn etwas angenehmer zu gestalten, haben wir entschlossen, eine digitale O-Phase zu erproben. Wir hoffen, eure Zeit an unserer Hochschule damit etwas angenehmer gestalten zu können.
+        </p>
+
+        <p>
+          &ndash; Eure Fachschaft Informatik &lt;3
         </p>
 
         {calendar && calendar.length > 0 &&
@@ -59,16 +67,12 @@ export default function Home () {
           </>
         }
 
+        <hr />
+
         <h2 className={styles.subtitle}>
           <FontAwesomeIcon icon={faDiscord} fixedWidth />
-          <> Discord-Server</>
+          <> Discord-Server der Fakultät Informatik</>
         </h2>
-
-        <p>
-          Um dem Stillstand des Studentenlebens entgegenzuwirken, haben wir uns als Fachschaft dazu entschieden das ganze irgendwie virtuell zu gestalten und haben einen Discord-Server für die Fakultät Informatik erstellt.
-          Dort könnt ihr euch kennenlernen und austauschen.
-          Also gesellt euch zu uns, wir freuen uns auf euch!
-        </p>
 
         <p>
           <a href="https://discord.gg/pTvQEZpga7" target="_blank" rel="noreferrer">
@@ -78,26 +82,29 @@ export default function Home () {
           </a>
         </p>
 
+        <hr />
+
         <h2 className={styles.subtitle}>
           <FontAwesomeIcon icon={faMapSigns} fixedWidth />
-          <> Stadt- und Campusführung</>
+          <> Virtuelle Stadt- und Campusführung</>
         </h2>
-        <p>
-          Anstelle euch persönlich durch die Hochschule zu führen, haben wir euch die Highlights unserer Hochschule und unserer Stadt
-          auf einer Karte zusammengestellt und kurze Videos gedreht, um sie euch näher zu bringen.
-        </p>
+
         <Link href="/tour">
           <Button variant="primary">
-            Virtuelle Stadt- und Campusführung öffnen
+            Stadt- und Campusführung öffnen
           </Button>
         </Link>
       </main>
 
+      <hr />
+
       <footer className={styles.footer}>
         <p>
-          Ein Projekt der <a href="https://www.thi.de/hochschule/ueber-uns/hochschulgremien/studierendenvertretung" target="_blank" rel="noreferrer">Fachschaft Informatik</a> und von <a href="https://neuland-ingolstadt.de" target="_blank" rel="noreferrer">Neuland Ingolstadt e.V.</a>
+          Feedback nehmen wir gerne via Discord entgegen.
         </p>
         <p>
+          Ein Projekt der <a href="https://www.thi.de/hochschule/ueber-uns/hochschulgremien/studierendenvertretung" target="_blank" rel="noreferrer">Fachschaft Informatik</a> und von <a href="https://neuland-ingolstadt.de" target="_blank" rel="noreferrer">Neuland Ingolstadt e.V.</a>
+          <> &ndash; </>
           <a href="https://neuland-ingolstadt.de/impressum.htm" target="_blank" rel="noreferrer">Impressum und Datenschutz</a>
         </p>
       </footer>

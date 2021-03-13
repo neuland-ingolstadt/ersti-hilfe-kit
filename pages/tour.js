@@ -4,14 +4,7 @@ import dynamic from 'next/dynamic'
 import Container from 'react-bootstrap/Container'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faUtensils,
-  faUmbrellaBeach,
-  faGraduationCap,
-  faBinoculars
-} from '@fortawesome/free-solid-svg-icons'
+import ReactMarkdown from 'react-markdown'
 
 import styles from '../styles/Map.module.css'
 
@@ -27,7 +20,12 @@ const ICONS = {
   gastro: '/pin_green.svg',
   hochschule: '/pin_indigo.svg',
   chill: '/pin_orange.svg',
-  sehenswuerdig: '/pin_red.svg'
+  sehenswuerdig: '/pin_red.svg',
+  nuetzlich: '/pin_gray.svg'
+}
+
+function getGoogleMapsLink (lat, lon) {
+  return `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`
 }
 
 export default function Map () {
@@ -93,14 +91,13 @@ export default function Map () {
               className={styles.popup}
             >
               <h4 className={styles.popupHeading}>
-                {elem.category === 'gastro' && <FontAwesomeIcon icon={faUtensils} fixedWidth />}
-                {elem.category === 'chill' && <FontAwesomeIcon icon={faUmbrellaBeach} fixedWidth />}
-                {elem.category === 'hochschule' && <FontAwesomeIcon icon={faGraduationCap} fixedWidth />}
-                {elem.category === 'sehenswuerdig' && <FontAwesomeIcon icon={faBinoculars} fixedWidth />}
-                {' ' + elem.title}
+                {elem.title}
               </h4>
               <p className={styles.popupDescription}>
-                {elem.description}
+                <ReactMarkdown>{elem.description}</ReactMarkdown>
+              </p>
+              <p>
+                <a href={getGoogleMapsLink(elem.lat, elem.lon)} target="_blank" rel="noreferrer">In Google Maps öffnen</a>
               </p>
               {elem.video &&
                 <video className={styles.popupVideo} controls>
