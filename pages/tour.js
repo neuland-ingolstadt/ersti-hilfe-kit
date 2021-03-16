@@ -93,9 +93,9 @@ export default function Map () {
               <h4 className={styles.popupHeading}>
                 {elem.title}
               </h4>
-              <p className={styles.popupDescription}>
+              <div className={styles.popupDescription}>
                 <ReactMarkdown>{elem.description}</ReactMarkdown>
-              </p>
+              </div>
               <p>
                 <a href={getGoogleMapsLink(elem.lat, elem.lon)} target="_blank" rel="noreferrer">In Google Maps öffnen</a>
               </p>
