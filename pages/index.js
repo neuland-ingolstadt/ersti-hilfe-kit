@@ -33,7 +33,7 @@ export default function Home () {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Digitale Orientierungsphase
+          Digitale O-Phase
         </h1>
 
         <p>
