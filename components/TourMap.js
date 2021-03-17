@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createRef } from 'react'
+import React, { useState, createRef } from 'react'
 import Head from 'next/head'
 import Container from 'react-bootstrap/Container'
 import Modal from 'react-bootstrap/Modal'
@@ -58,6 +58,12 @@ for (const category of Object.keys(ICONS)) {
 
 function getGoogleMapsLink (lat, lon) {
   return `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`
+}
+function getAppleMapsLink (lat, lon) {
+  return `http://maps.apple.com/?ll=${lat},${lon}`
+}
+function getOSMLink (lat, lon) {
+  return `https://www.openstreetmap.org/#map=19/${lat}/${lon}`
 }
 
 export default function TourMap () {
@@ -156,14 +162,19 @@ export default function TourMap () {
                     : <ReactMarkdown>{elem.description_en}</ReactMarkdown>
                   }
                 </div>
-                <p>
-                  <a href={getGoogleMapsLink(elem.lat, elem.lon)} target="_blank" rel="noreferrer">In Google Maps öffnen</a>
-                </p>
                 {elem.video &&
                   <video className={styles.popupVideo} poster={elem.poster} controls>
                     <source src={elem.video} type="video/mp4" />
                   </video>
                 }
+                <p>
+                  Öffnen in{' '}
+                  <a href={getOSMLink(elem.lat, elem.lon)} target="_blank" rel="noreferrer">OpenStreetMap</a>
+                  {', '}
+                  <a href={getGoogleMapsLink(elem.lat, elem.lon)} target="_blank" rel="noreferrer">Google Maps</a>
+                  {', '}
+                  <a href={getAppleMapsLink(elem.lat, elem.lon)} target="_blank" rel="noreferrer">Apple Maps</a>
+                </p>
               </Popup>
             </Marker>
           )}
