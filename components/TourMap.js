@@ -110,6 +110,10 @@ export default function TourMap () {
               )}
             </ListGroup>
           )}
+
+          <p className={styles.sidebarFooter}>
+            Ein Projekt der Fachschaft Informatik in Kooperation mit Neuland Ingolstadt e.V.
+          </p>
         </div>
 
         <MapContainer

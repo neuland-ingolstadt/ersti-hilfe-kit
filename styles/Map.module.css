@@ -63,6 +63,11 @@
   font-weight: bold;
 }
 
+.sidebarFooter {
+  font-size: 10pt;
+  margin: 10px 20px;
+}
+
 @media (max-width: 1024px) {
   .sidebar {
     display: none;
