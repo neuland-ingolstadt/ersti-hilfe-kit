@@ -1,7 +1,8 @@
 [
   {
     "title": "Klenzepark",
-    "description": "Eine Parkanlage mit einer großen Wiese, die zur Landesgartenschau 1992 eröffnet wurde. Normalerweise finden hier auch die Audi Sommerkonzerte statt.",
+    "description_de": "Der **Klenzepark** ist als ehemalige Landesgartenschau ein sehr schöner, cooler Park, um sich im Sommer mit Freunden zu treffen. Die große Wiese ist ideal um auf ihr Fußball, Frisbee oder andere Sachen zu spielen. Unter dem Klenzepark befindet sich eine Tiefgarage, die während der Zeit des Kalten Krieges als Atomschutzbunker mit Platz für ca. 5000 Menschen geplant und 1989/90 gebaut wurde.",
+    "description_en": "As a former state horticultural show, **Klenzepark** is a very nice, cool park to meet up with friends in the summer. The large meadow is ideal for playing football, frisbee or other things. Under the Klenzepark is an underground car park, which was planned during the Cold War as a nuclear shelter with space for about 5,000 people and built in 1989/90.",
     "category": "chill",
     "video": "https://assets.neuland.app/tour/Klenze.mp4",
     "poster": "https://assets.neuland.app/tour/Klenze.jpg",
@@ -10,7 +11,8 @@
   },
   {
     "title": "Donaustrand",
-    "description": "Ein Kunststrand an der Donau. Hier kann man sich auf Liegestühlen entspannen. An den Verkaufsständen gibt es Bier, Snacks und Shisha.",
+    "description_de": "Der **Donaustrand** ist ein cooler Spot zum Chillen an der Donau. Im Sommer wird dort eine Gastronomie in Containern aufgestellt, wo ihr euch Essen und Trinken kaufen könnt. Außerdem finden dort immer wieder Veranstaltungen, wie Poetry Slams oder das „Vollmondfeuer“ statt.",
+    "description_en": "The **Donaustrand** is a cool spot to chill out on the Danube. In summer, there is a restaurant in containers where you can buy food and drinks. In addition, events such as poetry slams or the \"Vollmondfeuer\" (full moon fire) take place there from time to time.",
     "category": "chill",
     "video": "https://assets.neuland.app/tour/Donaustrand.mp4",
     "poster": "https://assets.neuland.app/tour/Donaustrand.jpg",
@@ -19,6 +21,8 @@
   },
   {
     "title": "Donaustufen",
+    "description_de": "Die **Donaustufen** sind ein cooler Spot um direkt an der Donau zu chillen. Das Tagtraum baut hier immer wieder eine Bar auf und veranstaltet Partys. Direkt gegenüber, am anderen Ufer sieht man das Reduit Tilly, was im Sommer als Gelände für des Taktraum Festival genutzt wird.",
+    "description_en": "The **Donaustufen** are a cool spot to chill out right on the Danube. The Tagtraum regularly sets up a bar here and hosts parties. Directly opposite, on the other bank, you can see the Reduit Tilly, which is used in summer as the site for the Taktraum Festival.",
     "category": "chill",
     "video": "https://assets.neuland.app/tour/Donaustufen.mp4",
     "poster": "https://assets.neuland.app/tour/Donaustufen.jpg",
@@ -28,7 +32,6 @@
   {
     "title": "Baggersee",
     "category": "chill",
-    "description": "Der größte Badesee in Ingolstadt.",
     "lat": 48.74927,
     "lon": 11.39480
   },
@@ -40,7 +43,8 @@
   },
   {
     "title": "Paradeplatz",
-    "description": "Der Platz vor dem neuen Schloss, auf dem im Frühling der Ostermarkt stattfindet und im Winter eine Eislaufbahn aufgebaut wird.",
+    "description_de": "Der **Paradeplatz** befindet sich direkt vor dem Neuen Schloss und bietet den optimalen Ort um sich mit Freunden zu treffen. Es gibt mehrere Bänke und einen Brunnen, auf oder an die man sich setzen kann, wenn man nicht gerade an eines der anliegenden coolen Cafés gehen möchte.",
+    "description_en": "The **Paradeplatz** is located directly in front of the New Castle and is the perfect place to meet up with friends. There are several benches and a fountain to sit on or at if you don't want to go to one of the cool cafés nearby.",
     "category": "chill",
     "video": "https://assets.neuland.app/tour/Paradeplatz.mp4",
     "poster": "https://assets.neuland.app/tour/Paradeplatz.jpg",
@@ -49,13 +53,16 @@
   },
   {
     "title": "Scherbelberg",
+    "description_de": "Den Hügel neben dem Freibad nennt man übrigens **Scherbelberg**. Er ist ein Künstlicher „Berg“, den man aus Schutt der Weltkriege „gebaut“ hat. Ganz oben auf dem Scherbelberg ist ein toller Aussichtspunkt, von dem aus man über Ingolstadt blicken kann.",
+    "description_en": "By the way, the hill next to the open-air swimming pool is called **Scherbelberg**. It is an artificial \"mountain\" that was \"built\" from rubble from the world wars. At the top of the Scherbelberg is a great vantage point from which you can look out over Ingolstadt.",
     "category": "chill",
     "lat": 48.76226,
     "lon": 11.41839
   },
   {
     "title": "Planetenpark",
-    "description": "Ein kleiner Park mit einem maßstabsgetreuen Nachbau unseres Sonnensystems.",
+    "description_de": "Der **Planetenpark** ist einfach ein Modell unseres Sonnensystems in der Größe eines kleinen Parks direkt am Rande der Altstadt. Hier könnt ihr entweder entspannen oder etwas über unsere Planeten lernen.",
+    "description_en": "The **Planet Park** is simply a model of our solar system the size of a small park right on the edge of the old town. Here you can either relax or learn about our planets.",
     "category": "chill",
     "video": "https://assets.neuland.app/tour/Planetenpark.mp4",
     "poster": "https://assets.neuland.app/tour/Planetenpark.jpg",
@@ -64,6 +71,8 @@
   },
   {
     "title": "District Five",
+    "description_de": "Im **District Five** könnt ihr super leckeren Spezialitätenkaffee aus ihrer eigenen Rösterei in Manching genießen. Mit einer großen Auswahl an verschiedenen Sorten gibt es hier alles, was das Kaffeeherz begehrt. Hier könnt ihr euch mit euren Freunden zum Frühstück oder Brunch, oder aber auch zum Arbeiten treffen.",
+    "description_en": "At **District Five** you can enjoy super delicious speciality coffee from their own roastery in Manching. With a large selection of different varieties, you can find everything your coffee heart desires here. You can meet up with your friends here for breakfast or brunch, or even for work.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/District%20Five.mp4",
     "poster": "https://assets.neuland.app/tour/District%20Five.jpg",
@@ -72,6 +81,8 @@
   },
   {
     "title": "Café am Schloss",
+    "description_de": "Im **Café am Schloss** könnt ihr besten Kaffe von District Five gemeinsam mit einem super leckeren Stück Kuchen oder Torte genießen. Die kurze Distanz zu THI mach es auch zu einem guten Ort, um in der Mittagspause etwas zu entspannen.",
+    "description_en": "At the **Café am Schloss** you can enjoy the best coffee from District Five together with a super delicious piece of cake or pie. The short distance to THI also makes it a good place to relax during your lunch break.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Postwagenn.mp4",
     "poster": "https://assets.neuland.app/tour/Postwagenn.jpg",
@@ -80,6 +91,8 @@
   },
   {
     "title": "Tagtraum",
+    "description_de": "Das **Tagtraum** ist ein sehr cooles Café/Bar mit Wohnzimmer-Feeling. Normalerweise findet hier jeden zweiten Donnerstag eine Jam-Session namens „Rotes Fenster“ statt, bei der alle, die Musik machen gerne mitspielen können. Ansonsten finden hier auch immer coole Konzerte und Partys statt. Aktuell haben sie nur am Wochenende zum Mitnehmen geöffnet, wo ihr euch ein erfrischend kühles Getränk oder einen leckeren heißen Kaffee aus ihrem eigenen Blend von District Five holen könnt.",
+    "description_en": "The **Tagtraum** is a very cool café/bar with a living room feel. There is usually a jam session called \"Rotes Fenster\" every other Thursday, where anyone who makes music is welcome to join in. Apart from that, there are always cool concerts and parties here. Currently they are only open for takeaway on weekends, where you can grab a refreshingly cool drink or a delicious hot coffee from their own blend by District Five.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Tagtraum.mp4",
     "poster": "https://assets.neuland.app/tour/Tagtraum.jpg",
@@ -88,6 +101,8 @@
   },
   {
     "title": "Rosengasse 2",
+    "description_de": "Die **Rosengasse** ist eine urig-kultige Kneipe mit Hinterhof-Feeling. Hier könnt ihr in einer coolen Atmosphäre einige tolle Abende mit euren Freunden verbringen.",
+    "description_en": "The **Rosengasse** is a quaint and iconic pub with a backyard feel. Here you can spend some great evenings with your friends in a cool atmosphere.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Rosengasse.mp4",
     "poster": "https://assets.neuland.app/tour/Rosengasse.jpg",
@@ -96,6 +111,8 @@
   },
   {
     "title": "Postwagen",
+    "description_de": "Der **Postwagen** ist eine sehr coole Bar, in der ihr auch super leckere Burger und Wraps essen und dazu noch den ein oder anderen edlen Cocktail bei einer sehr lässigen Atmosphäre trinken könnt. Einen sehr guten Kaffee aus einem eigenen Blend von District Five kann man hier auch noch trinken. Das ganze ist etwas höherpreisig, aber wenn ihr euch mal was gönnen wollt absolut wert!",
+    "description_en": "The **Postwagen** is a very cool bar where you can also eat super tasty burgers and wraps and drink one or two fine cocktails in a very casual atmosphere. You can also drink a very good coffee from their own blend by District Five here. The whole thing is a bit more expensive, but if you want to treat yourself, it's absolutely worth it!",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Postwagen.mp4",
     "poster": "https://assets.neuland.app/tour/Postwagen.jpg",
@@ -104,6 +121,8 @@
   },
   {
     "title": "Golden",
+    "description_de": "Das **Golden** in der Kupferstraße ist eine der besten Burger-Bars der Stadt, also definitiv eine Empfehlung.",
+    "description_en": "The **Golden** on Kupferstraße is one of the best burger bars in town, so definitely a recommendation.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Golden.mp4",
     "poster": "https://assets.neuland.app/tour/Golden.jpg",
@@ -112,6 +131,8 @@
   },
   {
     "title": "Baby & Bombe",
+    "description_de": "Das **Baby & Bombe** ist nicht nur ein wirklich tolles, cooles Café mit leckerem Frühstück, sondern auch eine Bar, in der immer coole Partys mit guter Musik zum tanzen gefeiert werden.",
+    "description_en": "The **Baby & Bombe** is not only a really great, cool café with delicious breakfasts, but also a bar where there are always cool parties with good music to dance to.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/BabyBombe.mp4",
     "poster": "https://assets.neuland.app/tour/BabyBombe.jpg",
@@ -120,6 +141,8 @@
   },
   {
     "title": "Tam Tam",
+    "description_de": "Das **Tam Tam** ist eine sehr gute Bar zum Feiern gehen, gerade wegen Angeboten, wie dem Studentenmittwoch. Neben großen und kleinen Cocktails bekommt man hier auch Burger. Diese Bar bietet sich zu Feiern gehen deshalb so gut an, weil sie mit dem benachbarten Club **Suxul** verbunden ist. Dort werden verschiedene Musikgenres bedient.",
+    "description_en": "**Tam Tam** is a very good bar for partying, especially because of offers like Student Wednesday. In addition to large and small cocktails, you can also get burgers here. This bar is so good for partying because it is connected to the neighbouring club **Suxul**. Different music genres are served there.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/TamTamSuxul.mp4",
     "poster": "https://assets.neuland.app/tour/TamTamSuxul.jpg",
@@ -128,6 +151,8 @@
   },
   {
     "title": "Suxul",
+    "description_de": "Das **Tam Tam** ist eine sehr gute Bar zum Feiern gehen, gerade wegen Angeboten, wie dem Studentenmittwoch. Neben großen und kleinen Cocktails bekommt man hier auch Burger. Diese Bar bietet sich zu Feiern gehen deshalb so gut an, weil sie mit dem benachbarten Club **Suxul** verbunden ist. Dort werden verschiedene Musikgenres bedient.",
+    "description_en": "**Tam Tam** is a very good bar for partying, especially because of offers like Student Wednesday. In addition to large and small cocktails, you can also get burgers here. This bar is so good for partying because it is connected to the neighbouring club **Suxul**. Different music genres are served there.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/TamTamSuxul.mp4",
     "poster": "https://assets.neuland.app/tour/TamTamSuxul.jpg",
@@ -136,6 +161,8 @@
   },
   {
     "title": "Shamrock Irish Pub",
+    "description_de": "Direkt neben dem Suxul ist der **Irish Pub Shamrock**. Hier lässt es sich auch sehr gut feiern, ganz besonders donnerstags, wenn hier der Karaokeabend stattfindet",
+    "description_en": "Right next to Suxul is the **Irish pub Shamrock**. It's also a great place to party, especially on Thursdays when there's a karaoke night.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Shamrock.mp4",
     "poster": "https://assets.neuland.app/tour/Shamrock.jpg",
@@ -144,6 +171,8 @@
   },
   {
     "title": "Griesmüllers Altstadtbrauerei",
+    "description_de": "Seit Mitte 2020 befindet sich in der Schulstraße **Grießmüllers Altstadtbrauerei**, ein junges Braushaus aus Ingolstadt, mit einer coolen, urig-modernen Atmosphäre. Hier bekommt ihr super leckeres, süffiges Bier aus ihrer eigenen Brauerei.",
+    "description_en": "Since mid-2020, **Grießmüllers Altstadtbrauerei**, a young brewpub from Ingolstadt with a cool, quaint-modern atmosphere, has been located in Schulstraße. Here you can get super tasty beer from their own brewery.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Grießmüllers.mp4",
     "poster": "https://assets.neuland.app/tour/Grießmüllers.jpg",
@@ -152,6 +181,8 @@
   },
   {
     "title": "Bar Centrale",
+    "description_de": "Die **Bar Centrale** hat in Ingolstadt auf jeden Fall Kultstatus, denn man kennt sie hier einfach.",
+    "description_en": "The **Bar Centrale** definitely has cult status in Ingolstadt, because people simply know it here.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Bar%20Centrale.mp4",
     "poster": "https://assets.neuland.app/tour/Bar%20Centrale.jpg",
@@ -160,6 +191,8 @@
   },
   {
     "title": "Dollstraße",
+    "description_de": "Die **Dollstraße** ist DIE Restaurantstraße von Ingolstadt. Hier findet ihr eine kulinarische Vielfalt aus verschiedenen Kulturen.",
+    "description_en": "**Dollstraße** is THE restaurant street in Ingolstadt. Here you will find a culinary variety from different cultures.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Dollstra%C3%9Fe.mp4",
     "poster": "https://assets.neuland.app/tour/Dollstra%C3%9Fe.jpg",
@@ -168,6 +201,8 @@
   },
   {
     "title": "Touch Down",
+    "description_de": "Das **Touch Down** ist eine Sportsbar, in der ihr Football ansehen könnt. Außerdem ist hier so gut wie immer offen, selbst wenn alle anderen Kneipen bereits zu haben.",
+    "description_en": "**Touch Down** is a sports bar where you can watch football. It's also almost always open, even when all the other pubs are closed.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Touch%20Down.mp4",
     "poster": "https://assets.neuland.app/tour/Touch%20Down.jpg",
@@ -176,12 +211,16 @@
   },
   {
     "title": "Eiskeller",
+    "description_de": "Der **Eiskeller** ist einfach eine Kultdisco, die es gefühlt schon immer gibt.",
+    "description_en": "The **Eiskeller** is simply a cult disco that has been around for what feels like forever.",
     "category": "gastro",
     "lat": 48.76606,
     "lon": 11.41803
   },
   {
     "title": "Forty Nine",
+    "description_de": "Ziemlich versteckt in der Jesuitenstraße befindet sich das **Forty Nine**, ein Hip-Hop Club aus Ingolstadt.",
+    "description_en": "Quite hidden in Jesuitenstraße is *Forty Nine**, a hip-hop club from Ingolstadt.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Forty%20Nine.mp4",
     "poster": "https://assets.neuland.app/tour/Forty%20Nine.jpg",
@@ -190,6 +229,8 @@
   },
   {
     "title": "Amadeus",
+    "description_de": "In der Schulstraße ist das **Amadeus**, eine Rockbar, die auch schon Kultstatus hat. Direkt gegenüber ist das **Frisch & Veg**, ein vegetarisch/veganes Bistro, wo ihr leckeres essen bekommt. Ihr bekommt dort auch einen Studierenden-Rabatt, wenn ihr das beim Bezahlen sagt. Direkt über, bzw. neben dem Amadeus ist das **brigk**, das digitale Gründerzentrum.",
+    "description_en": "On Schulstraße is **Amadeus**, a rock bar that already has cult status. Directly opposite is **Frisch & Veg**, a vegetarian/vegan bistro where you can get delicious food. You also get a student discount there if you say so when paying. Directly above or next to Amadeus is **brigk**, the digital start-up centre.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Amadeus.mp4",
     "poster": "https://assets.neuland.app/tour/Amadeus.jpg",
@@ -198,6 +239,8 @@
   },
   {
     "title": "Himmelblau",
+    "description_de": "Das **Café Himmelblau** ist ein nettes Café mit Wohnzimmergefühl direkt an der Hohen Schule. Hier kann man frühstücken, brunchen oder zu Mittag essen.",
+    "description_en": "**Café Himmelblau** is a nice café with a living room feel right next to Hohe Schule. Here you can have breakfast, brunch or lunch.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Himmelblau.mp4",
     "poster": "https://assets.neuland.app/tour/Himmelblau.jpg",
@@ -206,6 +249,8 @@
   },
   {
     "title": "La Pizzeria",
+    "description_de": "In der **La Pizzaria** gibt es eine der besten Steinofenpizzen der Stadt. Definitiv eine Empfehlung, wenn ihr mal nicht selbst kochen wollt oder Lust auf italienisch habt.",
+    "description_en": "**La Pizzaria** has one of the best stone-baked pizzas in town. Definitely a recommendation if you don't want to cook yourself or crave Italian cuisine.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/La%20Pizzaria.mp4",
     "poster": "https://assets.neuland.app/tour/La%20Pizzaria.jpg",
@@ -262,7 +307,8 @@
   },
   {
     "title": "Mensa",
-    "description": "In der Mensa kann man (normalerweise) von 11:00 bis 13:30 günstig zu Mittag essen. Von 08:00 bis ca. 19:00 gibt es hier außerdem Kaffee, Getränke, belegte Brote und Snacks zu kaufen. (Die genauen Öffnungszeiten können nach Wochentag variieren.)",
+    "description_de": "In der Mensa kann man (normalerweise) von 11:00 bis 13:30 günstig zu Mittag essen. Von 08:00 bis ca. 19:00 gibt es hier außerdem Kaffee, Getränke, belegte Brote und Snacks zu kaufen. (Die genauen Öffnungszeiten können nach Wochentag variieren.)",
+    "description_en": "At the Mensa you can have lunch from 11:00 until 13:30 at a fair price. From 08:00 until approx. 19:00 you can also buy coffee, drinks, sandwiches and snacks. (The opening times vary by day of week.)",
     "category": "hochschule",
     "lat": 48.76733,
     "lon": 11.43170
@@ -275,28 +321,53 @@
   },
   {
     "title": "Studierendenhaus",
-    "description": "Büros der Studierendenvertretung und der studentischen Vereine.",
+    "description_de": "Büros der Studierendenvertretung und der studentischen Vereine.",
+    "description_en": "Offices of the student council and the student associations.",
     "category": "hochschule",
     "lat": 48.76760,
     "lon": 11.43344
   },
   {
     "title": "Campuswiese",
-    "description": "Wiese mit Sitzgelegenheiten.",
     "category": "hochschule",
     "lat": 48.76687,
     "lon": 11.43352
   },
   {
     "title": "Packstation",
-    "description": "Hier kann man sich Pakete liefern lassen.\n\n**Adresse:**  \nPackstation 195  \n85049 Ingolstadt",
+    "description_de": "Hier kann man sich Pakete liefern lassen.\n\n**Adresse:**  \nPackstation 195  \n85049 Ingolstadt",
     "category": "nuetzlich",
     "lat": 48.766474,
     "lon": 11.433385
   },
   {
+    "title": "Nordbahnhof",
+    "description_de": "**Ingolstadt Nord** ist ein Nahverkehrsbahnhof, von dem ihr unter anderem schnell nach München und Nürnberg kommt.",
+    "description_en": "**Ingolstadt Nord** is a regional train station, which amongst other desinations will take you quickly to Munich or Nuremberg.",
+    "category": "nuetzlich",
+    "lat": 48.77284,
+    "lon": 11.43213
+  },
+  {
+    "title": "Hauptbahnhof",
+    "description_de": "**Ingolstadt Hbf** ist ein Fernverkehrsbahnhof mit Anbindungen an viele Großstädte Deutschlands.",
+    "description_en": "**Ingolstadt Hbf** is a long-distance train station with connections to many major cities in Germany.",
+    "category": "nuetzlich",
+    "lat": 48.74441,
+    "lon": 11.43679
+  },
+  {
+    "title": "ZOB",
+    "description_de": "Der **ZOB (Zentraler Omnibusbahnhof)** ist das Drehkreuz des Ingolstädter Personennahverkehrs. Die meisten Buslinien halten hier.",
+    "description_en": "The **ZOB (Zentraler Ombibusbahnhof)** is the center of Ingolstadt's public transit. Most bus lines stop here.",
+    "category": "nuetzlich",
+    "lat": 48.76842,
+    "lon": 11.42218
+  },
+  {
     "title": "Neues Schloss",
-    "description": "Das neue Schloss ist nachts eines der markantesten Gebäude in der Ingolstädter Innenstadt und beherbergt heute das Bayerische Armeemuseum.",
+    "description_de": "Das **Neue Schloss** wurde im 15. Jahrhundert erbaut und zählt heute zu den größten, fast komplett erhaltenen Burganlagen Süddeutschlands. Im Schlosshof kann man schön entspannen und die verschiedenen Tore können als Shortcuts genutzt werden. Neben an ist das alte Gießereigelände, was aktuell aus mehren besteht, auf denen zukünftig das Museum für konkrete Kunst und Design, das Kongresshotel und das digitale Gründerzentrum Brigk entstehen. Im 19. Jahrhundert läutete die Gießerei den Beginn der Industrialisierung in Ingolstadt ein und war damals die königlich bayrische Geschütz- und Geschossfabrik.",
+    "description_en": "The **New Castle** was built in the 15th century and is today one of the largest, almost completely preserved castle complexes in southern Germany. You can relax in the castle courtyard and use the various gates as shortcuts. Next door is the old foundry site, which currently consists of several buildings on which the Museum of Concrete Art and Design, the congress hotel and the digital start-up centre Brigk will be built in the future. In the 19th century, the foundry heralded the beginning of industrialisation in Ingolstadt and was the royal Bavarian gun and bullet factory at the time.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Neues%20Schloss.mp4",
     "poster": "https://assets.neuland.app/tour/Neues%20Schloss.jpg",
@@ -305,7 +376,8 @@
   },
   {
     "title": "Stadttheater",
-    "description": "Studierende können kostenlos ins Stadttheater. Mehr Informationen dazu findet man [hier](https://www.thi.de/studium/studentisches-leben/verguenstigungen-fuer-studierende).",
+    "description_de": "Das **Stadttheater Ingolstadt** hat ein tolles, talentiertes Ensemble und inszeniert klassische, teils antike Stücke auf eine modernen Art und Weise, aber auch moderne Stücke. Mit der Studierenden-Flat könnt ihr euer Ticket für die Aufführungen des Theaters bekommen. Dazu müsst ihr euch einfach unter [theater.ingolstadt.de](https://theater.ingolstadt.de/karten-abos/studenten) registrieren. Außerdem gibt es hier noch einen Festsaal, in dem Konzerte und Partys stattfinden. Unter dem Theater befindet sich eine Tiefgarage, die während der Zeit des Kalten Krieges als Atomschutzbunker mit Platz für ca. 7200 Menschen geplant und 1989/90 gebaut wurde. Auf dem Theaterplatz vor dem Theater lässt es sich hervorragend entspannen und ihr könnt hier eure Freunde treffen. Hier bekommt man gerade im Sommer sehr viel Sonne ab.",
+    "description_en": "The **Stadttheater Ingolstadt** has a great, talented ensemble and stages classical, partly ancient plays in a modern way, but also modern plays. With the student flat rate, you can get your ticket for the theatre's performances. To do so, simply register at [theater.ingolstadt.de](https://theater.ingolstadt.de/kartenabos/studenten). There is also a festival hall where concerts and parties take place. Underneath the theatre is an underground car park, which was planned during the Cold War as a nuclear shelter with space for about 7200 people and built in 1989/90. The theatre square in front of the theatre is a great place to relax and meet your friends. You can get a lot of sun here, especially in summer.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Stadttheater.mp4",
     "poster": "https://assets.neuland.app/tour/Stadttheater.jpg",
@@ -314,7 +386,8 @@
   },
   {
     "title": "Rathausplatz",
-    "description": "Der Platz neben dem Rathaus und der Sparkasse. Hier gibt es ein kleines Modell unserer Innenstadt und eine Bushaltestelle.",
+    "description_de": "Am **Rathausplatz** findet ihr das alte und neue Rathaus und die Sparkasse. Zwischen dem Neuen Rathaus und der Sparkasse befindet sich ein Stadtmodell von Jakob Sandtner von 1572/73, auf dem noch die Augistinerkirche und die Schutter (Fluss), die heutige Schutterstraße, zu sehen sind. Vom Rathausplatz aus kann man auch den Turm der Moritzkirche, um die die Stadt Ingolstadt entstanden ist, und den Pfeifturm, von dem aus man im Mittelalter Alarm geschlagen hat, in welchem Viertel der Innenstadt es brennt, sehen.",
+    "description_en": "On **Rathausplatz** you will find the old and new town halls and the Sparkasse bank. Between the New Town Hall and the Sparkasse bank is a town model by Jakob Sandtner from 1572/73, on which you can still see the Augistinerkirche and the Schutter (river), today's Schutterstraße. From the town hall square, you can also see the tower of the Moritz Church, around which the city of Ingolstadt was founded, and the whistle tower, from which people sounded the alarm in the Middle Ages as to which quarter of the city centre was on fire.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Rathausplatz.mp4",
     "poster": "https://assets.neuland.app/tour/Rathausplatz.jpg",
@@ -323,6 +396,8 @@
   },
   {
     "title": "Viktualienmarkt",
+    "description_de": "Auf dem **Viktualienmarkt** seid ihr durch die verschiedenen Stände bestens mit Essen und Trinken versorgt. Bevor der Markt dort stand befand sich zwischen dem Rathausplatz und dem heutigen Theaterplatz die Augustiner- und spätere Franziskanerkirche, die im zweiten Weltkrieg zerstört wurde. Die Grundrisse des Kirchenschiffs wurden mit weißen Kopfsteinen nachgelegt.",
+    "description_en": "At the **Viktualienmarkt** you are well supplied with food and drink by the various stalls. Before the market stood there, the Augustinian and later Franciscan church, which was destroyed in the Second World War, was located between Rathausplatz and today's Theaterplatz. The ground plans of the nave were rebuilt with white cobblestones.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Viktualienmarkt.mp4",
     "poster": "https://assets.neuland.app/tour/Viktualienmarkt.jpg",
@@ -331,6 +406,8 @@
   },
   {
     "title": "Münster",
+    "description_de": "Das **Münster Zur Schönen Unserer Lieben Frau** oder **Liebfrauenmünster** ist die größte gotische Backsteinhallenkirche Süddeutschlands. Der Sage nach war der Teufel eifersüchtig, dass so eine schöne Kirche gebaut wird, dass er den Bau sabotieren wollte, indem er einen Stein, den Teufelsstein, auf die Baustelle geworfen hat. Allerdings war er damit nicht erfolgreich.",
+    "description_en": "The **Minster Zur Schönen Unserer Lieben Frau** or **Liebfrauenmünster** is the largest Gothic brick hall church in southern Germany. According to legend, the devil was jealous that such a beautiful church was being built that he wanted to sabotage the construction by throwing a stone, the Devil's Stone, onto the building site. However, he was not successful in doing so.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Münster.mp4",
     "poster": "https://assets.neuland.app/tour/Münster.jpg",
@@ -339,6 +416,8 @@
   },
   {
     "title": "Asamkirche Maria de Victoria",
+    "description_de": "Die **Asamkirche** ist eine wunderschöne barocke Kirche der Gebrüder Asam. Sie ist nicht nur außen sehr schön anzusehen, sondern hat auch atemberaubende Gemälde innen. Gerade die Deckengemälde sind faszinierend. Wenn ihr die Möglichkeit habt die Kirche mal von innen zu betrachten, achtet dabei besonders auf die Augen der Figuren des Deckengemäldes.",
+    "description_en": "The **Asam Church** is a beautiful baroque church built by the Asam brothers. It is not only beautiful to look at on the outside, but also has breathtaking paintings inside. Especially the ceiling paintings are fascinating. If you have the opportunity to see the church from the inside, pay special attention to the eyes of the figures on the ceiling painting.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Asamkirche.mp4",
     "poster": "https://assets.neuland.app/tour/Asamkirche.jpg",
@@ -347,6 +426,8 @@
   },
   {
     "title": "Ickstatthaus",
+    "description_de": "Das **Ickstatthaus**, auch **Salamanderhaus** genannt, in der Ludwigstraße hat seinen Namen vom Freiherr von Ickstatt, der im 18. Jahrhundert gemeinsam mit Ludwig Fronhofer die Realschule erfunden hat. Beide waren Mitglieder der Illuminati, einem Geheimbund von Aufklärern. Die Fassade des Hauses zählt zu den höchsten barocken Bürgerhausfassaden Europas. Wenn man die Verzierungen genauer untersucht kann man unten, mittig einen Salamander und ein paar Stockwerke höher ein Auge in einem Dreieck entdecken.",
+    "description_en": "The **Ickstatthaus**, also called **Salamanderhaus**, in Ludwigstraße takes its name from Baron von Ickstatt, who invented the Realschule together with Ludwig Fronhofer in the 18th century. Both were members of the Illuminati, a secret society of Enlightenment thinkers. The façade of the house is one of the highest baroque town house façades in Europe. If you examine the decorations more closely, you can see a salamander in the centre at the bottom and an eye in a triangle a few storeys up.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Ickstatthaus.mp4",
     "poster": "https://assets.neuland.app/tour/Ickstatthaus.jpg",
@@ -355,6 +436,8 @@
   },
   {
     "title": "Theresienstraße 23",
+    "description_de": "Das Haus in der **Theresienstraße 23** ist deshalb so besonders, weil es das Geburtshaus von Adam Weißhaupt ist. Aber wer soll das denn bitte sein?? Adam Weißhaupt hat 1780 die Illuminati gegründet, einen Geheimbund von Aufklärern. Sein Geburtshaus war später auch ihr Hauptquartier. Nach einigen Jahren wurden die Illuminati allerdings vom Fürsten von Bayern verboten, da er Angst vor einem Umsturz durch sie hatte. Berühmte Mitglieder der Illuminati waren unter anderem Knigge, Ickstatt, Fronhofer und sogar Goethe. Ab ca. 1905 war in diesem Haus dann eine Synagoge, die 1938 in der Reichsprogromnacht zerstört.",
+    "description_en": "The house at **Theresienstraße 23** is so special because it is the birthplace of Adam Weißhaupt. But who is that supposed to be? Adam Weißhaupt founded the Illuminati, a secret society of Enlightenment thinkers, in 1780. His birthplace was later also their headquarters. After a few years, however, the Illuminati were banned by the Prince of Bavaria because he was afraid of a coup by them. Famous members of the Illuminati included Knigge, Ickstatt, Fronhofer and even Goethe. From around 1905, there was a synagogue in this house, which was destroyed in 1938 during the Reichsprogromnacht.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Theresienstraße%2023.mp4",
     "poster": "https://assets.neuland.app/tour/Theresienstraße%2023.jpg",
@@ -363,12 +446,16 @@
   },
   {
     "title": "Alte Anatomie",
+    "description_de": "Die **Alte Anatomie** wurde von 1723 - 1736 für die Medizinische Fakultät der Universität Ingolstadt gebaut. Heute ist sie das Anatomiemuseum und hat einen schönen botanischen Garten. Fun Fact: Mary Shelleys Buch „Frankenstein“ spielt zu Beginn an der Alten Anatomie und ist stark von ihr inspiriert.",
+    "description_en": "The **Old Anatomy** was built from 1723 - 1736 for the Medical Faculty of Ingolstadt University. Today it is the Anatomy Museum and has a beautiful botanical garden. Fun Fact: Mary Shelley's book \"Frankenstein\" is set at the Old Anatomy at the beginning and is strongly inspired by it.",
     "category": "sehenswuerdig",
     "lat": 48.76242,
     "lon": 11.41952
   },
   {
     "title": "Hohe Schule",
+    "description_de": "Die **Hohe Schule** war damals die erste Universität Bayerns, die dann aber mit dem Sitz des Herzogs weggezogen ist. Viele Jahre später war das gleiche Gebäude auch der erste Sitz der THI.",
+    "description_en": "The **Hohe Schule** was Bavaria's first university at the time, but it then moved away with the Duke's seat. Many years later, the same building was also the first seat of the THI.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Hohe%20Schule.mp4",
     "poster": "https://assets.neuland.app/tour/Hohe%20Schule.jpg",
@@ -377,6 +464,8 @@
   },
   {
     "title": "Herzogskasten",
+    "description_de": "Vom Theaterplatz aus hat man einen sehr guten Blick auf das **Alte Schloss**, auch gennant **Herzogskasten**, welches von Ludwig den Strengen (1253-1294) erbaut wurde. Es war damals das südöstliche Eck der ersten Stadtmauer Ingolstadts und ist heute die Stadtbücherei.",
+    "description_en": "From the theatre square you have a very good view of the **Old Castle**, also known as the **Herzogskasten (Duke’s Box)**, which was built by Ludwig the Strict (1253-1294). At that time it was the south-eastern corner of Ingolstadt's first city wall and is now the city library.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Herzogskasten.mp4",
     "poster": "https://assets.neuland.app/tour/Herzogskasten.jpg",
@@ -385,12 +474,16 @@
   },
   {
     "title": "Kreuztor",
+    "description_de": "Das **Kreuztor** ist das einzige der vier Haupttore (Feldkirchnertor, Donautor, Hardertor und Kreuztor) der zweiten Stadtmauer, das heute noch existiert. Die Dekoration auf der Turmspitze wurde über die Jahrhunderte immer wieder geändert (Kugel; Kreuz; Halbmond), allerdings weiß man nicht von wem und warum. Es wurde 1385 als Teil der zweiten Stadtmauer erbaut und hat seinen Namen vom davon westlich gelegenen Aussätzigenhaus zum heiligen Kreuz, das 1546 im Schmalkaldischen Krieg zerstört wurde. Ingolstädter nennt man übrigens auch Schanzer. Der Name kommt von der Stadtmauer, die auch Schanz genannt wird. Die Menschen aus Ingolstadt sind sehr stolz auf ihre Schanz, weil sie als einzige Stadt Bayerns im dreißigjährigen Krieg nicht von den Schweden eingenommen werden konnten. Wegen den vielen Türmen der zweiten Stadtmauer nennt man Ingolstadt auch die Stadt der 100 Türme.",
+    "description_en": "The **Kreuztor** is the only one of the four main gates (Feldkirchnertor, Donautor, Hardertor and Kreuztor) of the second city wall that still exists today. The decoration on the top of the tower has been changed again and again over the centuries (ball; cross; crescent), although it is not known by whom or why. It was built in 1385 as part of the second city wall and takes its name from the leper house \"zum heiligen Kreuz\" to the west of it, which was destroyed in the Schmalkaldic War in 1546. By the way, Ingolstadters are also called Schanzer. The name comes from the city wall, which is also called Schanz. The people of Ingolstadt are very proud of their Schanz because they were the only town in Bavaria that could not be taken by the Swedes in the Thirty Years' War. Because of the many towers of the second city wall, Ingolstadt is also called the city of 100 towers.",
     "category": "sehenswuerdig",
     "lat": 48.76422,
     "lon": 11.41797
   },
   {
     "title": "Bierbrunnen",
+    "description_de": "Der **Bierbrunnen** an der Hohen Schule feiert das Reinheitsgebot von 1516, das älteste Lebensmittelgesetz Deutschlands, das heute noch gültig ist. Demnach darf Bier nur aus Hopfen, Malz, Hefe und Wasser hergestellt werden. Zu bestimmten Anlässen fließt in dem Brunnen auch mal eine kleine Menge Bier. Am selben Platz wird jährlich das Bierfest zur Feier des Reinheitsgebots gefeiert.",
+    "description_en": "The **beer fountain** at the Hohe Schule celebrates the Purity Law of 1516, the oldest food law in Germany that is still valid today. According to this law, beer may only be made from hops, malt, yeast and water. On certain occasions, a small amount of beer also flows in the fountain. The annual beer festival celebrating the Purity Law is held in the same place.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Bierbrunnen.mp4",
     "poster": "https://assets.neuland.app/tour/Bierbrunnen.jpg",
@@ -398,7 +491,9 @@
     "lon": 11.42182
   },
   {
-    "title": "Cinema",
+    "title": "Altstadtkino Cinema",
+    "description_de": "Das **Cinema** ist eines der zwei Altstadtkinos. Dort könnt ihr in die Sneak Preview gehen, wo ihr für wenig Geld einen Film sehen könnt, der demnächst erscheint. Aber ihr wisst nicht welcher Film das ist. Danach könnt ihr ihn bewerten. Im Sommer veranstalten die Altstadtkinos auch noch ein Freilichtkino, ein Kinoabend im Freien.",
+    "description_en": "The **Cinema** is one of the two cinemas in the old town. There you can go to the Sneak Preview, where you can see a film that is about to be released for little money. But you don't know which film it is. Afterwards you can rate it. In the summer, the old town cinemas also organize an openair cinema.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Cinema.mp4",
     "poster": "https://assets.neuland.app/tour/Cinema.jpg",
@@ -406,7 +501,17 @@
     "lon": 11.42643
   },
   {
+    "title": "Altstadtkino Union",
+    "description_de": "Das **Union** ist eines der zwei Altstadtkinos. Im Sommer veranstalten die Altstadtkinos auch noch ein Freilichtkino, ein Kinoabend im Freien.",
+    "description_en": "The **Union** is one of the two cinemas in the old town. In the summer, the old town cinemas also organize an open-air cinema.",
+    "category": "sehenswuerdig",
+    "lat": 48.76245,
+    "lon": 11.42444
+  },
+  {
     "title": "Marieluise Fleißer-Figur",
+    "description_de": "In der Theresienstraße findet ihr vor dem Segafredo das Denkmal für **Marieluise Fleißer** (1901 - 1974) von Elisabeth Wagner. Fleißer war die bekannteste Dichterin Ingolstadts und außerdem die Geliebte von Berthold Brecht. Das Fleißerhaus ist zwei Straßen weiter in der Kupferstaße, also warum steht ihr Denkmal vor dem Segafredo? Ganz einfach - Ihr Ehemann Josef „Sepp“ Kaindl hatte dort einen Tabakladen und wahrscheinlich, weil dort die Figur besser gesehen wird.",
+    "description_en": "In Theresienstraße, in front of the Segafredo, you will find the monument to **Marieluise Fleißer** (1901 - 1974) by Elisabeth Wagner. Fleißer was Ingolstadt's best-known poet and also Berthold Brecht's lover. The Fleißer House is two streets away in Kupferstaße, so why is her monument in front of the Segafredo? Quite simply - her husband Josef \"Sepp\" Kaindl had a tobacco shop there and probably because the figure is better seen there.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Fleißer.mp4",
     "poster": "https://assets.neuland.app/tour/Fleißer.jpg",
@@ -415,6 +520,8 @@
   },
   {
     "title": "Harderbastei",
+    "description_de": "Die **Harderbastei** war früher ein Teil der Festungsanlagen rund um die Innenstadt. Heute ist sie eine Kunstgalerie des **Berufsverband Bildender Künstler (BBK)**. Außerdem befindet sich dort die **Kunst- und Kulturbastei**, einer Kreativschule für Kinder und Jugendliche. Allerdings haben sie Angebote für jedes Alter, ganz egal ob in Richtung Kunst, Musik oder Schneiderei. Übrigens könnt ihr den Festungsrundgang um Ingolstadt auch selbst machen, indem ihr die Tafeln vor den Gebäuden lest. Wenn ihr aber mal eine Führung haben wollt könnt ihr das am Tag des Denkmals machen, wo ihr auch auch die Möglichkeit habt auf den Peifturm oder den Turm des Münsters zu steigen. Für mehr infos wendet Ihr euch aber am Besten an die Touristen Information.",
+    "description_en": "The **Harderbastei** used to be part of the fortifications around the city centre. Today it is an art gallery of the **Professional Association of Visual Artists (BBK)**. It is also home to the **Kunst- und Kulturbastei**, a creative school for children and young people. However, they have offers for all ages, whether in the direction of art, music or tailoring. By the way, you can also do the tour of the fortress around Ingolstadt yourself by reading the signs in front of the buildings. But if you want to take a guided tour, you can do so on Monument Day, when you also have the opportunity to climb the Peifturm or the tower of the cathedral. For more information, however, it is best to contact the tourist information office.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Harderbastei.mp4",
     "poster": "https://assets.neuland.app/tour/Harderbastei.jpg",
@@ -423,6 +530,8 @@
   },
   {
     "title": "Museum für Konkrete Kunst",
+    "description_de": "Das **MKKD (Museum für konkrete Kunst und Design)** ist mit seinen wechselnden Ausstellungen eine absolute Empfehlung, gerade für Studierende, die etwas mit Design studieren. In der Zukunft wird das MKKD direkt neben die THI auf das alte Gießereigelände ziehen.",
+    "description_en": "With its changing exhibitions, the **MKKD (Museum of Concrete Art and Design)** is an absolute recommendation, especially for students studying something to do with design. In the future, the MKKD will move right next to the THI to the old foundry site.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/MKK.mp4",
     "poster": "https://assets.neuland.app/tour/MKK.jpg",
@@ -431,6 +540,8 @@
   },
   {
     "title": "Teufelsstein",
+    "description_de": "Der **Teufelsstein** an der Ecke Theresienstraße/Am Stein gibt der Straße Am Stein ihren Namen. Warum wird dieses rote Rechteck im Boden Teufelsstein gennant? Der Sage nach war der Teufel eifersüchtig, dass so eine schöne Kirche gebaut wird, dass er den Bau sabotieren wollte, indem er einen Stein, den Teufelsstein, auf die Baustelle geworfen hat. Allerdings war er damit nicht erfolgreich. Der Stein wurde auf einem Karren von der Baustelle entfernt und an die heutige stelle gebracht. Aus Angst, dass der Karren Unheil bringen könnte wurde dieser dann Verbrannt.",
+    "description_en": "The **Teufelsstein (Devil's Stone)** at the corner of Theresienstraße and Am Stein gives the street Am Stein its name. Why is this red rectangle in the ground called the Devil's Stone? According to legend, the devil was jealous that such a beautiful church was being built that he wanted to sabotage the construction by throwing a stone, the Devil's Stone, onto the building site. However, he was not successful in doing so. The stone was removed from the building site on a cart and brought to its present location. Fearing that the cart could bring disaster, it was then burned.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Teufelsstein.mp4",
     "poster": "https://assets.neuland.app/tour/Teufelsstein.jpg",
@@ -445,12 +556,16 @@
   },
   {
     "title": "Fronte 79",
+    "description_de": "Die **Fronte 79** war ein Teil der Festungsanlagen um die Innenstadt. Heute ist sie der Sitz des Stadtjugendrings Ingolstadt und eines ihrer Jugendzentren, der Fronte 79. Hier kann man an verschiedensten Workshops teilnehmen. Das Angebot reicht von Schwertkampf, über Manga zeichnen, über Graffiti, bis hin zu Breakdance und Hip-Hop.",
+    "description_en": "The **Fronte 79** was part of the fortifications around the city centre. Today it is the headquarters of the Stadtjugendring Ingolstadt and one of its youth centres, the Fronte 79. Here you can take part in a wide variety of workshops. The offerings range from sword fighting, to manga drawing, to graffiti, to breakdancing and hip-hop.",
     "category": "sehenswuerdig",
     "lat": 48.76060,
     "lon": 11.41813
   },
   {
-    "title": "Kap",
+    "title": "Kap 94",
+    "description_de": "Das **Kap 94** war ein Teil der Festungsanlagen um die Innenstadt. Heute ist es eine Kunstund Kulturwerkstatt. Neben Ateliers von Künstlern gibt es hier auch immer wieder Konzerte, Partys und andere kulturelle Veranstaltungen.",
+    "description_en": "**Kap 94** was part of the fortifications around the city centre. Today it is an art and culture workshop. In addition to artists' studios, there are always concerts, parties and other cultural events here.",
     "category": "sehenswuerdig",
     "lat": 48.75788,
     "lon": 11.42361

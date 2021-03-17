@@ -147,7 +147,10 @@ export default function TourMap () {
                   {elem.title}
                 </h4>
                 <div className={styles.popupDescription}>
-                  <ReactMarkdown>{elem.description}</ReactMarkdown>
+                  {navigator.language.startsWith('de')
+                    ? <ReactMarkdown>{elem.description_de}</ReactMarkdown>
+                    : <ReactMarkdown>{elem.description_en}</ReactMarkdown>
+                  }
                 </div>
                 <p>
                   <a href={getGoogleMapsLink(elem.lat, elem.lon)} target="_blank" rel="noreferrer">In Google Maps öffnen</a>
