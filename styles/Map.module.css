@@ -20,7 +20,7 @@
 }
 
 .popup {
-  min-width: 300px;
+  min-width: min(400px, 80vw);
 }
 
 .popupHeading {
