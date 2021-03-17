@@ -68,6 +68,10 @@
   margin: 10px 20px;
 }
 
+.sidebarVideoIcon {
+  float: right;
+}
+
 @media (max-width: 1024px) {
   .sidebar {
     display: none;

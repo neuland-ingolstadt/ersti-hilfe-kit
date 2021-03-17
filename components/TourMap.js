@@ -8,6 +8,11 @@ import ReactMarkdown from 'react-markdown'
 import L from 'leaflet'
 import { MapContainer, TileLayer, ZoomControl, Marker, Popup } from 'react-leaflet'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faPhotoVideo,
+} from '@fortawesome/free-solid-svg-icons'
+
 import styles from '../styles/Map.module.css'
 
 import data from '../data/tour.json'
@@ -89,7 +94,10 @@ export default function TourMap () {
         </Modal.Header>
 
         <Modal.Body>
-          <p>Klicke auf eine Markierung, um mehr über diesen Ort zu erfahren.</p>
+          <p>
+            Klicke auf eine Markierung, um mehr über diesen Ort zu erfahren.
+            Viele der Orte haben auch ein kurzes Video.
+          </p>
         </Modal.Body>
 
         <Modal.Footer>
@@ -112,6 +120,11 @@ export default function TourMap () {
               {items.map(elem =>
                 <ListGroup.Item key={elem.id} action onClick={() => openElem(elem.id)}>
                   {elem.title}
+                  {elem.video && (
+                    <div className={styles.sidebarVideoIcon}>
+                      <FontAwesomeIcon icon={faPhotoVideo} fixedWidth />
+                    </div>
+                  )}
                 </ListGroup.Item>
               )}
             </ListGroup>
