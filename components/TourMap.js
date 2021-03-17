@@ -1,5 +1,4 @@
 import React, { useState, createRef } from 'react'
-import Head from 'next/head'
 import Container from 'react-bootstrap/Container'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
@@ -84,10 +83,6 @@ export default function TourMap () {
 
   return (
     <>
-      <Head>
-        <title>Stadt- und Campusführung</title>
-      </Head>
-
       <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Virtuelle Stadt- und Campusführung</Modal.Title>

@@ -21,7 +21,8 @@ export default function Home () {
   return (
     <Container className={styles.container}>
       <Head>
-        <title>Orientierungsphase</title>
+        <title>Digitale O-Phase</title>
+        <meta name="description" content="Eine digitale O-Phase für die Erstis an der TH Ingolstadt." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
