@@ -10,7 +10,7 @@ import { MapContainer, TileLayer, ZoomControl, Marker, Popup } from 'react-leafl
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faPhotoVideo,
+  faPhotoVideo
 } from '@fortawesome/free-solid-svg-icons'
 
 import styles from '../styles/Map.module.css'
@@ -64,11 +64,11 @@ for (const category of Object.keys(ICONS)) {
 function getGoogleMapsLink (lat, lon) {
   return `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`
 }
-function getAppleMapsLink (lat, lon) {
-  return `http://maps.apple.com/?ll=${lat},${lon}`
+function getAppleMapsLink (name, lat, lon) {
+  return `https://maps.apple.com/?q=${encodeURIComponent(name)}&ll=${lat},${lon}`
 }
 function getOSMLink (lat, lon) {
-  return `https://www.openstreetmap.org/#map=19/${lat}/${lon}`
+  return `https://www.openstreetmap.org/index.html?lat=${lat}&lon=${lon}&mlat=${lat}&mlon=${lon}&zoom=19&layers=M`
 }
 
 export default function TourMap () {
@@ -186,7 +186,7 @@ export default function TourMap () {
                   {', '}
                   <a href={getGoogleMapsLink(elem.lat, elem.lon)} target="_blank" rel="noreferrer">Google Maps</a>
                   {', '}
-                  <a href={getAppleMapsLink(elem.lat, elem.lon)} target="_blank" rel="noreferrer">Apple Maps</a>
+                  <a href={getAppleMapsLink(elem.title, elem.lat, elem.lon)} target="_blank" rel="noreferrer">Apple Maps</a>
                 </p>
               </Popup>
             </Marker>
