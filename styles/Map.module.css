@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 
   padding: 0;
   max-width: 100vw;
@@ -47,4 +47,44 @@
     width: 80vmin;
     height: 45vmin;
   }
+}
+
+.sidebar {
+  width: 300px;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.sidebarLogo {
+  margin: 10px;
+}
+
+.sidebarHeading {
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/* Firefox */
+.sidebar {
+  scrollbar-width: thin;
+}
+/* WebKit */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: #eeeeee;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border: 1px solid #eeeeee;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #bbbbbb;
+  border: 1px solid #eeeeee;
 }

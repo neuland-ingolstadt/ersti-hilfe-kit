@@ -4,6 +4,7 @@
     "description": "Eine Parkanlage mit einer großen Wiese, die zur Landesgartenschau 1992 eröffnet wurde. Normalerweise finden hier auch die Audi Sommerkonzerte statt.",
     "category": "chill",
     "video": "https://assets.neuland.app/tour/Klenze.mp4",
+    "poster": "https://assets.neuland.app/tour/Klenze.jpg",
     "lat": 48.76098,
     "lon": 11.43284
   },
@@ -12,6 +13,7 @@
     "description": "Ein Kunststrand an der Donau. Hier kann man sich auf Liegestühlen entspannen. An den Verkaufsständen gibt es Bier, Snacks und Shisha.",
     "category": "chill",
     "video": "https://assets.neuland.app/tour/Donaustrand.mp4",
+    "poster": "https://assets.neuland.app/tour/Donaustrand.jpg",
     "lat": 48.76231,
     "lon": 11.43202
   },
@@ -19,6 +21,7 @@
     "title": "Donaustufen",
     "category": "chill",
     "video": "https://assets.neuland.app/tour/Donaustufen.mp4",
+    "poster": "https://assets.neuland.app/tour/Donaustufen.jpg",
     "lat": 48.76212,
     "lon": 11.42918
   },
@@ -40,6 +43,7 @@
     "description": "Der Platz vor dem neuen Schloss, auf dem im Frühling der Ostermarkt stattfindet und im Winter eine Eislaufbahn aufgebaut wird.",
     "category": "chill",
     "video": "https://assets.neuland.app/tour/Paradeplatz.mp4",
+    "poster": "https://assets.neuland.app/tour/Paradeplatz.jpg",
     "lat": 48.76489,
     "lon": 11.42971
   },
@@ -54,6 +58,7 @@
     "description": "Ein kleiner Park mit einem maßstabsgetreuen Nachbau unseres Sonnensystems.",
     "category": "chill",
     "video": "https://assets.neuland.app/tour/Planetenpark.mp4",
+    "poster": "https://assets.neuland.app/tour/Planetenpark.jpg",
     "lat": 48.76029,
     "lon": 11.42682
   },
@@ -61,6 +66,7 @@
     "title": "District Five",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/District%20Five.mp4",
+    "poster": "https://assets.neuland.app/tour/District%20Five.jpg",
     "lat": 48.76187,
     "lon": 11.42549
   },
@@ -68,6 +74,7 @@
     "title": "Café am Schloss",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Postwagenn.mp4",
+    "poster": "https://assets.neuland.app/tour/Postwagenn.jpg",
     "lat": 48.76536,
     "lon": 11.42923
   },
@@ -75,6 +82,7 @@
     "title": "Tagtraum",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Tagtraum.mp4",
+    "poster": "https://assets.neuland.app/tour/Tagtraum.jpg",
     "lat": 48.76440,
     "lon": 11.42940
   },
@@ -82,6 +90,7 @@
     "title": "Rosengasse 2",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Rosengasse.mp4",
+    "poster": "https://assets.neuland.app/tour/Rosengasse.jpg",
     "lat": 48.76600,
     "lon": 11.42920
   },
@@ -89,6 +98,7 @@
     "title": "Postwagen",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Postwagen.mp4",
+    "poster": "https://assets.neuland.app/tour/Postwagen.jpg",
     "lat": 48.76505,
     "lon": 11.42534
   },
@@ -96,6 +106,7 @@
     "title": "Golden",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Golden.mp4",
+    "poster": "https://assets.neuland.app/tour/Golden.jpg",
     "lat": 48.76489,
     "lon": 11.42161
   },
@@ -103,6 +114,7 @@
     "title": "Baby & Bombe",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/BabyBombe.mp4",
+    "poster": "https://assets.neuland.app/tour/BabyBombe.jpg",
     "lat": 48.76387,
     "lon": 11.42055
   },
@@ -110,6 +122,7 @@
     "title": "Tam Tam",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/TamTamSuxul.mp4",
+    "poster": "https://assets.neuland.app/tour/TamTamSuxul.jpg",
     "lat": 48.76407,
     "lon": 11.42133
   },
@@ -117,6 +130,7 @@
     "title": "Suxul",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/TamTamSuxul.mp4",
+    "poster": "https://assets.neuland.app/tour/TamTamSuxul.jpg",
     "lat": 48.76417,
     "lon": 11.42129
   },
@@ -124,6 +138,7 @@
     "title": "Shamrock Irish Pub",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Shamrock.mp4",
+    "poster": "https://assets.neuland.app/tour/Shamrock.jpg",
     "lat": 48.76421,
     "lon": 11.42151
   },
@@ -131,6 +146,7 @@
     "title": "Griesmüllers Altstadtbrauerei",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Grießmüllers.mp4",
+    "poster": "https://assets.neuland.app/tour/Grießmüllers.jpg",
     "lat": 48.76472,
     "lon": 11.42184
   },
@@ -138,6 +154,7 @@
     "title": "Bar Centrale",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Bar%20Centrale.mp4",
+    "poster": "https://assets.neuland.app/tour/Bar%20Centrale.jpg",
     "lat": 48.76177,
     "lon": 11.42624
   },
@@ -145,6 +162,7 @@
     "title": "Dollstraße",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Dollstra%C3%9Fe.mp4",
+    "poster": "https://assets.neuland.app/tour/Dollstra%C3%9Fe.jpg",
     "lat": 48.76328,
     "lon": 11.42362
   },
@@ -152,6 +170,7 @@
     "title": "Touch Down",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Touch%20Down.mp4",
+    "poster": "https://assets.neuland.app/tour/Touch%20Down.jpg",
     "lat": 48.76388,
     "lon": 11.41861
   },
@@ -165,6 +184,7 @@
     "title": "Forty Nine",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Forty%20Nine.mp4",
+    "poster": "https://assets.neuland.app/tour/Forty%20Nine.jpg",
     "lat": 48.76583,
     "lon": 11.42016
   },
@@ -172,6 +192,7 @@
     "title": "Amadeus",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Amadeus.mp4",
+    "poster": "https://assets.neuland.app/tour/Amadeus.jpg",
     "lat": 48.76485,
     "lon": 11.42356
   },
@@ -179,6 +200,7 @@
     "title": "Himmelblau",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Himmelblau.mp4",
+    "poster": "https://assets.neuland.app/tour/Himmelblau.jpg",
     "lat": 48.76326,
     "lon": 11.42120
   },
@@ -186,6 +208,7 @@
     "title": "La Pizzeria",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/La%20Pizzaria.mp4",
+    "poster": "https://assets.neuland.app/tour/La%20Pizzaria.jpg",
     "lat": 48.76191,
     "lon": 11.42624
   },
@@ -276,6 +299,7 @@
     "description": "Das neue Schloss ist nachts eines der markantesten Gebäude in der Ingolstädter Innenstadt und beherbergt heute das Bayerische Armeemuseum.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Neues%20Schloss.mp4",
+    "poster": "https://assets.neuland.app/tour/Neues%20Schloss.jpg",
     "lat": 48.76442,
     "lon": 11.43116
   },
@@ -284,6 +308,7 @@
     "description": "Studierende können kostenlos ins Stadttheater. Mehr Informationen dazu findet man [hier](https://www.thi.de/studium/studentisches-leben/verguenstigungen-fuer-studierende).",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Stadttheater.mp4",
+    "poster": "https://assets.neuland.app/tour/Stadttheater.jpg",
     "lat": 48.76328,
     "lon": 11.42830
   },
@@ -292,6 +317,7 @@
     "description": "Der Platz neben dem Rathaus und der Sparkasse. Hier gibt es ein kleines Modell unserer Innenstadt und eine Bushaltestelle.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Rathausplatz.mp4",
+    "poster": "https://assets.neuland.app/tour/Rathausplatz.jpg",
     "lat": 48.76283,
     "lon": 11.42567
   },
@@ -299,6 +325,7 @@
     "title": "Viktualienmarkt",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Viktualienmarkt.mp4",
+    "poster": "https://assets.neuland.app/tour/Viktualienmarkt.jpg",
     "lat": 48.76296,
     "lon": 11.42679
   },
@@ -306,6 +333,7 @@
     "title": "Münster",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Münster.mp4",
+    "poster": "https://assets.neuland.app/tour/Münster.jpg",
     "lat": 48.76429,
     "lon": 11.42038
   },
@@ -313,6 +341,7 @@
     "title": "Asamkirche Maria de Victoria",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Asamkirche.mp4",
+    "poster": "https://assets.neuland.app/tour/Asamkirche.jpg",
     "lat": 48.76611,
     "lon": 11.42027
   },
@@ -320,6 +349,7 @@
     "title": "Ickstatthaus",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Ickstatthaus.mp4",
+    "poster": "https://assets.neuland.app/tour/Ickstatthaus.jpg",
     "lat": 48.76429,
     "lon": 11.42492
   },
@@ -327,6 +357,7 @@
     "title": "Theresienstraße 23",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Theresienstraße%2023.mp4",
+    "poster": "https://assets.neuland.app/tour/Theresienstraße%2023.jpg",
     "lat": 48.76420,
     "lon": 11.42238
   },
@@ -340,6 +371,7 @@
     "title": "Hohe Schule",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Hohe%20Schule.mp4",
+    "poster": "https://assets.neuland.app/tour/Hohe%20Schule.jpg",
     "lat": 48.76306,
     "lon": 11.42117
   },
@@ -347,6 +379,7 @@
     "title": "Herzogskasten",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Herzogskasten.mp4",
+    "poster": "https://assets.neuland.app/tour/Herzogskasten.jpg",
     "lat": 48.76352,
     "lon": 11.42747
   },
@@ -360,6 +393,7 @@
     "title": "Bierbrunnen",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Bierbrunnen.mp4",
+    "poster": "https://assets.neuland.app/tour/Bierbrunnen.jpg",
     "lat": 48.76327,
     "lon": 11.42182
   },
@@ -367,13 +401,15 @@
     "title": "Cinema",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Cinema.mp4",
+    "poster": "https://assets.neuland.app/tour/Cinema.jpg",
     "lat": 48.76210,
     "lon": 11.42643
   },
   {
-    "title": "Fleißer-Figur vor dem Segafredo",
+    "title": "Marieluise Fleißer-Figur",
     "category": "sehenswuerdig",
-    "video": "https://assets.neuland.app/tour/Flei%C3%9Fer.mp4",
+    "video": "https://assets.neuland.app/tour/Fleißer.mp4",
+    "poster": "https://assets.neuland.app/tour/Fleißer.jpg",
     "lat": 48.76420,
     "lon": 11.42408
   },
@@ -381,6 +417,7 @@
     "title": "Harderbastei",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Harderbastei.mp4",
+    "poster": "https://assets.neuland.app/tour/Harderbastei.jpg",
     "lat": 48.76777,
     "lon": 11.42071
   },
@@ -388,6 +425,7 @@
     "title": "Museum für Konkrete Kunst",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/MKK.mp4",
+    "poster": "https://assets.neuland.app/tour/MKK.jpg",
     "lat": 48.76161,
     "lon": 11.42729
   },
@@ -395,6 +433,7 @@
     "title": "Teufelsstein",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Teufelsstein.mp4",
+    "poster": "https://assets.neuland.app/tour/Teufelsstein.jpg",
     "lat": 48.76426,
     "lon": 11.42420
   },
