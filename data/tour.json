@@ -53,7 +53,7 @@
   },
   {
     "title": "Scherbelberg",
-    "description_de": "Den Hügel neben dem Freibad nennt man übrigens **Scherbelberg**. Er ist ein Künstlicher „Berg“, den man aus Schutt der Weltkriege „gebaut“ hat. Ganz oben auf dem Scherbelberg ist ein toller Aussichtspunkt, von dem aus man über Ingolstadt blicken kann.",
+    "description_de": "Den Hügel neben dem Freibad nennt man übrigens **Scherbelberg**. Er ist ein künstlicher „Berg“, den man aus Schutt der Weltkriege „gebaut“ hat. Ganz oben auf dem Scherbelberg ist ein toller Aussichtspunkt, von dem aus man über Ingolstadt blicken kann.",
     "description_en": "By the way, the hill next to the open-air swimming pool is called **Scherbelberg**. It is an artificial \"mountain\" that was \"built\" from rubble from the world wars. At the top of the Scherbelberg is a great vantage point from which you can look out over Ingolstadt.",
     "category": "chill",
     "lat": 48.76226,
@@ -131,7 +131,7 @@
   },
   {
     "title": "Baby & Bombe",
-    "description_de": "Das **Baby & Bombe** ist nicht nur ein wirklich tolles, cooles Café mit leckerem Frühstück, sondern auch eine Bar, in der immer coole Partys mit guter Musik zum tanzen gefeiert werden.",
+    "description_de": "Das **Baby & Bombe** ist nicht nur ein wirklich tolles, cooles Café mit leckerem Frühstück, sondern auch eine Bar, in der immer coole Partys mit guter Musik zum Tanzen gefeiert werden.",
     "description_en": "The **Baby & Bombe** is not only a really great, cool café with delicious breakfasts, but also a bar where there are always cool parties with good music to dance to.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/BabyBombe.mp4",
@@ -229,7 +229,7 @@
   },
   {
     "title": "Amadeus",
-    "description_de": "In der Schulstraße ist das **Amadeus**, eine Rockbar, die auch schon Kultstatus hat. Direkt gegenüber ist das **Frisch & Veg**, ein vegetarisch/veganes Bistro, wo ihr leckeres essen bekommt. Ihr bekommt dort auch einen Studierenden-Rabatt, wenn ihr das beim Bezahlen sagt. Direkt über, bzw. neben dem Amadeus ist das **brigk**, das digitale Gründerzentrum.",
+    "description_de": "In der Schulstraße ist das **Amadeus**, eine Rockbar, die auch schon Kultstatus hat. Direkt gegenüber ist das **Frisch & Veg**, ein vegetarisch/veganes Bistro, wo ihr leckeres Essen bekommt. Ihr bekommt dort auch einen Studierenden-Rabatt, wenn ihr das beim Bezahlen sagt. Direkt über, bzw. neben dem Amadeus ist das **brigk**, das digitale Gründerzentrum.",
     "description_en": "On Schulstraße is **Amadeus**, a rock bar that already has cult status. Directly opposite is **Frisch & Veg**, a vegetarian/vegan bistro where you can get delicious food. You also get a student discount there if you say so when paying. Directly above or next to Amadeus is **brigk**, the digital start-up centre.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Amadeus.mp4",
@@ -249,7 +249,7 @@
   },
   {
     "title": "La Pizzeria",
-    "description_de": "In der **La Pizzaria** gibt es eine der besten Steinofenpizzen der Stadt. Definitiv eine Empfehlung, wenn ihr mal nicht selbst kochen wollt oder Lust auf italienisch habt.",
+    "description_de": "In der **La Pizzaria** gibt es eine der besten Steinofenpizzen der Stadt. Definitiv eine Empfehlung, wenn ihr mal nicht selbst kochen wollt oder Lust auf Italienisch habt.",
     "description_en": "**La Pizzaria** has one of the best stone-baked pizzas in town. Definitely a recommendation if you don't want to cook yourself or crave Italian cuisine.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/La%20Pizzaria.mp4",
@@ -286,6 +286,14 @@
     "category": "gastro",
     "lat": 48.77122,
     "lon": 11.43505
+  },
+  {
+    "title": "Reimanns",
+    "description_de": "Die etwas teurere Alternative zur Mensa.",
+    "description_en": "The slightly more expensive alternative to the Mensa.",
+    "category": "gastro",
+    "lat": 48.76631,
+    "lon": 11.43260
   },
   {
     "title": "Bibliothek",
@@ -366,8 +374,8 @@
   },
   {
     "title": "Neues Schloss",
-    "description_de": "Das **Neue Schloss** wurde im 15. Jahrhundert erbaut und zählt heute zu den größten, fast komplett erhaltenen Burganlagen Süddeutschlands. Im Schlosshof kann man schön entspannen und die verschiedenen Tore können als Shortcuts genutzt werden. Neben an ist das alte Gießereigelände, was aktuell aus mehren besteht, auf denen zukünftig das Museum für konkrete Kunst und Design, das Kongresshotel und das digitale Gründerzentrum Brigk entstehen. Im 19. Jahrhundert läutete die Gießerei den Beginn der Industrialisierung in Ingolstadt ein und war damals die königlich bayrische Geschütz- und Geschossfabrik.",
-    "description_en": "The **New Castle** was built in the 15th century and is today one of the largest, almost completely preserved castle complexes in southern Germany. You can relax in the castle courtyard and use the various gates as shortcuts. Next door is the old foundry site, which currently consists of several buildings on which the Museum of Concrete Art and Design, the congress hotel and the digital start-up centre Brigk will be built in the future. In the 19th century, the foundry heralded the beginning of industrialisation in Ingolstadt and was the royal Bavarian gun and bullet factory at the time.",
+    "description_de": "Das **Neue Schloss** wurde im 15. Jahrhundert erbaut und zählt heute zu den größten, fast komplett erhaltenen Burganlagen Süddeutschlands. Im Schlosshof kann man schön entspannen und die verschiedenen Tore können als Shortcuts genutzt werden. Neben an ist das alte Gießereigelände, was aktuell aus mehren besteht, auf denen zukünftig das Museum für Konkrete Kunst und Design, das Kongresshotel und das digitale Gründerzentrum brigk entstehen. Im 19. Jahrhundert läutete die Gießerei den Beginn der Industrialisierung in Ingolstadt ein und war damals die königlich bayrische Geschütz- und Geschossfabrik.",
+    "description_en": "The **New Castle** was built in the 15th century and is today one of the largest, almost completely preserved castle complexes in southern Germany. You can relax in the castle courtyard and use the various gates as shortcuts. Next door is the old foundry site, which currently consists of several buildings on which the Museum of Concrete Art and Design, the congress hotel and the digital start-up centre brigk will be built in the future. In the 19th century, the foundry heralded the beginning of industrialisation in Ingolstadt and was the royal Bavarian gun and bullet factory at the time.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Neues%20Schloss.mp4",
     "poster": "https://assets.neuland.app/tour/Neues%20Schloss.jpg",
@@ -436,7 +444,7 @@
   },
   {
     "title": "Theresienstraße 23",
-    "description_de": "Das Haus in der **Theresienstraße 23** ist deshalb so besonders, weil es das Geburtshaus von Adam Weißhaupt ist. Aber wer soll das denn bitte sein?? Adam Weißhaupt hat 1780 die Illuminati gegründet, einen Geheimbund von Aufklärern. Sein Geburtshaus war später auch ihr Hauptquartier. Nach einigen Jahren wurden die Illuminati allerdings vom Fürsten von Bayern verboten, da er Angst vor einem Umsturz durch sie hatte. Berühmte Mitglieder der Illuminati waren unter anderem Knigge, Ickstatt, Fronhofer und sogar Goethe. Ab ca. 1905 war in diesem Haus dann eine Synagoge, die 1938 in der Reichsprogromnacht zerstört.",
+    "description_de": "Das Haus in der **Theresienstraße 23** ist deshalb so besonders, weil es das Geburtshaus von Adam Weißhaupt ist. Aber wer soll das denn bitte sein? Adam Weißhaupt hat 1780 die Illuminati gegründet, einen Geheimbund von Aufklärern. Sein Geburtshaus war später auch ihr Hauptquartier. Nach einigen Jahren wurden die Illuminati allerdings vom Fürsten von Bayern verboten, da er Angst vor einem Umsturz durch sie hatte. Berühmte Mitglieder der Illuminati waren unter anderem Knigge, Ickstatt, Fronhofer und sogar Goethe. Ab ca. 1905 war in diesem Haus dann eine Synagoge, die 1938 in der Reichsprogromnacht zerstört wurde.",
     "description_en": "The house at **Theresienstraße 23** is so special because it is the birthplace of Adam Weißhaupt. But who is that supposed to be? Adam Weißhaupt founded the Illuminati, a secret society of Enlightenment thinkers, in 1780. His birthplace was later also their headquarters. After a few years, however, the Illuminati were banned by the Prince of Bavaria because he was afraid of a coup by them. Famous members of the Illuminati included Knigge, Ickstatt, Fronhofer and even Goethe. From around 1905, there was a synagogue in this house, which was destroyed in 1938 during the Reichsprogromnacht.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Theresienstraße%2023.mp4",
@@ -446,8 +454,8 @@
   },
   {
     "title": "Alte Anatomie",
-    "description_de": "Die **Alte Anatomie** wurde von 1723 - 1736 für die Medizinische Fakultät der Universität Ingolstadt gebaut. Heute ist sie das Anatomiemuseum und hat einen schönen botanischen Garten. Fun Fact: Mary Shelleys Buch „Frankenstein“ spielt zu Beginn an der Alten Anatomie und ist stark von ihr inspiriert.",
-    "description_en": "The **Old Anatomy** was built from 1723 - 1736 for the Medical Faculty of Ingolstadt University. Today it is the Anatomy Museum and has a beautiful botanical garden. Fun Fact: Mary Shelley's book \"Frankenstein\" is set at the Old Anatomy at the beginning and is strongly inspired by it.",
+    "description_de": "Die **Alte Anatomie** wurde von 1723 - 1736 für die Medizinische Fakultät der Universität Ingolstadt gebaut. Heute ist sie das Anatomiemuseum und hat einen schönen botanischen Garten.\n\nFun Fact: Mary Shelleys Buch „Frankenstein“ spielt zu Beginn an der Alten Anatomie und ist stark von ihr inspiriert.",
+    "description_en": "The **Old Anatomy** was built from 1723 - 1736 for the Medical Faculty of Ingolstadt University. Today it is the Anatomy Museum and has a beautiful botanical garden.\n\nFun Fact: Mary Shelley's book \"Frankenstein\" is set at the Old Anatomy at the beginning and is strongly inspired by it.",
     "category": "sehenswuerdig",
     "lat": 48.76242,
     "lon": 11.41952
@@ -520,7 +528,7 @@
   },
   {
     "title": "Harderbastei",
-    "description_de": "Die **Harderbastei** war früher ein Teil der Festungsanlagen rund um die Innenstadt. Heute ist sie eine Kunstgalerie des **Berufsverband Bildender Künstler (BBK)**. Außerdem befindet sich dort die **Kunst- und Kulturbastei**, einer Kreativschule für Kinder und Jugendliche. Allerdings haben sie Angebote für jedes Alter, ganz egal ob in Richtung Kunst, Musik oder Schneiderei. Übrigens könnt ihr den Festungsrundgang um Ingolstadt auch selbst machen, indem ihr die Tafeln vor den Gebäuden lest. Wenn ihr aber mal eine Führung haben wollt könnt ihr das am Tag des Denkmals machen, wo ihr auch auch die Möglichkeit habt auf den Peifturm oder den Turm des Münsters zu steigen. Für mehr infos wendet Ihr euch aber am Besten an die Touristen Information.",
+    "description_de": "Die **Harderbastei** war früher ein Teil der Festungsanlagen rund um die Innenstadt. Heute ist sie eine Kunstgalerie des **Berufsverband Bildender Künstler (BBK)**. Außerdem befindet sich dort die **Kunst- und Kulturbastei**, einer Kreativschule für Kinder und Jugendliche. Allerdings haben sie Angebote für jedes Alter, ganz egal ob in Richtung Kunst, Musik oder Schneiderei. Übrigens könnt ihr den Festungsrundgang um Ingolstadt auch selbst machen, indem ihr die Tafeln vor den Gebäuden lest. Wenn ihr aber mal eine Führung haben wollt könnt ihr das am Tag des Denkmals machen, wo ihr auch auch die Möglichkeit habt auf den Peifturm oder den Turm des Münsters zu steigen. Für mehr Infos wendet Ihr euch aber am Besten an die Touristen-Information.",
     "description_en": "The **Harderbastei** used to be part of the fortifications around the city centre. Today it is an art gallery of the **Professional Association of Visual Artists (BBK)**. It is also home to the **Kunst- und Kulturbastei**, a creative school for children and young people. However, they have offers for all ages, whether in the direction of art, music or tailoring. By the way, you can also do the tour of the fortress around Ingolstadt yourself by reading the signs in front of the buildings. But if you want to take a guided tour, you can do so on Monument Day, when you also have the opportunity to climb the Peifturm or the tower of the cathedral. For more information, however, it is best to contact the tourist information office.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Harderbastei.mp4",
@@ -530,7 +538,7 @@
   },
   {
     "title": "Museum für Konkrete Kunst",
-    "description_de": "Das **MKKD (Museum für konkrete Kunst und Design)** ist mit seinen wechselnden Ausstellungen eine absolute Empfehlung, gerade für Studierende, die etwas mit Design studieren. In der Zukunft wird das MKKD direkt neben die THI auf das alte Gießereigelände ziehen.",
+    "description_de": "Das **MKKD (Museum für Konkrete Kunst und Design)** ist mit seinen wechselnden Ausstellungen eine absolute Empfehlung, gerade für Studierende, die etwas mit Design studieren. In der Zukunft wird das MKKD direkt neben die THI auf das alte Gießereigelände ziehen.",
     "description_en": "With its changing exhibitions, the **MKKD (Museum of Concrete Art and Design)** is an absolute recommendation, especially for students studying something to do with design. In the future, the MKKD will move right next to the THI to the old foundry site.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/MKK.mp4",
@@ -540,7 +548,7 @@
   },
   {
     "title": "Teufelsstein",
-    "description_de": "Der **Teufelsstein** an der Ecke Theresienstraße/Am Stein gibt der Straße Am Stein ihren Namen. Warum wird dieses rote Rechteck im Boden Teufelsstein gennant? Der Sage nach war der Teufel eifersüchtig, dass so eine schöne Kirche gebaut wird, dass er den Bau sabotieren wollte, indem er einen Stein, den Teufelsstein, auf die Baustelle geworfen hat. Allerdings war er damit nicht erfolgreich. Der Stein wurde auf einem Karren von der Baustelle entfernt und an die heutige stelle gebracht. Aus Angst, dass der Karren Unheil bringen könnte wurde dieser dann Verbrannt.",
+    "description_de": "Der **Teufelsstein** an der Ecke Theresienstraße/Am Stein gibt der Straße Am Stein ihren Namen. Warum wird dieses rote Rechteck im Boden Teufelsstein gennant? Der Sage nach war der Teufel eifersüchtig, dass so eine schöne Kirche gebaut wird, dass er den Bau sabotieren wollte, indem er einen Stein, den Teufelsstein, auf die Baustelle geworfen hat. Allerdings war er damit nicht erfolgreich. Der Stein wurde auf einem Karren von der Baustelle entfernt und an die heutige Stelle gebracht. Aus Angst, dass der Karren Unheil bringen könnte wurde dieser dann verbrannt.",
     "description_en": "The **Teufelsstein (Devil's Stone)** at the corner of Theresienstraße and Am Stein gives the street Am Stein its name. Why is this red rectangle in the ground called the Devil's Stone? According to legend, the devil was jealous that such a beautiful church was being built that he wanted to sabotage the construction by throwing a stone, the Devil's Stone, onto the building site. However, he was not successful in doing so. The stone was removed from the building site on a cart and brought to its present location. Fearing that the cart could bring disaster, it was then burned.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Teufelsstein.mp4",
