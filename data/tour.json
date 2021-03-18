@@ -56,6 +56,8 @@
     "description_de": "Den Hügel neben dem Freibad nennt man übrigens **Scherbelberg**. Er ist ein künstlicher „Berg“, den man aus Schutt der Weltkriege „gebaut“ hat. Ganz oben auf dem Scherbelberg ist ein toller Aussichtspunkt, von dem aus man über Ingolstadt blicken kann.",
     "description_en": "By the way, the hill next to the open-air swimming pool is called **Scherbelberg**. It is an artificial \"mountain\" that was \"built\" from rubble from the world wars. At the top of the Scherbelberg is a great vantage point from which you can look out over Ingolstadt.",
     "category": "chill",
+    "video": "https://assets.neuland.app/tour/Scherbelberg.mp4",
+    "poster": "https://assets.neuland.app/tour/Scherbelberg.jpg",
     "lat": 48.76226,
     "lon": 11.41839
   },
@@ -214,6 +216,8 @@
     "description_de": "Der **Eiskeller** ist einfach eine Kultdisco, die es gefühlt schon immer gibt.",
     "description_en": "The **Eiskeller** is simply a cult disco that has been around for what feels like forever.",
     "category": "gastro",
+    "video": "https://assets.neuland.app/tour/Eiskeller.mp4",
+    "poster": "https://assets.neuland.app/tour/Eiskeller.jpg",
     "lat": 48.76606,
     "lon": 11.41803
   },
@@ -489,6 +493,8 @@
     "description_de": "Die **Alte Anatomie** wurde von 1723 - 1736 für die Medizinische Fakultät der Universität Ingolstadt gebaut. Heute ist sie das Anatomiemuseum und hat einen schönen botanischen Garten.\n\nFun Fact: Mary Shelleys Buch „Frankenstein“ spielt zu Beginn an der Alten Anatomie und ist stark von ihr inspiriert.",
     "description_en": "The **Old Anatomy** was built from 1723 - 1736 for the Medical Faculty of Ingolstadt University. Today it is the Anatomy Museum and has a beautiful botanical garden.\n\nFun Fact: Mary Shelley's book \"Frankenstein\" is set at the Old Anatomy at the beginning and is strongly inspired by it.",
     "category": "sehenswuerdig",
+    "video": "https://assets.neuland.app/tour/Anatomie.mp4",
+    "poster": "https://assets.neuland.app/tour/Anatomie.jpg",
     "lat": 48.76242,
     "lon": 11.41952
   },
@@ -517,6 +523,8 @@
     "description_de": "Das **Kreuztor** ist das einzige der vier Haupttore (Feldkirchnertor, Donautor, Hardertor und Kreuztor) der zweiten Stadtmauer, das heute noch existiert. Die Dekoration auf der Turmspitze wurde über die Jahrhunderte immer wieder geändert (Kugel; Kreuz; Halbmond), allerdings weiß man nicht von wem und warum. Es wurde 1385 als Teil der zweiten Stadtmauer erbaut und hat seinen Namen vom davon westlich gelegenen Aussätzigenhaus zum heiligen Kreuz, das 1546 im Schmalkaldischen Krieg zerstört wurde. Ingolstädter nennt man übrigens auch Schanzer. Der Name kommt von der Stadtmauer, die auch Schanz genannt wird. Die Menschen aus Ingolstadt sind sehr stolz auf ihre Schanz, weil sie als einzige Stadt Bayerns im dreißigjährigen Krieg nicht von den Schweden eingenommen werden konnten. Wegen den vielen Türmen der zweiten Stadtmauer nennt man Ingolstadt auch die Stadt der 100 Türme.",
     "description_en": "The **Kreuztor** is the only one of the four main gates (Feldkirchnertor, Donautor, Hardertor and Kreuztor) of the second city wall that still exists today. The decoration on the top of the tower has been changed again and again over the centuries (ball; cross; crescent), although it is not known by whom or why. It was built in 1385 as part of the second city wall and takes its name from the leper house \"zum heiligen Kreuz\" to the west of it, which was destroyed in the Schmalkaldic War in 1546. By the way, Ingolstadters are also called Schanzer. The name comes from the city wall, which is also called Schanz. The people of Ingolstadt are very proud of their Schanz because they were the only town in Bavaria that could not be taken by the Swedes in the Thirty Years' War. Because of the many towers of the second city wall, Ingolstadt is also called the city of 100 towers.",
     "category": "sehenswuerdig",
+    "video": "https://assets.neuland.app/tour/Kreuzto.mp4",
+    "poster": "https://assets.neuland.app/tour/Kreuzto.jpg",
     "lat": 48.76422,
     "lon": 11.41797
   },
@@ -599,6 +607,8 @@
     "description_de": "Die **Fronte 79** war ein Teil der Festungsanlagen um die Innenstadt. Heute ist sie der Sitz des Stadtjugendrings Ingolstadt und eines ihrer Jugendzentren, der Fronte 79. Hier kann man an verschiedensten Workshops teilnehmen. Das Angebot reicht von Schwertkampf, über Manga zeichnen, über Graffiti, bis hin zu Breakdance und Hip-Hop.",
     "description_en": "The **Fronte 79** was part of the fortifications around the city centre. Today it is the headquarters of the Stadtjugendring Ingolstadt and one of its youth centres, the Fronte 79. Here you can take part in a wide variety of workshops. The offerings range from sword fighting, to manga drawing, to graffiti, to breakdancing and hip-hop.",
     "category": "sehenswuerdig",
+    "video": "https://assets.neuland.app/tour/Fronte.mp4",
+    "poster": "https://assets.neuland.app/tour/Fronte.jpg",
     "lat": 48.76060,
     "lon": 11.41813
   },
@@ -607,6 +617,8 @@
     "description_de": "Das **Kap 94** war ein Teil der Festungsanlagen um die Innenstadt. Heute ist es eine Kunstund Kulturwerkstatt. Neben Ateliers von Künstlern gibt es hier auch immer wieder Konzerte, Partys und andere kulturelle Veranstaltungen.",
     "description_en": "**Kap 94** was part of the fortifications around the city centre. Today it is an art and culture workshop. In addition to artists' studios, there are always concerts, parties and other cultural events here.",
     "category": "sehenswuerdig",
+    "video": "https://assets.neuland.app/tour/Kap%2094.mp4",
+    "poster": "https://assets.neuland.app/tour/Kap%2094.jpg",
     "lat": 48.75788,
     "lon": 11.42361
   }
