@@ -387,32 +387,40 @@
   },
   {
     "title": "Parkplatz Festplatz",
-    "description_de": "Kostenpflichtiger Parkplatz. ([Mehr Informationen](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-festplatz))",
-    "description_en": "Paid parking. ([more information](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-festplatz))",
+    "description_de": "Kostenpflichtiger Parkplatz. Hier kostet das Tagesticket maximal 2,50 €. Zudem ist das Monatsticket für Studenten mit nur 17 € das billigste. ([Mehr Informationen](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-festplatz))",
+    "description_en": "Paid parking. Here the day ticket costs a maximum of 2.50 €. In addition, the monthly ticket for students is the cheapest at just 17 €. ([more information](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-festplatz))",
     "category": "nuetzlich",
     "lat": 48.77098,
     "lon": 11.42356
   },
+    {
+    "title": "Heydeckplatz (Bundesagentur für Arbeit)",
+    "description_de": "Gratis Parkplatz, jedoch nur an Wochenenden. Unter der Woche ist dieser von einer Schranke blockiert.",
+    "description_en": "Free parking, but only on weekends. During the week the parking lot is blocked by a barrier.",
+    "category": "nuetzlich",
+    "lat": 48.76771,
+    "lon": 11.43143
+  },
   {
     "title": "Parkplatz Saturn Arena",
-    "description_de": "Kostenfreier Parkplatz, aber nicht über Nacht.",
-    "description_en": "Free parking, but not over night.",
+    "description_de": "Kostenfreier Parkplatz, aber nicht über Nacht. Der Saturn-Arena-Parkplatz ist bei Studierenden sehr beliebt, da er ganz gut in Laufreichweite zur Hochschule liegt.",
+    "description_en": "Free parking, but not over night. The Saturn Arena parking lot is very popular with students because it is within walking distance of the THI.",
     "category": "nuetzlich",
     "lat": 48.75929,
     "lon": 11.43935
   },
   {
     "title": "Parkhaus Donau City Center",
-    "description_de": "Kostenpflichtiges Parkhaus. ([Mehr Informationen](https://donaucitycenter.de/parken.html))",
-    "description_en": "Paid parking. ([more information](https://donaucitycenter.de/parken.html))",
+    "description_de": "Kostenpflichtiges Parkhaus. Im Parkhaus selbst kann man aber 3 Stunden gratis parken, also für einzelne Vorlesungen ganz gut geeignet. ([Mehr Informationen](https://donaucitycenter.de/parken.html))",
+    "description_en": "Paid parking. In the car park itself, however, you can park for 3 hours for free, so it is very useful for single lectures.([more information](https://donaucitycenter.de/parken.html))",
     "category": "nuetzlich",
     "lat": 48.76649,
     "lon": 11.43830
   },
   {
     "title": "Parkplatz Hallenbad",
-    "description_de": "Kostenpflichtiger Parkplatz. ([Mehr Informationen](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-hallenbad))",
-    "description_en": "Paid parking. ([more information](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-hallenbad))",
+    "description_de": "Kostenpflichtiger Parkplatz. Man kann hier ab 18 Uhr und am Sonntag gratis parken. Zudem kostet das Studentenmonatsticket 35 €.([Mehr Informationen](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-hallenbad))",
+    "description_en": "Paid parking. You can park here for free after 6 p.m. and on Sundays. In addition, the monthly student ticket costs 35 €.([more information](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-hallenbad))",
     "category": "nuetzlich",
     "lat": 48.76126,
     "lon": 11.41990
