@@ -349,9 +349,9 @@
     "lon": 11.433385
   },
   {
-    "title": "Nordbahnhof",
-    "description_de": "**Ingolstadt Nord** ist ein Nahverkehrsbahnhof, von dem ihr unter anderem schnell nach München und Nürnberg kommt.",
-    "description_en": "**Ingolstadt Nord** is a regional train station, which amongst other desinations will take you quickly to Munich or Nuremberg.",
+    "title": "Nordbahnhof (mit Parkhaus)",
+    "description_de": "**Ingolstadt Nord** ist ein Nahverkehrsbahnhof, von dem ihr unter anderem schnell nach München und Nürnberg kommt. Außerdem kann man hier kostenpflichtig parken. ([Mehr Informationen](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkhaus-nordbahnhof))",
+    "description_en": "**Ingolstadt Nord** is a regional train station, which amongst other desinations will take you quickly to Munich or Nuremberg. You can also park here for a fee. ([more information](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkhaus-nordbahnhof))",
     "category": "nuetzlich",
     "lat": 48.77284,
     "lon": 11.43213
@@ -371,6 +371,38 @@
     "category": "nuetzlich",
     "lat": 48.76842,
     "lon": 11.42218
+  },
+  {
+    "title": "Parkplatz Festplatz",
+    "description_de": "Kostenpflichtiger Parkplatz. ([Mehr Informationen](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-festplatz))",
+    "description_en": "Paid parking. ([more information](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-festplatz))",
+    "category": "nuetzlich",
+    "lat": 48.77098,
+    "lon": 11.42356
+  },
+  {
+    "title": "Parkplatz Saturn Arena",
+    "description_de": "Kostenfreier Parkplatz, aber nicht über Nacht.",
+    "description_en": "Free parking, but not over night.",
+    "category": "nuetzlich",
+    "lat": 48.75929,
+    "lon": 11.43935
+  },
+  {
+    "title": "Parkhaus Donau City Center",
+    "description_de": "Kostenpflichtiges Parkhaus. ([Mehr Informationen](https://donaucitycenter.de/parken.html))",
+    "description_en": "Paid parking. ([more information](https://donaucitycenter.de/parken.html))",
+    "category": "nuetzlich",
+    "lat": 48.76649,
+    "lon": 11.43830
+  },
+  {
+    "title": "Parkplatz Hallenbad",
+    "description_de": "Kostenpflichtiger Parkplatz. ([Mehr Informationen](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-hallenbad))",
+    "description_en": "Paid parking. ([more information](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-hallenbad))",
+    "category": "nuetzlich",
+    "lat": 48.76126,
+    "lon": 11.41990
   },
   {
     "title": "Neues Schloss",
