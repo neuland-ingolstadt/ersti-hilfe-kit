@@ -59,8 +59,9 @@
   font-weight: bold;
 }
 
-.sidebarDisclaimer {
-  font-size: 10pt;
+.sidebarPin {
+  height: 20px;
+  margin: 0 5px;
 }
 
 .sidebarVideoIcon {

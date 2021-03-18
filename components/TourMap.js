@@ -113,6 +113,7 @@ export default function TourMap () {
           {categorizedData.map(({ category, items }) =>
             <ListGroup key={category} variant="flush">
               <ListGroup.Item className={styles.sidebarHeading}>
+                <img src={ICONS[category]} className={styles.sidebarPin} />
                 {HEADINGS[category]}
               </ListGroup.Item>
               {items.map(elem =>
