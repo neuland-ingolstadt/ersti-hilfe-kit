@@ -93,6 +93,9 @@ export default function TourMap () {
             Klicke auf eine Markierung, um mehr über diesen Ort zu erfahren.
             Viele der Orte haben auch ein kurzes Video.
           </p>
+          <p>
+            Die virtuelle Stadt- und Campusführung ist ein Projekt der <a href="https://www.thi.de/hochschule/ueber-uns/hochschulgremien/studierendenvertretung" target="_blank" rel="noreferrer">Fachschaft Informatik</a> in Kooperation mit <a href="https://neuland-ingolstadt.de" target="_blank" rel="noreferrer">Neuland Ingolstadt</a>.
+          </p>
         </Modal.Body>
 
         <Modal.Footer>
@@ -106,10 +109,6 @@ export default function TourMap () {
             src="https://assets.neuland.app/StudVer_Logo_2020_CMYK.svg"
             alt="Studierendenvertretung TH Ingolstadt"
           />
-
-          <p className={styles.sidebarDisclaimer}>
-            Ein Projekt der <a href="https://www.thi.de/hochschule/ueber-uns/hochschulgremien/studierendenvertretung" target="_blank" rel="noreferrer">Fachschaft Informatik</a> in Kooperation mit <a href="https://neuland-ingolstadt.de" target="_blank" rel="noreferrer">Neuland Ingolstadt</a>
-          </p>
 
           {categorizedData.map(({ category, items }) =>
             <ListGroup key={category} variant="flush">

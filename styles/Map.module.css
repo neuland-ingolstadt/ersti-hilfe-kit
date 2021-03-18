@@ -15,10 +15,6 @@
   flex: 1;
 }
 
-.modal {
-  max-width: 90vw;
-}
-
 .popup {
   min-width: min(400px, 80vw);
 }
@@ -65,8 +61,6 @@
 
 .sidebarDisclaimer {
   font-size: 10pt;
-  margin: 10px 20px;
-  text-align: center;
 }
 
 .sidebarVideoIcon {
