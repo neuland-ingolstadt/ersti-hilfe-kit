@@ -76,6 +76,7 @@
     "description_de": "Der [**Hopfenspace**](https://hopfenspace.org) ist der Hackerspace in Pfaffenhofen an der Ilm. Dort findest du an Technik interessierte Menschen aus allen Bereichen, von Physik bis Informatik.",
     "description_en": "The [**Hopfenspace**](https://hopfenspace.org) is the local hackerspace of the city Pfaffenhofen at the Ilm. You will find people interested in all kinds of technic there, from physics to informatics.",
     "category": "chill",
+    "hide": true,
     "lat": 48.53785,
     "lon": 11.50638
   },

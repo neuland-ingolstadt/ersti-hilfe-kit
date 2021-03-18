@@ -116,7 +116,7 @@ export default function TourMap () {
                 <img src={ICONS[category]} className={styles.sidebarPin} />
                 {HEADINGS[category]}
               </ListGroup.Item>
-              {items.map(elem =>
+              {items.filter(elem => !elem.hide).map(elem =>
                 <ListGroup.Item key={elem.id} action onClick={() => openElem(elem.id)}>
                   {elem.title}
                   {elem.video && (
