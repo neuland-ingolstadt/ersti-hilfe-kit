@@ -63,9 +63,10 @@
   font-weight: bold;
 }
 
-.sidebarFooter {
+.sidebarDisclaimer {
   font-size: 10pt;
   margin: 10px 20px;
+  text-align: center;
 }
 
 .sidebarVideoIcon {

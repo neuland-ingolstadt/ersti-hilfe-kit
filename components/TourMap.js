@@ -107,6 +107,10 @@ export default function TourMap () {
             alt="Studierendenvertretung TH Ingolstadt"
           />
 
+          <p className={styles.sidebarDisclaimer}>
+            Ein Projekt der <a href="https://www.thi.de/hochschule/ueber-uns/hochschulgremien/studierendenvertretung" target="_blank" rel="noreferrer">Fachschaft Informatik</a> in Kooperation mit <a href="https://neuland-ingolstadt.de" target="_blank" rel="noreferrer">Neuland Ingolstadt</a>
+          </p>
+
           {categorizedData.map(({ category, items }) =>
             <ListGroup key={category} variant="flush">
               <ListGroup.Item className={styles.sidebarHeading}>
@@ -124,10 +128,6 @@ export default function TourMap () {
               )}
             </ListGroup>
           )}
-
-          <p className={styles.sidebarFooter}>
-            Ein Projekt der Fachschaft Informatik in Kooperation mit Neuland Ingolstadt e.V.
-          </p>
         </div>
 
         <MapContainer
