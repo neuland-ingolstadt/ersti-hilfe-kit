@@ -272,21 +272,19 @@
   },
   {
     "title": "Sultan's Kebab",
+    "description_de": "Bei **Sultan's Kebab** gibt es guten Döner. Wochenends ist es auch bis tief in die Nacht offen.",
+    "description_en": "At **Sultan's Kebab** you can get nice Döner. On the weekends it's open until late at night.",
     "category": "gastro",
     "lat": 48.76402,
     "lon": 11.41930
   },
   {
     "title": "Basta Pasta",
+    "description_de": "Bei **Basta Pasta** gibt es guten Döner sowie Nudeln und Pizza.",
+    "description_en": "At **Basta Pasta** you can get nice Döner as well as pasta and pizza.",
     "category": "gastro",
     "lat": 48.76529,
     "lon": 11.42596
-  },
-  {
-    "title": "Goldbraun",
-    "category": "gastro",
-    "lat": 48.76372,
-    "lon": 11.42062
   },
   {
     "title": "Hans im Glück",
@@ -302,48 +300,72 @@
   },
   {
     "title": "Reimanns",
-    "description_de": "Die etwas teurere Alternative zur Mensa.",
-    "description_en": "The slightly more expensive alternative to the Mensa.",
+    "description_de": "Die etwas teurere Alternative zur Mensa. Normalerweise finden hier oft Partys von Student's Life statt.",
+    "description_en": "The slightly more expensive alternative to the Mensa. Under normal circumstances, there are often partys here.",
     "category": "gastro",
     "lat": 48.76631,
     "lon": 11.43260
   },
   {
     "title": "Bibliothek",
+    "description_de": "Die Bibiliothek mit Arbeitsplätzen zum Lernen. An der Information kann man sich verschiedenes Equipment ausleihen und im Keller befindet sich ein Buchscanner. ([Mehr Informationen](https://www.thi.de/service/bibliothek))",
+    "description_en": "The library with areas for learning. At the information you can lend various equipment and in the basement there's a book scanner. ([more information](https://www.thi.de/en/service/university-library))",
     "category": "hochschule",
     "lat": 48.76667,
     "lon": 11.43192
   },
   {
+    "title": "Gruppenarbeitsräume",
+    "description_de": "In der Bibliothek befinden sich mehrere Gruppenarbeitsräume, in denen man sich zum Lernen treffen kann. Oben befinden sich außerdem ein PC-Pool, ein Drucker und ein Ausleihautomat.",
+    "description_en": "The library has multiple group study rooms which can be used for studying together. In the upper rooms there's also a PC pool, a printer and a lending machine.",
+    "category": "hochschule",
+    "lat": 48.76705,
+    "lon": 11.43171
+  },
+  {
+    "title": "Aufenthaltsräume",
+    "description_de": "Im ersten Stock befinden sich Aufenthaltsräume zum Entspannen.",
+    "description_en": "On the second floor there are lounges for relaxing.",
+    "category": "hochschule",
+    "lat": 48.76693,
+    "lon": 11.43173
+  },
+  {
     "title": "Aula",
+    "description_de": "In der Aula befinden sich ein paar Tische mit Stühlen, die man benutzen kann, wenn man arbeiten oder etwas Zeit totschlagen möchte. Außerdem gibt es hier einen Wasserspender und einen Automaten, an dem man seinen Studierendenausweis verlängern kann.",
+    "description_en": "In the auditorium there's a couple tables with chairs that you can use if you have to spend some time or want to work or need to kill some time. Also there's a water dispenser and a machine for extending your student ID.",
     "category": "hochschule",
     "lat": 48.76674,
     "lon": 11.43207
   },
   {
-    "title": "Drucker in Gebäude C",
+    "title": "Drucker in C",
+    "description_de": "Im Durchgang vom Parkplatz zu Gebäude C.",
+    "description_en": "In the passage from the parking lot to building C.",
     "category": "hochschule",
     "lat": 48.76747,
     "lon": 11.43262
   },
   {
-    "title": "Mensa",
-    "description_de": "In der Mensa kann man (normalerweise) von 11:00 bis 13:30 günstig zu Mittag essen. Von 08:00 bis ca. 19:00 gibt es hier außerdem Kaffee, Getränke, belegte Brote und Snacks zu kaufen. (Die genauen Öffnungszeiten können nach Wochentag variieren.)",
-    "description_en": "At the Mensa you can have lunch from 11:00 until 13:30 at a fair price. From 08:00 until approx. 19:00 you can also buy coffee, drinks, sandwiches and snacks. (The opening times vary by day of week.)",
+    "title": "Drucker und Wasserspender in G",
+    "description_de": "Im Eingangsbereich von Gebäude G befinden sich Wasserspender und Drucker. Einen weiteren Drucker gibt es in G307.",
+    "description_en": "In the entrance area of building G there are water dispensers and printers. An additional printer is in G307.",
     "category": "hochschule",
+    "lat": 48.76605,
+    "lon": 11.43352
+  },
+  {
+    "title": "Mensa",
+    "description_de": "In der Mensa kann man günstig zu Mittag essen. Es gibt ganztags Kaffee, Getränke, belegte Brote und Snacks zu kaufen. Außerdem gibt es eine Mikrowelle, um mitgebrachte Speisen zu erwärmen.",
+    "description_en": "At the Mensa you can have lunch a fair price. You can buy coffee, drinks, sandwiches and snacks all day. Also, there's a microwave to warm up your own food.",
+    "category": "gastro",
     "lat": 48.76733,
     "lon": 11.43170
   },
   {
-    "title": "Dekanat I",
-    "category": "hochschule",
-    "lat": 48.76734,
-    "lon": 11.43156
-  },
-  {
     "title": "Studierendenhaus",
-    "description_de": "Büros der Studierendenvertretung und der studentischen Vereine.",
-    "description_en": "Offices of the student council and the student associations.",
+    "description_de": "Büros der [Studierendenvertretung](https://www.thi.de/hochschule/ueber-uns/hochschulgremien/studierendenvertretung) und der [studentischen Vereine](https://www.thi.de/studium/studentisches-leben/studentische-vereine-an-der-thi).",
+    "description_en": "Offices of the [student council](https://www.thi.de/en/university/university-profile/organisation/students-council) and the [student associations](https://www.thi.de/en/international/studies/campus-and-student-life/student-clubs-and-initiatives-at-thi).",
     "category": "hochschule",
     "lat": 48.76760,
     "lon": 11.43344
@@ -353,6 +375,30 @@
     "category": "hochschule",
     "lat": 48.76687,
     "lon": 11.43352
+  },
+  {
+    "title": "Tische auf der Campuswiese",
+    "description_de": "Mehrere Tische unter freiem Himmel. Praktisch, wenn man draußen lernen möchte.",
+    "description_en": "A couple tables under the open sky. Nice if you want to study outside.",
+    "category": "hochschule",
+    "lat": 48.76654,
+    "lon": 11.43362
+  },
+  {
+    "title": "Service Center Studienangelegenheiten (SCS)",
+    "description_de": "Das SCS ist euer Ansprechpartner für alle administrativen Angelegenheiten sowie für Studienberatung. Hier kriegt ihr unter anderem Bescheinigungen und gebt Abschlussarbeiten ab. ([Mehr Informationen](https://www.thi.de/hochschule/ueber-uns/hochschulorganisation/service-center-studienangelegenheiten))",
+    "description_en": "The Service Center Study Affairs (SCS) is your main contact for all administrative matters as well as course guirdance. Among other things, this is where you get certificates and turn in your thesis. ([more information](https://www.thi.de/en/university/university-profile/hochschulorganisation/service-center-study-affairs))",
+    "category": "hochschule",
+    "lat": 48.76639,
+    "lon": 11.43209
+  },
+  {
+    "title": "Fahrradstellplatz",
+    "description_de": "Hier könnt ihr euer Fahrrad abschließen.",
+    "description_en": "Here you can lock your bike.",
+    "category": "hochschule",
+    "lat": 48.76674,
+    "lon": 11.43304
   },
   {
     "title": "Packstation",
@@ -412,15 +458,15 @@
   {
     "title": "Parkhaus Donau City Center",
     "description_de": "Kostenpflichtiges Parkhaus. Im Parkhaus selbst kann man aber 3 Stunden gratis parken, also für einzelne Vorlesungen ganz gut geeignet. ([Mehr Informationen](https://donaucitycenter.de/parken.html))",
-    "description_en": "Paid parking. In the car park itself, however, you can park for 3 hours for free, so it is very useful for single lectures.([more information](https://donaucitycenter.de/parken.html))",
+    "description_en": "Paid parking. In the car park itself, however, you can park for 3 hours for free, so it is very useful for single lectures. ([more information](https://donaucitycenter.de/parken.html))",
     "category": "nuetzlich",
     "lat": 48.76649,
     "lon": 11.43830
   },
   {
     "title": "Parkplatz Hallenbad",
-    "description_de": "Kostenpflichtiger Parkplatz. Man kann hier ab 18 Uhr und am Sonntag gratis parken. Zudem kostet das Studentenmonatsticket 35 €.([Mehr Informationen](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-hallenbad))",
-    "description_en": "Paid parking. You can park here for free after 6 p.m. and on Sundays. In addition, the monthly student ticket costs 35 €.([more information](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-hallenbad))",
+    "description_de": "Kostenpflichtiger Parkplatz. Man kann hier ab 18 Uhr und am Sonntag gratis parken. Zudem kostet das Studentenmonatsticket 35 €. ([Mehr Informationen](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-hallenbad))",
+    "description_en": "Paid parking. You can park here for free after 6 p.m. and on Sundays. In addition, the monthly student ticket costs 35 €. ([more information](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-hallenbad))",
     "category": "nuetzlich",
     "lat": 48.76126,
     "lon": 11.41990
@@ -615,6 +661,8 @@
   },
   {
     "title": "Landesgartenschau 2021",
+    "description_de": "Ursprünglich hätte bereits 2020 die Landesgartenschau im neu gebauten Park in der Nähe vom Westpark stattfinden sollen. Aufgrund gewisser Ereignisse wurde diese dann auf 2021 verschoben. Auch die THI ist hier mit einem Stand vertreten.",
+    "description_en": "Originally, the state horiticultural show in the area near the Westpark was planned to take place in 2020. Due to certain events, it was then moved to 2021. The THI also has a booth here.",
     "category": "sehenswuerdig",
     "lat": 48.77654,
     "lon": 11.39336
