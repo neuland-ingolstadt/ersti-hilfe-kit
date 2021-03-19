@@ -71,33 +71,39 @@ export default function Home () {
         <hr />
 
         <h2 className={styles.subtitle}>
-          <FontAwesomeIcon icon={faDiscord} fixedWidth />
-          <> Discord-Server der Fakultät Informatik</>
-        </h2>
-
-        <p>
-          <a href="https://discord.gg/pTvQEZpga7" target="_blank" rel="noreferrer">
-            <Button variant="primary">
-              Discord-Server beitreten
-            </Button>
-          </a>
-        </p>
-
-        <hr />
-
-        <h2 className={styles.subtitle}>
           <FontAwesomeIcon icon={faMapSigns} fixedWidth />
           <> Virtuelle Stadt- und Campusführung</>
         </h2>
+
+        <p>
+          Eine virtuelle Stadt- und Campusführung als interaktive Karte, damit ihr die Stadt und unsere Hochschule selbst erkunden könnt.
+        </p>
 
         <Link href="/tour">
           <Button variant="primary">
             Stadt- und Campusführung öffnen
           </Button>
         </Link>
-      </main>
 
-      <hr />
+        <hr />
+
+        <h2 className={styles.subtitle}>
+          <FontAwesomeIcon icon={faDiscord} fixedWidth />
+          <> Discord-Server der Fakultät Informatik</>
+        </h2>
+
+        <p>
+          Ein Discord-Server, um uns auch in Zeiten von Kontaktbeschränkungen etwas zusammenzubringen.
+        </p>
+
+        <a href="https://discord.gg/pTvQEZpga7" target="_blank" rel="noreferrer">
+          <Button>
+            Discord-Server beitreten
+          </Button>
+        </a>
+
+        <hr />
+      </main>
 
       <footer className={styles.footer}>
         <p>
