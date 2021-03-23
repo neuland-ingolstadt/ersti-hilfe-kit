@@ -49,25 +49,6 @@ export default function Home () {
           &ndash; Eure Fachschaft Informatik &lt;3
         </p>
 
-        {calendar && calendar.length > 0 &&
-          <>
-            <h2 className={styles.subtitle}>
-              <FontAwesomeIcon icon={faCalendarAlt} fixedWidth />
-              <> Veranstaltungen</>
-            </h2>
-
-            <div className={styles.calendar}>
-              {calendar.map((event, idx) =>
-                <p key={idx}>
-                  <div className={styles.calendarTitle}>{event.title}</div>
-                  <div className={styles.calendarDate}>am {new Date(event.date).toLocaleString()}</div>
-                  <div className={styles.calendarDescription}>{event.description}</div>
-                </p>
-              )}
-            </div>
-          </>
-        }
-
         <hr />
 
         <h2 className={styles.subtitle}>
@@ -101,6 +82,27 @@ export default function Home () {
             Discord-Server beitreten
           </Button>
         </a>
+
+        {calendar && calendar.length > 0 &&
+          <>
+            <hr />
+
+            <h2 className={styles.subtitle}>
+              <FontAwesomeIcon icon={faCalendarAlt} fixedWidth />
+              <> Veranstaltungen</>
+            </h2>
+
+            <ul className={styles.calendar}>
+              {calendar.map((event, idx) =>
+                <li key={idx}>
+                  <div className={styles.calendarTitle}>{event.title}</div>
+                  <div className={styles.calendarDate}>am {new Date(event.date).toLocaleString()}</div>
+                  <div className={styles.calendarDescription}>{event.description}</div>
+                </li>
+              )}
+            </ul>
+          </>
+        }
 
         <hr />
       </main>
