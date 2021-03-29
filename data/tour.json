@@ -401,6 +401,14 @@
     "lon": 11.43304
   },
   {
+    "title": "Center of Entrepreneurship",
+    "description_de": "Das **Center of Entrepreneurship** koordiniert alle Gründungsaktivitäten an der Technischen Hochschule Ingolstadt. Die Hauptaufgabe des Centers ist daher die Sicherung des Wissenstransfers zwischen Forschung und Praxis mit dem Ziel der Unterstützung von wettbewerbsfähigen Gründungen an der THI. Durch eine lebendige Gründerkultur und eine bedarfsgerechte Beratung von Gründungsaktivitäten möchten wir unseren Beitrag leisten und die Studierenden und Mitarbeiter dabei unterstützen ihre Ideen zu verwirklichen. [Webseite](https://thi.de/coe)",
+    "description_en": "The **Center of Entrepreneurship** coordinates all start-up activities at Ingolstadt University of Technology. The main task of the Center is therefore to ensure the transfer of knowledge between research and practice with the aim of supporting competitive start-ups at THI. Through a lively start-up culture and demand-oriented consulting for start-up activities, we would like to make our contribution and support students and employees in realizing their ideas. [Webseite](https://thi.de/coe)",
+    "category": "hochschule",
+    "lat": 48.76812,
+    "lon": 11.43237
+  },
+  {
     "title": "Packstation",
     "description_de": "Hier kann man sich Pakete liefern lassen.\n\n**Adresse:**  \nPackstation 195  \n85049 Ingolstadt",
     "category": "nuetzlich",
