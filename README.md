@@ -59,3 +59,7 @@ for i in *.mp4; do ffmpeg -i "$i" -vframes 1 -vf scale=1280:720 "../poster/$(bas
 ```
 
 Then add the video / poster URLs to `./data/tour.json`.
+
+## License
+
+AGPL-3.0, except for the `data/` folder.
