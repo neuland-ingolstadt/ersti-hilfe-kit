@@ -1,8 +1,8 @@
 [
   {
     "title": "Klenzepark",
-    "description_de": "Der **Klenzepark** ist als ehemalige Landesgartenschau ein sehr schöner, cooler Park, um sich im Sommer mit Freunden zu treffen. Die große Wiese ist ideal um auf ihr Fußball, Frisbee oder andere Sachen zu spielen. Unter dem Klenzepark befindet sich eine Tiefgarage, die während der Zeit des Kalten Krieges als Atomschutzbunker mit Platz für ca. 5000 Menschen geplant und 1989/90 gebaut wurde.",
-    "description_en": "As a former state horticultural show, **Klenzepark** is a very nice, cool park to meet up with friends in the summer. The large meadow is ideal for playing football, frisbee or other things. Under the Klenzepark is an underground car park, which was planned during the Cold War as a nuclear shelter with space for about 5,000 people and built in 1989/90.",
+    "description_de": "Der **Klenzepark** ist als ehemalige Landesgartenschau von 1992 ein sehr schöner, cooler Park, um sich im Sommer mit Freunden zu treffen. Die große Wiese ist ideal um auf ihr Fußball, Frisbee oder andere Sachen zu spielen. Unter dem Klenzepark befindet sich eine Tiefgarage, die während der Zeit des Kalten Krieges als Atomschutzbunker mit Platz für ca. 5000 Menschen geplant und 1989/90 gebaut wurde.",
+    "description_en": "The **Klenzepark** is a former state garden show from 1992 and a very nice, cool park to meet up with friends in the summer. The large meadow is ideal for playing football, frisbee or other things. Under the Klenzepark is an underground car park, which was planned during the Cold War as a nuclear shelter with space for about 5000 people and built in 1989/90.",
     "category": "chill",
     "video": "https://assets.neuland.app/tour/Klenze.mp4",
     "poster": "https://assets.neuland.app/tour/Klenze.jpg",
@@ -43,8 +43,8 @@
   },
   {
     "title": "Paradeplatz",
-    "description_de": "Der **Paradeplatz** befindet sich direkt vor dem Neuen Schloss und bietet den optimalen Ort um sich mit Freunden zu treffen. Es gibt mehrere Bänke und einen Brunnen, auf oder an die man sich setzen kann, wenn man nicht gerade an eines der anliegenden coolen Cafés gehen möchte.",
-    "description_en": "The **Paradeplatz** is located directly in front of the New Castle and is the perfect place to meet up with friends. There are several benches and a fountain to sit on or at if you don't want to go to one of the cool cafés nearby.",
+    "description_de": "Der **Paradeplatz** befindet sich direkt vor dem Neuen Schloss und bietet den optimalen Ort um sich mit Freunden zu treffen. Es gibt mehrere Bänke und einen Brunnen, auf oder an die man sich setzen kann, wenn man nicht gerade an eines der anliegenden coolen Cafés gehen möchte. Die Figur, die man auf dem dortigen Brunnen sieht ist Ludwig der Bayer, der Ingolstadt damals das Stadtrecht stiftete.",
+    "description_en": "The **Paradeplatz** is located directly in front of the New Castle and is the perfect place to meet up with friends. There are several benches and a fountain to sit on or at if you don't want to go to one of the cool cafés nearby. The figure on the fountain is Ludwig the Bavarian, who gave Ingolstadt its city charter.",
     "category": "chill",
     "video": "https://assets.neuland.app/tour/Paradeplatz.mp4",
     "poster": "https://assets.neuland.app/tour/Paradeplatz.jpg",
@@ -62,9 +62,9 @@
     "lon": 11.41839
   },
   {
-    "title": "Planetenpark",
-    "description_de": "Der **Planetenpark** ist einfach ein Modell unseres Sonnensystems in der Größe eines kleinen Parks direkt am Rande der Altstadt. Hier könnt ihr entweder entspannen oder etwas über unsere Planeten lernen.",
-    "description_en": "The **Planet Park** is simply a model of our solar system the size of a small park right on the edge of the old town. Here you can either relax or learn about our planets.",
+    "title": "Astronomiepark",
+    "description_de": "Der **Astronomiepark** ist einfach ein Modell unseres Sonnensystems in der Größe eines kleinen Parks direkt am Rande der Altstadt. Hier könnt ihr entweder entspannen oder etwas über unsere Planeten lernen.",
+    "description_en": "The **Astronomy Park** is simply a model of our solar system the size of a small park right on the edge of the old town. Here you can either relax or learn about our planets.",
     "category": "chill",
     "video": "https://assets.neuland.app/tour/Planetenpark.mp4",
     "poster": "https://assets.neuland.app/tour/Planetenpark.jpg",
@@ -243,7 +243,7 @@
   {
     "title": "Amadeus",
     "description_de": "In der Schulstraße ist das **Amadeus**, eine Rockbar, die auch schon Kultstatus hat. Direkt gegenüber ist das **Frisch & Veg**, ein vegetarisch/veganes Bistro, wo ihr leckeres Essen bekommt. Ihr bekommt dort auch einen Studierenden-Rabatt, wenn ihr das beim Bezahlen sagt. Direkt über, bzw. neben dem Amadeus ist das **brigk**, das digitale Gründerzentrum.",
-    "description_en": "On Schulstraße is **Amadeus**, a rock bar that already has cult status. Directly opposite is **Frisch & Veg**, a vegetarian/vegan bistro where you can get delicious food. You also get a student discount there if you say so when paying. Directly above or next to Amadeus is **brigk**, the digital start-up centre.",
+    "description_en": "In Schulstraße is the **Amadeus**, a rock bar that already has cult status. Directly opposite is **Frisch & Veg**, a vegetarian/vegan bistro where you can get delicious food. You also get a student discount there if you say so when paying. Directly above or next to Amadeus is **brigk**, the digital start-up centre.",
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Amadeus.mp4",
     "poster": "https://assets.neuland.app/tour/Amadeus.jpg",
@@ -481,8 +481,8 @@
   },
   {
     "title": "Neues Schloss",
-    "description_de": "Das **Neue Schloss** wurde im 15. Jahrhundert erbaut und zählt heute zu den größten, fast komplett erhaltenen Burganlagen Süddeutschlands. Im Schlosshof kann man schön entspannen und die verschiedenen Tore können als Shortcuts genutzt werden. Neben an ist das alte Gießereigelände, was aktuell aus mehren besteht, auf denen zukünftig das Museum für Konkrete Kunst und Design, das Kongresshotel und das digitale Gründerzentrum brigk entstehen. Im 19. Jahrhundert läutete die Gießerei den Beginn der Industrialisierung in Ingolstadt ein und war damals die königlich bayrische Geschütz- und Geschossfabrik.",
-    "description_en": "The **New Castle** was built in the 15th century and is today one of the largest, almost completely preserved castle complexes in southern Germany. You can relax in the castle courtyard and use the various gates as shortcuts. Next door is the old foundry site, which currently consists of several buildings on which the Museum of Concrete Art and Design, the congress hotel and the digital start-up centre brigk will be built in the future. In the 19th century, the foundry heralded the beginning of industrialisation in Ingolstadt and was the royal Bavarian gun and bullet factory at the time.",
+    "description_de": "Das **Neue Schloss** wurde im 15. Jahrhundert erbaut und zählt heute zu den größten, fast komplett erhaltenen Schlossanlagen Süddeutschlands. Es kann auch oft mit einer Burg verwechselt werden, da es genau in der Übergangszeit vom Burgen- zum Schlossbau entstanden ist. Im Schlosshof kann man schön entspannen und die verschiedenen Tore können als Shortcuts genutzt werden. Neben an ist das alte Gießereigelände, was aktuell aus mehreren Baustellen besteht, auf denen zukünftig das Museum für konkrete Kunst und Design, das Kongresshotel und das digitale Gründerzentrum brigk entstehen. Im 19. Jahrhundert läutete die Gießerei den Beginn der Industrialisierung in Ingolstadt ein und war damals die königlich bayrische Geschütz- und Geschossfabrik.",
+    "description_en": "The **New Castle** was built in the 15th century and is today one of the largest, almost completely preserved castle complexes in southern Germany. It can also often be mistaken for a castle, as it was built precisely in the transitional period from castle to palace construction. You can relax in the castle courtyard and use the various gates as shortcuts. Next door is the old foundry site, which currently consists of several construction sites where the Museum of Concrete Art and Design, the congress hotel and the digital start-up centre brigk will be built in the future. In the 19th century, the foundry heralded the beginning of industrialisation in Ingolstadt and was the royal Bavarian gun and bullet factory at the time.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Neues%20Schloss.mp4",
     "poster": "https://assets.neuland.app/tour/Neues%20Schloss.jpg",
@@ -531,8 +531,8 @@
   },
   {
     "title": "Asamkirche Maria de Victoria",
-    "description_de": "Die **Asamkirche** ist eine wunderschöne barocke Kirche der Gebrüder Asam. Sie ist nicht nur außen sehr schön anzusehen, sondern hat auch atemberaubende Gemälde innen. Gerade die Deckengemälde sind faszinierend. Wenn ihr die Möglichkeit habt die Kirche mal von innen zu betrachten, achtet dabei besonders auf die Augen der Figuren des Deckengemäldes.",
-    "description_en": "The **Asam Church** is a beautiful baroque church built by the Asam brothers. It is not only beautiful to look at on the outside, but also has breathtaking paintings inside. Especially the ceiling paintings are fascinating. If you have the opportunity to see the church from the inside, pay special attention to the eyes of the figures on the ceiling painting.",
+    "description_de": "Die **Asamkirche** ist eine wunderschöne barocke Kirche. Sie ist nicht nur außen sehr schön anzusehen, sondern hat auch atemberaubende Gemälde der Gebrüder Asam innen. Gerade das Deckengemälde ist faszinierend. Wenn ihr die Möglichkeit habt die Kirche mal von innen zu betrachten, achtet dabei besonders auf die Augen der Figuren des Deckengemäldes. Für eine Kirche ist das Gebäude aber ziemlich versteckt oder? Das liegt daran, dass die Asamkirche Maria de Victoria ursprünglich nicht als öffentliche Kirche geplant war, sondern als Versammlungs- und Gebetsraum für die Theologische Fakultät der Universität Ingolstadt.",
+    "description_en": "The **Asam Church** is a beautiful baroque church. It is not only beautiful to look at on the outside, but also has breathtaking paintings by the Asam brothers inside. The ceiling painting in particular is fascinating. If you have the opportunity to see the church from the inside, pay special attention to the eyes of the figures in the ceiling painting. For a church, the building is quite hidden, isn't it? That's because the Asamkirche Maria de Victoria was not originally planned as a public church, but as a meeting and prayer room for the theological faculty of Ingolstadt University.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Asamkirche.mp4",
     "poster": "https://assets.neuland.app/tour/Asamkirche.jpg",
@@ -541,8 +541,8 @@
   },
   {
     "title": "Ickstatthaus",
-    "description_de": "Das **Ickstatthaus**, auch **Salamanderhaus** genannt, in der Ludwigstraße hat seinen Namen vom Freiherr von Ickstatt, der im 18. Jahrhundert gemeinsam mit Ludwig Fronhofer die Realschule erfunden hat. Beide waren Mitglieder der Illuminati, einem Geheimbund von Aufklärern. Die Fassade des Hauses zählt zu den höchsten barocken Bürgerhausfassaden Europas. Wenn man die Verzierungen genauer untersucht kann man unten, mittig einen Salamander und ein paar Stockwerke höher ein Auge in einem Dreieck entdecken.",
-    "description_en": "The **Ickstatthaus**, also called **Salamanderhaus**, in Ludwigstraße takes its name from Baron von Ickstatt, who invented the Realschule together with Ludwig Fronhofer in the 18th century. Both were members of the Illuminati, a secret society of Enlightenment thinkers. The façade of the house is one of the highest baroque town house façades in Europe. If you examine the decorations more closely, you can see a salamander in the centre at the bottom and an eye in a triangle a few storeys up.",
+    "description_de": "Das **Ickstatthaus**, auch **Salamanderhaus** genannt, in der Ludwigstraße hat seinen Namen vom Freiherr von Ickstatt, der Ziehvater von Adam Weishaupt. Außerdem hat er im 18. Jahrhundert gemeinsam mit Ludwig Fronhofer die Realschule erfunden. Beide waren Mitglieder der Illuminati, einem Geheimbund von Aufklärern. Die Fassade des Hauses zählt zu den höchsten barocken Bürgerhausfassaden Europas. Wenn man die Verzierungen genauer untersucht kann man unten, mittig einen Salamander und ein paar Stockwerke höher ein Auge in einem Dreieck entdecken. Die beiden Figuren sind die Heilige Walburga, die Schwester von Willibald von Eichstätt, und der Heilige Laurentius, der auf einem Grill ermordet wurde.",
+    "description_en": "The **Ickstatthaus**, also called **Salamanderhaus**, in Ludwigstraße takes its name from Freiherr von Ickstatt, the foster father of Adam Weishaupt. He also invented the Realschule together with Ludwig Fronhofer in the 18th century. Both were members of the Illuminati, a secret society of Enlightenment thinkers. The façade of the house is one of the highest baroque town house façades in Europe. If you examine the decorations more closely, you can spot a salamander at the bottom, in the middle, and an eye in a triangle a few storeys up. The two figures are Saint Walburga, the sister of Willibald of Eichstätt, and Saint Laurentius, who was murdered on a barbecue.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Ickstatthaus.mp4",
     "poster": "https://assets.neuland.app/tour/Ickstatthaus.jpg",
@@ -581,8 +581,8 @@
   },
   {
     "title": "Herzogskasten",
-    "description_de": "Vom Theaterplatz aus hat man einen sehr guten Blick auf das **Alte Schloss**, auch gennant **Herzogskasten**, welches von Ludwig den Strengen (1253-1294) erbaut wurde. Es war damals das südöstliche Eck der ersten Stadtmauer Ingolstadts und ist heute die Stadtbücherei.",
-    "description_en": "From the theatre square you have a very good view of the **Old Castle**, also known as the **Herzogskasten (Duke’s Box)**, which was built by Ludwig the Strict (1253-1294). At that time it was the south-eastern corner of Ingolstadt's first city wall and is now the city library.",
+    "description_de": "Vom Theaterplatz aus hat man einen sehr guten Blick auf das **Alte Schloss**, auch gennant **Herzogskasten**, welches von Ludwig dem Strengen (1253-1294) erbaut wurde. Es war damals das südöstliche Eck der ersten Stadtmauer Ingolstadts und ist heute die Stadtbücherei.",
+    "description_en": "From the theatre square you have a very good view of the **Alte Schloss**, also called **Herzogskasten**, which was built by Ludwig the Strict (1253-1294). At that time it was the south-eastern corner of Ingolstadt's first city wall and is now the city library.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Herzogskasten.mp4",
     "poster": "https://assets.neuland.app/tour/Herzogskasten.jpg",
@@ -601,8 +601,8 @@
   },
   {
     "title": "Bierbrunnen",
-    "description_de": "Der **Bierbrunnen** an der Hohen Schule feiert das Reinheitsgebot von 1516, das älteste Lebensmittelgesetz Deutschlands, das heute noch gültig ist. Demnach darf Bier nur aus Hopfen, Malz, Hefe und Wasser hergestellt werden. Zu bestimmten Anlässen fließt in dem Brunnen auch mal eine kleine Menge Bier. Am selben Platz wird jährlich das Bierfest zur Feier des Reinheitsgebots gefeiert.",
-    "description_en": "The **beer fountain** at the Hohe Schule celebrates the Purity Law of 1516, the oldest food law in Germany that is still valid today. According to this law, beer may only be made from hops, malt, yeast and water. On certain occasions, a small amount of beer also flows in the fountain. The annual beer festival celebrating the Purity Law is held in the same place.",
+    "description_de": "Der **Bierbrunnen** an der Hohen Schule feiert das Reinheitsgebot von 1516, das älteste Lebensmittelgesetz Deutschlands, das heute noch gültig ist. Demnach darf Bier nur aus Hopfen, Malz, Hefe und Wasser hergestellt werden. Zu bestimmten Anlässen fließt in dem Brunnen auch mal eine kleine Menge Bier. Am selben Platz findet jährlich das Bierfest zur Feier des Reinheitsgebots statt.",
+    "description_en": "The **beer fountain** at the Hohe Schule celebrates the Purity Law of 1516, Germany's oldest food law, which is still valid today. According to it, beer may only be made from hops, malt, yeast and water. On certain occasions, a small amount of beer also flows in the fountain. The annual beer festival celebrating the Purity Law is held in the same place.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Bierbrunnen.mp4",
     "poster": "https://assets.neuland.app/tour/Bierbrunnen.jpg",
@@ -629,8 +629,8 @@
   },
   {
     "title": "Marieluise Fleißer-Figur",
-    "description_de": "In der Theresienstraße findet ihr vor dem Segafredo das Denkmal für **Marieluise Fleißer** (1901 - 1974) von Elisabeth Wagner. Fleißer war die bekannteste Dichterin Ingolstadts und außerdem die Geliebte von Berthold Brecht. Das Fleißerhaus ist zwei Straßen weiter in der Kupferstaße, also warum steht ihr Denkmal vor dem Segafredo? Ganz einfach - Ihr Ehemann Josef „Sepp“ Kaindl hatte dort einen Tabakladen und wahrscheinlich, weil dort die Figur besser gesehen wird.",
-    "description_en": "In Theresienstraße, in front of the Segafredo, you will find the monument to **Marieluise Fleißer** (1901 - 1974) by Elisabeth Wagner. Fleißer was Ingolstadt's best-known poet and also Berthold Brecht's lover. The Fleißer House is two streets away in Kupferstaße, so why is her monument in front of the Segafredo? Quite simply - her husband Josef \"Sepp\" Kaindl had a tobacco shop there and probably because the figure is better seen there.",
+    "description_de": "In der Theresienstraße findet ihr vor dem Segafredo das Denkmal für **Marieluise Fleißer** (1901 - 1974) von Elisabeth Wagner. Fleißer war die bekannteste Dichterin Ingolstadts und außerdem die Geliebte von Berthold Brecht. Das Fleißerhaus ist zwei Straßen weiter in der Kupferstaße, also warum steht ihr Denkmal vor dem Segafredo? Ganz einfach - Ihr Ehemann Josef „Bepp“ Heindl hatte dort einen Tabakladen, in dem Fleißer nach ihrer Rückkehr nach Ingolstadt gearbeitet hat.",
+    "description_en": "In Theresienstraße, in front of the Segafredo, you will find the monument to **Marieluise Fleißer** (1901 - 1974) by Elisabeth Wagner. Fleißer was Ingolstadt's best-known poet and also Berthold Brecht's lover. The Fleißer House is two streets away in Kupferstaße, so why is her memorial in front of the Segafredo? Quite simply - her husband Josef \"Bepp\" Heindl had a tobacco shop there, where Fleißer worked after her return to Ingolstadt.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Fleißer.mp4",
     "poster": "https://assets.neuland.app/tour/Fleißer.jpg",
@@ -649,8 +649,8 @@
   },
   {
     "title": "Museum für Konkrete Kunst",
-    "description_de": "Das **MKKD (Museum für Konkrete Kunst und Design)** ist mit seinen wechselnden Ausstellungen eine absolute Empfehlung, gerade für Studierende, die etwas mit Design studieren. In der Zukunft wird das MKKD direkt neben die THI auf das alte Gießereigelände ziehen.",
-    "description_en": "With its changing exhibitions, the **MKKD (Museum of Concrete Art and Design)** is an absolute recommendation, especially for students studying something to do with design. In the future, the MKKD will move right next to the THI to the old foundry site.",
+    "description_de": "Das **MKK (Museum für konkrete Kunst)** ist mit seinen wechselnden Ausstellungen eine absolute Empfehlung, gerade für Studierende, die etwas mit Design studieren. In der Zukunft wird es als das MKKD (Museum für konkrete Kunst und Design) direkt neben die THI auf das alte Gießereigelände ziehen.",
+    "description_en": "The **MKK (Museum for Concrete Art)** with its changing exhibitions is an absolute recommendation, especially for students studying something to do with design. In the future, it will move to the old foundry site as the MKKD (Museum for Concrete Art and Design) right next to the THI.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/MKK.mp4",
     "poster": "https://assets.neuland.app/tour/MKK.jpg",
@@ -659,8 +659,8 @@
   },
   {
     "title": "Teufelsstein",
-    "description_de": "Der **Teufelsstein** an der Ecke Theresienstraße/Am Stein gibt der Straße Am Stein ihren Namen. Warum wird dieses rote Rechteck im Boden Teufelsstein gennant? Der Sage nach war der Teufel eifersüchtig, dass so eine schöne Kirche gebaut wird, dass er den Bau sabotieren wollte, indem er einen Stein, den Teufelsstein, auf die Baustelle geworfen hat. Allerdings war er damit nicht erfolgreich. Der Stein wurde auf einem Karren von der Baustelle entfernt und an die heutige Stelle gebracht. Aus Angst, dass der Karren Unheil bringen könnte wurde dieser dann verbrannt.",
-    "description_en": "The **Teufelsstein (Devil's Stone)** at the corner of Theresienstraße and Am Stein gives the street Am Stein its name. Why is this red rectangle in the ground called the Devil's Stone? According to legend, the devil was jealous that such a beautiful church was being built that he wanted to sabotage the construction by throwing a stone, the Devil's Stone, onto the building site. However, he was not successful in doing so. The stone was removed from the building site on a cart and brought to its present location. Fearing that the cart could bring disaster, it was then burned.",
+    "description_de": "Das ist der **Teufelsstein**. Aber warum wird dieses rote Rechteck im Boden Teufelsstein gennant? Der Sage nach war der Teufel eifersüchtig, dass so eine schöne Kirche gebaut wird, dass er den Bau sabotieren wollte, indem er einen Stein, den Teufelsstein, auf die Baustelle geworfen hat. Allerdings war er damit nicht erfolgreich. Der Stein wurde auf einem Karren von der Baustelle entfernt und an die heutige Stelle gebracht. Aus Angst, dass der Karren Unheil bringen könnte wurde dieser dann verbrannt. Ob wohl es sehr schlüssig erscheint, gibt der Teufelsstein der Straße Am Stein nicht ihren Namen. Der kommt daher, dass an der Stelle der heutigen Stadtapotheke das erste Steinhaus der Stadt stand.",
+    "description_en": "This is the **devil's stone**. But why is this red rectangle in the ground called the Devil's Stone? According to legend, the devil was jealous that such a beautiful church was being built that he wanted to sabotage the construction by throwing a stone, the Devil's Stone, onto the building site. However, he was not successful in doing so. The stone was removed from the building site on a cart and brought to its present location. Fearing that the cart could bring disaster, it was then burned. Although it seems very logical, the Devil's Stone does not give the street Am Stein its name. The name comes from the fact that the town's first stone house stood on the site of today's town pharmacy.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Teufelsstein.mp4",
     "poster": "https://assets.neuland.app/tour/Teufelsstein.jpg",
@@ -668,7 +668,7 @@
     "lon": 11.42420
   },
   {
-    "title": "Landesgartenschau 2021",
+    "title": "Landesgartenschau 2020",
     "description_de": "Ursprünglich hätte bereits 2020 die Landesgartenschau im neu gebauten Park in der Nähe vom Westpark stattfinden sollen. Aufgrund gewisser Ereignisse wurde diese dann auf 2021 verschoben. Auch die THI ist hier mit einem Stand vertreten.",
     "description_en": "Originally, the state horiticultural show in the area near the Westpark was planned to take place in 2020. Due to certain events, it was then moved to 2021. The THI also has a booth here.",
     "category": "sehenswuerdig",
@@ -687,8 +687,8 @@
   },
   {
     "title": "Kap 94",
-    "description_de": "Das **Kap 94** war ein Teil der Festungsanlagen um die Innenstadt. Heute ist es eine Kunstund Kulturwerkstatt. Neben Ateliers von Künstlern gibt es hier auch immer wieder Konzerte, Partys und andere kulturelle Veranstaltungen.",
-    "description_en": "**Kap 94** was part of the fortifications around the city centre. Today it is an art and culture workshop. In addition to artists' studios, there are always concerts, parties and other cultural events here.",
+    "description_de": "Das **Kap 94** war ein Teil der Festungsanlagen um die Innenstadt. Heute ist es eine Kunst- und Kulturwerkstatt. Neben Ateliers von Künstlern gibt es hier auch immer wieder Konzerte, Partys und andere kulturelle Veranstaltungen.",
+    "description_en": "The **Kap 94** was part of the fortifications around the city centre. Today it is an art and culture workshop. In addition to artists' studios, there are always concerts, parties and other cultural events here.",
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Kap%2094.mp4",
     "poster": "https://assets.neuland.app/tour/Kap%2094.jpg",
