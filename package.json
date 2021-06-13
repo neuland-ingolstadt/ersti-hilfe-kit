@@ -8,25 +8,25 @@
     "start": "next start"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
-    "@fortawesome/free-brands-svg-icons": "^5.15.2",
-    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "bootstrap": "^4.6.0",
     "leaflet": "^1.7.1",
-    "next": "10.0.7",
-    "react": "17.0.1",
-    "react-bootstrap": "^1.5.0",
+    "next": "^10.2.3",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.6.1",
     "react-dom": "17.0.1",
-    "react-leaflet": "^3.1.0",
+    "react-leaflet": "^3.2.0",
     "react-markdown": "^5.0.3"
   },
   "devDependencies": {
-    "eslint": "^7.21.0",
-    "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint": "^7.28.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
-    "eslint-plugin-react": "^7.22.0"
+    "eslint-plugin-react": "^7.24.0"
   }
 }
