@@ -92,7 +92,7 @@ export default function TourMap () {
     <>
       <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>
-          <Modal.Title>Virtuelle Stadt- und Campusführung</Modal.Title>
+          <Modal.Title as="h5">Virtuelle Stadt- und Campusführung</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
