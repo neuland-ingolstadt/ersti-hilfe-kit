@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 /* leaflet popup styling */
 
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
