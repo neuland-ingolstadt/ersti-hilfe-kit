@@ -36,6 +36,13 @@ const HEADINGS = {
 // because they do not have enough space to fit the popup plus the padding
 const PADDING = window.matchMedia('(max-width: 768px)').matches ? 10 : 50
 
+// use custom link implementation to set rel="noopener"
+const COMPONENTS = {
+  a (props) {
+    return <a target="_blank" rel="noopener" {...props} />
+  }
+}
+
 const categorizedData = data
   .map(elem => elem.category)
   .filter((v, i, a) => a.indexOf(v) === i)
@@ -166,8 +173,8 @@ export default function TourMap () {
                 </h4>
                 <div className={styles.popupDescription}>
                   {navigator.language.startsWith('de')
-                    ? <ReactMarkdown>{elem.description_de}</ReactMarkdown>
-                    : <ReactMarkdown>{elem.description_en}</ReactMarkdown>
+                    ? <ReactMarkdown components={COMPONENTS}>{elem.description_de}</ReactMarkdown>
+                    : <ReactMarkdown components={COMPONENTS}>{elem.description_en}</ReactMarkdown>
                   }
                 </div>
                 {elem.video &&
