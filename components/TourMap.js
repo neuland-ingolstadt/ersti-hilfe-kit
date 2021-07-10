@@ -12,7 +12,7 @@ import {
   faPhotoVideo
 } from '@fortawesome/free-solid-svg-icons'
 
-import styles from '../styles/Map.module.css'
+import styles from '../styles/TourMap.module.css'
 
 import data from '../data/tour.json'
 
@@ -128,7 +128,7 @@ export default function TourMap () {
                   {elem.title}
                   {elem.video && (
                     <div className={styles.sidebarVideoIcon}>
-                      <FontAwesomeIcon icon={faPhotoVideo} fixedWidth />
+                      <FontAwesomeIcon icon={faPhotoVideo} className="text-muted" fixedWidth />
                     </div>
                   )}
                 </ListGroup.Item>
