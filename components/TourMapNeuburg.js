@@ -14,7 +14,7 @@ import {
 
 import styles from '../styles/TourMap.module.css'
 
-import data from '../data/tour.json'
+import data from '../data/neuburg/tour.json'
 
 const ICONS = {
   gastro: '/pin_green.svg',
@@ -77,7 +77,7 @@ function getOSMLink (lat, lon) {
   return `https://www.openstreetmap.org/index.html?lat=${lat}&lon=${lon}&mlat=${lat}&mlon=${lon}&zoom=19&layers=M`
 }
 
-export default function TourMap () {
+export default function TourMapIngolstadt () {
   const markerRefs = data.map(() => createRef())
   const [showModal, setShowModal] = useState(true)
 
@@ -138,8 +138,8 @@ export default function TourMap () {
         </div>
 
         <MapContainer
-          center={[48.76415, 11.42434]}
-          zoom={16}
+          center={[48.7386, 11.2034]}
+          zoom={14}
           scrollWheelZoom={true}
           zoomControl={false}
           // set tap=false to work around weird popup behavior on iOS

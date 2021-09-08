@@ -14,7 +14,7 @@ import {
   faDiscord
 } from '@fortawesome/free-brands-svg-icons'
 
-import calendar from '../data/calendar.json'
+import calendar from '../data/ingolstadt/calendar.json'
 import styles from '../styles/Home.module.css'
 
 export default function Home () {
@@ -42,7 +42,7 @@ export default function Home () {
         </p>
 
         <p>
-          Um euch die Ankunft in Ingolstadt und den Studienbeginn etwas angenehmer zu gestalten, haben wir entschlossen, eine digitale O-Phase zu erproben. Wir hoffen, eure Zeit an unserer Hochschule damit etwas angenehmer gestalten zu können.
+          Um euch die Ankunft in Ingolstadt sowie Neuburg und den Studienbeginn etwas angenehmer zu gestalten, haben wir entschlossen, eine digitale O-Phase zu erproben. Wir hoffen, eure Zeit an unserer Hochschule damit etwas angenehmer gestalten zu können.
         </p>
 
         <p>
@@ -53,16 +53,33 @@ export default function Home () {
 
         <h2 className={styles.subtitle}>
           <FontAwesomeIcon icon={faMapSigns} fixedWidth />
-          <> Virtuelle Stadt- und Campusführung</>
+          <> Virtuelle Stadt- und Campusführung für Ingolstadt</>
         </h2>
 
         <p>
-          Eine virtuelle Stadt- und Campusführung als interaktive Karte, damit ihr die Stadt und unsere Hochschule selbst erkunden könnt.
+          Eine virtuelle Stadt- und Campusführung als interaktive Karte, damit ihr die Stadt Ingolstadt und unseren Campus in Ingolstadt selbst erkunden könnt.
         </p>
 
-        <Link href="/tour">
+        <Link href="/tourIngolstadt">
           <Button variant="primary">
-            Stadt- und Campusführung öffnen
+            Stadt- und Campusführung für Ingolstadt öffnen
+          </Button>
+        </Link>
+
+        <hr />
+
+        <h2 className={styles.subtitle}>
+          <FontAwesomeIcon icon={faMapSigns} fixedWidth />
+          <> Virtuelle Stadt- und Campusführung für Neuburg</>
+        </h2>
+
+        <p>
+          Eine virtuelle Stadt- und Campusführung als interaktive Karte, damit ihr die Stadt Neuburg und unseren Campus in Neuburg selbst erkunden könnt.
+        </p>
+
+        <Link href="/tourNeuburg">
+          <Button variant="primary">
+            Stadt- und Campusführung für Neuburg öffnen
           </Button>
         </Link>
 
@@ -70,18 +87,36 @@ export default function Home () {
 
         <h2 className={styles.subtitle}>
           <FontAwesomeIcon icon={faDiscord} fixedWidth />
-          <> Discord-Server der Fakultät Informatik</>
+          <> Discord-Server der Fakultäten</>
         </h2>
 
         <p>
-          Ein Discord-Server, um uns auch in Zeiten von Kontaktbeschränkungen etwas zusammenzubringen.
+          Hier könnt Ihr die Discord-Server der Fakultäten finden:
         </p>
 
         <a href="https://discord.gg/pTvQEZpga7" target="_blank" rel="noreferrer">
           <Button>
-            Discord-Server beitreten
+            Dem Fakultät I-Discord beitreten
           </Button>
-        </a>
+        </a> <br /><br />
+
+        <a href="https://discord.gg/2gzsCD744V" target="_blank" rel="noreferrer">
+          <Button>
+            Dem Fakultät EI-Discord beitreten
+          </Button>
+        </a> <br /><br />
+
+        <a href="https://discord.gg/gP4hQaxmRS" target="_blank" rel="noreferrer">
+          <Button>
+            Dem Fakultät M-Discord beitreten
+          </Button>
+        </a> <br /><br />
+
+        <a href="https://discord.gg/geebhm5UKF" target="_blank" rel="noreferrer">
+          <Button>
+            Dem Fakultät WI-Discord beitreten
+          </Button>
+        </a> <br /><br />
 
         {calendar && calendar.length > 0 &&
           <>

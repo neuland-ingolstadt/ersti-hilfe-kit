@@ -694,5 +694,45 @@
     "poster": "https://assets.neuland.app/tour/Kap%2094.jpg",
     "lat": 48.75788,
     "lon": 11.42361
+  },
+  {
+    "title": "Dekanat der Fakultät Maschinenbau (ServicePoint)",
+    "description_de": "Der ServicePoint der Fakultät Maschinenbau befindet sich im Raum A209.",
+    "description_en": "The ServicePoint of the Faculty of Mechanical Engineering is located in room A209.",
+    "category": "hochschule",
+    "video": "",
+    "poster": "",
+    "lat": 48.76692,
+    "lon": 11.43187
+  },
+  {
+    "title": "Dekanat der Fakultät Elektro- und Informationstechnik (ServicePoint)",
+    "description_de": "Der ServicePoint der Fakultät Elektro- und Informationstechnik befindet sich im Raum A108.",
+    "description_en": "The ServicePoint of the Faculty of Electrical and information technology is located in room A108.",
+    "category": "hochschule",
+    "video": "",
+    "poster": "",
+    "lat": 48.76694,
+    "lon": 11.4317
+  },
+  {
+    "title": "Dekanat der Fakultät Informatik (ServicePoint)",
+    "description_de": "Der ServicePoint der Fakultät Informatik befindet sich im Raum B002.",
+    "description_en": "The ServicePoint of the Faculty of Computer Science is located in room B002.",
+    "category": "hochschule",
+    "video": "",
+    "poster": "",
+    "lat": 48.76728,
+    "lon": 11.43151
+  },
+  {
+    "title": "Dekanat der THI Business School (ServicePoint)",
+    "description_de": "Der ServicePoint der THI Business School befindet sich im Raum F203.",
+    "description_en": "The ServicePoint of the THI Business School is located in room F203.",
+    "category": "hochschule",
+    "video": "",
+    "poster": "",
+    "lat": 48.76627,
+    "lon": 11.43249
   }
 ]
