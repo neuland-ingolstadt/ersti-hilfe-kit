@@ -14,7 +14,7 @@ import {
   faDiscord
 } from '@fortawesome/free-brands-svg-icons'
 
-import calendar from '../data/ingolstadt/calendar.json'
+import calendar from '../data/calendar.json'
 import styles from '../styles/Home.module.css'
 
 export default function Home () {
@@ -60,7 +60,7 @@ export default function Home () {
           Eine virtuelle Stadt- und Campusführung als interaktive Karte, damit ihr die Stadt Ingolstadt und unseren Campus in Ingolstadt selbst erkunden könnt.
         </p>
 
-        <Link href="/tourIngolstadt">
+        <Link href="/tour/ingolstadt">
           <Button variant="primary">
             Stadt- und Campusführung für Ingolstadt öffnen
           </Button>
@@ -77,7 +77,7 @@ export default function Home () {
           Eine virtuelle Stadt- und Campusführung als interaktive Karte, damit ihr die Stadt Neuburg und unseren Campus in Neuburg selbst erkunden könnt.
         </p>
 
-        <Link href="/tourNeuburg">
+        <Link href="/tour/neuburg">
           <Button variant="primary">
             Stadt- und Campusführung für Neuburg öffnen
           </Button>

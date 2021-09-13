@@ -1,4 +1,4 @@
-import React, { useState, createRef } from 'react'
+import React, { useState, createRef, useCallback, useMemo } from 'react'
 import Container from 'react-bootstrap/Container'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
@@ -6,6 +6,7 @@ import ListGroup from 'react-bootstrap/ListGroup'
 import ReactMarkdown from 'react-markdown'
 import L from 'leaflet'
 import { MapContainer, TileLayer, ZoomControl, Marker, Popup } from 'react-leaflet'
+import PropTypes from 'prop-types'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -13,8 +14,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 import styles from '../styles/TourMap.module.css'
-
-import data from '../data/neuburg/tour.json'
 
 const ICONS = {
   gastro: '/pin_green.svg',
@@ -43,20 +42,6 @@ const COMPONENTS = {
   }
 }
 
-const categorizedData = data
-  .map(elem => elem.category)
-  .filter((v, i, a) => a.indexOf(v) === i)
-  .map(category => {
-    const items = data.map((elem, idx) => ({
-      id: idx,
-      ...elem
-    }))
-      .filter(elem => elem.category === category)
-      .sort((a, b) => a.title.localeCompare(b.title))
-
-    return { category, items }
-  })
-
 const icons = {}
 for (const category of Object.keys(ICONS)) {
   icons[category] = L.icon({
@@ -77,16 +62,33 @@ function getOSMLink (lat, lon) {
   return `https://www.openstreetmap.org/index.html?lat=${lat}&lon=${lon}&mlat=${lat}&mlon=${lon}&zoom=19&layers=M`
 }
 
-export default function TourMapIngolstadt () {
-  const markerRefs = data.map(() => createRef())
+export default function TourMap ({ center, data }) {
   const [showModal, setShowModal] = useState(true)
 
-  function openElem (idx) {
+  const markerRefs = useMemo(() => data.map(() => createRef(), [data]))
+
+  const categorizedData = useMemo(() => {
+    return data
+      .map(elem => elem.category)
+      .filter((v, i, a) => a.indexOf(v) === i)
+      .map(category => {
+        const items = data.map((elem, idx) => ({
+          id: idx,
+          ...elem
+        }))
+          .filter(elem => elem.category === category)
+          .sort((a, b) => a.title.localeCompare(b.title))
+
+        return { category, items }
+      })
+  }, [data])
+
+  const openElem = useCallback((idx) => {
     const marker = markerRefs[idx].current
     if (marker) {
       marker.openPopup()
     }
-  }
+  }, [markerRefs])
 
   return (
     <>
@@ -138,8 +140,8 @@ export default function TourMapIngolstadt () {
         </div>
 
         <MapContainer
-          center={[48.7386, 11.2034]}
-          zoom={14}
+          center={center}
+          zoom={16}
           scrollWheelZoom={true}
           zoomControl={false}
           // set tap=false to work around weird popup behavior on iOS
@@ -197,4 +199,8 @@ export default function TourMapIngolstadt () {
       </Container>
     </>
   )
+}
+TourMap.propTypes = {
+  center: PropTypes.array,
+  data: PropTypes.array
 }
