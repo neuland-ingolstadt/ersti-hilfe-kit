@@ -42,7 +42,7 @@ export default function Home () {
         </p>
 
         <p>
-          Um euch die Ankunft in Ingolstadt sowie Neuburg und den Studienbeginn etwas angenehmer zu gestalten, haben wir entschlossen, eine digitale O-Phase zu erproben. Wir hoffen, eure Zeit an unserer Hochschule damit etwas angenehmer gestalten zu können.
+          Um euch die Ankunft in Ingolstadt beziehungsweise Neuburg und den Studienbeginn etwas angenehmer zu gestalten, haben wir entschlossen, eine digitale O-Phase zu erproben. Wir hoffen, eure Zeit an unserer Hochschule damit etwas angenehmer gestalten zu können.
         </p>
 
         <p>
@@ -53,35 +53,28 @@ export default function Home () {
 
         <h2 className={styles.subtitle}>
           <FontAwesomeIcon icon={faMapSigns} fixedWidth />
-          <> Virtuelle Stadt- und Campusführung für Ingolstadt</>
+          <> Virtuelle Stadt- und Campusführung</>
         </h2>
 
         <p>
-          Eine virtuelle Stadt- und Campusführung als interaktive Karte, damit ihr die Stadt Ingolstadt und unseren Campus in Ingolstadt selbst erkunden könnt.
+          Eine virtuelle Stadt- und Campusführung als interaktive Karte, damit ihr Ingolstadt und Neuburg selbst erkunden könnt.
         </p>
-
-        <Link href="/tour/ingolstadt">
-          <Button variant="primary">
-            Stadt- und Campusführung für Ingolstadt öffnen
-          </Button>
-        </Link>
-
-        <hr />
-
-        <h2 className={styles.subtitle}>
-          <FontAwesomeIcon icon={faMapSigns} fixedWidth />
-          <> Virtuelle Stadt- und Campusführung für Neuburg</>
-        </h2>
 
         <p>
-          Eine virtuelle Stadt- und Campusführung als interaktive Karte, damit ihr die Stadt Neuburg und unseren Campus in Neuburg selbst erkunden könnt.
+          <Link href="/tour/ingolstadt">
+            <Button variant="primary">
+              Ingolstädter Führung öffnen
+            </Button>
+          </Link>
         </p>
 
-        <Link href="/tour/neuburg">
-          <Button variant="primary">
-            Stadt- und Campusführung für Neuburg öffnen
-          </Button>
-        </Link>
+        <p>
+          <Link href="/tour/neuburg">
+            <Button variant="primary">
+              Neuburger Führung öffnen
+            </Button>
+          </Link>
+        </p>
 
         <hr />
 
@@ -94,29 +87,37 @@ export default function Home () {
           Hier könnt Ihr die Discord-Server der Fakultäten finden:
         </p>
 
-        <a href="https://discord.gg/pTvQEZpga7" target="_blank" rel="noreferrer">
-          <Button>
-            Dem Fakultät I-Discord beitreten
-          </Button>
-        </a> <br /><br />
+        <p>
+          <a href="https://discord.gg/pTvQEZpga7" target="_blank" rel="noreferrer">
+            <Button>
+              Server der Fakultät I
+            </Button>
+          </a>
+        </p>
 
-        <a href="https://discord.gg/2gzsCD744V" target="_blank" rel="noreferrer">
-          <Button>
-            Dem Fakultät EI-Discord beitreten
-          </Button>
-        </a> <br /><br />
+        <p>
+          <a href="https://discord.gg/2gzsCD744V" target="_blank" rel="noreferrer">
+            <Button>
+              Server der Fakultät EI
+            </Button>
+          </a>
+        </p>
 
-        <a href="https://discord.gg/gP4hQaxmRS" target="_blank" rel="noreferrer">
-          <Button>
-            Dem Fakultät M-Discord beitreten
-          </Button>
-        </a> <br /><br />
+        <p>
+          <a href="https://discord.gg/gP4hQaxmRS" target="_blank" rel="noreferrer">
+            <Button>
+              Server der Fakultät M
+            </Button>
+          </a>
+        </p>
 
-        <a href="https://discord.gg/geebhm5UKF" target="_blank" rel="noreferrer">
-          <Button>
-            Dem Fakultät WI-Discord beitreten
-          </Button>
-        </a> <br /><br />
+        <p>
+          <a href="https://discord.gg/geebhm5UKF" target="_blank" rel="noreferrer">
+            <Button>
+              Server der Fakultät WI
+            </Button>
+          </a>
+        </p>
 
         {calendar && calendar.length > 0 &&
           <>
