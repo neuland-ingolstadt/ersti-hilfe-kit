@@ -126,8 +126,8 @@
     "category": "hochschule",
     "video": "",
     "poster": "",
-    "lat": 48.73426,
-    "lon": 11.17427
+    "lat": 48.73237,
+    "lon": 11.17253
   },
   {
     "title": "Rennbahn",
@@ -176,8 +176,8 @@
     "category": "gastro",
     "video": "",
     "poster": "",
-    "lat": 48.7038,
-    "lon": 11.3246
+    "lat": 48.73332,
+    "lon": 11.18270
   },
   {
     "title": "Subway",
@@ -236,8 +236,8 @@
     "category": "gastro",
     "video": "",
     "poster": "",
-    "lat": 48.7038,
-    "lon": 11.3246
+    "lat": 48.73504,
+    "lon": 11.18002
   },
   {
     "title": "Shishco (Shisha und Cocktailbar)",
@@ -390,7 +390,7 @@
     "lon": 11.13989
   },
   {
-    "title": "",
+    "title": "Geotop \"Alter Steinbruch\"",
     "description_de": "",
     "description_en": "",
     "category": "sehenswuerdig",
@@ -446,8 +446,8 @@
     "category": "nuetzlich",
     "video": "",
     "poster": "",
-    "lat": 48.7038,
-    "lon": 11.3246
+    "lat": 48.72742,
+    "lon": 11.17811
   },
   {
     "title": "Bushaltestelle Hofgarten",
@@ -456,8 +456,8 @@
     "category": "nuetzlich",
     "video": "",
     "poster": "",
-    "lat": 48.72742,
-    "lon": 11.17811
+    "lat": 48.73635,
+    "lon": 11.18155
   },
   {
     "title": "Bücherturm / Stadtbücherei",
