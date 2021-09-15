@@ -42,7 +42,7 @@ export default function Home () {
         </p>
 
         <p>
-          Um euch die Ankunft in Ingolstadt und den Studienbeginn etwas angenehmer zu gestalten, haben wir entschlossen, eine digitale O-Phase zu erproben. Wir hoffen, eure Zeit an unserer Hochschule damit etwas angenehmer gestalten zu können.
+          Um euch die Ankunft in Ingolstadt beziehungsweise Neuburg und den Studienbeginn etwas angenehmer zu gestalten, haben wir entschlossen, eine digitale O-Phase zu erproben. Wir hoffen, eure Zeit an unserer Hochschule damit etwas angenehmer gestalten zu können.
         </p>
 
         <p>
@@ -57,31 +57,67 @@ export default function Home () {
         </h2>
 
         <p>
-          Eine virtuelle Stadt- und Campusführung als interaktive Karte, damit ihr die Stadt und unsere Hochschule selbst erkunden könnt.
+          Eine virtuelle Stadt- und Campusführung als interaktive Karte, damit ihr Ingolstadt und Neuburg selbst erkunden könnt.
         </p>
 
-        <Link href="/tour">
-          <Button variant="primary">
-            Stadt- und Campusführung öffnen
-          </Button>
-        </Link>
+        <p>
+          <Link href="/tour/ingolstadt">
+            <Button variant="primary">
+              Ingolstädter Führung öffnen
+            </Button>
+          </Link>
+        </p>
+
+        <p>
+          <Link href="/tour/neuburg">
+            <Button variant="primary">
+              Neuburger Führung öffnen
+            </Button>
+          </Link>
+        </p>
 
         <hr />
 
         <h2 className={styles.subtitle}>
           <FontAwesomeIcon icon={faDiscord} fixedWidth />
-          <> Discord-Server der Fakultät Informatik</>
+          <> Discord-Server der Fakultäten</>
         </h2>
 
         <p>
-          Ein Discord-Server, um uns auch in Zeiten von Kontaktbeschränkungen etwas zusammenzubringen.
+          Hier könnt Ihr die Discord-Server der Fakultäten finden:
         </p>
 
-        <a href="https://discord.gg/pTvQEZpga7" target="_blank" rel="noreferrer">
-          <Button>
-            Discord-Server beitreten
-          </Button>
-        </a>
+        <p>
+          <a href="https://discord.gg/pTvQEZpga7" target="_blank" rel="noreferrer">
+            <Button>
+              Server der Fakultät I
+            </Button>
+          </a>
+        </p>
+
+        <p>
+          <a href="https://discord.gg/2gzsCD744V" target="_blank" rel="noreferrer">
+            <Button>
+              Server der Fakultät EI
+            </Button>
+          </a>
+        </p>
+
+        <p>
+          <a href="https://discord.gg/gP4hQaxmRS" target="_blank" rel="noreferrer">
+            <Button>
+              Server der Fakultät M
+            </Button>
+          </a>
+        </p>
+
+        <p>
+          <a href="https://discord.gg/geebhm5UKF" target="_blank" rel="noreferrer">
+            <Button>
+              Server der Fakultät WI
+            </Button>
+          </a>
+        </p>
 
         {calendar && calendar.length > 0 &&
           <>

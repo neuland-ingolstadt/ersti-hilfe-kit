@@ -8,26 +8,26 @@
     "start": "next start"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@fortawesome/react-fontawesome": "^0.1.14",
-    "bootstrap": "^5.0.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "bootstrap": "^5.1.1",
     "leaflet": "^1.7.1",
-    "next": "^11.1.1",
+    "next": "^11.1.2",
     "react": "^17.0.2",
-    "react-bootstrap": "^v2.0.0-beta.2",
+    "react-bootstrap": "^2.0.0-beta.6",
     "react-dom": "^17.0.2",
-    "react-leaflet": "^3.2.0",
-    "react-markdown": "^6.0.2"
+    "react-leaflet": "^3.2.1",
+    "react-markdown": "^7.0.1"
   },
   "devDependencies": {
-    "eslint": "^7.30.0",
-    "eslint-config-next": "^11.0.1",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.1.2",
     "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-react": "^7.24.0"
+    "eslint-plugin-react": "^7.25.1"
   }
 }
