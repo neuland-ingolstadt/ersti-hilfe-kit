@@ -1,4 +1,4 @@
-## Tische an der Hoschulwiese (Gebäude H)
+## Tische an der Hoschulwiese (Wiese)
 uuid: qH0uY
 Points for Finding: 50
 
