@@ -1,7 +1,3 @@
 ## Große Vorlesungssäle (Gebäude E)
-uuid: ZC0kn
-Points for Finding: 50
-
-
-
-
+ID: ZC0kn
+Points: 50

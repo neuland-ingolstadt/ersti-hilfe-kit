@@ -1,9 +1,5 @@
 ## Wasserspender (Gebäude G)
-uuid: NaXwg
-Points for Finding: 50
+ID: NaXwg
+Points: 50
 
 Benutzt diesen Wasserspender lieber als den in Gebäude A!
-
-
-
-
