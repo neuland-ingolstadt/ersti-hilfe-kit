@@ -1,7 +1,7 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { Container, Navbar, Form, InputGroup, Button } from 'react-bootstrap'
+import { Container, Navbar, Form } from 'react-bootstrap'
 import PropTypes from 'prop-types'
 import { faMapMarkerAlt, faQuestion } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -59,12 +59,12 @@ export default function Scavenger ({ id, entry, error }) {
 
   async function changeQuizAnswer (index, newAnswer) {
     const dup = [...quizes]
-    const quiz = {...dup[index]}
+    const quiz = { ...dup[index] }
 
     quiz.answer = newAnswer
     quiz.isCorrect = checkAnswerSimilarity(newAnswer, quiz.correctAnswers)
 
-    if(quiz.isCorrect && !quiz.isUnlocked) {
+    if (quiz.isCorrect && !quiz.isUnlocked) {
       const db = new ScavengerDatabase()
       await db.addItemQuestion(`${id}-${quiz.id}`, quiz, 100)
       setScore(await db.getScore())
