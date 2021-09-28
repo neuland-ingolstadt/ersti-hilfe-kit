@@ -1,5 +1,5 @@
 ## Service Point Studienangelegenheiten (Gebäude A)
-ID: TOK6M
+ID: UKEEn
 Points: 50
 
 Das SCS ist euer Ansprechpartner für alle administrativen Angelegenheiten sowie für Studienberatung. Hier kriegt ihr unter anderem Bescheinigungen und gebt Abschlussarbeiten ab
