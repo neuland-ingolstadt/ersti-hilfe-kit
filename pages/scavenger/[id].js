@@ -11,7 +11,8 @@ import ScavengerDatabase from '../../lib/ScavengerDatabase'
 import data from '../../lib/data'
 
 function checkAnswerSimilarity (givenAnswer, correctAnswers) {
-  return Math.min(...correctAnswers.map(correctAnswer => levenshtein(correctAnswer.toLowerCase(), givenAnswer.toLowerCase()) / correctAnswer.length)) <= 0.25
+  const applyLevenshtein = x => levenshtein(x.toLowerCase(), givenAnswer.toLowerCase()) / x.length
+  return Math.min(...correctAnswers.map(applyLevenshtein)) <= 0.2
 }
 
 export async function getServerSideProps (context) {
@@ -26,9 +27,8 @@ export async function getServerSideProps (context) {
 }
 
 export default function Scavenger ({ id, entry, error }) {
-  const [lastUpdated, setLastUpdated] = useState(Date.now())
   const [score, setScore] = useState()
-  const [answers, setAnswers] = useState({})
+  const [quizes, setQuizes] = useState([])
 
   useEffect(() => {
     async function update () {
@@ -39,23 +39,43 @@ export default function Scavenger ({ id, entry, error }) {
       const db = new ScavengerDatabase()
       await db.addItem(id, 100)
       setScore(await db.getScore())
+
+      const newQuizes = Promise.all(entry.questions.map(async (question) => {
+        const oldAnswer = await db.getItemQuestion(`${id}-${question.id}`)
+
+        return {
+          id: question.id,
+          question: question.question,
+          correctAnswers: question.answer,
+          answer: oldAnswer?.question.answer || '',
+          isCorrect: !!oldAnswer,
+          isUnlocked: !!oldAnswer
+        }
+      }))
+      setQuizes(await newQuizes)
     }
     update()
-  }, [id, lastUpdated])
+  }, [])
 
-  const check = useCallback(async (question, givenAnswer) => {
-    const correctAnswers = entry.questions.find(x => x.question === question).answer
-    if (checkAnswerSimilarity(givenAnswer, correctAnswers)) {
+  async function changeQuizAnswer (index, newAnswer) {
+    const dup = [...quizes]
+    const quiz = {...dup[index]}
+
+    quiz.answer = newAnswer
+    quiz.isCorrect = checkAnswerSimilarity(newAnswer, quiz.correctAnswers)
+
+    if(quiz.isCorrect && !quiz.isUnlocked) {
       const db = new ScavengerDatabase()
-      await db.addItemQuestion(id, question, 100)
-      setLastUpdated(Date.now())
-    } else {
-      alert('Das war leider nicht die richtige Antwort.')
-    }
-  }, [answers])
+      await db.addItemQuestion(`${id}-${quiz.id}`, quiz, 100)
+      setScore(await db.getScore())
 
-  // the page contents are in a separate component
-  // because Leaflet can't handle SSR
+      quiz.isUnlocked = true
+    }
+
+    dup[index] = quiz
+    setQuizes(dup)
+  }
+
   return (
     <>
       <Head>
@@ -99,21 +119,20 @@ export default function Scavenger ({ id, entry, error }) {
                   Für die richtige Antwort gibt es extra Punkte.
                 </small>
               </p>
-              {entry.questions.map(question =>
-                <div key={question.question} className={styles.question}>
-                  <p key={question.question}>
-                    <strong>{question.question}</strong>
+              {quizes.map((quiz, i) =>
+                <div key={i} className={styles.question}>
+                  <p>
+                    <strong>{quiz.question}</strong>
                   </p>
                   <Form>
-                    <InputGroup>
-                      <Form.Control
-                        type="text"
-                        placeholder="Antwort"
-                        value={answers[question.question] || ''}
-                        onChange={e => setAnswers({ ...answers, [question.question]: e.target.value })}
-                      />
-                      <Button onClick={() => check(question.question, answers[question.question])}>OK</Button>
-                    </InputGroup>
+                    <Form.Control
+                      type="text"
+                      placeholder="Antwort..."
+                      value={quiz.answer || ''}
+                      isValid={quiz.isCorrect || (quiz.answer.length === 0 && quiz.isUnlocked)}
+                      isInvalid={quiz.answer.length > 0 && !quiz.isCorrect}
+                      onChange={e => changeQuizAnswer(i, e.target.value)}
+                    />
                   </Form>
                 </div>
               )}
