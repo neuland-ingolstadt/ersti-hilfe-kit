@@ -10,4 +10,4 @@ A1: Aushang, Neuland, NeulandApp, Neuland-App, THI-App, Google, Werkswelt.de
 
 P2: 25
 Q2: Wie zahle ich in der Mensa?
-A2: Studierendenausweis
+A2: Studierendenausweis, Ausweis, Studiausweis, THI-Ausweis 

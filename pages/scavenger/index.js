@@ -55,11 +55,9 @@ export default function Scavenger ({ id, entry, error }) {
           <p>
             Überall in der THI sind an interessanten Orten QR-Codes angebracht. Scanne diesen QR-Code, um Punkte gutgeschrieben zu bekommen. Die Personen, die am Ende die meisten Punkte haben, kriegen als Preis etwas THI Merch. Alle anderen haben zumindest etwas über ihre Hochschule gelernt. ;)
           </p>
-          {score &&
-            <p>
-              Du hast aktuell <strong>{score} Punkte</strong>.
-            </p>
-          }
+          <p>
+            Du hast aktuell <strong>{score || 0} Punkte</strong>.
+          </p>
         </main>
 
         <footer className={styles.footer}>

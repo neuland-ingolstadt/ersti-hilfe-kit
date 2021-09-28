@@ -2,7 +2,7 @@
 ID: TOK6M
 Points: 50
 
-Hier könnt Ihr verschiedene Studentische Vereine! Außerdem ist auch die StudVer (Studienvertretung ansässig).
+Hier sind verschiedene Studentische Vereine zuhause! Außerdem ist auch die StudVer (Studierendenvertretung) hier ansässig.
 
 Wir finden Engagement in unseren Vereinen sowie der StudVer ist sehr wichtig!
 
