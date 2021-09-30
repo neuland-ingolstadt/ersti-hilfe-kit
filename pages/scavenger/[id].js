@@ -37,7 +37,7 @@ export default function Scavenger ({ id, entry, error }) {
       }
 
       const db = new ScavengerDatabase()
-      await db.addItem(id, 100)
+      await db.addItem(id, entry.points)
       setScore(await db.getScore())
 
       const newQuizes = Promise.all(entry.questions.map(async (question) => {
@@ -45,6 +45,7 @@ export default function Scavenger ({ id, entry, error }) {
 
         return {
           id: question.id,
+          points: question.points,
           question: question.question,
           correctAnswers: question.answer,
           answer: oldAnswer?.question.answer || '',
@@ -66,7 +67,7 @@ export default function Scavenger ({ id, entry, error }) {
 
     if (quiz.isCorrect && !quiz.isUnlocked) {
       const db = new ScavengerDatabase()
-      await db.addItemQuestion(`${id}-${quiz.id}`, quiz, 100)
+      await db.addItemQuestion(`${id}-${quiz.id}`, quiz, quiz.points)
       setScore(await db.getScore())
 
       quiz.isUnlocked = true
