@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import { faMapMarkerAlt, faQuestion } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import levenshtein from 'js-levenshtein'
+import ReactMarkdown from 'react-markdown'
 import styles from '../../styles/Scavenger.module.css'
 import ScavengerDatabase from '../../lib/ScavengerDatabase'
 import data from '../../lib/data'
@@ -110,7 +111,7 @@ export default function Scavenger ({ id, entry, error }) {
                 <FontAwesomeIcon icon={faMapMarkerAlt} /> {entry.heading}
               </h1>
               <p>
-                {entry.text}
+                <ReactMarkdown>{entry.text}</ReactMarkdown>
               </p>
               {quizes.length &&
                 <>
