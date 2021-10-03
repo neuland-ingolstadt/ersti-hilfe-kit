@@ -113,7 +113,7 @@ export default function Scavenger ({ id, entry, error }) {
               <p>
                 <ReactMarkdown>{entry.text}</ReactMarkdown>
               </p>
-              {quizes.length &&
+              {quizes.length > 0 &&
                 <>
                   <h2 className={styles.subtitle}>
                     <FontAwesomeIcon icon={faQuestion} /> Fragen
