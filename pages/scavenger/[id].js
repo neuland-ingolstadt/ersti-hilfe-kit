@@ -112,31 +112,35 @@ export default function Scavenger ({ id, entry, error }) {
               <p>
                 {entry.text}
               </p>
-              <h2 className={styles.subtitle}>
-                <FontAwesomeIcon icon={faQuestion} /> Fragen
-              </h2>
-              <p className="text-muted">
-                <small>
-                  Für die richtige Antwort gibt es extra Punkte.
-                </small>
-              </p>
-              {quizes.map((quiz, i) =>
-                <div key={i} className={styles.question}>
-                  <p>
-                    <strong>{quiz.question}</strong>
+              {quizes.length &&
+                <>
+                  <h2 className={styles.subtitle}>
+                    <FontAwesomeIcon icon={faQuestion} /> Fragen
+                  </h2>
+                  <p className="text-muted">
+                    <small>
+                      Für die richtige Antwort gibt es extra Punkte.
+                    </small>
                   </p>
-                  <Form>
-                    <Form.Control
-                      type="text"
-                      placeholder="Antwort..."
-                      value={quiz.answer || ''}
-                      isValid={quiz.isCorrect || (quiz.answer.length === 0 && quiz.isUnlocked)}
-                      isInvalid={quiz.answer.length > 0 && !quiz.isCorrect}
-                      onChange={e => changeQuizAnswer(i, e.target.value)}
-                    />
-                  </Form>
-                </div>
-              )}
+                  {quizes.map((quiz, i) =>
+                    <div key={i} className={styles.question}>
+                      <p>
+                        <strong>{quiz.question}</strong>
+                      </p>
+                      <Form>
+                        <Form.Control
+                          type="text"
+                          placeholder="Antwort..."
+                          value={quiz.answer || ''}
+                          isValid={quiz.isCorrect || (quiz.answer.length === 0 && quiz.isUnlocked)}
+                          isInvalid={quiz.answer.length > 0 && !quiz.isCorrect}
+                          onChange={e => changeQuizAnswer(i, e.target.value)}
+                        />
+                      </Form>
+                    </div>
+                  )}
+                </>
+              }
             </>
           }
           {error &&
