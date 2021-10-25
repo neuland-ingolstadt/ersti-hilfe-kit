@@ -24,9 +24,9 @@ export default function Map () {
   return (
     <>
       <Head>
-        <title>Virtuelle Stadt- und Campusführung - Campus Ingolstadt</title>
-        <meta name="description" content="Eine virtuelle Stadt- und Campusführung für die Erstis an der TH Ingolstadt - Campus Ingolstadt." />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Virtuelle Stadt- und Campusführung</title>
+        <meta name="description" content="Eine virtuelle Stadt- und Campusführung für die Erstis an der TH Ingolstadt." />
+        <link rel="icon" href="https://assets.neuland.app/StudVer_Logo_ohne%20Schrift.svg" />
       </Head>
 
       <TourMap center={centers[city]} data={data[city]} />
