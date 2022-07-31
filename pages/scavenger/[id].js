@@ -166,7 +166,7 @@ export default function Scavenger ({ id, entry, error }) {
           </p>
           <p>
             <small>
-              Erstellt und entwickelt von der <a href="https://www.thi.de/hochschule/ueber-uns/hochschulgremien/studierendenvertretung" target="_blank" rel="noreferrer">Studierendenvertretung</a> und <a href="https://neuland-ingolstadt.de" target="_blank" rel="noreferrer">Neuland Ingolstadt.</a>
+              Erstellt und entwickelt von der <a href="https://studverthi.de" target="_blank" rel="noreferrer">Studierendenvertretung</a> und <a href="https://neuland-ingolstadt.de" target="_blank" rel="noreferrer">Neuland Ingolstadt.</a>
             </small>
           </p>
         </footer>
