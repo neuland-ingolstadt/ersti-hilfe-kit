@@ -66,25 +66,25 @@ export default function Studies () {
           </h2>
 
           <p>
-            <Link href="/guide/studies">
-              <Button variant="primary">
-                Dein Studium
-              </Button>
-            </Link>
-          </p>
-
-          <p>
-            <Link href="/guide/studver">
-              <Button variant="primary">
-                Deine Studierendenvertretung
-              </Button>
-            </Link>
-          </p>
-
-          <p>
             <Link href="/guide/campus">
               <Button variant="primary">
                 Dein Campus
+              </Button>
+            </Link>
+          </p>
+
+          <p>
+            <Link href="/guide/glossary">
+              <Button variant="primary">
+                Glossar
+              </Button>
+            </Link>
+          </p>
+
+          <p>
+            <Link href="/guide/studies">
+              <Button variant="primary">
+                Dein Studium
               </Button>
             </Link>
           </p>

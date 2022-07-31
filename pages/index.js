@@ -6,25 +6,20 @@ import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faBook,
-  faCalendarAlt,
-  faMapSigns
-} from '@fortawesome/free-solid-svg-icons'
-import {
-  faDiscord
-} from '@fortawesome/free-brands-svg-icons'
+import { faBook, faCalendarAlt, faMapSigns } from '@fortawesome/free-solid-svg-icons'
+import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 
 import calendar from '../data/calendar.json'
 import styles from '../styles/Home.module.css'
+import { Accordion } from 'react-bootstrap'
 
 export default function Home () {
   return (
     <Container className={styles.container}>
       <Head>
         <title>Digitale O-Phase</title>
-        <meta name="description" content="Eine digitale O-Phase für die Erstis an der TH Ingolstadt." />
-        <link rel="icon" href="https://assets.neuland.app/StudVer_Logo_ohne%20Schrift.svg" />
+        <meta name="description" content="Eine digitale O-Phase für die Erstis an der TH Ingolstadt."/>
+        <link rel="icon" href="https://assets.neuland.app/StudVer_Logo_ohne%20Schrift.svg"/>
       </Head>
 
       <img
@@ -52,22 +47,25 @@ export default function Home () {
 
         {calendar && calendar.length > 0 &&
           <>
-            <hr />
+            <hr/>
 
             <h2 className={styles.subtitle}>
-              <FontAwesomeIcon icon={faCalendarAlt} fixedWidth />
+              <FontAwesomeIcon icon={faCalendarAlt} fixedWidth/>
               <> Veranstaltungen</>
             </h2>
 
-            <ul className={styles.calendar}>
+            <Accordion>
               {calendar.map((event, idx) =>
-                <li key={idx}>
-                  <div className={styles.calendarTitle}>{event.title}</div>
-                  <div className={styles.calendarDate}>am {new Date(event.date).toLocaleString()}</div>
-                  <div className={styles.calendarDescription}>{event.description}</div>
-                </li>
+                <Accordion.Item eventKey={idx} key={idx}>
+                  <Accordion.Header>
+                    {event.title} am {new Date(event.date).toLocaleString()}
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    {event.description}
+                  </Accordion.Body>
+                </Accordion.Item>
               )}
-            </ul>
+            </Accordion>
           </>
         }
 
@@ -107,12 +105,23 @@ export default function Home () {
         </p>
 
         <p>
-          Bei allen Informationen, die auf euch einprasseln, vergesst eines nicht: <b>Macht euch nicht verrückt!</b>
-          <br /><br />
-          Ein Neustart ist immer anstrengend und am besten lässt er sich ertragen, wenn man ihn mit anderen teilt. Nutzt die Erstsemesterangebote der Vereine und der Studierendenvertretung und ihr werdet schnell neue Leute kennenlernen. Bei Fragen und Nöten steht euch auch eure Studierendenvertretung im Raum W003 immer zur Verfügung!
+          <Link href="/guide/glossary">
+            <Button variant={'primary'}>
+              Glossar
+            </Button>
+          </Link>
         </p>
 
-        <hr />
+        <p>
+          Bei allen Informationen, die auf euch einprasseln, vergesst eines nicht: <b>Macht euch nicht verrückt!</b>
+          <br/><br/>
+          Ein Neustart ist immer anstrengend und am besten lässt er sich ertragen, wenn man ihn mit anderen teilt. Nutzt
+          die Erstsemesterangebote der Vereine und der Studierendenvertretung und ihr werdet schnell neue Leute
+          kennenlernen. Bei Fragen und Nöten steht euch auch eure Studierendenvertretung im Raum W003 immer zur
+          Verfügung!
+        </p>
+
+        <hr/>
 
         <h2 className={styles.subtitle}>
           <FontAwesomeIcon icon={faMapSigns} fixedWidth />
@@ -132,17 +141,17 @@ export default function Home () {
         </p>
 
         <p>
-          <Link href="/scavenger">
+          <Link href="/tour/neuburg">
             <Button variant="primary">
-              Digitale Schnitzeljagd (Ingolstadt)
+              Neuburger Führung öffnen
             </Button>
           </Link>
         </p>
 
         <p>
-          <Link href="/tour/neuburg">
+          <Link href="/scavenger">
             <Button variant="primary">
-              Neuburger Führung öffnen
+              Digitale Schnitzeljagd (Ingolstadt)
             </Button>
           </Link>
         </p>
