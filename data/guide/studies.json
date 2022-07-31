@@ -4,7 +4,32 @@
     "title": "A-Z der Begriffe und wichtigen Themen",
     "content": [
       {
-        "title": "Test1",
+        "title": "Terminplan/Semestertermine",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Studierendenausweis - Multifunktionskarte",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Rechtliche Grundlagen",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Rückmeldung",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Exmatrikulation",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Beurlaubung",
         "content": "",
         "link": ""
       }
@@ -15,7 +40,47 @@
     "title": "Studieren im digitalen Zeitalter",
     "content": [
       {
-        "title": "Test2",
+        "title": "Zentraler IT Service",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Studierenden Mail",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Primuss",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Moodle",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "THI-App & Neuland.App",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "WLAN",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "VPN & Studierendenlaufwerk",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Programme & Lizenzen",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Scannen, Drucken, Kopieren",
         "content": "",
         "link": ""
       }
@@ -26,7 +91,52 @@
     "title": "Servicestellen und Ansprechpartner:innen",
     "content": [
       {
-        "title": "Test3",
+        "title": "Allgemeine Studienberatung",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Psychosoziale Beratung",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Hilfe bei Diskriminierung und (sexuelle) Belästigung",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Studieren mit chronischer Erkrankung oder Behinderung",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Studieren mit Kind und Familie",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "International Office",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Career Service",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Center of Entrepreneurship",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Studentenwerk Erlangen-Nürnberg",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "BAföG Amt des Studentenwerks",
         "content": "",
         "link": ""
       }
@@ -37,7 +147,37 @@
     "title": "Fachschaften und Studierendenvertretung",
     "content": [
       {
-        "title": "Semestertermine",
+        "title": "Fachschaft Informatik",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Fachschaft Elektro- und Informationstechnik",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Fachschaft Maschinenbau",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Fachschaft THI Business School",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Fachschaft Wirtschaftsingenieurwesen",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Fachschaft Nachhaltige Infrastruktur",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Konvent & Sprecherrat",
         "content": "",
         "link": ""
       }
