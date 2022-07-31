@@ -5,7 +5,8 @@ A virtual city and campus tour for freshmen at the TH Ingolstadt.
 Developed by the [Fachschaft Informatik](https://studverthi.de) in cooperation with [Neuland Ingolstadt e.V.](https://neuland-ingolstadt.de/)
 
 Campustour inspired by the [Fachschaft Wiwi of the University of Göttingen](https://hochschulforumdigitalisierung.de/de/blog/o-phase-online).
-Studyguide inspired by the [StuV of the OTH Regensburg](https://stuv.othr.de/dein-studienguide/)
+
+Studyguide inspired by the [StuV of the OTH Regensburg](https://stuv.othr.de/dein-studienguide/).
 
 ## Deployment
 
