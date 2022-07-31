@@ -78,14 +78,6 @@ export default function Home () {
         </p>
 
         <p>
-          <Link href="/guide/studver">
-            <Button variant="primary">
-              Deine Studierendenvertretung
-            </Button>
-          </Link>
-        </p>
-
-        <p>
           <Link href="/guide/campus">
             <Button variant={'primary'}>
               Dein Campus

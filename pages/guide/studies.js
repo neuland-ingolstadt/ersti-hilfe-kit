@@ -26,7 +26,7 @@ export default function Studies () {
               alt="Studierendenvertretung TH Ingolstadt"
               className={`d-inline-block align-top ${styles.logo}`}
             />{' '}
-            Studienguide - Dein Studium
+            Studienguide
           </Navbar.Brand>
         </Container>
       </Navbar>
@@ -34,7 +34,7 @@ export default function Studies () {
       <Container className={styles.container}>
         <main className={styles.main}>
           <h2 className={styles.title}>
-            Die Grundlagen
+            Dein Studium
           </h2>
 
           Der klare Unterschied zwischen Schule und Studium ist, dass man sich selbst darum kümmern muss, alle
@@ -69,7 +69,6 @@ export default function Studies () {
             </AccordionItem>
           )}
           </Accordion>
-
           <hr/>
 
           <h2 className={styles.subtitle}>

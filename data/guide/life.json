@@ -1,0 +1,73 @@
+[
+  {
+    "category": "socialoffer",
+    "title": "Soziales Angebot",
+    "content": [
+      {
+        "title": "Psychosoziale Beratung",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Wohnen",
+        "content": "",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "category": "culture",
+    "title": "Kulturelles Angebot",
+    "content": [
+      {
+        "title": "Theater",
+        "content": "",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "category": "nightlife",
+    "title": "Nachtleben",
+    "content": [
+      {
+        "title": "Kneipentour",
+        "content": "",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "category": "sports",
+    "title": "Sport und Bewegung",
+    "content": [
+      {
+        "title": "Hochschulsport",
+        "content": "",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "category": "clubs",
+    "title": "Verine und Hochschulgruppen",
+    "content": [
+      {
+        "title": "Neuland Ingolstadt e.V.",
+        "content": "",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "category": "shopping",
+    "title": "Einkaufen",
+    "content": [
+      {
+        "title": "Westpark",
+        "content": "",
+        "link": ""
+      }
+    ]
+  }
+]

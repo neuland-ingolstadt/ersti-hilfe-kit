@@ -1,0 +1,81 @@
+[
+  {
+    "category": "buildings",
+    "title": "Gebäude & Bibliothek",
+    "content": [
+      {
+        "title": "Räume finden",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Container - Gebäude W",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Besondere Gebäude",
+        "content": "",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "category": "ways",
+    "title": "Wege zur Hochschule",
+    "content": [
+      {
+        "title": "Mit dem Fahrrad",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Mit dem Bus",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Mit dem Auto",
+        "content": "",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "category": "mensa",
+    "title": "Mensa, Cafeteria & Reimanns",
+    "content": [
+      {
+        "title": "Mensa",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Cafeteria",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Reimanns",
+        "content": "",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "category": "bib",
+    "title": "Bibliothek",
+    "content": [
+      {
+        "title": "Aufstellung",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "OPAC",
+        "content": "",
+        "link": ""
+      }
+    ]
+  }
+]
