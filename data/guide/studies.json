@@ -1,0 +1,46 @@
+[
+  {
+    "category": "atoz",
+    "title": "A-Z der Begriffe und wichtigen Themen",
+    "content": [
+      {
+        "title": "Test1",
+        "content": "",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "category": "digitStudy",
+    "title": "Studieren im digitalen Zeitalter",
+    "content": [
+      {
+        "title": "Test2",
+        "content": "",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "category": "service",
+    "title": "Servicestellen und Ansprechpartner:innen",
+    "content": [
+      {
+        "title": "Test3",
+        "content": "",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "category": "Test4",
+    "title": "Fachschaften und Studierendenvertretung",
+    "content": [
+      {
+        "title": "Semestertermine",
+        "content": "",
+        "link": ""
+      }
+    ]
+  }
+]

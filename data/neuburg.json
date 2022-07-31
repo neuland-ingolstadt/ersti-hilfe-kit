@@ -578,5 +578,15 @@
     "poster": "",
     "lat": 48.73775,
     "lon": 11.19031
+  },
+  {
+    "title": "Volleyballplatz",
+    "description_de": "Der Volleyballplatz wurde von uns Studierenden wieder hergerichtet und ist ein beliebter Treffpunkt geworden. Gleichzeitig ist daneben ein Skateplatz, ein Soccerfeld und Basketballkörbe. Der Platz ist gerade im Sommer zu einem belibten Treffpunkt unter uns Studierenden geworden",
+    "description_en": "The volleyball court was restored by us students and has become a popular meeting place. At the same time there is a skate park, a soccer field and basketball hoops. The square has become a popular meeting place among us students, especially in summer",
+    "category": "chill",
+    "video": "",
+    "poster": "",
+    "lat": 48.733371613236685,
+    "lon": 11.17404368206476
   }
 ]

@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
+  faBook,
   faCalendarAlt,
   faMapSigns
 } from '@fortawesome/free-solid-svg-icons'
@@ -52,6 +53,55 @@ export default function Home () {
         <hr />
 
         <h2 className={styles.subtitle}>
+          <FontAwesomeIcon icon={faBook} fixedWidth />
+          <> Studienguide </>
+        </h2>
+
+        <p>
+          In den folgenden Themenbereichen versuchen wir das wichtigste Knowhow zu eurem Studierendenleben an der THI zusammenzufassen:
+        </p>
+
+        <p>
+          <Link href="/guide/studies">
+            <Button variant="primary">
+              Dein Studium
+            </Button>
+          </Link>
+        </p>
+
+        <p>
+          <Link href="/guide/life">
+            <Button variant="primary">
+              Dein Studierendenleben
+            </Button>
+          </Link>
+        </p>
+
+        <p>
+          <Link href="/guide/studver">
+            <Button variant="primary">
+              Deine Studierendenvertretung
+            </Button>
+          </Link>
+        </p>
+
+        <p>
+          <Link href="/guide/campus">
+            <Button variant={'primary'}>
+              Dein Campus
+            </Button>
+          </Link>
+        </p>
+
+        <p>
+          Bei allen Informationen, die auf euch einprasseln, vergesst eines nicht: <b>Macht euch nicht verrückt!</b>
+          <br /><br />
+          Ein Neustart ist immer anstrengend und am besten lässt er sich ertragen, wenn man ihn mit anderen teilt. Nutzt die Erstsemesterangebote der Vereine und der Studierendenvertretung und ihr werdet schnell neue Leute kennenlernen. Bei Fragen und Nöten steht euch auch eure Studierendenvertretung im Raum W003 immer zur Verfügung!
+        </p>
+
+        <hr />
+
+        <h2 className={styles.subtitle}>
           <FontAwesomeIcon icon={faMapSigns} fixedWidth />
           <> Virtuelle Stadt- und Campusführung</>
         </h2>
@@ -64,6 +114,14 @@ export default function Home () {
           <Link href="/tour/ingolstadt">
             <Button variant="primary">
               Ingolstädter Führung öffnen
+            </Button>
+          </Link>
+        </p>
+
+        <p>
+          <Link href="/scavenger">
+            <Button variant="primary">
+              Digitale Schnitzeljagd (Ingolstadt)
             </Button>
           </Link>
         </p>
@@ -98,7 +156,7 @@ export default function Home () {
         <p>
           <a href="https://discord.gg/2gzsCD744V" target="_blank" rel="noreferrer">
             <Button>
-              Server der Fakultät EI
+              Server der Fakultät E
             </Button>
           </a>
         </p>
@@ -145,7 +203,7 @@ export default function Home () {
 
       <footer className={styles.footer}>
         <p>
-          Ein Projekt der <a href="https://www.thi.de/hochschule/ueber-uns/hochschulgremien/studierendenvertretung" target="_blank" rel="noreferrer">Fachschaft Informatik</a> in Kooperation mit <a href="https://neuland-ingolstadt.de" target="_blank" rel="noreferrer">Neuland Ingolstadt e.V.</a>
+          Ein Projekt der <a href="https://studverthi.de" target="_blank" rel="noreferrer">Fachschaft Informatik (StudVer)</a> in Kooperation mit <a href="https://neuland-ingolstadt.de" target="_blank" rel="noreferrer">Neuland Ingolstadt e.V.</a>
         </p>
         <p>
           Wir würden uns über euer Feedback freuen &ndash; entweder über Discord oder <a href="mailto:info@neuland-ingolstadt.de">per E-Mail</a>.
