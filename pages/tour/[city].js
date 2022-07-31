@@ -6,8 +6,8 @@ import { useRouter } from 'next/dist/client/router'
 const TourMap = dynamic(() => import('../../components/TourMap'), { ssr: false })
 
 const data = {
-  ingolstadt: require('../../data/ingolstadt.json'),
-  neuburg: require('../../data/neuburg.json')
+  ingolstadt: require('../../data/tour/ingolstadt.json'),
+  neuburg: require('../../data/tour/neuburg.json')
 }
 
 const centers = {
