@@ -4,7 +4,7 @@ import { Accordion, Container, Navbar } from 'react-bootstrap'
 import styles from '../../styles/Scavenger.module.css'
 import Link from 'next/link'
 import Button from 'react-bootstrap/Button'
-import rawData from '../../data/guide/studies.json'
+import rawData from '../../data/guide/glossary.json'
 import AccordionItem from 'react-bootstrap/AccordionItem'
 import AccordionHeader from 'react-bootstrap/AccordionHeader'
 import AccordionBody from 'react-bootstrap/AccordionBody'
@@ -34,48 +34,30 @@ export default function Studies () {
       <Container className={styles.container}>
         <main className={styles.main}>
           <h2 className={styles.title}>
-            Dein Studium
+            Glossar
           </h2>
 
-          Der klare Unterschied zwischen Schule und Studium ist, dass man sich selbst darum kümmern muss, alle
-          wichtigen Informationen zu erhalten. Sehr viele Informationen werden an das E-Mail-Postfach geschickt,
-          welches jeder Studierende zu Beginn seines Studiums erhält.
-          Daher ist es ratsam, dieses regelmäßig zu überprüfen oder direkt auf das private E-Mail-Postfach umzuleiten.
-          <br/><br/>
-          Bei Fragen, die man selbst nicht genau zuordnen kann, ist es meist der beste Weg auf die Professoren oder
-          Deine Fachschaft zuzugehen. Meist wissen sie die Antwort und wenn nicht können sie einen in den meisten Fällen
-          weitervermitteln.
-          Auch das Dekanat der Fakultät ist eine gute Anlaufstelle. Solltet ihr ein Auslandssemester planen,
-          Beratung rund um Prüfungen und Studium brauchen oder etwas unangebrachtes melden wollen haben wir auch einmal
-          die
-          Ansprechpartner:innen auf dieser Seite zusammengeführt.
-          <br/><br/>
-          <b>Wichtig! </b> - Termine und Noten werden meist nur noch auf elektronischem Wege bekannt gegeben.
-
-          <hr/>
-
           <Accordion>
-          {rawData.map((item) =>
-            <AccordionItem eventKey={item.title} key={item.title}>
-              <AccordionHeader>{item.title}</AccordionHeader>
-              <AccordionBody>
-                <Accordion>
-                {item.content.map((content) =>
-                  <AccordionItem eventKey={content.title} key={content.title}>
-                    <AccordionHeader>{content.title}</AccordionHeader>
-                    <AccordionBody>{content.content}</AccordionBody>
-                  </AccordionItem>
-                )}
-                </Accordion>
-              </AccordionBody>
-            </AccordionItem>
-          )}
+            {rawData.map((item) =>
+              <AccordionItem eventKey={item.title} key={item.title}>
+                <AccordionHeader>{item.title}</AccordionHeader>
+                <AccordionBody>{item.content}</AccordionBody>
+              </AccordionItem>
+            )}
           </Accordion>
           <hr/>
 
           <h2 className={styles.subtitle}>
             Weiterführende Seiten:
           </h2>
+
+          <p>
+            <Link href="/guide/studies">
+              <Button variant="primary">
+                Dein Studium
+              </Button>
+            </Link>
+          </p>
 
           <p>
             <Link href="/guide/life">
@@ -89,14 +71,6 @@ export default function Studies () {
             <Link href="/guide/campus">
               <Button variant="primary">
                 Dein Campus
-              </Button>
-            </Link>
-          </p>
-
-          <p>
-            <Link href="/guide/glossary">
-              <Button variant="primary">
-                Glossar
               </Button>
             </Link>
           </p>

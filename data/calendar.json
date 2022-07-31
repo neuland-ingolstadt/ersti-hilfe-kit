@@ -1,6 +1,14 @@
 [
   {
-    "title": "Erstsemestertag",
-    "date": "2022-10-04"
+    "title": "Erstitag",
+    "date": "2022-10-04T09:00",
+    "description": "Offizieller Studienstart für alle Erstsemester sowohl am Campus Ingolstadt als auch am Campus Neuburg",
+    "link": "https://studverthi.de"
+  },
+  {
+    "title": "Semesteranfangsparty",
+    "date": "2022-10-14T19:00",
+    "description": "Semesteranfangsparty von Students' Life im Stadtheater",
+    "link": "https://students-life.de"
   }
 ]
