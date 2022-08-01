@@ -4,8 +4,17 @@
     "title": "Gebäude & Bibliothek",
     "content": [
       {
+        "title": "Campus Ingolstadt",
+        "content": "Der Campus in Ingolstadt, ist unser Stammcampus. Hier findet ihr fast alle Gebäude alten Gebäude der THI. Die Gebäude umfassen: A, B, C, D, E, F, G, H (Carissma), I, W, Z. Du kannst sowohl in der THI-App als auch in der Neuland.App (https://neuland.app/) einen Campusplan einsehen.",
+        "link": ""
+      },
+      {
+        "title": "Campus Neuburg",
+        "content": "Der Campus in Neuburg, ist unser zweiter Campus. Hier befindet sich hautpsächlich die Fakultät Nachhaltige Infrastruktur. Das Gelände war früher die Neuburger Lasingy-Kaserne, jetzt wird diese renoviert und als Campus hergerichtet. Leider kannst du noch keinen Campusplan einsehen."
+      },
+      {
         "title": "Räume finden",
-        "content": "",
+        "content": "Räume werden immer in einem bestimmten Schema betitelt. Das Schema funktioniert wie folgt. Zuerst der Gebäudebuchstabe dann folgt in den 100ern das Stockwerk und zuletzt die Raumnummer. \n \n Beispielsweise D115 befindet sich im Gebäude D im Stockwerk 1 und ist das 15 Zimmer.",
         "link": ""
       },
       {
