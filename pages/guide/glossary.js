@@ -8,6 +8,7 @@ import rawData from '../../data/guide/glossary.json'
 import AccordionItem from 'react-bootstrap/AccordionItem'
 import AccordionHeader from 'react-bootstrap/AccordionHeader'
 import AccordionBody from 'react-bootstrap/AccordionBody'
+import ReactMarkdown from 'react-markdown'
 
 export default function Studies () {
   return (
@@ -41,7 +42,9 @@ export default function Studies () {
             {rawData.map((item) =>
               <AccordionItem eventKey={item.title} key={item.title}>
                 <AccordionHeader>{item.title}</AccordionHeader>
-                <AccordionBody>{item.content}</AccordionBody>
+                <AccordionBody>
+                  <ReactMarkdown>{item.content}</ReactMarkdown>
+                </AccordionBody>
               </AccordionItem>
             )}
           </Accordion>

@@ -4,10 +4,11 @@ import { Accordion, Container, Navbar } from 'react-bootstrap'
 import styles from '../../styles/Scavenger.module.css'
 import Link from 'next/link'
 import Button from 'react-bootstrap/Button'
-import rawData from '../../data/guide/life.json'
+import rawData from '../../data/guide/campus.json'
 import AccordionItem from 'react-bootstrap/AccordionItem'
 import AccordionHeader from 'react-bootstrap/AccordionHeader'
 import AccordionBody from 'react-bootstrap/AccordionBody'
+import ReactMarkdown from 'react-markdown'
 
 export default function Studies () {
   return (
@@ -49,12 +50,16 @@ export default function Studies () {
               <AccordionItem eventKey={item.title} key={item.title}>
                 <AccordionHeader>{item.title}</AccordionHeader>
                 <AccordionBody>
-                  {item.content.map((content) =>
-                    <AccordionItem eventKey={content.title} key={content.title}>
-                      <AccordionHeader>{content.title}</AccordionHeader>
-                      <AccordionBody>{content.content}</AccordionBody>
-                    </AccordionItem>
-                  )}
+                  <Accordion>
+                    {item.content.map((content) =>
+                      <AccordionItem eventKey={content.title} key={content.title}>
+                        <AccordionHeader>{content.title}</AccordionHeader>
+                        <AccordionBody>
+                          <ReactMarkdown>{content.content}</ReactMarkdown>
+                        </AccordionBody>
+                      </AccordionItem>
+                    )}
+                  </Accordion>
                 </AccordionBody>
               </AccordionItem>
             )}
