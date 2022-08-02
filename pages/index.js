@@ -12,6 +12,7 @@ import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 import calendar from '../data/calendar.json'
 import styles from '../styles/Home.module.css'
 import { Accordion } from 'react-bootstrap'
+import { formatFriendlyRelativeTime } from '../lib/date-utils'
 
 export default function Home () {
   return (
@@ -54,16 +55,24 @@ export default function Home () {
               <> Veranstaltungen</>
             </h2>
 
-            <Accordion>
-              {calendar.map((event, idx) =>
-                <Accordion.Item eventKey={idx} key={idx}>
-                  <Accordion.Header>
-                    {event.title} am {new Date(event.date).toLocaleString()}
-                  </Accordion.Header>
-                  <Accordion.Body>
-                    {event.description}
-                  </Accordion.Body>
-                </Accordion.Item>
+            <Accordion >
+              {calendar.map((event, idx) => {
+                const date = new Date(event.date)
+                return <Accordion.Item eventKey={idx} key={idx}>
+                    <Accordion.Header>
+                      <div className={styles.left}>
+                        {event.title} {event.location.length > 0}<br/>
+                        am {date.toLocaleString('de', { weekday: 'short' })}, {date.toLocaleString()}
+                      </div>
+                      <div>
+                        <p>{formatFriendlyRelativeTime(date)}</p>
+                      </div>
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      {event.description}
+                    </Accordion.Body>
+                  </Accordion.Item>
+              }
               )}
             </Accordion>
           </>
