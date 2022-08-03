@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
@@ -12,9 +12,38 @@ import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 import calendar from '../data/calendar.json'
 import styles from '../styles/Home.module.css'
 import { Accordion } from 'react-bootstrap'
-import { formatFriendlyRelativeTime } from '../lib/date-utils'
+import { formatFriendlyDateTime, formatFriendlyRelativeTime } from '../lib/date-utils'
 
 export default function Home () {
+  const [events, setEvents] = useState(null)
+
+  async function fetchCampusLifeDates () {
+    return fetch('https://neuland.app/api/cl-events').then(response => response.json())
+  }
+
+  useEffect(() => {
+    async function load () {
+      const [campusLifeEvents, thiEvents] = await Promise.all([
+        fetchCampusLifeDates(),
+        calendar
+      ])
+
+      const newEvents = campusLifeEvents
+        .concat(thiEvents)
+        .map(x => ({
+          ...x,
+          begin: x.begin ? new Date(x.begin) : null,
+          end: x.end ? new Date(x.end) : null
+        }))
+        .sort((a, b) => a.end - b.end)
+        .sort((a, b) => a.begin - b.begin)
+
+      setEvents(newEvents)
+      console.log(events)
+    }
+    load()
+  }, [])
+
   return (
     <Container className={styles.container}>
       <Head>
@@ -39,7 +68,9 @@ export default function Home () {
         </p>
 
         <p>
-          Um euch die Ankunft in Ingolstadt beziehungsweise Neuburg und den Studienbeginn etwas angenehmer zu gestalten, haben wir entschlossen, eine digitale O-Phase zu erproben. Wir hoffen, eure Zeit an unserer Hochschule damit etwas angenehmer gestalten zu können.
+          Um euch die Ankunft in Ingolstadt beziehungsweise Neuburg und den Studienbeginn etwas angenehmer zu gestalten,
+          haben wir entschlossen, eine digitale O-Phase zu erproben. Wir hoffen, eure Zeit an unserer Hochschule damit
+          etwas angenehmer gestalten zu können.
         </p>
 
         <p>
@@ -55,17 +86,19 @@ export default function Home () {
               <> Veranstaltungen</>
             </h2>
 
-            <Accordion >
+            <Accordion>
               {calendar.map((event, idx) => {
                 const date = new Date(event.date)
                 return <Accordion.Item eventKey={idx} key={idx}>
                     <Accordion.Header>
-                      <div className={styles.left}>
-                        {event.title} {event.location.length > 0}<br/>
-                        am {date.toLocaleString('de', { weekday: 'short' })}, {date.toLocaleString()}
-                      </div>
-                      <div>
-                        <p>{formatFriendlyRelativeTime(date)}</p>
+                      <div className={styles.item}>
+                        <div className={styles.left}>
+                          {event.title} {event.location.length > 0}<br/>
+                          am {formatFriendlyDateTime(date)}
+                        </div>
+                        <div className={styles.details}>
+                          <p>{formatFriendlyRelativeTime(date)}</p>
+                        </div>
                       </div>
                     </Accordion.Header>
                     <Accordion.Body>
@@ -78,15 +111,16 @@ export default function Home () {
           </>
         }
 
-        <hr />
+        <hr/>
 
         <h2 className={styles.subtitle}>
-          <FontAwesomeIcon icon={faBook} fixedWidth />
-          <> Studienguide </>
+          <FontAwesomeIcon icon={faBook} fixedWidth/>
+          <> Studienguide</>
         </h2>
 
         <p>
-          In den folgenden Themenbereichen versuchen wir das wichtigste Knowhow zu eurem Studierendenleben an der THI zusammenzufassen:
+          In den folgenden Themenbereichen versuchen wir das wichtigste Knowhow zu eurem Studierendenleben an der THI
+          zusammenzufassen:
         </p>
 
         <p>
@@ -133,12 +167,13 @@ export default function Home () {
         <hr/>
 
         <h2 className={styles.subtitle}>
-          <FontAwesomeIcon icon={faMapSigns} fixedWidth />
+          <FontAwesomeIcon icon={faMapSigns} fixedWidth/>
           <> Virtuelle Stadt- und Campusführung</>
         </h2>
 
         <p>
-          Eine virtuelle Stadt- und Campusführung als interaktive Karte, damit ihr Ingolstadt und Neuburg selbst erkunden könnt.
+          Eine virtuelle Stadt- und Campusführung als interaktive Karte, damit ihr Ingolstadt und Neuburg selbst
+          erkunden könnt.
         </p>
 
         <p>
@@ -165,10 +200,10 @@ export default function Home () {
           </Link>
         </p>
 
-        <hr />
+        <hr/>
 
         <h2 className={styles.subtitle}>
-          <FontAwesomeIcon icon={faDiscord} fixedWidth />
+          <FontAwesomeIcon icon={faDiscord} fixedWidth/>
           <> Discord-Server der Fakultäten</>
         </h2>
 
@@ -208,20 +243,25 @@ export default function Home () {
           </a>
         </p>
 
-        <hr />
+        <hr/>
       </main>
 
       <footer className={styles.footer}>
         <p>
-          Ein Projekt der <a href="https://studverthi.de" target="_blank" rel="noreferrer">Fachschaft Informatik (StudVer)</a> in Kooperation mit <a href="https://neuland-ingolstadt.de" target="_blank" rel="noreferrer">Neuland Ingolstadt e.V.</a>
+          Ein Projekt der <a href="https://studverthi.de" target="_blank" rel="noreferrer">Fachschaft Informatik
+          (StudVer)</a> in Kooperation mit <a href="https://neuland-ingolstadt.de" target="_blank" rel="noreferrer">Neuland
+          Ingolstadt e.V.</a>
         </p>
         <p>
-          Wir würden uns über euer Feedback freuen &ndash; entweder über Discord oder <a href="mailto:info@neuland-ingolstadt.de">per E-Mail</a>.
+          Wir würden uns über euer Feedback freuen &ndash; entweder über Discord oder <a
+          href="mailto:info@neuland-ingolstadt.de">per E-Mail</a>.
         </p>
         <p>
-          <a href="https://github.com/neuland-ingolstadt/orientierungsphase" target="_blank" rel="noreferrer">Quellcode</a>
+          <a href="https://github.com/neuland-ingolstadt/orientierungsphase" target="_blank"
+             rel="noreferrer">Quellcode</a>
           <> &ndash; </>
-          <a href="https://neuland-ingolstadt.de/impressum.htm" target="_blank" rel="noreferrer">Impressum und Datenschutz</a>
+          <a href="https://neuland-ingolstadt.de/impressum.htm" target="_blank" rel="noreferrer">Impressum und
+            Datenschutz</a>
         </p>
       </footer>
     </Container>
