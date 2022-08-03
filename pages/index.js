@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
@@ -11,38 +11,11 @@ import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 
 import calendar from '../data/calendar.json'
 import styles from '../styles/Home.module.css'
-import { Accordion } from 'react-bootstrap'
+import { Accordion, ListGroup, ListGroupItem } from 'react-bootstrap'
 import { formatFriendlyDateTime, formatFriendlyRelativeTime } from '../lib/date-utils'
 
-export default function Home () {
-  const [events, setEvents] = useState(null)
-
-  async function fetchCampusLifeDates () {
-    return fetch('https://neuland.app/api/cl-events').then(response => response.json())
-  }
-
-  useEffect(() => {
-    async function load () {
-      const [campusLifeEvents, thiEvents] = await Promise.all([
-        fetchCampusLifeDates(),
-        calendar
-      ])
-
-      const newEvents = campusLifeEvents
-        .concat(thiEvents)
-        .map(x => ({
-          ...x,
-          begin: x.begin ? new Date(x.begin) : null,
-          end: x.end ? new Date(x.end) : null
-        }))
-        .sort((a, b) => a.end - b.end)
-        .sort((a, b) => a.begin - b.begin)
-
-      setEvents(newEvents)
-      console.log(events)
-    }
-    load()
-  }, [])
+function Home ({ rawData }) {
+  const data = rawData
 
   return (
     <Container className={styles.container}>
@@ -87,26 +60,26 @@ export default function Home () {
             </h2>
 
             <Accordion>
-              {calendar.map((event, idx) => {
-                const date = new Date(event.date)
-                return <Accordion.Item eventKey={idx} key={idx}>
-                    <Accordion.Header>
+              {data.map((event, idx) => {
+                const date = new Date(event.begin)
+                return <ListGroup variant={'flush'} key={idx}>
+                    <ListGroupItem>
                       <div className={styles.item}>
                         <div className={styles.left}>
-                          {event.title} {event.location.length > 0}<br/>
+                          {event.title}<br/>
                           am {formatFriendlyDateTime(date)}
                         </div>
                         <div className={styles.details}>
                           <p>{formatFriendlyRelativeTime(date)}</p>
                         </div>
                       </div>
-                    </Accordion.Header>
-                    <Accordion.Body>
-                      {event.description}
-                    </Accordion.Body>
-                  </Accordion.Item>
+                    </ListGroupItem>
+                  </ListGroup>
               }
-              )}
+              )
+                .sort((a, b) => a.end - b.end)
+                .sort((a, b) => a.begin - b.end)
+              }
             </Accordion>
           </>
         }
@@ -267,3 +240,20 @@ export default function Home () {
     </Container>
   )
 }
+
+export async function getServerSideProps () {
+  const res = await fetch('https://neuland.app/api/cl-events')
+  const dataWeb = await res.json()
+
+  const rawData = calendar
+    .concat(dataWeb)
+    .map(x => ({
+      ...x
+    }))
+    .sort((a, b) => a.end - b.end)
+    .sort((a, b) => a.begin - b.begin)
+
+  return { props: { rawData } }
+}
+
+export default Home

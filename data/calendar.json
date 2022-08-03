@@ -1,16 +1,16 @@
 [
   {
+    "origin_url": "https://studverthi.de",
+    "organizer": "StudVer",
     "title": "Erstitag",
-    "location": "Stadttheater",
-    "date": "2022-10-04T09:00",
-    "description": "Offizieller Studienstart für alle Erstsemester sowohl am Campus Ingolstadt als auch am Campus Neuburg",
-    "link": "https://studverthi.de"
+    "begin": "2022-10-04T09:00",
+    "end": "2022-10-04T23:59"
   },
   {
+    "origin_url": "https://students-life.de",
+    "organizer": "Students' Life",
     "title": "Semesteranfangsparty",
-    "location": "Stadttheater",
-    "date": "2022-10-14T19:00",
-    "description": "Semesteranfangsparty von Students' Life im Stadtheater",
-    "link": "https://students-life.de"
+    "begin": "2022-10-14T19:00",
+    "end": "2022-10-14T23:59"
   }
 ]
