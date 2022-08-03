@@ -243,8 +243,8 @@ export async function getServerSideProps () {
 
   const rawData = calendar
     .concat(dataWeb)
-    .sort((a, b) => a.end - b.end)
-    .sort((a, b) => a.begin - b.begin)
+    .sort((a, b) => a.end.localeCompare(b.end))
+    .sort((a, b) => a.begin.localeCompare(b.begin))
 
   return { props: { rawData } }
 }
