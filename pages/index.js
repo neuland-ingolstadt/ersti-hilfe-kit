@@ -13,10 +13,10 @@ import calendar from '../data/calendar.json'
 import styles from '../styles/Home.module.css'
 import { Accordion, ListGroup, ListGroupItem } from 'react-bootstrap'
 import { formatFriendlyDateTime, formatFriendlyRelativeTime } from '../lib/date-utils'
+import PropTypes from 'prop-types'
 
 function Home ({ rawData }) {
-  const data = rawData
-
+  console.log(rawData)
   return (
     <Container className={styles.container}>
       <Head>
@@ -60,7 +60,7 @@ function Home ({ rawData }) {
             </h2>
 
             <Accordion>
-              {data.map((event, idx) => {
+              {rawData.map((event, idx) => {
                 const date = new Date(event.begin)
                 return <ListGroup variant={'flush'} key={idx}>
                     <ListGroupItem>
@@ -75,11 +75,7 @@ function Home ({ rawData }) {
                       </div>
                     </ListGroupItem>
                   </ListGroup>
-              }
-              )
-                .sort((a, b) => a.end - b.end)
-                .sort((a, b) => a.begin - b.end)
-              }
+              })}
             </Accordion>
           </>
         }
@@ -247,13 +243,14 @@ export async function getServerSideProps () {
 
   const rawData = calendar
     .concat(dataWeb)
-    .map(x => ({
-      ...x
-    }))
     .sort((a, b) => a.end - b.end)
     .sort((a, b) => a.begin - b.begin)
 
   return { props: { rawData } }
+}
+
+Home.propTypes = {
+  rawData: PropTypes.array
 }
 
 export default Home
