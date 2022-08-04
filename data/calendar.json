@@ -1,16 +1,9 @@
 [
   {
     "origin_url": "https://studverthi.de",
-    "organizer": "StudVer",
+    "organizer": "Studierendenvertretung",
     "title": "Erstitag",
     "begin": "2022-10-04T09:00",
-    "end": "2022-10-04T23:59"
-  },
-  {
-    "origin_url": "https://students-life.de",
-    "organizer": "Students' Life",
-    "title": "Semesteranfangsparty",
-    "begin": "2022-10-14T19:00",
-    "end": "2022-10-14T23:59"
+    "end": "2022-10-04T18:00"
   }
 ]

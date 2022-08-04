@@ -87,9 +87,9 @@ export default function Studies () {
           </p>
 
           <p>
-            <Link href="/guide/campus">
+            <Link href="/guide/life">
               <Button variant="primary">
-                Dein Campus
+                Dein Studierendenleben
               </Button>
             </Link>
           </p>

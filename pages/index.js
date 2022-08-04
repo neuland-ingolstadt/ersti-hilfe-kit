@@ -6,17 +6,17 @@ import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBook, faCalendarAlt, faMapSigns } from '@fortawesome/free-solid-svg-icons'
-import { faDiscord } from '@fortawesome/free-brands-svg-icons'
+import { faBook, faCalendarAlt, faExternalLink, faMapSigns } from '@fortawesome/free-solid-svg-icons'
+import { faDiscord, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 import calendar from '../data/calendar.json'
+import clubs from '../data/clubs.json'
 import styles from '../styles/Home.module.css'
 import { Accordion, ListGroup, ListGroupItem } from 'react-bootstrap'
 import { formatFriendlyDateTime, formatFriendlyRelativeTime } from '../lib/date-utils'
 import PropTypes from 'prop-types'
 
 function Home ({ rawData }) {
-  console.log(rawData)
   return (
     <Container className={styles.container}>
       <Head>
@@ -62,11 +62,23 @@ function Home ({ rawData }) {
             <Accordion>
               {rawData.map((event, idx) => {
                 const date = new Date(event.begin)
+                const club = clubs.find(item => item.club === event.organizer)
                 return <ListGroup variant={'flush'} key={idx}>
                     <ListGroupItem>
                       <div className={styles.item}>
                         <div className={styles.left}>
-                          {event.title}<br/>
+                          <span>{event.title}</span>
+                          {event.organizer.length > 0 &&
+                            <span className={styles.organizer}><span> | </span>
+                              {event.organizer}
+                              <a href={club.instagram} className={styles.link}>
+                               <FontAwesomeIcon icon={faInstagram} fixedWidth/>
+                              </a>
+                              <a href={club.website}>
+                                <FontAwesomeIcon icon={faExternalLink} fixedWidth/>
+                              </a>
+                            </span>
+                          }<br/>
                           am {formatFriendlyDateTime(date)}
                         </div>
                         <div className={styles.details}>
@@ -245,8 +257,17 @@ export async function getServerSideProps () {
     .concat(dataWeb)
     .sort((a, b) => a.end.localeCompare(b.end))
     .sort((a, b) => a.begin.localeCompare(b.begin))
+    .filter(x => {
+      if (x.end != null) {
+        const date = new Date(x.end)
+        return date > Date.now()
+      } else {
+        const date = new Date(x.start)
+        return date > Date.now()
+      }
+    })
 
-  return { props: { rawData } }
+  return { props: { rawData: rawData.slice(0, 7) } }
 }
 
 Home.propTypes = {
