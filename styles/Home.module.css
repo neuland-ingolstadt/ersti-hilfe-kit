@@ -34,6 +34,14 @@
   alignItems: center;
 }
 
+.organizer {
+  color: gray;
+}
+
+.link {
+  margin: 0 1vh;
+}
+
 .item {
   display: flex;
   flex: 1;
