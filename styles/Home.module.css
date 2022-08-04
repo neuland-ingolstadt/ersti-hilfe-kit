@@ -28,18 +28,15 @@
 
 .details {
   color: gray;
-  margin-right: 1vh;
-  display: flex;
-  justifyContent: center;
-  alignItems: center;
 }
 
 .organizer {
   color: gray;
 }
 
-.link {
-  margin: 0 1vh;
+.instagram {
+  margin-left: 1vh;
+  color: gray;
 }
 
 .item {
