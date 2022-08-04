@@ -67,15 +67,14 @@ function Home ({ rawData }) {
                     <ListGroupItem>
                       <div className={styles.item}>
                         <div className={styles.left}>
-                          <span>{event.title}</span>
+                          <span>{event.title}</span><br/>
                           {event.organizer.length > 0 &&
-                            <span className={styles.organizer}><span> | </span>
-                              {event.organizer}
-                              <a href={club.instagram} className={styles.link}>
-                               <FontAwesomeIcon icon={faInstagram} fixedWidth/>
+                            <span className={styles.organizer}>
+                              <a href={club.website} className={styles.organizer}>
+                                {event.organizer}<FontAwesomeIcon icon={faExternalLink} fixedWidth/>
                               </a>
-                              <a href={club.website}>
-                                <FontAwesomeIcon icon={faExternalLink} fixedWidth/>
+                              <a href={club.instagram} className={styles.instagram}>
+                               <FontAwesomeIcon icon={faInstagram} fixedWidth/>
                               </a>
                             </span>
                           }<br/>
@@ -143,6 +142,8 @@ function Home ({ rawData }) {
           die Erstsemesterangebote der Vereine und der Studierendenvertretung und ihr werdet schnell neue Leute
           kennenlernen. Bei Fragen und Nöten steht euch auch eure Studierendenvertretung im Raum W003 immer zur
           Verfügung!
+          <br/><br/>
+          Wir wünschen Euch viel Erfolg, Durchhaltevermögen und vor allem viel Spaß beim Studium an der TH Ingolstadt!
         </p>
 
         <hr/>
@@ -267,7 +268,7 @@ export async function getServerSideProps () {
       }
     })
 
-  return { props: { rawData: rawData.slice(0, 7) } }
+  return { props: { rawData: rawData.slice(0, 10) } }
 }
 
 Home.propTypes = {
