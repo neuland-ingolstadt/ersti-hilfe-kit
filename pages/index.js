@@ -63,7 +63,8 @@ function Home ({ rawData }) {
               {rawData.map((event, idx) => {
                 const date = new Date(event.begin)
                 const club = clubs.find(item => item.club === event.organizer)
-                return <ListGroup variant={'flush'} key={idx}>
+                if (club != null && event.organizer != null) {
+                  return <ListGroup variant={'flush'} key={idx}>
                     <ListGroupItem>
                       <div className={styles.item}>
                         <div className={styles.left}>
@@ -86,6 +87,26 @@ function Home ({ rawData }) {
                       </div>
                     </ListGroupItem>
                   </ListGroup>
+                } else {
+                  return <ListGroup variant={'flush'} key={idx}>
+                    <ListGroupItem>
+                      <div className={styles.item}>
+                        <div className={styles.left}>
+                          <span>{event.title}</span><br/>
+                          {event.organizer.length > 0 &&
+                            <span className={styles.organizer}>
+                              {event.organizer}
+                            </span>
+                          }<br/>
+                          am {formatFriendlyDateTime(date)}
+                        </div>
+                        <div className={styles.details}>
+                          <p>{formatFriendlyRelativeTime(date)}</p>
+                        </div>
+                      </div>
+                    </ListGroupItem>
+                  </ListGroup>
+                }
               })}
             </Accordion>
           </>
