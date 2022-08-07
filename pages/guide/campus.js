@@ -38,11 +38,8 @@ export default function Studies () {
             Dein Campus
           </h2>
 
-          Studium ist mehr als Bücher wälzen, Vorlesungen besuchen und Leistung zeigen.
-          Der Campus, die Stadt Regensburg und zahlreiche Einrichtungen bieten eine Vielzahl von Möglichkeiten,
-          neben dem Lernen das Leben nicht zu kurz kommen zu lassen.
-          Ob Konzert, Kickern oder Kirche – auf den nächsten Seiten ist sicher was für dich dabei.
-
+          Die THI hat zwei Hochschulgelände. Der Campus der Fakultät Nachhaltige Infrastruktur befindet sich in Neuburg.
+          Der Stammcampus mit Mensa, Bibliothek und den restlichen Fakultäten befindet sich an der Esplanade in Ingolstadt.
           <hr/>
 
           <Accordion>

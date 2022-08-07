@@ -20,8 +20,38 @@
     "title": "Kulturelles Angebot",
     "content": [
       {
+        "title": "Filme",
+        "content": "* [Altstadtkinos](https://www.ingolstadt-altstadtkinos.de/)\n* [Audi Programmkino](https://www.audi.de/de/foren/de/audi-forum-ingolstadt/programmkino.html)\n* [Cinestar](https://www.ingolstadt.de/redirect.phtml?extlink=1&La=1&url_fid=2789.156.1)\n* [Freilichtkino im Turm Baur](https://www.ingolstadt.de/redirect.phtml?extlink=1&La=1&url_fid=2789.157.1)",
+        "link": ""
+      },
+      {
+        "title": "Festivals, Events, Reihen",
+        "content": "* [Webseite des Kulturamts](https://www.kulturamt-ingolstadt.de/)\n* [Audi Sommerkonzerte](https://www.audi.de/de/audi-artexperience/sommerkonzerte-2022.html)",
+        "link": ""
+      },
+      {
         "title": "Theater",
-        "content": "",
+        "content": "* [Stadttheater](https://theater.ingolstadt.de/)\n* [Altstadttheater](http://www.altstadttheater-ingolstadt.de/)\n* [Kleinkunstbühne Neue Welt](https://www.neuewelt-ingolstadt.de/)",
+        "link": ""
+      },
+      {
+        "title": "Musik",
+        "content": "* [Konzerte](https://www.ingolstadt.de/Kultur/Veranstaltungen/Musik-Konzerte/)\n* [Jazz](https://www.ingolstadt.de/Kultur/Kunst-Kultur/Kultur-Museumsverwaltung/Kulturelle-Adressen/index.php?&object=tx,2789.1.1&ModID=9&call=suche&sfort=1&KatID=0&kat=465.238&bn=0&La=1)\n* [Klassische Musik](https://www.ingolstadt.de/Kultur/Kunst-Kultur/Kultur-Museumsverwaltung/Kulturelle-Adressen/index.php?&object=tx,2789.1.1&ModID=9&call=suche&KatID=0&kat=465.242&bn=0&sfort=0&La=1)\n* [Musikschulen und Unterricht](https://www.ingolstadt.de/Kultur/Kunst-Kultur/Kultur-Museumsverwaltung/Kulturelle-Adressen/index.php?&object=tx,2789.1.1&ModID=9&call=suche&KatID=0&kat=465.270&bn=0&sfort=0&La=1)\n* [Rock & Pop](https://www.ingolstadt.de/Kultur/Kunst-Kultur/Kultur-Museumsverwaltung/Kulturelle-Adressen/index.php?&object=tx,2789.1.1&ModID=9&call=suche&KatID=0&kat=465.247&bn=0&sfort=0&La=1)",
+        "link": ""
+      },
+      {
+        "title": "Kunst",
+        "content": "* [Bildende Kunst](https://www.ingolstadt.de/Kultur/Kunst-Kultur/Kultur-Museumsverwaltung/Kulturelle-Adressen/index.php?&object=tx,2789.1.1&ModID=9&call=suche&KatID=0&kat=465.226&bn=0&sfort=0&La=1)\n* [Galerien](https://www.ingolstadt.de/Kultur/Kunst-Kultur/Kultur-Museumsverwaltung/Kulturelle-Adressen/index.php?&object=tx,2789.1.1&ModID=9&call=suche&KatID=0&kat=465.234&bn=0&sfort=0&La=1)",
+        "link": ""
+      },
+      {
+        "title": "Literatur",
+        "content": "* [Büchereien und Bibliotheken](https://www.ingolstadt.de/Kultur/Kunst-Kultur/Kultur-Museumsverwaltung/Kulturelle-Adressen/index.php?&object=tx,2789.1.1&ModID=9&call=suche&KatID=0&kat=465.229&bn=0&sfort=0&La=1)\n* [Literarische Gruppen und Vereine ](https://www.ingolstadt.de/Kultur/Kunst-Kultur/Kultur-Museumsverwaltung/Kulturelle-Adressen/index.php?&object=tx,2789.1.1&ModID=9&call=suche&KatID=0&kat=465.245&bn=0&sfort=0&La=1)",
+        "link": ""
+      },
+      {
+        "title": "Museen",
+        "content": "* [Bayerisches Armeemuseum](https://www.armeemuseum.de/de/)\n* [Bayerisches Polizeimuseum](https://www.armeemuseum.de/de/ausstellungen/polizei.html)\n* [Museum des Ersten Weltkriegs](https://www.armeemuseum.de/de/ausstellungen/museum-des-ersten-weltkriegs.html)\n* [Deutsches Medizinhistorisches Museum](https://www.dmm-ingolstadt.de/)\n* [Museum für Konkrete Kunst Ingolstadt](https://www.mkk-ingolstadt.de/willkommen/)\n* [Lechner Museum](https://www.lechner-museum.de/Lechner-Museum/de/Ausstellungen-Termine.php)\n* [Stadtmuseum](https://zentrumstadtgeschichte.ingolstadt.de/Stadtmuseum/)\n* [Spielzeugmuseum](https://zentrumstadtgeschichte.ingolstadt.de/Stadtmuseum/Spielzeugmuseum/)",
         "link": ""
       }
     ]
@@ -31,7 +61,37 @@
     "title": "Nachtleben",
     "content": [
       {
+        "title": "Semesteranfangsparty (SAP)",
+        "content": "",
+        "link": ""
+      },
+      {
         "title": "Kneipentour",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Eiskeller",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Amadeus (Amal)",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Suxul",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Lago Bar",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "LaFiesta",
         "content": "",
         "link": ""
       }
@@ -45,15 +105,146 @@
         "title": "Hochschulsport",
         "content": "",
         "link": ""
+      },
+      {
+        "title": "Sportbad, Freibad, Hallenbad Südwest",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "TSV Ingolstadt-Nord",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "DJK Ingolstadt e.V.",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "ERC Ingolstadt",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Eishallen",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Sportportal der Stadt Ingolstadt",
+        "content": "",
+        "link": ""
       }
     ]
   },
   {
-    "category": "clubs",
-    "title": "Verine und Hochschulgruppen",
+    "category": "activeclubs",
+    "title": "Active Vereine und Hochschulgruppen",
     "content": [
       {
+        "title": "Studierendenvertretung",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Hochschulkino",
+        "content": "",
+        "link": ""
+      },
+      {
         "title": "Neuland Ingolstadt e.V.",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Students' Life",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Schanzer Racing Electric e.V.",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "think e.V.",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Our Future e.V.",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "NEWEXIST e.V.",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "N.I.C.E.",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "consult.IN e.V.",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Enactus Ingolstadt",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Studentischer Börsenclub Ingolstadt e.V.",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Hochschulgaming Ingolstadt",
+        "content": "",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "category": "inactiveclubs",
+    "title": "Inaktive Vereine und Hochschulgruppen",
+    "content": [
+      {
+        "title": "Hochschulband",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Eta-nol e.V.",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Leo Club Ingolstadt",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "UNICEF Hochschulgruppe",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Studenten-bilden-Schüler e.V.",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Mabuhay Phillipines Fördervrein THI e.V.",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Masifunde",
         "content": "",
         "link": ""
       }
@@ -64,7 +255,27 @@
     "title": "Einkaufen",
     "content": [
       {
-        "title": "Westpark",
+        "title": "Ingolstadt - Westpark",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Ingolstadt - Fußgängerzone",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Ingolstadt - Gewerbegebiet Eriagstraße",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Neuburg - Südpark",
+        "content": "",
+        "link": ""
+      },
+      {
+        "title": "Neuburg - Innenstadt",
         "content": "",
         "link": ""
       }

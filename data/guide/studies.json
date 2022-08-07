@@ -5,65 +5,74 @@
     "content": [
       {
         "title": "Terminplan/Semestertermine",
-        "content": "",
+        "content": "Du kannst die Semestertermine auf mehrere Art und Weisen bekommen.\nSowohl in der [Neuland.App](https://neuland.app) als auch auf der Website der Hochschule.",
         "link": "https://www.thi.de/studium/pruefung/semestertermine/",
         "linktitle": "Mehr Informationen auf www.thi.de"
       },
       {
         "title": "Studierendenausweis - Multifunktionskarte",
-        "content": "",
-        "link": ""
+        "content": "Dein Studierendenausweis der Hochschule hat mehrere Funktionen:\n* Zahlen in der Mensa\n* Zahlen an den Terminals der Hochschule\n* Bibliotheksausweis\n\n**Validieren des Ausweises**\nEs gibt an der Hochschule *drei Orte* an welchen du deinen Ausweis in der Bibliothek bei den Service-Terminals, vor dem SCS und beim Service-Terminal in der alten Aula.\n\n *Der Ausweis muss jedes Semester validiert werden*\n\n**Bei Verlust des Ausweises**\nGehe *schnellstmöglich* in das Service Center Studienangelegenheiten (SCS) oder die Bibliothek und lass deinen Ausweis *sperren*. Das SCS stellt dir gegen *15 Euro* auch einen neuen Ausweis aus.\n\n**Bei defekten Ausweisen**\nGehe zum SCS und dieser wird geprüft. Sollte ein defekt vorliegen, wird dir kostenlos ein neuer Ausweis ausgestellt.",
+        "link": "https://www.thi.de/service/it-service/benutzerkonto/hochschulausweis/",
+        "linktitle": "Mehr Informationen auf www.thi.de"
       },
       {
         "title": "Rechtliche Grundlagen",
-        "content": "",
-        "link": ""
+        "content": "Es gibt viele Satzungen an Hochschulen. Eine der wichtigesten ist die Allgemeine Prüfungsordnung, aber auch die Studien- und Prüfungsordnungen eines jeden Studiengangs sind für dich wichtig.",
+        "link": "https://www.thi.de/hochschule/ueber-uns/hochschulorganisation/stabsstelle-recht/allgemeine-satzungen/",
+        "linktitle": "Mehr Informationen auf www.thi.de"
       },
       {
         "title": "Rückmeldung",
-        "content": "",
-        "link": ""
+        "content": "Studierende haben sich zu jedem Semester form- und fristgerecht zum Weiterstudium anzumelden (Rückmeldung).\n\nEine Rückmeldung wird durch die Zahlung des Studierendenwerksbeitrages durchgeführt. Die Zahlung ist per Kreditkarte oder PayPal möglich.",
+        "link": "https://www.thi.de/studium/studienfinanzierung/rueckmeldung/",
+        "linktitle": "Mehr Informationen auf www.thi.de"
       },
       {
         "title": "Exmatrikulation",
-        "content": "",
+        "content": "Das Studienverhältnis an der Hochschule wird mit der Exmatrikulation beendet. Es wird unterschieden zwischen der Exmatrikulation durch dich auf Antrag und der Exmatrikulation von Amts wegen. Letztere erfolgt mit (schriftlicher) Verfügung der Hochschule aus folgenden Gründen:\n\n* Aushändigung des Zeugnisses über die bestandene Bachelor- oder Masterprüfung,\n* Endgültiges Nichtbestehen einer Bachelor- oder Masterprüfung,\n* Versäumen einer ärztlichen Pflichtuntersuchung,\n* Nachträgliches Eintreten eines Immatrikulationshindernisses,\n* Eintreten von Versagungsgründen im Studium,\n* Fehlende Rückmeldung für das Weiterstudium.",
         "link": ""
       },
       {
         "title": "Beurlaubung",
-        "content": "",
-        "link": ""
+        "content": "Studierende können auf Antrag aus einem wichtigen Grund von der Verpflichtung zu einem ordnungsgemäßen Studium befreit werden.\nAuch während einer Beurlaubung bleibt man Mitglied der Hochschule und *behält den Studierendenstatus*.\n\n**Wichtige Gründe sind:**\n\n1.  eine durch ärztliches Attest bescheinigte Krankheit des Studierenden, wenn die Krankheit ein ordnungsgemäßes Studium im betreffenden Semester verhindert,\n2.  Umstände, die für Arbeitnehmerinnen Anspruch auf Mutterschutz und/oder Elternzeit oder für Arbeitnehmer Anspruch auf Elternzeit begründen, \n3.  die Ableistung eines freiwilligen Praktikums im Umfang von mindestens 18 Wochen, das für das Studium förderlich ist, \n4.  die Absolvierung von Ausbildungszeiten für einen anerkannten Ausbildungsberuf, sofern diese Ausbildung neben dem Studium im Verbund mit Ausbildungsbetrieben absolviert wird (Verbundstudium),\n5.  ein fehlendes Angebot des nach dem Studienfortschritt des Studierenden erforderlichen Anschlusssemesters. (maximal ein Semester)\n6.  eine durch den Arbeitgeber des Studierenden bescheinigte, inhaltlich und/oder zeitlich klar begrenzte außerordentliche berufliche Mehrbelastung des Studierenden, die ein ordnungsgemäßes Studium im betreffenden Semester erheblich beeinträchtigt (in berufsbegleitenden Bachelor- und Masterstudiengängen). \n\n**Antragsfristen**\n\n* für das Wintersemester: **spätestens bis zum 31. Oktober**\n* für das Sommersemester: **spätestens bis zum 14. April**",
+        "link": "https://www.thi.de/studium/beratungsangebote-an-der-thi/beratung-fuer-studierende/beurlaubung-vom-studium/",
+        "linktitle": "Mehr Informationen auf www.thi.de"
       }
     ]
   },
   {
     "category": "digitStudy",
-    "title": "Studieren im digitalen Zeitalter",
+    "title": "Nützliche Websites und Apps",
     "content": [
       {
-        "title": "Zentraler IT Service",
-        "content": "",
-        "link": ""
+        "title": "THI-App & Neuland.App",
+        "content": "Diese Apps helfen dir dein Studium zu organisieren. Die THI-App ist die offizielle App der Technischen Hochschule, der Verein Neuland Ingolstadt e.V. hat eine webbasierte alternativ App mit mehr nützlichen Funktionen für dein Studium programmiert.\n\nDie THI-App:\n* [Jetzt auf iOS installieren](https://apps.apple.com/de/app/thi-app/id947313861)\n* [Jetzt auf Android installieren](https://play.google.com/store/apps/details?id=com.embarcadero.THIApp&hl=de)\n\nDie Neuland.App:\n* [Jetzt im Browser nutzen](https://neuland.app)",
+        "link": "",
+        "linktitle": ""
+      },
+      {
+        "title": "Zentraler IT Service (IT Support)",
+        "content": "Die Abteilung Zentraler IT-Service ist IT Dienstleister für alle Organisationseinheiten der Technischen Hochschule Ingolstadt.",
+        "link": "https://www.thi.de/service/it-service/",
+        "linktitle": "Mehr Informationen auf www.thi.de"
       },
       {
         "title": "Studierenden Mail",
-        "content": "",
-        "link": ""
+        "content": "Jeder Studierende bekommt während seinem Studium eine @thi.de Mail gestellt.\nDiese hat *215 MB* Speicherplatz, entsprechend **leert dieses Postfach** regelmäßig und richtet am besten eine **Umleitung auf ein Privates Postfach** ein!",
+        "link": "https://outlook.thi.de",
+        "linktitle": "Zur Outlook Web App"
       },
       {
         "title": "Primuss",
-        "content": "",
-        "link": ""
+        "content": "Im Studierendenportal Primuss können Studierende persönliche Daten und Dokumente überprüfen und abrufen, die im Laufe Ihres Studiums an der THI erhalten werden, wie bsw. Immatrikulationsbescheinigungen, Notenblätter usw.",
+        "link": "https://login.thi.de/idp/profile/SAML2/Redirect/SSO?execution=e1s1",
+        "linktitle": "Zu Primuss"
       },
       {
         "title": "Moodle",
-        "content": "",
-        "link": ""
-      },
-      {
-        "title": "THI-App & Neuland.App",
-        "content": "",
-        "link": ""
+        "content": "Moodle ist eine Lernplattform, die an der THI eingesetzt wird.\nHier werden Unterlagen und Informationen die du für dein Studium benötigst, wie bsw. Skripte und andere Vorlesungsunterlagen.",
+        "link": "https://moodle.thi.de",
+        "linktitle": "Zu Moodle"
       },
       {
         "title": "WLAN",
@@ -77,7 +86,7 @@
       },
       {
         "title": "Programme & Lizenzen",
-        "content": "",
+        "content": "* [Adobe für PC-Pool](https://www.thi.de/service/it-service/softwareangebote/adobe-fuer-pc-pool-nutzung/)\n* [Citavi](https://www.thi.de/service/it-service/softwareangebote/citavi-literaturverwaltung/)\n* [Flexpro](http://www.weisang.com/produkte/flexpro-10/studenten-und-hochschulen/studentenformular/)\n* [MATLAB](https://www.thi.de/service/it-service/softwareangebote/matlab/)\n* [Microsoft Imagine nur für Studierende von MINT-Studiengängen](https://www.thi.de/service/it-service/softwareangebote/microsoft-imagine/)\n* [Microsoft Office](https://www.thi.de/service/it-service/softwareangebote/office/)\n* [Mindmanager](https://www.thi.de/service/it-service/softwareangebote/mindmanager/)",
         "link": ""
       },
       {
@@ -144,43 +153,56 @@
     ]
   },
   {
-    "category": "Test4",
+    "category": "fachschaften",
     "title": "Fachschaften und Studierendenvertretung",
     "content": [
       {
         "title": "Fachschaft Informatik",
         "content": "",
-        "link": ""
+        "link": "https://studverthi.de/fachschaft-i",
+        "linktitle": "Zur Seite der Fachschaft auf www.studverthi.de"
       },
       {
         "title": "Fachschaft Elektro- und Informationstechnik",
         "content": "",
-        "link": ""
+        "link": "https://studverthi.de/fachschaft-e",
+        "linktitle": "Zur Seite der Fachschaft auf www.studverthi.de"
       },
       {
         "title": "Fachschaft Maschinenbau",
         "content": "",
-        "link": ""
+        "link": "https://studverthi.de/fachschaft-m",
+        "linktitle": "Zur Seite der Fachschaft auf www.studverthi.de"
       },
       {
         "title": "Fachschaft THI Business School",
         "content": "",
-        "link": ""
+        "link": "https://studverthi.de/fachschaft-bs",
+        "linktitle": "Zur Seite der Fachschaft auf www.studverthi.de"
       },
       {
         "title": "Fachschaft Wirtschaftsingenieurwesen",
         "content": "",
-        "link": ""
+        "link": "https://studverthi.de/fachschaft-wi",
+        "linktitle": "Zur Seite der Fachschaft auf www.studverthi.de"
       },
       {
         "title": "Fachschaft Nachhaltige Infrastruktur",
         "content": "",
-        "link": ""
+        "link": "https://studverthi.de/fachschaft-ni",
+        "linktitle": "Zur Seite der Fachschaft auf www.studverthi.de"
       },
       {
-        "title": "Konvent & Sprecherrat",
+        "title": "Konvent",
         "content": "",
-        "link": ""
+        "link": "https://studverthi.de/der-konvent",
+        "linktitle": "Zur Seite des Konvents auf www.studverthi.de"
+      },
+      {
+        "title": "Sprecherrat",
+        "content": "",
+        "link": "https://studverthi.de/der-sprecherrat",
+        "linktitle": "Zur Seite des Sprecherrats auf www.studverthi.de"
       }
     ]
   }
