@@ -53,6 +53,13 @@ export default function Studies () {
                         <AccordionHeader>{content.title}</AccordionHeader>
                         <AccordionBody>
                           <ReactMarkdown>{content.content}</ReactMarkdown>
+                          {content.link.length > 0 &&
+                            <Link href={content.link}>
+                              <Button variant="outline-info">
+                                {content.linktitle}
+                              </Button>
+                            </Link>
+                          }
                         </AccordionBody>
                       </AccordionItem>
                     )}

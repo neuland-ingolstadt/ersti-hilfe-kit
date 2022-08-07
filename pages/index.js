@@ -13,7 +13,10 @@ import calendar from '../data/calendar.json'
 import clubs from '../data/clubs.json'
 import styles from '../styles/Home.module.css'
 import { Accordion, ListGroup, ListGroupItem } from 'react-bootstrap'
-import { formatFriendlyDateTime, formatFriendlyRelativeTime } from '../lib/date-utils'
+import {
+  formatFriendlyDateTime,
+  formatFriendlyRelativeTime
+} from '../lib/date-utils'
 import PropTypes from 'prop-types'
 
 function Home ({ rawData }) {
@@ -277,12 +280,12 @@ export async function getServerSideProps () {
         const date = new Date(x.end)
         return date > Date.now()
       } else {
-        const date = new Date(x.start)
+        const date = new Date(x.begin)
         return date > Date.now()
       }
     })
 
-  return { props: { rawData: rawData.slice(0, 10) } }
+  return { props: { rawData: rawData.slice(0, 20) } }
 }
 
 Home.propTypes = {
