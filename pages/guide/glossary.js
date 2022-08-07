@@ -38,6 +38,10 @@ export default function Studies () {
             Glossar
           </h2>
 
+          Damit du dich in der “Hochschulsprache“ gut zurechtfindest, haben wir ein Glossar angelegt, in dem wir dir Abkürzungen, Begriffe und Formulierungen kurz und knapp erläutern.
+
+          <hr/>
+
           <Accordion>
             {rawData.map((item) =>
               <AccordionItem eventKey={item.title} key={item.title}>

@@ -39,17 +39,7 @@ export default function Studies () {
           </h2>
 
           Der klare Unterschied zwischen Schule und Studium ist, dass man sich selbst darum kümmern muss, alle
-          wichtigen Informationen zu erhalten. Sehr viele Informationen werden an das E-Mail-Postfach geschickt,
-          welches jeder Studierende zu Beginn seines Studiums erhält.
-          Daher ist es ratsam, dieses regelmäßig zu überprüfen oder direkt auf das private E-Mail-Postfach umzuleiten.
-          <br/><br/>
-          Bei Fragen, die man selbst nicht genau zuordnen kann, ist es meist der beste Weg auf die Professoren oder
-          Deine Fachschaft zuzugehen. Meist wissen sie die Antwort und wenn nicht können sie einen in den meisten Fällen
-          weitervermitteln.
-          Auch das Dekanat der Fakultät ist eine gute Anlaufstelle. Solltet ihr ein Auslandssemester planen,
-          Beratung rund um Prüfungen und Studium brauchen oder etwas unangebrachtes melden wollen haben wir auch einmal
-          die
-          Ansprechpartner:innen auf dieser Seite zusammengeführt.
+          wichtigen Informationen zu erhalten. Dennoch können Fragen aufkommen, dafür findet ihr auf dieser Seite die meisten Informationen unter anderem wo ihr nachfragen könnt.
           <br/><br/>
           <b>Wichtig! </b> - Termine und Noten werden meist nur noch auf elektronischem Wege bekannt gegeben.
 

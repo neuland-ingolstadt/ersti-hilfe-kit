@@ -39,9 +39,9 @@ export default function Studies () {
           </h2>
 
           Studium ist mehr als Bücher wälzen, Vorlesungen besuchen und Leistung zeigen.
-          Der Campus, die Stadt Regensburg und zahlreiche Einrichtungen bieten eine Vielzahl von Möglichkeiten,
+          Der Campus, die Stadt Ingolstadt und zahlreiche Einrichtungen bieten eine Vielzahl von Möglichkeiten,
           neben dem Lernen das Leben nicht zu kurz kommen zu lassen.
-          Ob Konzert, Kickern oder Kirche – auf den nächsten Seiten ist sicher was für dich dabei.
+          Ob Konzert, Kickern oder Kirche – auf dieser Seiten ist sicher was für dich dabei.
 
           <hr/>
 

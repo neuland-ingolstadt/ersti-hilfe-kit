@@ -158,13 +158,6 @@ function Home ({ rawData }) {
 
         <p>
           Bei allen Informationen, die auf euch einprasseln, vergesst eines nicht: <b>Macht euch nicht verrückt!</b>
-          <br/><br/>
-          Ein Neustart ist immer anstrengend und am besten lässt er sich ertragen, wenn man ihn mit anderen teilt. Nutzt
-          die Erstsemesterangebote der Vereine und der Studierendenvertretung und ihr werdet schnell neue Leute
-          kennenlernen. Bei Fragen und Nöten steht euch auch eure Studierendenvertretung im Raum W003 immer zur
-          Verfügung!
-          <br/><br/>
-          Wir wünschen Euch viel Erfolg, Durchhaltevermögen und vor allem viel Spaß beim Studium an der TH Ingolstadt!
         </p>
 
         <hr/>
