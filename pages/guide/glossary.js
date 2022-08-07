@@ -11,6 +11,7 @@ import AccordionBody from 'react-bootstrap/AccordionBody'
 import ReactMarkdown from 'react-markdown'
 
 export default function Studies () {
+  const data = rawData.sort((a, b) => a.title.localeCompare(b.title))
   return (
     <>
       <Head>
@@ -43,13 +44,13 @@ export default function Studies () {
           <hr/>
 
           <Accordion>
-            {rawData.map((item) =>
-              <AccordionItem eventKey={item.title} key={item.title}>
-                <AccordionHeader>{item.title}</AccordionHeader>
-                <AccordionBody>
-                  <ReactMarkdown>{item.content}</ReactMarkdown>
-                </AccordionBody>
-              </AccordionItem>
+            {data.map((item) =>
+                <AccordionItem eventKey={item.title} key={item.title}>
+                  <AccordionHeader>{item.title}</AccordionHeader>
+                  <AccordionBody>
+                    <ReactMarkdown>{item.content}</ReactMarkdown>
+                  </AccordionBody>
+                </AccordionItem>
             )}
           </Accordion>
           <hr/>

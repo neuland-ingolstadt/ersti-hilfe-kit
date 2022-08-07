@@ -13,10 +13,7 @@ import calendar from '../data/calendar.json'
 import clubs from '../data/clubs.json'
 import styles from '../styles/Home.module.css'
 import { Accordion, ListGroup, ListGroupItem } from 'react-bootstrap'
-import {
-  formatFriendlyDateTime,
-  formatFriendlyRelativeTime
-} from '../lib/date-utils'
+import { formatFriendlyDateTime, formatFriendlyRelativeTime } from '../lib/date-utils'
 import PropTypes from 'prop-types'
 
 function Home ({ rawData }) {
@@ -52,6 +49,26 @@ function Home ({ rawData }) {
         <p>
           &ndash; Eure Fachschaft Informatik &lt;3
         </p>
+
+        {rawData.length > 2 &&
+          <>
+            <Link href="#studyguide">
+              <Button variant={'secondary'} className={styles.button}>
+                Springe zum Studienguide
+              </Button>
+            </Link>
+            <Link href="#cityguide">
+              <Button variant={'secondary'} className={styles.button}>
+                Springe zur Stadtführung
+              </Button>
+            </Link>
+            <Link href="#discord">
+              <Button variant={'secondary'} className={styles.button}>
+                Springe zu den Discord Servern
+              </Button>
+            </Link>
+          </>
+        }
 
         {calendar && calendar.length > 0 &&
           <>
@@ -115,9 +132,15 @@ function Home ({ rawData }) {
           </>
         }
 
-        <hr/>
+        <div className={styles.hrcontainer}>
+          <a href="https://neuland.app">
+            <hr className={styles.textedhr} data-content="Mehr einsehen in der Neuland.App"/>
+          </a>
+        </div>
 
-        <h2 className={styles.subtitle}>
+        <hr id='studyguide'/>
+
+        <h2 className={styles.subtitle} >
           <FontAwesomeIcon icon={faBook} fixedWidth/>
           <> Studienguide</>
         </h2>
@@ -163,7 +186,7 @@ function Home ({ rawData }) {
           Bei allen Informationen, die auf euch einprasseln, vergesst eines nicht: <b>Macht euch nicht verrückt!</b>
         </p>
 
-        <hr/>
+        <hr id='cityguide'/>
 
         <h2 className={styles.subtitle}>
           <FontAwesomeIcon icon={faMapSigns} fixedWidth/>
@@ -199,7 +222,7 @@ function Home ({ rawData }) {
           </Link>
         </p>
 
-        <hr/>
+        <hr id='discord'/>
 
         <h2 className={styles.subtitle}>
           <FontAwesomeIcon icon={faDiscord} fixedWidth/>
@@ -285,7 +308,20 @@ export async function getServerSideProps () {
       }
     })
 
-  return { props: { rawData: rawData.slice(0, 20) } }
+  const finalRawData = rawData
+    .filter(x => {
+      const xDate = new Date(x.begin)
+      const startDay = new Date(rawData[0].begin)
+      xDate.setHours(12, 0, 0)
+      startDay.setHours(12, 0, 0)
+
+      const dateDelta = (xDate - startDay)
+      const roundedDateDelta = Math.round(dateDelta / 86400000)
+
+      return roundedDateDelta <= 14
+    })
+
+  return { props: { rawData: finalRawData } }
 }
 
 Home.propTypes = {
