@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { Container, Navbar, Form } from 'react-bootstrap'
+import { Container, Form, Navbar } from 'react-bootstrap'
 import PropTypes from 'prop-types'
 import { faMapMarkerAlt, faQuestion } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
