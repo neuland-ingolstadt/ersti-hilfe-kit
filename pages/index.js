@@ -50,7 +50,7 @@ function Home ({ rawData }) {
           &ndash; Eure Fachschaft Informatik &lt;3
         </p>
 
-        {rawData.length > 2 &&
+        {rawData.length >= 8 &&
           <>
             <Link href="#studyguide">
               <Button variant={'secondary'} className={styles.button}>
