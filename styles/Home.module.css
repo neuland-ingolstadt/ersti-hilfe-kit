@@ -9,12 +9,12 @@
 
 .title {
   font-size: 18pt;
-  margin: 20px 0px;
+  margin: 20px 0;
 }
 
 .subtitle {
   font-size: 14pt;
-  margin: 20px 0px;
+  margin: 20px 0;
 }
 
 .calendarTitle {
@@ -24,6 +24,10 @@
 .left {
   flex: 1;
   text-align: left;
+}
+
+.button {
+    margin: .5vh;
 }
 
 .details {
@@ -42,6 +46,10 @@
 .item {
     display: flex;
     flex: 1;
+}
+
+.navigation {
+    background: #bbbbbb;
 }
 
 .hrcontainer {
@@ -74,12 +82,7 @@
     content: attr(data-content);
     position: relative;
     display: inline-block;
-    color: black;
     padding: 0 .5em;
     color: #818078;
     background-color: white;
-}
-
-.button {
-    margin: .5vh;
 }

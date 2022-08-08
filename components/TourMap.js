@@ -14,6 +14,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 import styles from '../styles/TourMap.module.css'
+import Link from 'next/link'
 
 const ICONS = {
   gastro: '/pin_green.svg',
@@ -118,6 +119,14 @@ export default function TourMap ({ center, data }) {
             src="https://assets.neuland.app/StudVer_Logo_2020_CMYK.svg"
             alt="Studierendenvertretung TH Ingolstadt"
           />
+
+          <center>
+            <Link href="../">
+              <Button variant='secondary'>
+                Zurück
+              </Button>
+            </Link>
+          </center>
 
           {categorizedData.map(({ category, items }) =>
             <ListGroup key={category} variant="flush">

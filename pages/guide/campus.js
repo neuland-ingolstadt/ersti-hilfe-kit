@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
-import { Accordion, Container, Navbar } from 'react-bootstrap'
+import { Accordion, Container, Navbar, Offcanvas } from 'react-bootstrap'
 import styles from '../../styles/Scavenger.module.css'
 import Link from 'next/link'
 import Button from 'react-bootstrap/Button'
@@ -9,8 +9,18 @@ import AccordionItem from 'react-bootstrap/AccordionItem'
 import AccordionHeader from 'react-bootstrap/AccordionHeader'
 import AccordionBody from 'react-bootstrap/AccordionBody'
 import ReactMarkdown from 'react-markdown'
+import Hamburger from 'hamburger-react'
 
 export default function Studies () {
+  const [isOpen, setOpen] = useState(false)
+  const handleToggle = () => {
+    if (isOpen) {
+      setOpen(false)
+    } else {
+      setOpen(true)
+    }
+  }
+
   return (
     <>
       <Head>
@@ -29,7 +39,42 @@ export default function Studies () {
             />{' '}
             Studienguide
           </Navbar.Brand>
+          <Hamburger toggled={isOpen} onToggle={setOpen} />
         </Container>
+        <Offcanvas show={isOpen} onHide={handleToggle} placement={'end'}>
+          <Offcanvas.Body className={styles.navbar}>
+            <>
+              <li>
+                <Link href="../guide/studies">
+                  <h3>Dein Studium</h3>
+                </Link>
+              </li>
+              <li>
+                <Link href="../guide/life">
+                  <h3>Dein Studierendenleben</h3>
+                </Link>
+              </li>
+              <li>
+                <Link href="../guide/campus">
+                  <h3 className={styles.active}>Dein Campus</h3>
+                </Link>
+              </li>
+              <li>
+                <Link href="../guide/glossary">
+                  <h3>Glossar</h3>
+                </Link>
+              </li>
+              <li>
+                <Link href="../">
+                  <h3>Zurück</h3>
+                </Link>
+              </li>
+              <li>
+                <Hamburger toggled={isOpen} onToggle={setOpen} />
+              </li>
+            </>
+          </Offcanvas.Body>
+        </Offcanvas>
       </Navbar>
 
       <Container className={styles.container}>
