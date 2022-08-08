@@ -199,7 +199,7 @@ function Home ({ rawData }) {
         </p>
 
         <p>
-          <Link href="/tour/ingolstadt">
+          <Link href="/tour/ingolstadt" target='_blank'>
             <Button variant="primary">
               Ingolstädter Führung öffnen
             </Button>
@@ -296,7 +296,6 @@ export async function getServerSideProps () {
 
   const rawData = calendar
     .concat(dataWeb)
-    .sort((a, b) => a.end.localeCompare(b.end))
     .sort((a, b) => a.begin.localeCompare(b.begin))
     .filter(x => {
       if (x.end != null) {
