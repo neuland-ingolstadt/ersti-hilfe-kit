@@ -6,15 +6,77 @@ import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBook, faCalendarAlt, faExternalLink, faMapSigns } from '@fortawesome/free-solid-svg-icons'
+import {
+  faBook,
+  faCalendarAlt,
+  faExternalLink,
+  faMapSigns
+} from '@fortawesome/free-solid-svg-icons'
 import { faDiscord, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 import calendar from '../data/calendar.json'
 import clubs from '../data/clubs.json'
 import styles from '../styles/Home.module.css'
-import { Accordion, ListGroup, ListGroupItem } from 'react-bootstrap'
-import { formatFriendlyDateTime, formatFriendlyRelativeTime } from '../lib/date-utils'
+import { Card, Carousel } from 'react-bootstrap'
+import { formatFriendlyDateTime } from '../lib/date-utils'
 import PropTypes from 'prop-types'
+
+function getCards (arr) {
+  let p = 0
+  const data = arr
+  const carousel = []
+  for (let i = 0; i < Math.ceil(arr.length / 3); i++) {
+    let firstCard = null
+    let secondCard = null
+    let thirdCard = null
+
+    if (data[p] != null) {
+      firstCard = getSingleCard(data[p])
+    }
+    if (data[p + 1] != null) {
+      secondCard = getSingleCard(data[p + 1])
+    }
+    if (data[p + 2] != null) {
+      thirdCard = getSingleCard(data[p + 2])
+    }
+    const carouselItem = <Carousel.Item key={p}>
+      {firstCard}{secondCard}{thirdCard}
+    </Carousel.Item>
+    carousel.push(carouselItem)
+    p = p + 3
+  }
+
+  return carousel
+}
+
+function getSingleCard (item) {
+  const date = new Date(item.begin)
+  const club = clubs.find(it => it.club === item.organizer)
+
+  if (item.organizer != null && club != null) {
+    return <Card className={styles.card}>
+      <Card.Body>
+        <Card.Title><h4>{item.title}</h4></Card.Title>
+        <Card.Subtitle>{formatFriendlyDateTime(date)}</Card.Subtitle>
+        <Card.Text>
+          <span>{item.organizer} </span>
+          <Card.Link href={club.website}><FontAwesomeIcon icon={faExternalLink}/></Card.Link>
+          <Card.Link href={club.instagram}><FontAwesomeIcon icon={faInstagram}/></Card.Link>
+        </Card.Text>
+      </Card.Body>
+    </Card>
+  } else {
+    return <Card className={styles.card}>
+        <Card.Body>
+          <Card.Title><h4>{item.title}</h4></Card.Title>
+          <Card.Subtitle>{formatFriendlyDateTime(date)}</Card.Subtitle>
+          <Card.Text>
+            <span>{item.organizer.length > 0 && item.organizer} </span>
+          </Card.Text>
+        </Card.Body>
+      </Card>
+  }
+}
 
 function Home ({ rawData }) {
   return (
@@ -70,7 +132,7 @@ function Home ({ rawData }) {
           </>
         }
 
-        {calendar && calendar.length > 0 &&
+        {rawData && rawData.length > 0 &&
           <>
             <hr/>
 
@@ -79,68 +141,17 @@ function Home ({ rawData }) {
               <> Veranstaltungen</>
             </h2>
 
-            <Accordion>
-              {rawData.map((event, idx) => {
-                const date = new Date(event.begin)
-                const club = clubs.find(item => item.club === event.organizer)
-                if (club != null && event.organizer != null) {
-                  return <ListGroup variant={'flush'} key={idx}>
-                    <ListGroupItem>
-                      <div className={styles.item}>
-                        <div className={styles.left}>
-                          <span>{event.title}</span><br/>
-                          {event.organizer.length > 0 &&
-                            <span className={styles.organizer}>
-                              <a href={club.website} className={styles.organizer}>
-                                {event.organizer}<FontAwesomeIcon icon={faExternalLink} fixedWidth/>
-                              </a>
-                              <a href={club.instagram} className={styles.instagram}>
-                               <FontAwesomeIcon icon={faInstagram} fixedWidth/>
-                              </a>
-                            </span>
-                          }<br/>
-                          am {formatFriendlyDateTime(date)}
-                        </div>
-                        <div className={styles.details}>
-                          <p>{formatFriendlyRelativeTime(date)}</p>
-                        </div>
-                      </div>
-                    </ListGroupItem>
-                  </ListGroup>
-                } else {
-                  return <ListGroup variant={'flush'} key={idx}>
-                    <ListGroupItem>
-                      <div className={styles.item}>
-                        <div className={styles.left}>
-                          <span>{event.title}</span><br/>
-                          {event.organizer.length > 0 &&
-                            <span className={styles.organizer}>
-                              {event.organizer}
-                            </span>
-                          }<br/>
-                          am {formatFriendlyDateTime(date)}
-                        </div>
-                        <div className={styles.details}>
-                          <p>{formatFriendlyRelativeTime(date)}</p>
-                        </div>
-                      </div>
-                    </ListGroupItem>
-                  </ListGroup>
-                }
+            <Carousel variant="dark">
+              {getCards(rawData).map((item) => {
+                return item
               })}
-            </Accordion>
+            </Carousel>
           </>
         }
 
-        <div className={styles.hrcontainer}>
-          <a href="https://neuland.app">
-            <hr className={styles.textedhr} data-content="Mehr einsehen in der Neuland.App"/>
-          </a>
-        </div>
+        <hr id="studyguide"/>
 
-        <hr id='studyguide'/>
-
-        <h2 className={styles.subtitle} >
+        <h2 className={styles.subtitle}>
           <FontAwesomeIcon icon={faBook} fixedWidth/>
           <> Studienguide</>
         </h2>
