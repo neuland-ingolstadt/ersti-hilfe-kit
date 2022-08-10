@@ -6,12 +6,7 @@ import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faBook,
-  faCalendarAlt,
-  faExternalLink,
-  faMapSigns
-} from '@fortawesome/free-solid-svg-icons'
+import { faBook, faCalendarAlt, faExternalLink, faMapSigns } from '@fortawesome/free-solid-svg-icons'
 import { faDiscord, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 import calendar from '../data/calendar.json'
@@ -84,6 +79,7 @@ function Home ({ rawData }) {
       <Head>
         <title>Digitale O-Phase</title>
         <meta name="description" content="Eine digitale O-Phase für die Erstis an der TH Ingolstadt."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="icon" href="https://assets.neuland.app/StudVer_Logo_ohne%20Schrift.svg"/>
       </Head>
 
