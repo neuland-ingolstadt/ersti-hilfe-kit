@@ -149,9 +149,10 @@
         "link": ""
       },
       {
-        "title": "BAföG Amt des Studentenwerks",
+        "title": "BAföG Amt des Studierendenwerks",
         "content": "",
-        "link": ""
+        "link": "https://www.werkswelt.de/index.php?id=bafoeg",
+        "linktitle": "Zur Infoseite des Studierendenwerks"
       }
     ]
   },
