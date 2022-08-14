@@ -111,38 +111,45 @@
       },
       {
         "title": "Psychosoziale Beratung",
-        "content": "",
-        "link": ""
+        "content": "*Bitte nehmt lieber früher als später eine Beratungsstunde in Anspruch. Auch einfach nur um ein gutes Gespräch zu führen*",
+        "link": "https://www.werkswelt.de/index.php?id=ppbIN",
+        "linktitle": "Zur Webseite der Psychosozialen Beratungsstelle bei uns in Ingolstadt"
       },
       {
         "title": "Hilfe bei Diskriminierung und (sexuelle) Belästigung",
-        "content": "",
-        "link": ""
+        "content": "Seit eingier Zeit hat die THI ein Projekt, dasss isch respect@THI nennt. Darüber läuft beispielsweise auch eine App namens respect@THI welche das Ziel hat Diskriminierung und Belästigung einzugrenzen. Zuständig ist die Gleichstellungsbeauftragte der Hochschule.",
+        "link": "https://www.thi.de/service/gleichstellung-und-vielfalt/respect-at-thi/",
+        "linktitle": "Webseite von respect@THI"
       },
       {
         "title": "Studieren mit chronischer Erkrankung oder Behinderung",
         "content": "",
-        "link": ""
+        "link": "https://www.thi.de/studium/beratungsangebote-an-der-thi/studieren-mit-behinderung/",
+        "linktitle": "Zur Informationsseite der Hochschule"
       },
       {
         "title": "Studieren mit Kind und Familie",
         "content": "",
-        "link": ""
+        "link": "https://www.thi.de/studium/beratungsangebote-an-der-thi/studieren-mit-kind-und-mutterschutz/",
+        "linktitle": "Zur Informationsseite der Hochschule"
       },
       {
-        "title": "International Office",
-        "content": "",
-        "link": ""
+        "title": "International Office (IO)",
+        "content": "Du willst ins Ausland? Das IO wird dir dabei sehr gerne eine Stütze geben",
+        "link": "https://www.thi.de/hochschule/ueber-uns/hochschulorganisation/international-office/",
+        "linktitle": "Zur Informationsseite des IO"
       },
       {
         "title": "Career Service",
         "content": "",
-        "link": ""
+        "link": "https://www.thi.de/studium/career-service-fuer-studierende/",
+        "linktitle": "Zur Informationsseite des Career Services"
       },
       {
-        "title": "Center of Entrepreneurship",
+        "title": "Center of Entrepreneurship (CoE)",
         "content": "",
-        "link": ""
+        "link": "https://www.thi.de/studium/center-of-entrepreneurship/",
+        "linktitle": "Zur Informationsseite des CoE"
       },
       {
         "title": "Studierendenwerks Erlangen-Nürnberg",
