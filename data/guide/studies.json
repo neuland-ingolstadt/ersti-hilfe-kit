@@ -105,8 +105,9 @@
     "content": [
       {
         "title": "Allgemeine Studienberatung",
-        "content": "",
-        "link": ""
+        "content": "*Macht euch keine Sorgen, geht da auch gerne mal hin!*",
+        "link": "https://www.thi.de/studium/beratungsangebote-an-der-thi/beratung-fuer-studierende/studienberatung/",
+        "linktitle": "Mehr Informationen auf www.thi.de"
       },
       {
         "title": "Psychosoziale Beratung",
