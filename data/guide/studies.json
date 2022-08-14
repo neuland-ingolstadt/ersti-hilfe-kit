@@ -77,12 +77,14 @@
       {
         "title": "WLAN",
         "content": "",
-        "link": ""
+        "link": "https://www.thi.de/service/it-service/wifi/",
+        "linktitle": "Zur Infoseite der Hochschule"
       },
       {
         "title": "VPN & Studierendenlaufwerk",
         "content": "",
-        "link": ""
+        "link": "https://www.thi.de/service/it-service/vpn/",
+        "linktitle": "Zur Infoseite der Hochschule"
       },
       {
         "title": "Programme & Lizenzen",
@@ -92,7 +94,8 @@
       {
         "title": "Scannen, Drucken, Kopieren",
         "content": "",
-        "link": ""
+        "link": "https://www.thi.de/service/it-service/drucken/",
+        "linktitle": "Zur Infoseite der Hochschule"
       }
     ]
   },
