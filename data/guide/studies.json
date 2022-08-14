@@ -144,9 +144,10 @@
         "link": ""
       },
       {
-        "title": "Studentenwerk Erlangen-Nürnberg",
+        "title": "Studierendenwerks Erlangen-Nürnberg",
         "content": "",
-        "link": ""
+        "link": "https://www.werkswelt.de/",
+        "linktitle": "Zur Website des Studierendenwerks"
       },
       {
         "title": "BAföG Amt des Studierendenwerks",
