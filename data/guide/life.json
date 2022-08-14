@@ -140,72 +140,85 @@
   },
   {
     "category": "activeclubs",
-    "title": "Active Vereine und Hochschulgruppen",
+    "title": "Aktive Vereine und Hochschulgruppen",
     "content": [
       {
         "title": "Studierendenvertretung",
         "content": "",
-        "link": ""
+        "link": "https://studverthi.de",
+        "linktitle": "Zur Webseite der Studierendenvertretung"
       },
       {
         "title": "Hochschulkino",
         "content": "",
-        "link": ""
+        "link": "https://studverthi.de/hochschulkino",
+        "linktitle": "Zur Webseite der Studierendenvertretung"
       },
       {
         "title": "Neuland Ingolstadt e.V.",
         "content": "",
-        "link": ""
+        "link": "https://neuland-ingolstadt.de",
+        "linktitle": "Zur Webseite von Neuland Ingolstadt e.V."
       },
       {
         "title": "Students' Life",
         "content": "",
-        "link": ""
+        "link": "https://students-life.de",
+        "linktitle": "Zur Webseite von Student's Life"
       },
       {
         "title": "Schanzer Racing Electric e.V.",
         "content": "",
-        "link": ""
+        "link": "https://www.schanzer-racing.de",
+        "linktitle": "Zur Webseite von Schanzer Racing Electric e.V."
       },
       {
         "title": "think e.V.",
         "content": "",
-        "link": ""
+        "link": "https://think-thi.de/",
+        "linktitle": "Zur Webseite von think e.V."
       },
       {
         "title": "Our Future e.V.",
         "content": "",
-        "link": ""
+        "link": "https://www.ourfuturethi.de",
+        "linktitle": "Zur Webseite von Our Future e.V."
       },
       {
         "title": "NEWEXIST e.V.",
         "content": "",
-        "link": ""
+        "link": "https://newexist.com/",
+        "linktitle": "Zur Webseite von NEWEXIST e.V."
       },
       {
         "title": "N.I.C.E.",
         "content": "",
-        "link": ""
+        "link": "https://www.thi.de/studium/studentisches-leben/studentische-vereine-an-der-thi/nice-network-international-culture-exchange/",
+        "linktitle": "Zur Webseite von N.I.C.E."
       },
       {
         "title": "consult.IN e.V.",
         "content": "",
-        "link": ""
+        "link": "https://consultin.net/",
+        "linktitle": "Zur Webseite von consult.IN e.V."
       },
       {
-        "title": "Enactus Ingolstadt",
+        "title": "Enactus Ingolstadt e.V.",
         "content": "",
-        "link": ""
+        "link": "https://www.thi.de/studium/studentisches-leben/studentische-vereine-an-der-thi/enactus-ingolstadt-ev/",
+        "linktitle": "Zur Webseite von Enactus Ingolstadt e.V."
       },
       {
         "title": "Studentischer Börsenclub Ingolstadt e.V.",
         "content": "",
-        "link": ""
+        "link": "https://www.boersenclub-ingolstadt.de/",
+        "linktitle": "Zur Webseite von Studentischer Börsenclub Ingolstadt e.V."
       },
       {
         "title": "Hochschulgaming Ingolstadt",
         "content": "",
-        "link": ""
+        "link": "https://hochschulgaming.de/",
+        "linktitle": "Zur Webseite von Hochschulgaming Ingolstadt"
       }
     ]
   },
@@ -216,22 +229,26 @@
       {
         "title": "Hochschulband",
         "content": "",
-        "link": ""
+        "link": "https://studverthi.de",
+        "linktitle": "Zur Webseite der Studierendenvertretung"
       },
       {
         "title": "Eta-nol e.V.",
         "content": "",
-        "link": ""
+        "link": "https://eta-nol.de/",
+        "linktitle": "Zur Webseite von Eta-nol e.V."
       },
       {
         "title": "Leo Club Ingolstadt",
         "content": "",
-        "link": ""
+        "link": "https://www.thi.de/studium/studentisches-leben/studentische-vereine-an-der-thi/leo-club-ingolstadt/",
+        "linktitle": "Zur Webseite des Leo Club Ingolstadt"
       },
       {
         "title": "UNICEF Hochschulgruppe",
         "content": "",
-        "link": ""
+        "link": "https://www.unicef.de/mitmachen/ehrenamtlich-aktiv/-/hochschulgruppe-thi-ingolstadt",
+        "linktitle": "Zur Website von UNICEF"
       },
       {
         "title": "Studenten-bilden-Schüler e.V.",
@@ -257,26 +274,28 @@
       {
         "title": "Ingolstadt - Westpark",
         "content": "",
-        "link": ""
+        "link": "https://westpark-center.com/",
+        "linktitle": "Zur Webseite vom Westpark"
       },
       {
         "title": "Ingolstadt - Fußgängerzone",
-        "content": "",
+        "content": "In Ingolstadt in der Innenstadt (Fußgängerzone) findet Ihr von Klamottengeschäften bis hin zu Lebensmittel und sogar Kneipen alles.",
         "link": ""
       },
       {
         "title": "Ingolstadt - Gewerbegebiet Eriagstraße",
-        "content": "",
+        "content": "In der Eriagstraße könnt Ihr einen Mediamarkt oder einen Decathlon (gerade für unserere Fahrradliebhaber).",
         "link": ""
       },
       {
         "title": "Neuburg - Südpark",
         "content": "",
-        "link": ""
+        "link": "https://www.suedpark-neuburg.de/",
+        "linktitle": "Zur Webseite vom Südpark"
       },
       {
         "title": "Neuburg - Innenstadt",
-        "content": "",
+        "content": "Alles was du brauchst an Läden von Lebensmittelläden bis runter zu Schokoladengeschäften und wieder rauf zu einem Computerfachgeschäft findet ihr hier auch viel. \n\n Schaut einfach mal durch!",
         "link": ""
       }
     ]

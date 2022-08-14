@@ -34,6 +34,12 @@ function getCards (arr) {
     if (data[p + 2] != null) {
       thirdCard = getSingleCard(data[p + 2])
     }
+
+    if (thirdCard == null && secondCard == null) {
+      thirdCard = getNeulandCard()
+      secondCard = null
+    }
+
     const carouselItem = <Carousel.Item key={p}>
       {firstCard}{secondCard}{thirdCard}
     </Carousel.Item>
@@ -71,6 +77,18 @@ function getSingleCard (item) {
         </Card.Body>
       </Card>
   }
+}
+
+function getNeulandCard () {
+  return <Card className={styles.card}>
+      <Card.Body>
+        <Card.Title><h4>Mehr in der Neuland.App</h4></Card.Title>
+        <Card.Subtitle>Deine zuverlässige THI-App!</Card.Subtitle>
+        <Card.Text>
+          <Card.Link href="https://neuland.app">JETZT IM BROWSER ÖFFNEN <FontAwesomeIcon icon={faExternalLink}/></Card.Link>
+        </Card.Text>
+      </Card.Body>
+    </Card>
 }
 
 function Home ({ rawData }) {
