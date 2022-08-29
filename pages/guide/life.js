@@ -83,12 +83,12 @@ export default function Studies () {
             Dein Studierendenleben
           </h2>
 
-          Studium ist mehr als Bücher wälzen, Vorlesungen besuchen und Leistung zeigen.
-          Der Campus, die Stadt Ingolstadt und zahlreiche Einrichtungen bieten eine Vielzahl von Möglichkeiten,
-          neben dem Lernen das Leben nicht zu kurz kommen zu lassen.
-          Ob Konzert, Kickern oder Kirche – auf dieser Seiten ist sicher was für dich dabei.
-
-          <hr/>
+          <p>
+            Studium ist mehr als Bücher wälzen, Vorlesungen besuchen und Leistung zeigen.
+            Der Campus, die Stadt Ingolstadt und zahlreiche Einrichtungen bieten eine Vielzahl von Möglichkeiten,
+            neben dem Lernen das Leben nicht zu kurz kommen zu lassen.
+            Ob Konzert, Kickern oder Kirche – auf dieser Seiten ist sicher was für dich dabei.
+          </p>
 
           <Accordion>
             {rawData.map((item) =>
@@ -119,20 +119,20 @@ export default function Studies () {
           <hr/>
 
           <h2 className={styles.subtitle}>
-            Weiterführende Seiten:
+            Navigation
           </h2>
 
           <p>
             <Link href="/guide/campus">
-              <Button variant="primary">
-                Dein Campus
+              <Button variant="outline-primary">
+                Campus
               </Button>
             </Link>
           </p>
 
           <p>
             <Link href="/guide/glossary">
-              <Button variant="primary">
+              <Button variant="outline-primary">
                 Glossar
               </Button>
             </Link>
@@ -140,15 +140,15 @@ export default function Studies () {
 
           <p>
             <Link href="/guide/studies">
-              <Button variant="primary">
-                Dein Studium
+              <Button variant="outline-primary">
+                Studium
               </Button>
             </Link>
           </p>
 
           <p>
             <Link href="../">
-              <Button variant="info">
+              <Button variant="outline-secondary">
                 Zurück
               </Button>
             </Link>

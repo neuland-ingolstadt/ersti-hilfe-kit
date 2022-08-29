@@ -27,7 +27,7 @@
 }
 
 .button {
-    margin: .5vh;
+  margin: .5vh;
 }
 
 .details {
@@ -39,40 +39,46 @@
 }
 
 .instagram {
-    margin-left: 1vh;
-    color: gray;
+  margin-left: 1vh;
+  color: gray;
 }
 
 .item {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 .navigation {
-    background: #bbbbbb;
+  background: #bbbbbb;
 }
 
 .centered {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    margin: auto;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin: auto;
 }
 
 @media only screen and (min-width: 800px) {
-    .card {
-        margin: 4vh auto;
-        width: 60%;
-    }
+  .card {
+    margin: 10px auto;
+    width: 60%;
+  }
+  .card:last-child {
+    margin-bottom: 50px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
-    .card {
-        margin: 4vh auto;
-        width: 75%;
-    }
+  .card {
+    margin: 10px auto;
+    width: 75%;
+  }
+  .card:last-child {
+    margin-bottom: 50px;
+  }
 }
 
 .card span {
-    color: #AAAAAA;
+  color: #AAAAAA;
 }

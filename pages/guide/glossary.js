@@ -84,9 +84,9 @@ export default function Studies () {
             Glossar
           </h2>
 
-          Damit du dich in der “Hochschulsprache“ gut zurechtfindest, haben wir ein Glossar angelegt, in dem wir dir Abkürzungen, Begriffe und Formulierungen kurz und knapp erläutern.
-
-          <hr/>
+          <p>
+            Damit du dich in der “Hochschulsprache“ gut zurechtfindest, haben wir ein Glossar angelegt, in dem wir dir Abkürzungen, Begriffe und Formulierungen kurz und knapp erläutern.
+          </p>
 
           <Accordion>
             {data.map((item) =>
@@ -101,36 +101,36 @@ export default function Studies () {
           <hr/>
 
           <h2 className={styles.subtitle}>
-            Weiterführende Seiten:
+            Navigation
           </h2>
 
           <p>
             <Link href="/guide/studies">
-              <Button variant="primary">
-                Dein Studium
+              <Button variant="outline-primary">
+                Studium
               </Button>
             </Link>
           </p>
 
           <p>
             <Link href="/guide/life">
-              <Button variant="primary">
-                Dein Studierendenleben
+              <Button variant="outline-primary">
+                Studierendenleben
               </Button>
             </Link>
           </p>
 
           <p>
             <Link href="/guide/campus">
-              <Button variant="primary">
-                Dein Campus
+              <Button variant="outline-primary">
+                Campus
               </Button>
             </Link>
           </p>
 
           <p>
             <Link href="../">
-              <Button variant="info">
+              <Button variant="outline-secondary">
                 Zurück
               </Button>
             </Link>

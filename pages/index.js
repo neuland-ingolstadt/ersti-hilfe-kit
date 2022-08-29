@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBook, faCalendarAlt, faExternalLink, faMapSigns } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faCalendarAlt, faExternalLink, faMapSigns, faMobile } from '@fortawesome/free-solid-svg-icons'
 import { faDiscord, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 import calendar from '../data/calendar.json'
@@ -57,19 +57,23 @@ function getSingleCard (item) {
   if (item.organizer != null && club != null) {
     return <Card className={styles.card}>
       <Card.Body>
-        <Card.Title><h4>{item.title}</h4></Card.Title>
+        <Card.Title>{item.title}</Card.Title>
         <Card.Subtitle>{formatFriendlyDateTime(date)}</Card.Subtitle>
         <Card.Text>
-          <span>{item.organizer} </span>
-          <Card.Link href={club.website}><FontAwesomeIcon icon={faExternalLink}/></Card.Link>
-          <Card.Link href={club.instagram}><FontAwesomeIcon icon={faInstagram}/></Card.Link>
+          <a href={club.website} target="_blank" rel="noreferrer">
+            {item.organizer}{' '}
+            <FontAwesomeIcon icon={faExternalLink}/>
+          </a>{' '}
+          <a href={club.instagram} target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={faInstagram}/>
+          </a>
         </Card.Text>
       </Card.Body>
     </Card>
   } else {
     return <Card className={styles.card}>
         <Card.Body>
-          <Card.Title><h4>{item.title}</h4></Card.Title>
+          <Card.Title>{item.title}</Card.Title>
           <Card.Subtitle>{formatFriendlyDateTime(date)}</Card.Subtitle>
           <Card.Text>
             <span>{item.organizer.length > 0 && item.organizer} </span>
@@ -95,7 +99,7 @@ function Home ({ rawData }) {
   return (
     <Container className={styles.container}>
       <Head>
-        <title>Digitale O-Phase</title>
+        <title>Ersti-Hilfe-Kit</title>
         <meta name="description" content="Eine digitale O-Phase für die Erstis an der TH Ingolstadt."/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="icon" href="https://assets.neuland.app/StudVer_Logo_ohne%20Schrift.svg"/>
@@ -109,7 +113,7 @@ function Home ({ rawData }) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Digitale O-Phase
+          Ersti-Hilfe-Kit
         </h1>
 
         <p>
@@ -125,26 +129,6 @@ function Home ({ rawData }) {
         <p>
           &ndash; Eure Fachschaft Informatik &lt;3
         </p>
-
-        {rawData.length >= 8 &&
-          <>
-            <Link href="#studyguide">
-              <Button variant={'secondary'} className={styles.button}>
-                Springe zum Studienguide
-              </Button>
-            </Link>
-            <Link href="#cityguide">
-              <Button variant={'secondary'} className={styles.button}>
-                Springe zur Stadtführung
-              </Button>
-            </Link>
-            <Link href="#discord">
-              <Button variant={'secondary'} className={styles.button}>
-                Springe zu den Discord Servern
-              </Button>
-            </Link>
-          </>
-        }
 
         {rawData && rawData.length > 0 &&
           <>
@@ -163,7 +147,7 @@ function Home ({ rawData }) {
           </>
         }
 
-        <hr id="studyguide"/>
+        <hr id="studyguide" />
 
         <h2 className={styles.subtitle}>
           <FontAwesomeIcon icon={faBook} fixedWidth/>
@@ -171,37 +155,37 @@ function Home ({ rawData }) {
         </h2>
 
         <p>
-          In den folgenden Themenbereichen versuchen wir das wichtigste Knowhow zu eurem Studierendenleben an der THI
-          zusammenzufassen:
+          In den folgenden Themenbereichen versuchen wir das wichtigste Know-How zu eurem Studierendenleben an der THI
+          zusammenzufassen.
         </p>
 
         <p>
           <Link href="/guide/studies">
-            <Button variant="primary">
-              Dein Studium
+            <Button variant="outline-primary">
+              Studium
             </Button>
           </Link>
         </p>
 
         <p>
           <Link href="/guide/life">
-            <Button variant="primary">
-              Dein Studierendenleben
+            <Button variant="outline-primary">
+              Studierendenleben
             </Button>
           </Link>
         </p>
 
         <p>
           <Link href="/guide/campus">
-            <Button variant={'primary'}>
-              Dein Campus
+            <Button variant="outline-primary">
+              Campus
             </Button>
           </Link>
         </p>
 
         <p>
           <Link href="/guide/glossary">
-            <Button variant={'primary'}>
+            <Button variant="outline-primary">
               Glossar
             </Button>
           </Link>
@@ -224,25 +208,17 @@ function Home ({ rawData }) {
         </p>
 
         <p>
-          <Link href="/tour/ingolstadt" target='_blank'>
-            <Button variant="primary">
-              Ingolstädter Führung öffnen
+          <Link href="/tour/ingolstadt" target="_blank">
+            <Button variant="outline-primary">
+              Ingolstadt
             </Button>
           </Link>
         </p>
 
         <p>
-          <Link href="/tour/neuburg">
-            <Button variant="primary">
-              Neuburger Führung öffnen
-            </Button>
-          </Link>
-        </p>
-
-        <p>
-          <Link href="/scavenger">
-            <Button variant="primary">
-              Digitale Schnitzeljagd (Ingolstadt)
+          <Link href="/tour/neuburg" target="_blank">
+            <Button variant="outline-primary">
+              Neuburg
             </Button>
           </Link>
         </p>
@@ -260,32 +236,32 @@ function Home ({ rawData }) {
 
         <p>
           <a href="https://discord.gg/pTvQEZpga7" target="_blank" rel="noreferrer">
-            <Button>
-              Server der Fakultät I
+            <Button variant="outline-primary">
+              Fakultät Informatik
             </Button>
           </a>
         </p>
 
         <p>
           <a href="https://discord.gg/2gzsCD744V" target="_blank" rel="noreferrer">
-            <Button>
-              Server der Fakultät E
+            <Button variant="outline-primary">
+              Fakultät Elektro- und Informationstechnik
             </Button>
           </a>
         </p>
 
         <p>
           <a href="https://discord.gg/gP4hQaxmRS" target="_blank" rel="noreferrer">
-            <Button>
-              Server der Fakultät M
+            <Button variant="outline-primary">
+              Fakultät Maschinenbau
             </Button>
           </a>
         </p>
 
         <p>
           <a href="https://discord.gg/geebhm5UKF" target="_blank" rel="noreferrer">
-            <Button>
-              Server der Fakultät WI
+            <Button variant="outline-primary">
+              Fakultät Wirtschaftsingenieurwesen
             </Button>
           </a>
         </p>

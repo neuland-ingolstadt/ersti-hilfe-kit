@@ -83,9 +83,10 @@ export default function Studies () {
             Dein Campus
           </h2>
 
-          Die THI hat zwei Hochschulgelände. Der Campus der Fakultät Nachhaltige Infrastruktur befindet sich in Neuburg.
-          Der Stammcampus mit Mensa, Bibliothek und den restlichen Fakultäten befindet sich an der Esplanade in Ingolstadt.
-          <hr/>
+          <p>
+            Die THI hat zwei Hochschulgelände. Der Campus der Fakultät Nachhaltige Infrastruktur befindet sich in Neuburg.
+            Der Stammcampus mit Mensa, Bibliothek und den restlichen Fakultäten befindet sich an der Esplanade in Ingolstadt.
+          </p>
 
           <Accordion>
             {rawData.map((item) =>
@@ -116,12 +117,12 @@ export default function Studies () {
           <hr/>
 
           <h2 className={styles.subtitle}>
-            Weiterführende Seiten:
+            Navigation
           </h2>
 
           <p>
             <Link href="/guide/glossary">
-              <Button variant="primary">
+              <Button variant="outline-primary">
                 Glossar
               </Button>
             </Link>
@@ -129,23 +130,23 @@ export default function Studies () {
 
           <p>
             <Link href="/guide/studies">
-              <Button variant="primary">
-                Dein Studium
+              <Button variant="outline-primary">
+                Studium
               </Button>
             </Link>
           </p>
 
           <p>
             <Link href="/guide/life">
-              <Button variant="primary">
-                Dein Studierendenleben
+              <Button variant="outline-primary">
+                Studierendenleben
               </Button>
             </Link>
           </p>
 
           <p>
             <Link href="../">
-              <Button variant="info">
+              <Button variant="outline-secondary">
                 Zurück
               </Button>
             </Link>
