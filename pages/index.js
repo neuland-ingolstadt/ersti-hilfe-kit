@@ -223,6 +223,26 @@ function Home ({ rawData }) {
           </Link>
         </p>
 
+        <hr id="app" />
+
+        <h2 className={styles.subtitle}>
+          <FontAwesomeIcon icon={faMobile} fixedWidth/>
+          <> App</>
+        </h2>
+
+        <p>
+          Die neuland.app ist eine alternative App für die THI.
+          Hier habt ihr euren Stundenplan, die Speisepläne sowie wichtige Termine und Veranstaltungen auf einen Blick.
+        </p>
+
+        <p>
+          <a href="https://neuland.app" target="_blank" rel="noreferrer">
+            <Button variant="outline-primary">
+              neuland.app
+            </Button>
+          </a>
+        </p>
+
         <hr id='discord'/>
 
         <h2 className={styles.subtitle}>
