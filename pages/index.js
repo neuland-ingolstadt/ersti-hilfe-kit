@@ -160,33 +160,13 @@ function Home ({ rawData }) {
         </p>
 
         <p>
+          In den Texten des Guides wird aufgrund technischer Beschränkungen mit einem Doppelpunkt gegendert, obwohl hier immer der Genderstern gemeint ist.
+        </p>
+
+        <p>
           <Link href="/guide/studies">
             <Button variant="outline-primary">
-              Studium
-            </Button>
-          </Link>
-        </p>
-
-        <p>
-          <Link href="/guide/life">
-            <Button variant="outline-primary">
-              Studierendenleben
-            </Button>
-          </Link>
-        </p>
-
-        <p>
-          <Link href="/guide/campus">
-            <Button variant="outline-primary">
-              Campus
-            </Button>
-          </Link>
-        </p>
-
-        <p>
-          <Link href="/guide/glossary">
-            <Button variant="outline-primary">
-              Glossar
+              Zum Guide
             </Button>
           </Link>
         </p>
