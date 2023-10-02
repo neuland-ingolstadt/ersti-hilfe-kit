@@ -155,6 +155,9 @@ export default function Scavenger ({ id, entry, error }) {
 
         <footer className={styles.footer}>
           <p>
+            Finde drei QR-Codes und komm dann zum Stand von Neuland Ingolstadt, um deinen Preis abzuholen!
+          </p>
+          <p>
             <small>
               <>Fragen? </>
               <Link href="/scavenger">
