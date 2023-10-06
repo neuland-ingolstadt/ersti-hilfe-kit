@@ -231,26 +231,6 @@
     "lon": 11.41803
   },
   {
-    "title": "Forty Nine",
-    "description_de": "Ziemlich versteckt in der Jesuitenstraße befindet sich das **Forty Nine**, ein Hip-Hop Club aus Ingolstadt.",
-    "description_en": "Quite hidden in Jesuitenstraße is *Forty Nine**, a hip-hop club from Ingolstadt.",
-    "category": "gastro",
-    "video": "https://assets.neuland.app/tour/Forty%20Nine.mp4",
-    "poster": "https://assets.neuland.app/tour/Forty%20Nine.jpg",
-    "lat": 48.76583,
-    "lon": 11.42016
-  },
-  {
-    "title": "Amadeus",
-    "description_de": "In der Schulstraße ist das **Amadeus**, eine Rockbar, die auch schon Kultstatus hat. Direkt gegenüber ist das **Frisch & Veg**, ein vegetarisch/veganes Bistro, wo ihr leckeres Essen bekommt. Ihr bekommt dort auch einen Studierenden-Rabatt, wenn ihr das beim Bezahlen sagt. Direkt über, bzw. neben dem Amadeus ist das **brigk**, das digitale Gründerzentrum.",
-    "description_en": "In Schulstraße is the **Amadeus**, a rock bar that already has cult status. Directly opposite is **Frisch & Veg**, a vegetarian/vegan bistro where you can get delicious food. You also get a student discount there if you say so when paying. Directly above or next to Amadeus is **brigk**, the digital start-up centre.",
-    "category": "gastro",
-    "video": "https://assets.neuland.app/tour/Amadeus.mp4",
-    "poster": "https://assets.neuland.app/tour/Amadeus.jpg",
-    "lat": 48.76485,
-    "lon": 11.42356
-  },
-  {
     "title": "Himmelblau",
     "description_de": "Das **Café Himmelblau** ist ein nettes Café mit Wohnzimmergefühl direkt an der Hohen Schule. Hier kann man frühstücken, brunchen oder zu Mittag essen.",
     "description_en": "**Café Himmelblau** is a nice café with a living room feel right next to Hohe Schule. Here you can have breakfast, brunch or lunch.",
@@ -405,8 +385,8 @@
     "description_de": "Das **Center of Entrepreneurship** koordiniert alle Gründungsaktivitäten an der Technischen Hochschule Ingolstadt. Die Hauptaufgabe des Centers ist daher die Sicherung des Wissenstransfers zwischen Forschung und Praxis mit dem Ziel der Unterstützung von wettbewerbsfähigen Gründungen an der THI. Durch eine lebendige Gründerkultur und eine bedarfsgerechte Beratung von Gründungsaktivitäten möchten wir unseren Beitrag leisten und die Studierenden und Mitarbeiter dabei unterstützen ihre Ideen zu verwirklichen. [Webseite](https://thi.de/coe)",
     "description_en": "The **Center of Entrepreneurship** coordinates all start-up activities at Ingolstadt University of Technology. The main task of the Center is therefore to ensure the transfer of knowledge between research and practice with the aim of supporting competitive start-ups at THI. Through a lively start-up culture and demand-oriented consulting for start-up activities, we would like to make our contribution and support students and employees in realizing their ideas. [Webseite](https://thi.de/coe)",
     "category": "hochschule",
-    "lat": 48.76812,
-    "lon": 11.43237
+    "lat": 48.76653,
+    "lon": 11.43419
   },
   {
     "title": "Packstation",
@@ -734,5 +714,13 @@
     "poster": "",
     "lat": 48.76627,
     "lon": 11.43249
+  },
+{
+    "title": "Raum der Stille",
+    "description_de": "Mitten in der Hektik des Alltags abschalten? Eine Atempause einlegen? Kein Problem. Im Norden des Campus befindet sich der Raum der Stille der Technischen Hochschule Ingolstadt. Während Studierende und Professoren zu den nächsten Vorlesungen eilen und die Mitarbeiter der verschiedenen Abteilungen von Termin zu Termin hasten, bietet der Raum der Stille einen Ort zum Verweilen.\n\nDer Raum der Stille soll allen Vorbeikommenden Gelegenheit bieten, einzukehren, eine Weile in Stille Platz zu nehmen, sei es, um zu entspannen, sei es, um an diesem Ort zu meditieren oder zu beten.\n\nWeil hier alle zum stillen und friedlichen Verweilen eingeladen sind, kommt dem Raum auch eine symbolische Bedeutung zu: Der Raum der Stille soll eine ständige Aufforderung zu Geschwisterlichkeit und Toleranz unter den Menschen, zwischen den Nationalitäten und Weltanschauungen sein, eine ständige Mahnung gegen Gewalt und Fremdenfeindlichkeit - ein kleiner Schritt hin zum Frieden. Vorbild war der Raum der Stille der Vereinten Nationen.\n\nDeswegen ist die Gestaltung des Raumes neutral und schlicht gehalten. Sie verzichtet auf jede religiöse oder weltanschauliche Ausrichtung.\n\nDer Raum der Stille steht allen Hochschulangehörigen - Studierenden, Lehrenden und Mitarbeitern – zu den Gebäudeöffnungszeiten jederzeit offen.\nDer Raum befindet sich im Z-Gebäude (Kavalier Heydeck). Hier laden Sitzsäcke, Futonkissen, Meditationsschemel und der weiche Teppich zum Sitzen oder Liegen in verschiedenen Positionen ein. [Webseite](https://www.thi.de/hochschule/ueber-uns/campus/raum-der-stille/)",
+    "description_en": "Feel like switching off amid the hustle and bustle of university life? Want to pause for a breather? No problem! The THI Room of Silence is located in the northern part of the campus. The Room of Silence gives all those who enter the opportunity to sit quietly for a while - whether to relax, meditate or pray.\n\nSince everyone is invited to come here and enjoy the peace and quiet, the room also has a symbolic significance: the Room of Silence stands as an ongoing call for neighbourliness and tolerance between people, nationalities and ideologies, a constant appeal against violence and xenophobia - indeed it is a small step towards peace. The idea is based on the United Nations meditation room.\n\nDuring building opening hours the Room of Silence is available to all members of the university - students, teachers and staff. It is located in Z Building (Kavalier Heydeck). The furnishings are appropriate to the room’s function, with beanbags, futon cushions, meditation stools and a soft carpet enabling visitors to sit or lie down in various positions. [Webseite](https://www.thi.de/en/university/university-profile/campus/room-of-silence/)",
+    "category": "hochschule",
+    "lat": 48.76812,
+    "lon": 11.43237
   }
 ]
