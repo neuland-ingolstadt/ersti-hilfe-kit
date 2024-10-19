@@ -5,23 +5,28 @@ import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup'
 import ReactMarkdown from 'react-markdown'
 import L from 'leaflet'
-import { MapContainer, TileLayer, ZoomControl, Marker, Popup } from 'react-leaflet'
+import {
+  MapContainer,
+  TileLayer,
+  ZoomControl,
+  Marker,
+  Popup,
+} from 'react-leaflet'
 import PropTypes from 'prop-types'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faPhotoVideo
-} from '@fortawesome/free-solid-svg-icons'
+import { faPhotoVideo } from '@fortawesome/free-solid-svg-icons'
 
 import styles from '../styles/TourMap.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const ICONS = {
   gastro: '/pin_green.svg',
   hochschule: '/pin_indigo.svg',
   chill: '/pin_orange.svg',
   sehenswuerdig: '/pin_red.svg',
-  nuetzlich: '/pin_gray.svg'
+  nuetzlich: '/pin_gray.svg',
 }
 
 const HEADINGS = {
@@ -29,7 +34,7 @@ const HEADINGS = {
   hochschule: 'Hochschule',
   chill: 'Chillen',
   sehenswuerdig: 'Sehenswürdigkeiten',
-  nuetzlich: 'Nützliches'
+  nuetzlich: 'Nützliches',
 }
 
 // use less padding on small devices
@@ -38,9 +43,15 @@ const PADDING = window.matchMedia('(max-width: 768px)').matches ? 10 : 50
 
 // use custom link implementation to set rel="noopener"
 const COMPONENTS = {
-  a (props) {
-    return <a target="_blank" rel="noopener" {...props} />
-  }
+  a(props) {
+    return (
+      <a
+        target="_blank"
+        rel="noopener"
+        {...props}
+      />
+    )
+  },
 }
 
 const icons = {}
@@ -49,51 +60,58 @@ for (const category of Object.keys(ICONS)) {
     iconUrl: ICONS[category],
     iconSize: [20, 35],
     iconAnchor: [10, 35],
-    popupAnchor: [0, -35]
+    popupAnchor: [0, -35],
   })
 }
 
-function getGoogleMapsLink (lat, lon) {
+function getGoogleMapsLink(lat, lon) {
   return `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`
 }
-function getAppleMapsLink (name, lat, lon) {
+function getAppleMapsLink(name, lat, lon) {
   return `https://maps.apple.com/?q=${encodeURIComponent(name)}&ll=${lat},${lon}`
 }
-function getOSMLink (lat, lon) {
+function getOSMLink(lat, lon) {
   return `https://www.openstreetmap.org/index.html?lat=${lat}&lon=${lon}&mlat=${lat}&mlon=${lon}&zoom=19&layers=M`
 }
 
-export default function TourMap ({ center, data }) {
+export default function TourMap({ center, data }) {
   const [showModal, setShowModal] = useState(true)
 
-  const markerRefs = useMemo(() => data.map(() => createRef(), [data]))
+  const markerRefs = useMemo(() => data.map(() => createRef()), [data])
 
   const categorizedData = useMemo(() => {
     return data
-      .map(elem => elem.category)
+      .map((elem) => elem.category)
       .filter((v, i, a) => a.indexOf(v) === i)
-      .map(category => {
-        const items = data.map((elem, idx) => ({
-          id: idx,
-          ...elem
-        }))
-          .filter(elem => elem.category === category)
+      .map((category) => {
+        const items = data
+          .map((elem, idx) => ({
+            id: idx,
+            ...elem,
+          }))
+          .filter((elem) => elem.category === category)
           .sort((a, b) => a.title.localeCompare(b.title))
 
         return { category, items }
       })
   }, [data])
 
-  const openElem = useCallback((idx) => {
-    const marker = markerRefs[idx].current
-    if (marker) {
-      marker.openPopup()
-    }
-  }, [markerRefs])
+  const openElem = useCallback(
+    (idx) => {
+      const marker = markerRefs[idx].current
+      if (marker) {
+        marker.openPopup()
+      }
+    },
+    [markerRefs]
+  )
 
   return (
     <>
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
+      <Modal
+        show={showModal}
+        onHide={() => setShowModal(false)}
+      >
         <Modal.Header closeButton>
           <Modal.Title as="h5">Virtuelle Stadt- und Campusführung</Modal.Title>
         </Modal.Header>
@@ -104,48 +122,90 @@ export default function TourMap ({ center, data }) {
             Viele der Orte haben auch ein kurzes Video.
           </p>
           <p>
-            Die virtuelle Stadt- und Campusführung ist ein Projekt der <a href="https://www.thi.de/hochschule/ueber-uns/hochschulgremien/studierendenvertretung" target="_blank" rel="noreferrer">Fachschaft Informatik</a> in Kooperation mit <a href="https://neuland-ingolstadt.de" target="_blank" rel="noreferrer">Neuland Ingolstadt</a>.
+            Die virtuelle Stadt- und Campusführung ist ein Projekt der{' '}
+            <a
+              href="https://www.thi.de/hochschule/ueber-uns/hochschulgremien/studierendenvertretung"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Fachschaft Informatik
+            </a>{' '}
+            in Kooperation mit{' '}
+            <a
+              href="https://neuland-ingolstadt.de"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Neuland Ingolstadt
+            </a>
+            .
           </p>
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="primary" onClick={() => setShowModal(false)}>OK</Button>
+          <Button
+            variant="primary"
+            onClick={() => setShowModal(false)}
+          >
+            OK
+          </Button>
         </Modal.Footer>
       </Modal>
       <Container className={styles.container}>
         <div className={styles.sidebar}>
-          <img
-            className={styles.sidebarLogo}
-            src="https://assets.neuland.app/StudVer_Logo_2020_CMYK.svg"
-            alt="Studierendenvertretung TH Ingolstadt"
-          />
+          <Link href="/">
+            <Image
+              className={styles.sidebarLogo}
+              src="https://assets.neuland.app/StudVer_Logo_2020_CMYK.svg"
+              width={250}
+              height={85}
+              alt="Studierendenvertretung TH Ingolstadt"
+            />
+          </Link>
 
           <center>
             <Link href="../">
-              <Button variant='secondary'>
-                Zurück
-              </Button>
+              <Button variant="secondary">Zurück</Button>
             </Link>
           </center>
 
-          {categorizedData.map(({ category, items }) =>
-            <ListGroup key={category} variant="flush">
+          {categorizedData.map(({ category, items }) => (
+            <ListGroup
+              key={category}
+              variant="flush"
+            >
               <ListGroup.Item className={styles.sidebarHeading}>
-                <img src={ICONS[category]} className={styles.sidebarPin} />
+                <Image
+                  src={ICONS[category]}
+                  className={styles.sidebarPin}
+                  alt=""
+                  width={20}
+                  height={20}
+                />
                 {HEADINGS[category]}
               </ListGroup.Item>
-              {items.filter(elem => !elem.hide).map(elem =>
-                <ListGroup.Item key={elem.id} action onClick={() => openElem(elem.id)}>
-                  {elem.title}
-                  {elem.video && (
-                    <div className={styles.sidebarVideoIcon}>
-                      <FontAwesomeIcon icon={faPhotoVideo} className="text-muted" fixedWidth />
-                    </div>
-                  )}
-                </ListGroup.Item>
-              )}
+              {items
+                .filter((elem) => !elem.hide)
+                .map((elem) => (
+                  <ListGroup.Item
+                    key={elem.id}
+                    action
+                    onClick={() => openElem(elem.id)}
+                  >
+                    {elem.title}
+                    {elem.video && (
+                      <div className={styles.sidebarVideoIcon}>
+                        <FontAwesomeIcon
+                          icon={faPhotoVideo}
+                          className="text-muted"
+                          fixedWidth
+                        />
+                      </div>
+                    )}
+                  </ListGroup.Item>
+                ))}
             </ListGroup>
-          )}
+          ))}
         </div>
 
         <MapContainer
@@ -166,7 +226,7 @@ export default function TourMap ({ center, data }) {
 
           <ZoomControl position="bottomright" />
 
-          {data.map((elem, idx) =>
+          {data.map((elem, idx) => (
             <Marker
               key={idx}
               position={[elem.lat, elem.lon]}
@@ -179,31 +239,59 @@ export default function TourMap ({ center, data }) {
                 className={styles.popup}
                 autoPanPadding={[PADDING, PADDING]}
               >
-                <h4 className={styles.popupHeading}>
-                  {elem.title}
-                </h4>
+                <h4 className={styles.popupHeading}>{elem.title}</h4>
                 <div className={styles.popupDescription}>
-                  {navigator.language.startsWith('de')
-                    ? <ReactMarkdown components={COMPONENTS}>{elem.description_de}</ReactMarkdown>
-                    : <ReactMarkdown components={COMPONENTS}>{elem.description_en}</ReactMarkdown>
-                  }
+                  {navigator.language.startsWith('de') ? (
+                    <ReactMarkdown components={COMPONENTS}>
+                      {elem.description_de}
+                    </ReactMarkdown>
+                  ) : (
+                    <ReactMarkdown components={COMPONENTS}>
+                      {elem.description_en}
+                    </ReactMarkdown>
+                  )}
                 </div>
-                {elem.video &&
-                  <video className={styles.popupVideo} poster={elem.poster} controls>
-                    <source src={elem.video} type="video/mp4" />
+                {elem.video && (
+                  <video
+                    className={styles.popupVideo}
+                    poster={elem.poster}
+                    controls
+                  >
+                    <source
+                      src={elem.video}
+                      type="video/mp4"
+                    />
                   </video>
-                }
+                )}
                 <p>
                   Öffnen in{' '}
-                  <a href={getOSMLink(elem.lat, elem.lon)} target="_blank" rel="noreferrer">OpenStreetMap</a>
+                  <a
+                    href={getOSMLink(elem.lat, elem.lon)}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    OpenStreetMap
+                  </a>
                   {', '}
-                  <a href={getGoogleMapsLink(elem.lat, elem.lon)} target="_blank" rel="noreferrer">Google Maps</a>
+                  <a
+                    href={getGoogleMapsLink(elem.lat, elem.lon)}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Google Maps
+                  </a>
                   {', '}
-                  <a href={getAppleMapsLink(elem.title, elem.lat, elem.lon)} target="_blank" rel="noreferrer">Apple Maps</a>
+                  <a
+                    href={getAppleMapsLink(elem.title, elem.lat, elem.lon)}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Apple Maps
+                  </a>
                 </p>
               </Popup>
             </Marker>
-          )}
+          ))}
         </MapContainer>
       </Container>
     </>
@@ -211,5 +299,5 @@ export default function TourMap ({ center, data }) {
 }
 TourMap.propTypes = {
   center: PropTypes.array,
-  data: PropTypes.array
+  data: PropTypes.array,
 }

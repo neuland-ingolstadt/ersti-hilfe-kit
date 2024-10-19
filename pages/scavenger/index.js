@@ -4,12 +4,13 @@ import { Container, Navbar } from 'react-bootstrap'
 import PropTypes from 'prop-types'
 import styles from '../../styles/Scavenger.module.css'
 import ScavengerDatabase from '../../lib/ScavengerDatabase'
+import Image from 'next/image'
 
-export default function Scavenger ({ id, entry, error }) {
+export default function Scavenger() {
   const [score, setScore] = useState()
 
   useEffect(() => {
-    async function update () {
+    async function update() {
       const db = new ScavengerDatabase()
       setScore(await db.getScore())
     }
@@ -20,17 +21,28 @@ export default function Scavenger ({ id, entry, error }) {
     <>
       <Head>
         <title>Schnitzeljagd</title>
-        <meta name="description" content="Eine digitale Schnitzeljagd für die Erstis an der TH Ingolstadt." />
-        <link rel="icon" href="https://assets.neuland.app/StudVer_Logo_ohne%20Schrift.svg" />
+        <meta
+          name="description"
+          content="Eine digitale Schnitzeljagd für die Erstis an der TH Ingolstadt."
+        />
+        <link
+          rel="icon"
+          href="https://assets.neuland.app/StudVer_Logo_ohne%20Schrift.svg"
+        />
       </Head>
 
-      <Navbar bg="light" variant="light">
+      <Navbar
+        bg="light"
+        variant="light"
+      >
         <Container>
-          <Navbar.Brand>
-            <img
+          <Navbar.Brand href="/">
+            <Image
               src="https://assets.neuland.app/StudVer_Logo_ohne%20Schrift.svg"
               alt="Studierendenvertretung TH Ingolstadt"
               className={`d-inline-block align-top ${styles.logo}`}
+              height={30}
+              width={30}
             />{' '}
             Schnitzeljagd
           </Navbar.Brand>
@@ -43,17 +55,19 @@ export default function Scavenger ({ id, entry, error }) {
 
       <Container className={styles.container}>
         <main className={styles.main}>
-          <h1 className={styles.title}>
-            Was ist das?
-          </h1>
+          <h1 className={styles.title}>Was ist das?</h1>
           <p>
-            Das ist eine Campusführung in Form einer digitalen Schnitzeljagd, welche euch dabei helfen soll, eure neue Hochschule besser kennenzulernen.
+            Das ist eine Campusführung in Form einer digitalen Schnitzeljagd,
+            welche euch dabei helfen soll, eure neue Hochschule besser
+            kennenzulernen.
           </p>
-          <h2 className={styles.subtitle}>
-            Wie mache ich mit?
-          </h2>
+          <h2 className={styles.subtitle}>Wie mache ich mit?</h2>
           <p>
-            Überall in der THI sind an interessanten Orten QR-Codes angebracht. Scanne diesen QR-Code, um Punkte gutgeschrieben zu bekommen. Die Personen, die am Ende die meisten Punkte haben, kriegen als Preis etwas THI Merch. Alle anderen haben zumindest etwas über ihre Hochschule gelernt. ;)
+            Überall in der THI sind an interessanten Orten QR-Codes angebracht.
+            Scanne diesen QR-Code, um Punkte gutgeschrieben zu bekommen. Die
+            Personen, die am Ende die meisten Punkte haben, kriegen als Preis
+            etwas THI Merch. Alle anderen haben zumindest etwas über ihre
+            Hochschule gelernt. ;)
           </p>
           <p>
             Du hast aktuell <strong>{score || 0} Punkte</strong>.
@@ -63,7 +77,22 @@ export default function Scavenger ({ id, entry, error }) {
         <footer className={styles.footer}>
           <p>
             <small>
-              Erstellt und entwickelt von der <a href="https://studverthi.de" target="_blank" rel="noreferrer">Studierendenvertretung</a> und <a href="https://neuland-ingolstadt.de" target="_blank" rel="noreferrer">Neuland Ingolstadt.</a>
+              Erstellt und entwickelt von der{' '}
+              <a
+                href="https://studverthi.de"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Studierendenvertretung
+              </a>{' '}
+              und{' '}
+              <a
+                href="https://neuland-ingolstadt.de"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Neuland Ingolstadt.
+              </a>
             </small>
           </p>
         </footer>
@@ -74,5 +103,5 @@ export default function Scavenger ({ id, entry, error }) {
 Scavenger.propTypes = {
   id: PropTypes.string,
   entry: PropTypes.any,
-  error: PropTypes.string
+  error: PropTypes.string,
 }

@@ -10,29 +10,31 @@ import ReactMarkdown from 'react-markdown'
 import styles from '../../styles/Scavenger.module.css'
 import ScavengerDatabase from '../../lib/ScavengerDatabase'
 import data from '../../lib/data'
+import Image from 'next/image'
 
-function checkAnswerSimilarity (givenAnswer, correctAnswers) {
-  const applyLevenshtein = x => levenshtein(x.toLowerCase(), givenAnswer.toLowerCase()) / x.length
+function checkAnswerSimilarity(givenAnswer, correctAnswers) {
+  const applyLevenshtein = (x) =>
+    levenshtein(x.toLowerCase(), givenAnswer.toLowerCase()) / x.length
   return Math.min(...correctAnswers.map(applyLevenshtein)) <= 0.2
 }
 
-export async function getServerSideProps (context) {
+export async function getServerSideProps(context) {
   const { id } = context.query
   return {
     props: {
       id,
       entry: data[id] || null,
-      error: data[id] ? null : 'Dieser Ort existiert nicht.'
-    }
+      error: data[id] ? null : 'Dieser Ort existiert nicht.',
+    },
   }
 }
 
-export default function Scavenger ({ id, entry, error }) {
+export default function Scavenger({ id, entry, error }) {
   const [score, setScore] = useState()
-  const [quizes, setQuizes] = useState([])
+  const [quizzes, setQuizzes] = useState([])
 
   useEffect(() => {
-    async function update () {
+    async function update() {
       if (!entry) {
         return
       }
@@ -41,26 +43,28 @@ export default function Scavenger ({ id, entry, error }) {
       await db.addItem(id, entry.points)
       setScore(await db.getScore())
 
-      const newQuizes = Promise.all(entry.questions.map(async (question) => {
-        const oldAnswer = await db.getItemQuestion(`${id}-${question.id}`)
+      const newQuizzes = Promise.all(
+        entry.questions.map(async (question) => {
+          const oldAnswer = await db.getItemQuestion(`${id}-${question.id}`)
 
-        return {
-          id: question.id,
-          points: question.points,
-          question: question.question,
-          correctAnswers: question.answer,
-          answer: oldAnswer?.question.answer || '',
-          isCorrect: !!oldAnswer,
-          isUnlocked: !!oldAnswer
-        }
-      }))
-      setQuizes(await newQuizes)
+          return {
+            id: question.id,
+            points: question.points,
+            question: question.question,
+            correctAnswers: question.answer,
+            answer: oldAnswer?.question.answer || '',
+            isCorrect: !!oldAnswer,
+            isUnlocked: !!oldAnswer,
+          }
+        })
+      )
+      setQuizzes(await newQuizzes)
     }
     update()
-  }, [])
+  }, [entry, id])
 
-  async function changeQuizAnswer (index, newAnswer) {
-    const dup = [...quizes]
+  async function changeQuizAnswer(index, newAnswer) {
+    const dup = [...quizzes]
     const quiz = { ...dup[index] }
 
     quiz.answer = newAnswer
@@ -75,24 +79,35 @@ export default function Scavenger ({ id, entry, error }) {
     }
 
     dup[index] = quiz
-    setQuizes(dup)
+    setQuizzes(dup)
   }
 
   return (
     <>
       <Head>
         <title>{entry ? entry.heading : 'Ungültiger Ort'}</title>
-        <meta name="description" content="Eine digitale Schnitzeljagd für die Erstis an der TH Ingolstadt." />
-        <link rel="icon" href="https://assets.neuland.app/StudVer_Logo_ohne%20Schrift.svg" />
+        <meta
+          name="description"
+          content="Eine digitale Schnitzeljagd für die Erstis an der TH Ingolstadt."
+        />
+        <link
+          rel="icon"
+          href="https://assets.neuland.app/StudVer_Logo_ohne%20Schrift.svg"
+        />
       </Head>
 
-      <Navbar bg="light" variant="light">
+      <Navbar
+        bg="light"
+        variant="light"
+      >
         <Container>
-          <Navbar.Brand>
-            <img
+          <Navbar.Brand href="/">
+            <Image
               src="https://assets.neuland.app/StudVer_Logo_ohne%20Schrift.svg"
               alt="Studierendenvertretung TH Ingolstadt"
               className={`d-inline-block align-top ${styles.logo}`}
+              height={30}
+              width={30}
             />{' '}
             Schnitzeljagd
           </Navbar.Brand>
@@ -105,7 +120,7 @@ export default function Scavenger ({ id, entry, error }) {
 
       <Container className={styles.container}>
         <main className={styles.main}>
-          {entry &&
+          {entry && (
             <>
               <h1 className={styles.title}>
                 <FontAwesomeIcon icon={faMapMarkerAlt} /> {entry.heading}
@@ -113,7 +128,7 @@ export default function Scavenger ({ id, entry, error }) {
               <p>
                 <ReactMarkdown>{entry.text}</ReactMarkdown>
               </p>
-              {quizes.length > 0 &&
+              {quizzes.length > 0 && (
                 <>
                   <h2 className={styles.subtitle}>
                     <FontAwesomeIcon icon={faQuestion} /> Fragen
@@ -123,8 +138,11 @@ export default function Scavenger ({ id, entry, error }) {
                       Für die richtige Antwort gibt es extra Punkte.
                     </small>
                   </p>
-                  {quizes.map((quiz, i) =>
-                    <div key={i} className={styles.question}>
+                  {quizzes.map((quiz, i) => (
+                    <div
+                      key={i}
+                      className={styles.question}
+                    >
                       <p>
                         <strong>{quiz.question}</strong>
                       </p>
@@ -133,43 +151,56 @@ export default function Scavenger ({ id, entry, error }) {
                           type="text"
                           placeholder="Antwort..."
                           value={quiz.answer || ''}
-                          isValid={quiz.isCorrect || (quiz.answer.length === 0 && quiz.isUnlocked)}
+                          isValid={
+                            quiz.isCorrect ||
+                            (quiz.answer.length === 0 && quiz.isUnlocked)
+                          }
                           isInvalid={quiz.answer.length > 0 && !quiz.isCorrect}
-                          onChange={e => changeQuizAnswer(i, e.target.value)}
+                          onChange={(e) => changeQuizAnswer(i, e.target.value)}
                         />
                       </Form>
                     </div>
-                  )}
+                  ))}
                 </>
-              }
+              )}
             </>
-          }
-          {error &&
-            <>
-              {error}
-            </>
-          }
+          )}
+          {error && <>{error}</>}
         </main>
 
         <hr />
 
         <footer className={styles.footer}>
           <p>
-            Finde drei QR-Codes und komm dann zum Stand von Neuland Ingolstadt, um deinen Preis abzuholen!
+            Finde drei QR-Codes und komm dann zum Stand von Neuland Ingolstadt,
+            um deinen Preis abzuholen!
           </p>
           <p>
             <small>
               <>Fragen? </>
               <Link href="/scavenger">
-                <a>
-                  Hier gibt Informationen zur Schnitzeljagd.
-                </a>
+                <a>Hier gibt Informationen zur Schnitzeljagd.</a>
               </Link>
             </small>
           </p>
           <p>
             <small>
-              Erstellt und entwickelt von der <a href="https://studverthi.de" target="_blank" rel="noreferrer">Studierendenvertretung</a> und <a href="https://neuland-ingolstadt.de" target="_blank" rel="noreferrer">Neuland Ingolstadt.</a>
+              Erstellt und entwickelt von der{' '}
+              <a
+                href="https://studverthi.de"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Studierendenvertretung
+              </a>{' '}
+              und{' '}
+              <a
+                href="https://neuland-ingolstadt.de"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Neuland Ingolstadt.
+              </a>
             </small>
           </p>
         </footer>
@@ -180,5 +211,5 @@ export default function Scavenger ({ id, entry, error }) {
 Scavenger.propTypes = {
   id: PropTypes.string,
   entry: PropTypes.any,
-  error: PropTypes.string
+  error: PropTypes.string,
 }

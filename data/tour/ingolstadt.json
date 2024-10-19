@@ -33,7 +33,7 @@
     "title": "Baggersee",
     "category": "chill",
     "lat": 48.74927,
-    "lon": 11.39480
+    "lon": 11.3948
   },
   {
     "title": "Auwaldsee",
@@ -107,8 +107,8 @@
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Tagtraum.mp4",
     "poster": "https://assets.neuland.app/tour/Tagtraum.jpg",
-    "lat": 48.76440,
-    "lon": 11.42940
+    "lat": 48.7644,
+    "lon": 11.4294
   },
   {
     "title": "Rosengasse 2",
@@ -117,8 +117,8 @@
     "category": "gastro",
     "video": "https://assets.neuland.app/tour/Rosengasse.mp4",
     "poster": "https://assets.neuland.app/tour/Rosengasse.jpg",
-    "lat": 48.76600,
-    "lon": 11.42920
+    "lat": 48.766,
+    "lon": 11.4292
   },
   {
     "title": "Postwagen",
@@ -238,7 +238,7 @@
     "video": "https://assets.neuland.app/tour/Himmelblau.mp4",
     "poster": "https://assets.neuland.app/tour/Himmelblau.jpg",
     "lat": 48.76326,
-    "lon": 11.42120
+    "lon": 11.4212
   },
   {
     "title": "La Pizzeria",
@@ -256,7 +256,7 @@
     "description_en": "At **Sultan's Kebab** you can get nice Döner. On the weekends it's open until late at night.",
     "category": "gastro",
     "lat": 48.76402,
-    "lon": 11.41930
+    "lon": 11.4193
   },
   {
     "title": "Basta Pasta",
@@ -284,7 +284,7 @@
     "description_en": "The slightly more expensive alternative to the Mensa. Under normal circumstances, there are often partys here.",
     "category": "gastro",
     "lat": 48.76631,
-    "lon": 11.43260
+    "lon": 11.4326
   },
   {
     "title": "Bibliothek",
@@ -340,14 +340,14 @@
     "description_en": "At the Mensa you can have lunch a fair price. You can buy coffee, drinks, sandwiches and snacks all day. Also, there's a microwave to warm up your own food.",
     "category": "gastro",
     "lat": 48.76733,
-    "lon": 11.43170
+    "lon": 11.4317
   },
   {
     "title": "Studierendenhaus",
     "description_de": "Büros der [Studierendenvertretung](https://www.thi.de/hochschule/ueber-uns/hochschulgremien/studierendenvertretung) und der [studentischen Vereine](https://www.thi.de/studium/studentisches-leben/studentische-vereine-an-der-thi).",
     "description_en": "Offices of the [student council](https://www.thi.de/en/university/university-profile/organisation/students-council) and the [student associations](https://www.thi.de/en/international/studies/campus-and-student-life/student-clubs-and-initiatives-at-thi).",
     "category": "hochschule",
-    "lat": 48.76760,
+    "lat": 48.7676,
     "lon": 11.43344
   },
   {
@@ -427,7 +427,7 @@
     "lat": 48.77098,
     "lon": 11.42356
   },
-    {
+  {
     "title": "Parkplatz Heydeckplatz",
     "description_de": "Gratis Parkplatz, jedoch nur an Wochenenden. Unter der Woche ist dieser von einer Schranke blockiert.",
     "description_en": "Free parking, but only on weekends. During the week the parking lot is blocked by a barrier.",
@@ -449,7 +449,7 @@
     "description_en": "Paid parking. In the car park itself, however, you can park for 3 hours for free, so it is very useful for single lectures. ([more information](https://donaucitycenter.de/parken.html))",
     "category": "nuetzlich",
     "lat": 48.76649,
-    "lon": 11.43830
+    "lon": 11.4383
   },
   {
     "title": "Parkplatz Hallenbad",
@@ -457,7 +457,7 @@
     "description_en": "Paid parking. You can park here for free after 6 p.m. and on Sundays. In addition, the monthly student ticket costs 35 €. ([more information](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-hallenbad))",
     "category": "nuetzlich",
     "lat": 48.76126,
-    "lon": 11.41990
+    "lon": 11.4199
   },
   {
     "title": "Neues Schloss",
@@ -477,7 +477,7 @@
     "video": "https://assets.neuland.app/tour/Stadttheater.mp4",
     "poster": "https://assets.neuland.app/tour/Stadttheater.jpg",
     "lat": 48.76328,
-    "lon": 11.42830
+    "lon": 11.4283
   },
   {
     "title": "Rathausplatz",
@@ -536,7 +536,7 @@
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Theresienstraße%2023.mp4",
     "poster": "https://assets.neuland.app/tour/Theresienstraße%2023.jpg",
-    "lat": 48.76420,
+    "lat": 48.7642,
     "lon": 11.42238
   },
   {
@@ -596,7 +596,7 @@
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Cinema.mp4",
     "poster": "https://assets.neuland.app/tour/Cinema.jpg",
-    "lat": 48.76210,
+    "lat": 48.7621,
     "lon": 11.42643
   },
   {
@@ -614,7 +614,7 @@
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Fleißer.mp4",
     "poster": "https://assets.neuland.app/tour/Fleißer.jpg",
-    "lat": 48.76420,
+    "lat": 48.7642,
     "lon": 11.42408
   },
   {
@@ -645,7 +645,7 @@
     "video": "https://assets.neuland.app/tour/Teufelsstein.mp4",
     "poster": "https://assets.neuland.app/tour/Teufelsstein.jpg",
     "lat": 48.76426,
-    "lon": 11.42420
+    "lon": 11.4242
   },
   {
     "title": "Landesgartenschau 2020",
@@ -662,7 +662,7 @@
     "category": "sehenswuerdig",
     "video": "https://assets.neuland.app/tour/Fronte.mp4",
     "poster": "https://assets.neuland.app/tour/Fronte.jpg",
-    "lat": 48.76060,
+    "lat": 48.7606,
     "lon": 11.41813
   },
   {
@@ -715,7 +715,7 @@
     "lat": 48.76627,
     "lon": 11.43249
   },
-{
+  {
     "title": "Raum der Stille",
     "description_de": "Mitten in der Hektik des Alltags abschalten? Eine Atempause einlegen? Kein Problem. Im Norden des Campus befindet sich der Raum der Stille der Technischen Hochschule Ingolstadt. Während Studierende und Professoren zu den nächsten Vorlesungen eilen und die Mitarbeiter der verschiedenen Abteilungen von Termin zu Termin hasten, bietet der Raum der Stille einen Ort zum Verweilen.\n\nDer Raum der Stille soll allen Vorbeikommenden Gelegenheit bieten, einzukehren, eine Weile in Stille Platz zu nehmen, sei es, um zu entspannen, sei es, um an diesem Ort zu meditieren oder zu beten.\n\nWeil hier alle zum stillen und friedlichen Verweilen eingeladen sind, kommt dem Raum auch eine symbolische Bedeutung zu: Der Raum der Stille soll eine ständige Aufforderung zu Geschwisterlichkeit und Toleranz unter den Menschen, zwischen den Nationalitäten und Weltanschauungen sein, eine ständige Mahnung gegen Gewalt und Fremdenfeindlichkeit - ein kleiner Schritt hin zum Frieden. Vorbild war der Raum der Stille der Vereinten Nationen.\n\nDeswegen ist die Gestaltung des Raumes neutral und schlicht gehalten. Sie verzichtet auf jede religiöse oder weltanschauliche Ausrichtung.\n\nDer Raum der Stille steht allen Hochschulangehörigen - Studierenden, Lehrenden und Mitarbeitern – zu den Gebäudeöffnungszeiten jederzeit offen.\nDer Raum befindet sich im Z-Gebäude (Kavalier Heydeck). Hier laden Sitzsäcke, Futonkissen, Meditationsschemel und der weiche Teppich zum Sitzen oder Liegen in verschiedenen Positionen ein. [Webseite](https://www.thi.de/hochschule/ueber-uns/campus/raum-der-stille/)",
     "description_en": "Feel like switching off amid the hustle and bustle of university life? Want to pause for a breather? No problem! The THI Room of Silence is located in the northern part of the campus. The Room of Silence gives all those who enter the opportunity to sit quietly for a while - whether to relax, meditate or pray.\n\nSince everyone is invited to come here and enjoy the peace and quiet, the room also has a symbolic significance: the Room of Silence stands as an ongoing call for neighbourliness and tolerance between people, nationalities and ideologies, a constant appeal against violence and xenophobia - indeed it is a small step towards peace. The idea is based on the United Nations meditation room.\n\nDuring building opening hours the Room of Silence is available to all members of the university - students, teachers and staff. It is located in Z Building (Kavalier Heydeck). The furnishings are appropriate to the room’s function, with beanbags, futon cushions, meditation stools and a soft carpet enabling visitors to sit or lie down in various positions. [Webseite](https://www.thi.de/en/university/university-profile/campus/room-of-silence/)",

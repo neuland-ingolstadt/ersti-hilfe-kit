@@ -10,12 +10,12 @@ import '../styles/globals.css'
 // eslint-disable-next-line no-unused-expressions
 typeof window !== 'undefined' && window.indexedDB
 
-function MyApp ({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 MyApp.propTypes = {
   Component: PropTypes.elementType,
-  pageProps: PropTypes.any
+  pageProps: PropTypes.any,
 }
 
 export default MyApp

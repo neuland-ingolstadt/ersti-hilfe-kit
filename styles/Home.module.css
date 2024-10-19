@@ -27,7 +27,7 @@
 }
 
 .button {
-  margin: .5vh;
+  margin: 0.5vh;
 }
 
 .details {
@@ -80,5 +80,5 @@
 }
 
 .card span {
-  color: #AAAAAA;
+  color: #aaaaaa;
 }
