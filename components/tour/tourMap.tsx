@@ -4,13 +4,7 @@ import Image from 'next/image'
 
 import Map, { MapRef, Marker } from 'react-map-gl/maplibre'
 import useMediaQuery from '@restart/hooks/useMediaQuery'
-import {
-  ChevronsLeft,
-  ImagePlay,
-  MapPin,
-  Menu,
-  Map as MapIcon,
-} from 'lucide-react'
+import { ChevronsLeft, ImagePlay, MapPin, Menu } from 'lucide-react'
 import { TourData } from '@/pages/tour/[city]'
 import {
   Dialog,
@@ -26,7 +20,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@/components/ui/collapsible'
-import TourDetails from '@/components/TourDetails'
+import TourDetails from '@/components/tour/tourDetails'
 import { cn } from '@/lib/utils'
 import {
   Drawer,
@@ -37,16 +31,8 @@ import {
   DrawerHeader,
   DrawerTitle,
 } from '@/components/ui/drawer'
-import { AttributionControl } from '@/components/ui/AttributionControl'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-import MapStyleControl from '@/components/ui/MapStyleControl'
+import { AttributionControl } from '@/components/map/attributionControl'
+import MapStyleControl from '@/components/map/styleControl'
 
 interface CategoryProps {
   fill: string

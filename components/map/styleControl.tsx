@@ -1,4 +1,4 @@
-import { MapStyle } from '@/components/TourMap'
+import { MapStyle } from '@/components/tour/tourMap'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,8 +9,6 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { cn } from '@/lib/utils'
 import { Map } from 'lucide-react'
-import { useCallback } from 'react'
-import { useMap } from 'react-map-gl/dist/esm/exports-maplibre'
 
 interface MapStyleControlProps {
   className?: string
@@ -21,8 +19,6 @@ export default function MapStyleControl({
   className,
   onStyleChange,
 }: MapStyleControlProps) {
-  const map = useMap().current
-
   return (
     <div className={cn('maplibregl-ctrl-top-right', className)}>
       <div className="maplibregl-ctrl flex flex-row items-center !rounded-md bg-background p-2">

@@ -11,12 +11,12 @@ import {
   DrawerHeader,
   DrawerTitle,
 } from '@/components/ui/drawer'
+import { COMPONENTS } from '@/components/ui/markdownComponents'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { useTourDetails } from '@/lib/hooks/tourDetails'
 import { cn } from '@/lib/utils'
 import { TourData } from '@/pages/tour/[city]'
 import useMediaQuery from '@restart/hooks/useMediaQuery'
-import { ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 import { useCallback, useMemo } from 'react'
 import { SiApple, SiGooglemaps, SiOpenstreetmap } from 'react-icons/si'
@@ -25,22 +25,6 @@ import ReactMarkdown from 'react-markdown'
 interface TourDialogProps {
   popup: TourData | undefined
   setPopup: (popup: TourData | undefined) => void
-}
-
-const COMPONENTS = {
-  a(props: Omit<React.ComponentProps<'a'>, 'ref'>) {
-    return (
-      <span className="flex items-center gap-1 text-primary">
-        <ExternalLink size={12} />
-        <Link
-          target="_blank"
-          rel="noopener"
-          href={props.href!}
-          {...props}
-        />
-      </span>
-    )
-  },
 }
 
 export default function TourDetails({ popup, setPopup }: TourDialogProps) {
