@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="flex flex-row items-center border-t py-4">
-      <div className="flex-1">
+    <footer className="flex flex-col items-center border-t py-4 md:flex-row md:justify-between">
+      <div>
         <p>
           Ein Projekt der{' '}
           <Link
@@ -29,7 +29,7 @@ export default function Footer() {
         </p>
       </div>
 
-      <ul className="flex list-disc flex-col text-right">
+      <ul className="flex list-disc flex-col text-center md:text-right">
         <Link
           href="https://github.com/neuland-ingolstadt/ersti-hilfe-kit"
           target="_blank"

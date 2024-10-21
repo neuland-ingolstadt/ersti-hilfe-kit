@@ -6,22 +6,32 @@ import INGOLSTADT from '@/data/tour/ingolstadt.json'
 import NEUBURG from '@/data/tour/neuburg.json'
 import { GetStaticProps } from 'next'
 
-const TourMap = dynamic(() => import('../../components/TourMap'), {
+const TourMap = dynamic(() => import('@/components/TourMap'), {
   ssr: false,
 })
 
-type Cities = 'ingolstadt' | 'neuburg'
-type City = keyof typeof CENTERS
-export type CityData = typeof INGOLSTADT | typeof NEUBURG
+export interface TourData {
+  title: string
+  description_de?: string
+  description_en?: string
+  category: string
+  video?: string
+  poster?: string
+  lat: number
+  lon: number
+  hide?: boolean
+}
 
-const CENTERS: Record<Cities, [number, number]> = {
+type City = 'ingolstadt' | 'neuburg'
+
+const CENTERS: Record<City, [number, number]> = {
   ingolstadt: [48.76415, 11.42434],
   neuburg: [48.73719, 11.18038],
 }
 
 interface MapProps {
   city: City
-  data: CityData
+  data: TourData[]
 }
 
 export default function Map({ city, data }: MapProps) {

@@ -104,13 +104,13 @@ export default function Home({ events }: HomeProps) {
         return (
           <Card key={index}>
             <CardHeader className="flex flex-row items-start gap-3">
-              <div className="mt-0! flex flex-1 flex-col gap-1">
-                <CardTitle>{event.title}</CardTitle>
+              <div className="mt-0! flex flex-1 flex-col">
+                <CardTitle className="truncate pb-2">{event.title}</CardTitle>
                 <CardDescription>{event.organizer}</CardDescription>
               </div>
 
               {'club' in event && (
-                <div className="flex items-start gap-1">
+                <div className="flex flex-shrink-0 items-start gap-1">
                   <Link
                     href={event.club.website}
                     target="_blank"
@@ -144,7 +144,7 @@ export default function Home({ events }: HomeProps) {
               {event.begin != null && (
                 <span className="flex items-center gap-1 text-muted-foreground">
                   <Calendar size={16} />
-                  <span>
+                  <span className="truncate">
                     {event.end != null
                       ? formatFriendlyDateTimeRange(event.begin, event.end)
                       : formatFriendlyDateTime(event.begin)}
@@ -175,7 +175,7 @@ export default function Home({ events }: HomeProps) {
         )
       })
 
-    // combine 3 cards into one carousel item
+    // combine 2 cards into one carousel item
     return data.reduce((acc, _, index) => {
       if (index % 2 === 0) {
         acc.push(data.slice(index, index + 2))
@@ -215,13 +215,13 @@ export default function Home({ events }: HomeProps) {
                 <span>Veranstaltungen</span>
               </h2>
 
-              <div className="mx-12">
+              <div className="mx-6 md:mx-12">
                 <Carousel>
                   <CarouselContent>
                     {cards.map((cards, idx) => (
                       <CarouselItem
                         key={idx}
-                        className="grid grid-cols-2 gap-3"
+                        className="grid grid-rows-2 gap-3 md:grid-cols-2 md:grid-rows-1"
                       >
                         {cards}
                       </CarouselItem>
@@ -278,7 +278,6 @@ export default function Home({ events }: HomeProps) {
           <div className="mt-2 flex gap-3">
             <Link
               href="/tour/ingolstadt"
-              target="_blank"
               passHref
             >
               <Button variant="secondary">
@@ -289,7 +288,6 @@ export default function Home({ events }: HomeProps) {
 
             <Link
               href="/tour/neuburg"
-              target="_blank"
               passHref
             >
               <Button variant="secondary">
@@ -307,12 +305,20 @@ export default function Home({ events }: HomeProps) {
           </h2>
 
           <p>
-            Die neuland.app ist eine alternative App für die THI. Hier habt ihr
-            euren Stundenplan, die Speisepläne sowie wichtige Termine und
+            Die{' '}
+            <Link
+              href="https://next.neuland.app"
+              target="_blank"
+              className="text-primary"
+            >
+              Neuland Next App
+            </Link>{' '}
+            ist eine alternative App für die THI. Hier habt ihr euren
+            Stundenplan, die Speisepläne sowie wichtige Termine und
             Veranstaltungen auf einen Blick.
           </p>
 
-          <div className="mt-3 flex items-center gap-2">
+          <div className="mt-3 flex flex-col items-start gap-2 md:flex-row md:items-center">
             <Link href="https://apps.apple.com/app/apple-store/id1617096811?pt=124486931&ct=web&mt=8">
               <Image
                 alt="Download im App Store"

@@ -1,15 +1,17 @@
 import React, { useState, createRef, useMemo } from 'react'
-import ListGroup from 'react-bootstrap/ListGroup'
-import ReactMarkdown from 'react-markdown'
-import PropTypes from 'prop-types'
-const styles = {}
 import Link from 'next/link'
 import Image from 'next/image'
 
-import Map, { Marker, Popup } from 'react-map-gl/maplibre'
+import Map, { MapRef, Marker } from 'react-map-gl/maplibre'
 import useMediaQuery from '@restart/hooks/useMediaQuery'
-import { ImagePlay, MapPin, X } from 'lucide-react'
-import { CityData } from '@/pages/tour/[city]'
+import {
+  ChevronsLeft,
+  ImagePlay,
+  MapPin,
+  Menu,
+  Map as MapIcon,
+} from 'lucide-react'
+import { TourData } from '@/pages/tour/[city]'
 import {
   Dialog,
   DialogContent,
@@ -18,31 +20,63 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
+import { ScrollArea } from '@/components/ui/scroll-area'
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '@/components/ui/collapsible'
+import TourDetails from '@/components/TourDetails'
+import { cn } from '@/lib/utils'
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+} from '@/components/ui/drawer'
+import { AttributionControl } from '@/components/ui/AttributionControl'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
+import MapStyleControl from '@/components/ui/MapStyleControl'
 
-const COLORS = {
+interface CategoryProps {
+  fill: string
+  stroke: string
+}
+
+const COLORS: Record<string, CategoryProps> = {
   gastro: {
     fill: '#2ECC71',
-    stroke: '#27AE60',
+    stroke: '#367a4b',
   },
   hochschule: {
     fill: '#3498DB',
-    stroke: '#2980B9',
+    stroke: '#2c6189',
   },
   chill: {
     fill: '#F39C12',
-    stroke: '#D35400',
+    stroke: '#9f6b26',
   },
   sehenswuerdig: {
     fill: '#E74C3C',
-    stroke: '#C0392B',
+    stroke: '#8f392c',
   },
   nuetzlich: {
     fill: '#BDC3C7',
-    stroke: '#7F8C8D',
+    stroke: '#74787a',
   },
 }
 
-const HEADINGS = {
+const HEADINGS: Record<string, string> = {
   gastro: 'Bars & Cafés',
   hochschule: 'Hochschule',
   chill: 'Chillen',
@@ -50,41 +84,21 @@ const HEADINGS = {
   nuetzlich: 'Nützliches',
 }
 
-// use custom link implementation to open links in new tab
-const COMPONENTS = {
-  a(props) {
-    return (
-      <Link
-        target="_blank"
-        rel="noopener"
-        {...props}
-      />
-    )
-  },
-}
-
-function getGoogleMapsLink(lat: number, lon: number) {
-  return `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`
-}
-function getAppleMapsLink(name: string, lat: number, lon: number) {
-  return `https://maps.apple.com/?q=${encodeURIComponent(
-    name
-  )}&ll=${lat},${lon}`
-}
-function getOSMLink(lat: number, lon: number) {
-  return `https://www.openstreetmap.org/index.html?lat=${lat}&lon=${lon}&mlat=${lat}&mlon=${lon}&zoom=19&layers=M`
-}
-
 interface TourMapProps {
   center: [number, number]
-  data: CityData
+  data: TourData[]
 }
 
-export default function TourMap({ center, data }: TourMapProps) {
-  const [dialogOpen, showDialog] = useState(true)
-  const [popup, setPopup] = useState(null)
+export type MapStyle = 'bright' | 'light' | 'dark'
 
-  const mapRef = createRef()
+export default function TourMap({ center, data }: TourMapProps) {
+  const [mapStyle, setMapStyle] = useState<MapStyle>('bright')
+  const [dialogOpen, showDialog] = useState(true)
+  const [drawerOpen, setDrawer] = useState(false)
+  const [popup, setPopup] = useState<TourData | undefined>(undefined)
+  const isDesktop = useMediaQuery('(min-width: 1024px)')
+
+  const mapRef = createRef<MapRef>()
 
   // use less padding on small devices
   // because they do not have enough space to fit the popup plus the padding
@@ -107,6 +121,59 @@ export default function TourMap({ center, data }: TourMapProps) {
       })
   }, [data])
 
+  const menuEntries = useMemo(() => {
+    return (
+      <div className="flex flex-col gap-6 p-6 pt-0">
+        {categorizedData.map(({ category, items }) => (
+          <Collapsible
+            key={category}
+            defaultOpen
+          >
+            <CollapsibleTrigger className="flex w-full items-center gap-2 text-xl font-bold">
+              <MapPin
+                size={20}
+                color={COLORS[category].stroke}
+                fill={COLORS[category].fill}
+              />
+              {HEADINGS[category]}
+            </CollapsibleTrigger>
+            <CollapsibleContent className="flex flex-col gap-1">
+              <span className="mb-1 mt-3 border-t" />
+
+              {items
+                .filter((elem) => ('hide' in elem ? !elem.hide : true))
+                .map((elem) => (
+                  <Button
+                    variant="ghost"
+                    key={elem.id}
+                    onClick={() => {
+                      mapRef.current?.getMap().flyTo({
+                        center: [elem.lon, elem.lat],
+                        zoom: 16,
+                        padding: PADDING,
+                      })
+                      setPopup(elem)
+                    }}
+                    className="flex items-center gap-2"
+                  >
+                    <span className="flex-1 truncate text-left">
+                      {elem.title}
+                    </span>
+                    {elem.video && (
+                      <ImagePlay
+                        size={20}
+                        className="flex-shrink-0 text-muted-foreground"
+                      />
+                    )}
+                  </Button>
+                ))}
+            </CollapsibleContent>
+          </Collapsible>
+        ))}
+      </div>
+    )
+  }, [PADDING, categorizedData, mapRef])
+
   return (
     <>
       <Dialog
@@ -115,7 +182,9 @@ export default function TourMap({ center, data }: TourMapProps) {
       >
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Virtuelle Stadt- und Campusführung</DialogTitle>
+            <DialogTitle className="mb-0">
+              Virtuelle Stadt- und Campusführung
+            </DialogTitle>
           </DialogHeader>
 
           <p>
@@ -152,72 +221,69 @@ export default function TourMap({ center, data }: TourMapProps) {
         </DialogContent>
       </Dialog>
 
-      <div className="flex h-screen w-screen flex-row gap-4">
-        <div className="w-48">
-          <Link href="/">
-            <Image
-              src="https://assets.neuland.app/StudVer_Logo_2020_CMYK.svg"
-              width={200}
-              height={85}
-              alt="Studierendenvertretung TH Ingolstadt"
-            />
-          </Link>
+      <Drawer
+        open={drawerOpen}
+        onOpenChange={setDrawer}
+      >
+        <DrawerContent>
+          <DrawerHeader>
+            <DrawerTitle>Virtuelle Stadt- und Campusführung</DrawerTitle>
+            <DrawerDescription></DrawerDescription>
+          </DrawerHeader>
 
-          <center>
-            <Link href="../">
-              <Button variant="secondary">Zurück</Button>
+          <ScrollArea className="flex h-[70vh]">{menuEntries}</ScrollArea>
+
+          <DrawerFooter>
+            <DrawerClose>
+              <Button variant="destructive">Schließen</Button>
+            </DrawerClose>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
+
+      <TourDetails
+        popup={popup}
+        setPopup={setPopup}
+      />
+
+      <div className="flex h-screen max-h-screen w-full flex-row">
+        <div
+          className={cn('max-h-full w-[360px] border-r', {
+            hidden: !isDesktop,
+          })}
+        >
+          <div className="flex flex-col items-center justify-between gap-6 p-6">
+            <Link href="/">
+              <Image
+                src="https://assets.neuland.app/StudVer_Logo_2020_CMYK.svg"
+                width={200}
+                height={85}
+                alt="Studierendenvertretung TH Ingolstadt"
+              />
             </Link>
-          </center>
 
-          {categorizedData.map(({ category, items }) => (
-            <ListGroup
-              key={category}
-              variant="flush"
+            <Link
+              href="/"
+              passHref
+              className="w-full"
             >
-              <ListGroup.Item
-                className={`${styles.sidebarHeading} d-flex align-items-center gap-1`}
-              >
-                <MapPin
-                  size={20}
-                  color={COLORS[category].stroke}
-                  fill={COLORS[category].fill}
-                />
-                {HEADINGS[category]}
-              </ListGroup.Item>
-              {items
-                .filter((elem) => !elem.hide)
-                .map((elem) => (
-                  <ListGroup.Item
-                    key={elem.id}
-                    action
-                    onClick={() => {
-                      mapRef.current.getMap().flyTo({
-                        center: [elem.lon, elem.lat],
-                        zoom: 16,
-                        padding: PADDING,
-                      })
-                      setPopup(elem)
-                    }}
-                    className="d-flex align-items-center gap-1"
-                  >
-                    <span className="flex-grow-1">{elem.title}</span>
-                    {elem.video && (
-                      <ImagePlay
-                        size={20}
-                        className="text-muted"
-                      />
-                    )}
-                  </ListGroup.Item>
-                ))}
-            </ListGroup>
-          ))}
+              <Button className="flex w-full items-center gap-2">
+                <ChevronsLeft />
+                <span>Zurück</span>
+              </Button>
+            </Link>
+          </div>
+
+          <ScrollArea className="flex h-[calc(100%-200px)]">
+            {menuEntries}
+          </ScrollArea>
         </div>
 
-        <div>
+        <div className="h-full flex-1">
           <Map
             ref={mapRef}
             reuseMaps
-            mapStyle={`https://tile.neuland.app/styles/bright/style.json`}
+            mapStyle={`https://tile.neuland.app/styles/${mapStyle}/style.json`}
             attributionControl={false}
             initialViewState={{
               latitude: center[0],
@@ -236,7 +302,7 @@ export default function TourMap({ center, data }: TourMapProps) {
                 longitude={elem.lon}
                 onClick={(e) => {
                   e.originalEvent.stopPropagation()
-                  mapRef.current.getMap().flyTo({
+                  mapRef.current?.getMap().flyTo({
                     center: [elem.lon, elem.lat],
                     zoom: 16,
                     padding: PADDING,
@@ -252,85 +318,54 @@ export default function TourMap({ center, data }: TourMapProps) {
               </Marker>
             ))}
 
-            {popup && (
-              <Popup
-                longitude={popup.lon}
-                latitude={popup.lat}
-                closeButton={false}
-                className={styles.popup}
-                anchor="center"
-                maxWidth="820px"
-                onClose={() => setPopup(null)}
-              >
-                <h4 className="d-flex align-items-center gap-3">
-                  <span className="flex-grow-1">{popup.title}</span>
-
-                  <Button
-                    variant="outline"
-                    onClick={() => {
-                      setPopup(null)
-                    }}
-                  >
-                    <X
-                      size={20}
-                      className="text-muted"
-                    />
-                  </Button>
-                </h4>
-                <div className={styles.popupDescription}>
-                  <ReactMarkdown components={COMPONENTS}>
-                    {navigator.language.startsWith('de')
-                      ? popup.description_de
-                      : popup.description_en}
-                  </ReactMarkdown>
-                </div>
-                {popup.video && (
-                  <video
-                    className={styles.popupVideo}
-                    poster={popup.poster}
-                    controls
-                  >
-                    <source
-                      src={popup.video}
-                      type="video/mp4"
-                    />
-                  </video>
-                )}
-                <p>
-                  Öffnen in{' '}
-                  <a
-                    href={getOSMLink(popup.lat, popup.lon)}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    OpenStreetMap
-                  </a>
-                  {', '}
-                  <a
-                    href={getGoogleMapsLink(popup.lat, popup.lon)}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Google Maps
-                  </a>
-                  {', '}
-                  <a
-                    href={getAppleMapsLink(popup.title, popup.lat, popup.lon)}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Apple Maps
-                  </a>
-                </p>
-              </Popup>
-            )}
+            <AttributionControl
+              attribution={
+                <Link
+                  href="https://www.openstreetmap.org/copyright"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Map data from © OpenStreetMap
+                </Link>
+              }
+            />
+            <MapStyleControl
+              className="mt-10"
+              onStyleChange={setMapStyle}
+            />
           </Map>
+
+          <div
+            className={cn(
+              'absolute bottom-4 left-6 flex w-[calc(100vw-48px)] gap-3',
+              {
+                hidden: isDesktop,
+              }
+            )}
+          >
+            <Link
+              href="/"
+              passHref
+            >
+              <Button
+                size="icon"
+                variant="secondary"
+                className="shadow"
+              >
+                <ChevronsLeft />
+              </Button>
+            </Link>
+
+            <Button
+              className="w-full items-center gap-2 shadow-lg"
+              onClick={() => setDrawer(true)}
+            >
+              <Menu />
+              <span>Menu</span>
+            </Button>
+          </div>
         </div>
       </div>
     </>
   )
-}
-TourMap.propTypes = {
-  center: PropTypes.array,
-  data: PropTypes.array,
 }
