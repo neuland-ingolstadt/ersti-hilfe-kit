@@ -8,7 +8,7 @@ export const TABS = [
     link: '/guide/studies',
   },
   {
-    title: 'Studierendenleben',
+    title: 'Leben',
     link: '/guide/life',
   },
   {

@@ -1,14 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
-import dynamic from 'next/dynamic'
 
 import INGOLSTADT from '@/data/tour/ingolstadt.json'
 import NEUBURG from '@/data/tour/neuburg.json'
 import { GetStaticProps } from 'next'
-
-const TourMap = dynamic(() => import('@/components/TourMap'), {
-  ssr: false,
-})
+import TourMap from '@/components/tour/tourMap'
 
 export interface TourData {
   title: string

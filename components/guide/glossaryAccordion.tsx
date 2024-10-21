@@ -29,7 +29,9 @@ export default function GlossaryAccordion({
           value={item.title}
           key={item.title}
         >
-          <AccordionTrigger className="py-6">{item.title}</AccordionTrigger>
+          <AccordionTrigger className="max-w-full py-6">
+            <div className="truncate pr-6">{item.title}</div>
+          </AccordionTrigger>
           <AccordionContent>
             <ReactMarkdown components={COMPONENTS}>
               {item.content}

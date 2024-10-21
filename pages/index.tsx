@@ -319,7 +319,12 @@ export default function Home({ events }: HomeProps) {
           </p>
 
           <div className="mt-3 flex flex-col items-start gap-2 md:flex-row md:items-center">
-            <Link href="https://apps.apple.com/app/apple-store/id1617096811?pt=124486931&ct=web&mt=8">
+            <Link
+              href="https://apps.apple.com/app/apple-store/id1617096811?pt=124486931&ct=web&mt=8"
+              target="_blank"
+              rel="noreferrer"
+              passHref
+            >
               <Image
                 alt="Download im App Store"
                 src="https://next.neuland.app/assets/Apple_Badge_DE.svg"
@@ -327,7 +332,11 @@ export default function Home({ events }: HomeProps) {
                 height={50}
               />
             </Link>
-            <Link href="https://play.google.com/store/apps/details?id=app.neuland">
+            <Link
+              href="https://play.google.com/store/apps/details?id=app.neuland"
+              target="_blank"
+              passHref
+            >
               <Image
                 alt="Get it on Google Play"
                 src="https://next.neuland.app/assets/Google_Badge_DE.svg"
@@ -339,7 +348,6 @@ export default function Home({ events }: HomeProps) {
             <Link
               href="https://neuland.app"
               target="_blank"
-              rel="noreferrer"
               passHref
             >
               <Button className="text-md h-12 w-40 border border-gray-400 bg-black text-white hover:bg-gray-800">

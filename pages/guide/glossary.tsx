@@ -70,7 +70,7 @@ export default function GlossaryGuide({ data, searchQuery }: GlossaryProps) {
           icon={<Search size={16} />}
         />
 
-        <ScrollArea className="h-[calc(100vh-400px)] pr-6">
+        <ScrollArea className="h-[calc(100vh-450px)] pr-6">
           <GlossaryAccordion glossary={filteredData} />
         </ScrollArea>
       </main>

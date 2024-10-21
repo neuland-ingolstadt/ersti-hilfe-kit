@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import Map, { MapRef, Marker } from 'react-map-gl/maplibre'
-import useMediaQuery from '@restart/hooks/useMediaQuery'
+import { useMediaQuery } from 'usehooks-ts'
 import { ChevronsLeft, ImagePlay, MapPin, Menu } from 'lucide-react'
 import { TourData } from '@/pages/tour/[city]'
 import {
@@ -82,7 +82,10 @@ export default function TourMap({ center, data }: TourMapProps) {
   const [dialogOpen, showDialog] = useState(true)
   const [drawerOpen, setDrawer] = useState(false)
   const [popup, setPopup] = useState<TourData | undefined>(undefined)
-  const isDesktop = useMediaQuery('(min-width: 1024px)')
+  const isDesktop = useMediaQuery('(min-width: 1024px)', {
+    defaultValue: true,
+    initializeWithValue: true,
+  })
 
   const mapRef = createRef<MapRef>()
 
