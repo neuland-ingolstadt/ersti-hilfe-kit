@@ -90,10 +90,6 @@ export default function Scavenger({ id, entry, error }) {
           name="description"
           content="Eine digitale Schnitzeljagd für die Erstis an der TH Ingolstadt."
         />
-        <link
-          rel="icon"
-          href="https://assets.neuland.app/StudVer_Logo_ohne%20Schrift.svg"
-        />
       </Head>
 
       <Navbar

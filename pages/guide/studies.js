@@ -26,14 +26,6 @@ export default function Studies() {
     <>
       <Head>
         <title>Studienguide</title>
-        <meta
-          name="description"
-          content="Ein digitales Guide für die Erstis an der TH Ingolstadt."
-        />
-        <link
-          rel="icon"
-          href="https://assets.neuland.app/StudVer_Logo_ohne%20Schrift.svg"
-        />
       </Head>
 
       <Navbar

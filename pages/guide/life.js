@@ -30,10 +30,6 @@ export default function Studies() {
           name="description"
           content="Ein digitales Guide für die Erstis an der TH Ingolstadt."
         />
-        <link
-          rel="icon"
-          href="https://assets.neuland.app/StudVer_Logo_ohne%20Schrift.svg"
-        />
       </Head>
 
       <Navbar
