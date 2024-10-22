@@ -68,6 +68,10 @@
     @apply mb-4 text-2xl font-semibold;
   }
 
+  h3 {
+    @apply mb-4 text-xl font-semibold;
+  }
+
   hr {
     @apply my-6 border-t;
   }
