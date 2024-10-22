@@ -32,7 +32,7 @@ export default function GlossaryAccordion({
           <AccordionTrigger className="max-w-full py-6">
             <div className="truncate pr-6">{item.title}</div>
           </AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="text-base">
             <ReactMarkdown components={COMPONENTS}>
               {item.content}
             </ReactMarkdown>

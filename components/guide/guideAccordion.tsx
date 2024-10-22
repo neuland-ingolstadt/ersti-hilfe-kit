@@ -39,7 +39,11 @@ export default function GuideAccordion({ guide }: GuideAccordionProps) {
           value={item.title}
           key={item.title}
         >
-          <AccordionTrigger className="py-6">{item.title}</AccordionTrigger>
+          <AccordionTrigger className="max-w-full pt-8">
+            <div className="max-w-full truncate pr-6 text-left">
+              {item.title}
+            </div>
+          </AccordionTrigger>
           <AccordionContent>
             <Card>
               <CardContent className="px-6 py-3">
@@ -52,8 +56,12 @@ export default function GuideAccordion({ guide }: GuideAccordionProps) {
                       value={content.title}
                       key={content.title}
                     >
-                      <AccordionTrigger>{content.title}</AccordionTrigger>
-                      <AccordionContent>
+                      <AccordionTrigger className="max-w-full pt-8">
+                        <div className="max-w-full truncate pr-6 text-left text-base">
+                          {content.title}
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-base">
                         <ReactMarkdown components={COMPONENTS}>
                           {content.content}
                         </ReactMarkdown>
