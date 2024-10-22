@@ -277,7 +277,7 @@ export default function TourMap({ center, data }: TourMapProps) {
             initialViewState={{
               latitude: center[0],
               longitude: center[1],
-              zoom: 16,
+              zoom: 15,
             }}
             boxZoom={false}
             maxPitch={0}
