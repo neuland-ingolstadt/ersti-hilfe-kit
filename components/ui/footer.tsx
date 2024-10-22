@@ -10,6 +10,7 @@ export default function Footer() {
           <Link
             href="https://studverthi.de"
             target="_blank"
+            className="text-primary"
             rel="noreferrer"
           >
             Fachschaft Informatik (StudVer)
@@ -18,6 +19,7 @@ export default function Footer() {
           <Link
             href="https://neuland-ingolstadt.de"
             target="_blank"
+            className="text-primary"
             rel="noreferrer"
           >
             Neuland Ingolstadt e.V.
