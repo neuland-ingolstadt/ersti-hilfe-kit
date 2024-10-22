@@ -45,7 +45,7 @@ export default function GuideTabs() {
             value={link.link}
             onClick={(e) => {
               e.preventDefault()
-              router.push(link.link)
+              router.replace(link.link)
             }}
           >
             {link.title}
