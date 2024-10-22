@@ -1,21 +1,5 @@
 [
   {
-    "category": "socialoffer",
-    "title": "Soziales Angebot",
-    "content": [
-      {
-        "title": "Psychosoziale Beratung",
-        "content": "",
-        "link": ""
-      },
-      {
-        "title": "Wohnen",
-        "content": "",
-        "link": ""
-      }
-    ]
-  },
-  {
     "category": "culture",
     "title": "Kulturelles Angebot",
     "content": [
@@ -151,7 +135,7 @@
       {
         "title": "Hochschulkino",
         "content": "",
-        "link": "https://studverthi.de/hochschulkino",
+        "link": "https://studverthi.de/projekte/hochschulkino",
         "linktitle": "Zur Webseite der Studierendenvertretung"
       },
       {

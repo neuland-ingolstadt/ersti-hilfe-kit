@@ -4,5 +4,6 @@
   "singleQuote": true,
   "jsxSingleQuote": false,
   "endOfLine": "lf",
-  "singleAttributePerLine": true
+  "singleAttributePerLine": true,
+  "plugins": ["prettier-plugin-tailwindcss"]
 }
