@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import Head from 'next/head'
 import levenshtein from 'js-levenshtein'
 import ReactMarkdown from 'react-markdown'
@@ -8,7 +8,7 @@ import { GetServerSideProps } from 'next'
 import Footer from '@/components/ui/footer'
 import NavBar from '@/components/ui/navbar'
 import { COMPONENTS } from '@/components/ui/markdownComponents'
-import { MapPin, MessageCircleQuestion } from 'lucide-react'
+import { MapPin, MessageCircleQuestion, Trophy } from 'lucide-react'
 import {
   Card,
   CardContent,
@@ -29,8 +29,10 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import Confetti from 'react-confetti'
 import { useWindowSize } from 'usehooks-ts'
+import dynamic from 'next/dynamic'
+
+const Confetti = dynamic(() => import('react-confetti'), { ssr: false })
 
 interface ScavengerProps {
   id: string
@@ -105,12 +107,12 @@ export const getServerSideProps: GetServerSideProps<ScavengerProps> = async ({
 export default function Scavenger({ id, entry }: ScavengerProps) {
   const [score, setScore] = useState()
   const [quizzes, setQuizzes] = useState<Quiz[]>([])
-  const [showConfetti, setShowConfetti] = useState(true)
-  const { width = 0, height = 0 } = useWindowSize()
+  const [showConfetti, setShowConfetti] = useState(false)
+  const { width, height } = useWindowSize()
 
   const handleShowConfetti = useCallback(() => {
     setShowConfetti(true)
-    setTimeout(() => setShowConfetti(false), 1000)
+    setTimeout(() => setShowConfetti(false), 2000)
   }, [])
 
   useEffect(() => {
@@ -143,48 +145,57 @@ export default function Scavenger({ id, entry }: ScavengerProps) {
     update()
   }, [entry, id])
 
-  async function changeQuizAnswer(
-    quiz: Quiz | undefined,
-    newAnswer: string | undefined
-  ) {
-    if (!quiz || !newAnswer) {
-      return false
-    }
+  const changeQuizAnswer = useCallback(
+    async (quiz: Quiz | undefined, newAnswer: string | undefined) => {
+      if (!quiz || !newAnswer) {
+        return false
+      }
 
-    quiz.answer = newAnswer
-    quiz.isCorrect = checkAnswerSimilarity(newAnswer, quiz.correctAnswers)
+      quiz.answer = newAnswer
+      quiz.isCorrect = checkAnswerSimilarity(newAnswer, quiz.correctAnswers)
 
-    if (quiz.isCorrect && !quiz.isUnlocked) {
-      const db = new ScavengerDatabase()
-      await db.addItemQuestion(`${id}-${quiz.id}`, quiz, quiz.points)
-      setScore(await db.getScore())
+      if (quiz.isCorrect && !quiz.isUnlocked) {
+        const db = new ScavengerDatabase()
+        await db.addItemQuestion(`${id}-${quiz.id}`, quiz, quiz.points)
+        setScore(await db.getScore())
 
-      quiz.isUnlocked = true
-    }
+        quiz.isUnlocked = true
+      }
 
-    setQuizzes((prev) => [...prev.filter((q) => q.id !== quiz.id), quiz])
+      setQuizzes((prev) => {
+        const index = prev.findIndex((q) => q.id === quiz.id)
+        prev[index] = quiz
 
-    return quiz.isCorrect
-  }
+        return [...prev]
+      })
 
-  const schema = z.object(
-    Object.fromEntries(
-      entry.questions.map((question) => [
-        question.id,
-        z
-          .string()
-          .optional()
-          .refine(
-            (x) =>
-              changeQuizAnswer(
-                quizzes.find((q) => q.id === question.id),
-                x
-              ),
-            'Das ist nicht die richtige Antwort.'
-          )
-          .optional(),
-      ])
-    )
+      return quiz.isCorrect
+    },
+    [id]
+  )
+
+  const schema = useMemo(
+    () =>
+      z.object(
+        Object.fromEntries(
+          entry.questions.map((question) => [
+            question.id,
+            z
+              .string()
+              .optional()
+              .refine(
+                (x) =>
+                  changeQuizAnswer(
+                    quizzes.find((q) => q.id === question.id),
+                    x
+                  ),
+                'Das ist nicht die richtige Antwort.'
+              )
+              .optional(),
+          ])
+        )
+      ),
+    [entry.questions, quizzes, changeQuizAnswer]
   )
 
   type FormValues = z.infer<typeof schema>
@@ -199,17 +210,33 @@ export default function Scavenger({ id, entry }: ScavengerProps) {
   })
 
   const onSubmit = useCallback(() => {
-    console.log('submit')
-
-    // check if all answers are correct
-    const allCorrect = quizzes.every((quiz) => quiz.isCorrect)
-
-    if (allCorrect) {
-      console.log('all correct')
+    if (
+      form.formState.isValid &&
+      Object.values(form.getValues()).some(Boolean)
+    ) {
+      handleShowConfetti()
+      return
     }
 
-    handleShowConfetti()
-  }, [handleShowConfetti])
+    console.log('error')
+
+    // check if every question is empty and show error message
+    const emptyQuestions = Object.values(form.getValues())
+      .map((value) => !value)
+      .every(Boolean)
+    console.log(emptyQuestions)
+
+    if (emptyQuestions) {
+      // get all fields and set them to error
+      const fields = Object.keys(form.getValues())
+      fields.forEach((field) => {
+        form.setError(field, {
+          type: 'manual',
+          message: 'Bitte gib eine Antwort ein.',
+        })
+      })
+    }
+  }, [form, handleShowConfetti])
 
   return (
     <div className="container flex min-h-screen flex-col gap-3">
@@ -226,19 +253,19 @@ export default function Scavenger({ id, entry }: ScavengerProps) {
       <Confetti
         width={width}
         height={height}
-        numberOfPieces={showConfetti ? 200 : 0}
+        numberOfPieces={showConfetti ? 250 : 0}
       />
 
       <main className="flex-1">
-        <h1 className="flex items-center gap-1">
+        <h1 className="flex items-center gap-3">
           <MapPin size={32} /> {entry.heading}
         </h1>
         <ReactMarkdown components={COMPONENTS}>{entry.text}</ReactMarkdown>
         {quizzes.length > 0 && (
           <Card className="mt-6">
             <CardHeader>
-              <CardTitle className="flex items-center gap-1">
-                <MessageCircleQuestion size={32} /> Fragen
+              <CardTitle className="flex items-center gap-3">
+                <MessageCircleQuestion size={24} /> Fragen
               </CardTitle>
               <CardDescription>
                 Für die richtige Antwort gibt es extra Punkte.
@@ -274,6 +301,22 @@ export default function Scavenger({ id, entry }: ScavengerProps) {
             </CardContent>
           </Card>
         )}
+
+        <Card className="mt-6">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-3">
+              <Trophy size={24} />
+              Dein Punktestand
+            </CardTitle>
+          </CardHeader>
+
+          <CardContent>
+            <p>
+              Dein aktueller Punktestand beträgt:{' '}
+              <strong>{score} Punkte.</strong>
+            </p>
+          </CardContent>
+        </Card>
       </main>
 
       <Footer />
