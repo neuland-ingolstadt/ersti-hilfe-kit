@@ -4,8 +4,11 @@ import Head from 'next/head'
 import INGOLSTADT from '@/data/tour/ingolstadt.json'
 import NEUBURG from '@/data/tour/neuburg.json'
 import { GetStaticProps } from 'next'
-import TourMap from '@/components/tour/tourMap'
+import dynamic from 'next/dynamic'
 
+const TourMap = dynamic(() => import('@/components/tour/tourMap'), {
+  ssr: false,
+})
 export interface TourData {
   title: string
   description_de?: string
