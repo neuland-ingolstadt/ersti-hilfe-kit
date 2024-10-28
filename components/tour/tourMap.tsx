@@ -1,11 +1,17 @@
-import React, { useState, createRef, useMemo } from 'react'
+import React, {
+  useState,
+  createRef,
+  useMemo,
+  useCallback,
+  useEffect,
+} from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
 import Map, { MapRef, Marker } from 'react-map-gl/maplibre'
 import { useMediaQuery } from 'usehooks-ts'
 import { ChevronsLeft, ImagePlay, MapPin, Menu } from 'lucide-react'
-import { TourData } from '@/pages/tour/[city]'
+import { City, TourData } from '@/pages/tour/[city]'
 import {
   Dialog,
   DialogContent,
@@ -33,6 +39,9 @@ import {
 } from '@/components/ui/drawer'
 import { AttributionControl } from '@/components/map/attributionControl'
 import MapStyleControl from '@/components/map/styleControl'
+import { useTheme } from 'next-themes'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { useRouter } from 'next/router'
 
 interface CategoryProps {
   fill: string
@@ -78,7 +87,16 @@ interface TourMapProps {
 export type MapStyle = 'bright' | 'light' | 'dark'
 
 export default function TourMap({ center, data }: TourMapProps) {
-  const [mapStyle, setMapStyle] = useState<MapStyle>('bright')
+  const router = useRouter()
+
+  const city = useMemo(() => {
+    return router.query.city as string
+  }, [router.query.city])
+
+  const { resolvedTheme } = useTheme()
+  const [mapStyle, setMapStyle] = useState<MapStyle>(
+    resolvedTheme === 'dark' ? 'dark' : 'light'
+  )
   const [dialogOpen, showDialog] = useState(true)
   const [drawerOpen, setDrawer] = useState(false)
   const [popup, setPopup] = useState<TourData | undefined>(undefined)
@@ -162,6 +180,45 @@ export default function TourMap({ center, data }: TourMapProps) {
       </div>
     )
   }, [PADDING, categorizedData, mapRef])
+
+  const selectCity = useCallback(
+    (city: City) => {
+      router.push(`/tour/${city}`)
+    },
+    [router]
+  )
+
+  useEffect(() => {
+    mapRef.current?.getMap().easeTo({
+      center: [center[1], center[0]],
+      zoom: 15,
+      animate: false,
+    })
+  }, [center, mapRef])
+
+  const tabs = useMemo(() => {
+    return (
+      <Tabs
+        defaultValue={city}
+        className="w-full"
+      >
+        <TabsList className="grid grid-cols-2 gap-2">
+          <TabsTrigger
+            value="ingolstadt"
+            onClick={() => selectCity('ingolstadt')}
+          >
+            Ingolstadt
+          </TabsTrigger>
+          <TabsTrigger
+            value="neuburg"
+            onClick={() => selectCity('neuburg')}
+          >
+            Neuburg
+          </TabsTrigger>
+        </TabsList>
+      </Tabs>
+    )
+  }, [city, selectCity])
 
   return (
     <>
@@ -251,6 +308,8 @@ export default function TourMap({ center, data }: TourMapProps) {
               />
             </Link>
 
+            {tabs}
+
             <Link
               href="/"
               passHref
@@ -271,7 +330,6 @@ export default function TourMap({ center, data }: TourMapProps) {
         <div className="h-full flex-1">
           <Map
             ref={mapRef}
-            reuseMaps
             mapStyle={`https://tile.neuland.app/styles/${mapStyle}/style.json`}
             attributionControl={false}
             initialViewState={{
@@ -332,26 +390,32 @@ export default function TourMap({ center, data }: TourMapProps) {
               }
             )}
           >
-            <Link
-              href="/"
-              passHref
-            >
-              <Button
-                size="icon"
-                variant="secondary"
-                className="shadow"
-              >
-                <ChevronsLeft />
-              </Button>
-            </Link>
+            <div className="flex w-full flex-col gap-2">
+              <div className="flex gap-2">
+                <Link
+                  href="/"
+                  passHref
+                >
+                  <Button
+                    size="icon"
+                    variant="secondary"
+                    className="shadow"
+                  >
+                    <ChevronsLeft />
+                  </Button>
+                </Link>
 
-            <Button
-              className="w-full items-center gap-2 shadow-lg"
-              onClick={() => setDrawer(true)}
-            >
-              <Menu />
-              <span>Menu</span>
-            </Button>
+                <Button
+                  className="w-full items-center gap-2 bg-primary shadow-lg"
+                  onClick={() => setDrawer(true)}
+                >
+                  <Menu />
+                  <span>Menu</span>
+                </Button>
+              </div>
+
+              {tabs}
+            </div>
           </div>
         </div>
       </div>

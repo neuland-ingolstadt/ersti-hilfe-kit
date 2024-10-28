@@ -12,31 +12,22 @@ import {
   Calendar,
   ExternalLink,
   Globe,
-  Map,
   MapPin,
   Milestone,
   Smartphone,
 } from 'lucide-react'
 import { SiDiscord, SiInstagram } from 'react-icons/si'
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardDescription,
-  CardTitle,
-} from '@/components/ui/card'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel'
+import { Card, CardHeader, CardContent } from '@/components/ui/card'
 import {
   formatFriendlyDateTime,
   formatFriendlyDateTimeRange,
 } from '@/lib/date-utils'
 import clubs from '@/data/clubs.json'
+import Map from 'react-map-gl/maplibre'
+import { useTheme } from 'next-themes'
+import { ScrollArea } from '@/components/ui/scroll-area'
+
+const CENTER = [48.76415, 11.42434]
 
 interface CLEventsResponse {
   clEvents: CLEvent[]
@@ -102,11 +93,16 @@ export default function Home({ events }: HomeProps) {
 
       .map((event, index) => {
         return (
-          <Card key={index}>
+          <Card
+            key={index}
+            className="bg border-0 bg-slate-200 dark:bg-white dark:bg-opacity-5"
+          >
             <CardHeader className="flex flex-row items-start gap-3">
-              <div className="mt-0! flex flex-1 flex-col">
-                <CardTitle className="truncate pb-2">{event.title}</CardTitle>
-                <CardDescription>{event.organizer}</CardDescription>
+              <div className="mt-0 flex flex-1 flex-col">
+                <span className="truncate text-lg font-bold">
+                  {event.title}
+                </span>
+                <span className="text-muted-foreground">{event.organizer}</span>
               </div>
 
               {'club' in event && (
@@ -175,217 +171,205 @@ export default function Home({ events }: HomeProps) {
         )
       })
 
-    // combine 2 cards into one carousel item
-    return data.reduce((acc, _, index) => {
-      if (index % 2 === 0) {
-        acc.push(data.slice(index, index + 2))
-      }
-      return acc
-    }, [] as JSX.Element[][])
+    return data
   }, [events])
+
+  const { resolvedTheme } = useTheme()
 
   return (
     <div>
       <Head>
         <title>Ersti-Hilfe-Kit</title>
       </Head>
-      <div className="container flex flex-col gap-3">
-        <NavBar />
+      <div className="flex flex-col gap-3">
+        <NavBar overlay />
 
         <main>
-          <h1>Ersti-Hilfe-Kit</h1>
-
-          <h2>Willkommen an der Technischen Hochschule Ingolstadt!</h2>
-
-          <p>
-            Um euch die Ankunft in Ingolstadt beziehungsweise Neuburg und den
-            Studienbeginn etwas angenehmer zu gestalten, haben wir entschlossen,
-            eine digitale O-Phase zu erproben. Wir hoffen, eure Zeit an unserer
-            Hochschule damit etwas angenehmer gestalten zu können.
-          </p>
-
-          <p>&ndash; Eure Fachschaft Informatik &lt;3</p>
-
-          {events.length > 0 && (
-            <>
-              <hr />
-
-              <h2 className="flex items-center gap-2">
-                <Calendar />
-                <span>Veranstaltungen</span>
+          <div className="-z-10 flex min-h-screen w-screen grid-cols-6 grid-rows-6 flex-col gap-4 p-4 pt-20 lg:grid lg:p-8 lg:pt-24 xl:max-h-screen">
+            <Card className="col-span-4 row-span-3 flex flex-col gap-6 bg-secondary p-6 lg:p-12">
+              <h1 className="text-4xl font-bold md:text-5xl">
+                <span>Willkommen an der </span>
+                <br />
+                <span className="bg-gradient-to-r from-blue-800 via-indigo-500 to-blue-400 bg-clip-text text-transparent">
+                  Technischen Hochschule Ingolstadt!
+                </span>
+              </h1>
+              <h2 className="max-w-4xl text-lg">
+                Um euch die Ankunft in Ingolstadt beziehungsweise Neuburg und
+                den Studienbeginn etwas angenehmer zu gestalten, haben wir
+                entschlossen, eine digitale O-Phase zu erproben. Wir hoffen,
+                eure Zeit an unserer Hochschule damit etwas angenehmer gestalten
+                zu können.
               </h2>
 
-              <div className="mx-6 md:mx-12">
-                <Carousel>
-                  <CarouselContent>
-                    {cards.map((cards, idx) => (
-                      <CarouselItem
-                        key={idx}
-                        className="grid grid-rows-2 gap-3 md:grid-cols-2 md:grid-rows-1"
-                      >
-                        {cards}
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious />
-                  <CarouselNext />
-                </Carousel>
-              </div>
-            </>
-          )}
+              <span>&ndash; Eure Fachschaft Informatik &lt;3</span>
+            </Card>
 
-          <hr id="studyguide" />
-
-          <h2 className="flex items-center gap-2">
-            <BookText />
-            <span>Studienguide</span>
-          </h2>
-
-          <p>
-            In den folgenden Themenbereichen versuchen wir das wichtigste
-            Know-How zu eurem Studierendenleben an der THI zusammenzufassen.
-          </p>
-
-          <Link
-            href="/guide/studies"
-            passHref
-          >
-            <Button
-              variant="secondary"
-              className="my-3"
-            >
-              Zum Guide
-            </Button>
-          </Link>
-
-          <p>
-            Bei allen Informationen, die auf euch einprasseln, vergesst eines
-            nicht: <b>Macht euch nicht verrückt!</b>
-          </p>
-
-          <hr id="cityguide" />
-
-          <h2 className="flex items-center gap-2">
-            <Milestone />
-            <span> Virtuelle Stadt- und Campusführung</span>
-          </h2>
-
-          <p>
-            Eine virtuelle Stadt- und Campusführung als interaktive Karte, damit
-            ihr Ingolstadt und Neuburg selbst erkunden könnt.
-          </p>
-
-          <div className="mt-2 flex gap-3">
-            <Link
-              href="/tour/ingolstadt"
-              passHref
-            >
-              <Button variant="secondary">
-                <Map />
-                Ingolstadt
-              </Button>
-            </Link>
-
-            <Link
-              href="/tour/neuburg"
-              passHref
-            >
-              <Button variant="secondary">
-                <Map />
-                Neuburg
-              </Button>
-            </Link>
-          </div>
-
-          <hr id="app" />
-
-          <h2 className="flex items-center gap-2">
-            <Smartphone />
-            <span>App</span>
-          </h2>
-
-          <p>
-            Die{' '}
-            <Link
-              href="https://next.neuland.app"
-              target="_blank"
-              className="text-primary"
-            >
-              Neuland Next App
-            </Link>{' '}
-            ist eine alternative App für die THI. Hier habt ihr euren
-            Stundenplan, die Speisepläne sowie wichtige Termine und
-            Veranstaltungen auf einen Blick.
-          </p>
-
-          <div className="mt-3 flex flex-col items-start gap-2 md:flex-row md:items-center">
-            <Link
-              href="https://apps.apple.com/app/apple-store/id1617096811?pt=124486931&ct=web&mt=8"
-              target="_blank"
-              rel="noreferrer"
-              passHref
-            >
-              <Image
-                alt="Download im App Store"
-                src="https://next.neuland.app/assets/Apple_Badge_DE.svg"
-                width={150}
-                height={50}
-              />
-            </Link>
-            <Link
-              href="https://play.google.com/store/apps/details?id=app.neuland"
-              target="_blank"
-              passHref
-            >
-              <Image
-                alt="Get it on Google Play"
-                src="https://next.neuland.app/assets/Google_Badge_DE.svg"
-                width={165}
-                height={50}
-              />
-            </Link>
-
-            <Link
-              href="https://neuland.app"
-              target="_blank"
-              passHref
-            >
-              <Button className="text-md h-12 w-40 border border-gray-400 bg-black text-white hover:bg-gray-800">
-                <Globe />
-                <span>neuland.app</span>
-              </Button>
-            </Link>
-          </div>
-
-          <hr id="discord" />
-
-          <h2 className="flex items-center gap-2">
-            <SiDiscord size={24} />
-            <span>Discord</span>
-          </h2>
-
-          <p>Hier könnt Ihr die Discord-Server der Fakultäten finden:</p>
-
-          <div className="mt-2 flex flex-col">
-            {SERVERS.map((server) => (
+            <Card className="cursor-pointer! relative row-span-4 h-[30vh] rounded-xl lg:col-span-2 lg:h-full">
               <Link
-                key={server.name}
-                href={server.link}
+                href="/tour/ingolstadt"
+                passHref
+              >
+                <div className="absolute z-10 h-full w-full rounded-xl p-4">
+                  <h3 className="flex w-fit items-center gap-2 rounded-lg bg-secondary px-3 py-1 text-2xl font-bold">
+                    <Milestone size={24} />
+                    <span>Virtuelle Stadt- und Campusführung</span>
+                  </h3>
+                </div>
+              </Link>
+
+              <Map
+                reuseMaps
+                mapStyle={`https://tile.neuland.app/styles/${resolvedTheme}/style.json`}
+                initialViewState={{
+                  latitude: CENTER[0],
+                  longitude: CENTER[1],
+                  zoom: 13,
+                }}
+                dragPan={false}
+                dragRotate={false}
+                scrollZoom={false}
+                touchPitch={false}
+                touchZoomRotate={false}
+                doubleClickZoom={false}
+                keyboard={false}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '1em',
+                }}
+                attributionControl={false}
+              />
+            </Card>
+
+            <Card className="col-span-2 row-span-3 flex flex-col gap-3 bg-secondary p-6">
+              <h3 className="flex items-center gap-2 text-2xl font-bold">
+                <BookText size={24} />
+                <span>Guide</span>
+              </h3>
+
+              <p className="text-muted-foreground">
+                In den folgenden Themenbereichen versuchen wir das wichtigste
+                Know-How zu eurem Studierendenleben an der THI zusammenzufassen.
+              </p>
+
+              <p className="flex-1 text-muted-foreground">
+                Bei allen Informationen, die auf euch einprasseln, vergesst
+                eines nicht: <b>Macht euch nicht verrückt!</b>
+              </p>
+
+              <Link
+                href="/guide/studies"
                 passHref
               >
                 <Button
-                  variant="link"
-                  className="flex items-center gap-2"
+                  variant="outline"
+                  className="w-full"
                 >
-                  <ExternalLink />
-                  <span>{server.name}</span>
+                  Zum Guide
                 </Button>
               </Link>
-            ))}
+            </Card>
+
+            <Card className="col-span-2 row-span-3 bg-secondary p-6 xl:max-h-full">
+              <h3 className="flex items-center gap-2 text-2xl font-bold">
+                <Calendar size={24} />
+                <span>Events</span>
+              </h3>
+
+              <ScrollArea className="h-[calc(100%-48px)] overflow-y-auto">
+                <div className="flex flex-col gap-2">
+                  {cards.map((card, idx) => (
+                    <div
+                      key={idx}
+                      className="grid grid-cols-1 gap-3"
+                    >
+                      {card}
+                    </div>
+                  ))}
+                </div>
+              </ScrollArea>
+            </Card>
+
+            <Card className="col-span-2 row-span-2 flex flex-col gap-3 bg-secondary p-6">
+              <h3 className="flex items-center gap-2 text-2xl font-bold">
+                <Smartphone size={24} />
+                <span>Apps</span>
+              </h3>
+
+              <p className="flex-1 text-muted-foreground">
+                Die{' '}
+                <Link
+                  href="https://next.neuland.app"
+                  target="_blank"
+                  className="text-primary"
+                >
+                  Neuland Next App
+                </Link>{' '}
+                ist eine alternative App für die THI. Hier habt ihr euren
+                Stundenplan, die Speisepläne sowie wichtige Termine und
+                Veranstaltungen auf einen Blick.
+              </p>
+
+              <div className="flex flex-col gap-3 xl:flex-row">
+                <Link
+                  href="https://apps.apple.com/app/apple-store/id1617096811?pt=124486931&ct=web&mt=8"
+                  target="_blank"
+                  rel="noreferrer"
+                  passHref
+                >
+                  <Image
+                    alt="Download im App Store"
+                    src="https://next.neuland.app/assets/Apple_Badge_DE.svg"
+                    width={150}
+                    height={50}
+                  />
+                </Link>
+                <Link
+                  href="https://play.google.com/store/apps/details?id=app.neuland"
+                  target="_blank"
+                  passHref
+                >
+                  <Image
+                    alt="Get it on Google Play"
+                    src="https://next.neuland.app/assets/Google_Badge_DE.svg"
+                    width={165}
+                    height={50}
+                  />
+                </Link>
+              </div>
+            </Card>
+          </div>
+
+          <div className="container my-6">
+            <h4 className="flex items-center gap-2 text-2xl font-bold">
+              <SiDiscord size={24} />
+              <span>Discord</span>
+            </h4>
+
+            <p>Hier könnt Ihr die Discord-Server der Fakultäten finden:</p>
+
+            <div className="mt-2 flex flex-col">
+              {SERVERS.map((server) => (
+                <Link
+                  key={server.name}
+                  href={server.link}
+                  passHref
+                >
+                  <Button
+                    variant="link"
+                    className="flex items-center gap-2"
+                  >
+                    <ExternalLink />
+                    <span>{server.name}</span>
+                  </Button>
+                </Link>
+              ))}
+            </div>
           </div>
         </main>
 
-        <Footer />
+        <Footer className="container" />
       </div>
     </div>
   )
@@ -427,7 +411,7 @@ export async function getServerSideProps() {
         return date > new Date()
       }
     })
-    .slice(0, 5)
+    .slice(0, 3)
 
   return { props: { events } }
 }

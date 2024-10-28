@@ -21,7 +21,7 @@ export interface TourData {
   hide?: boolean
 }
 
-type City = 'ingolstadt' | 'neuburg'
+export type City = 'ingolstadt' | 'neuburg'
 
 const CENTERS: Record<City, [number, number]> = {
   ingolstadt: [48.76415, 11.42434],

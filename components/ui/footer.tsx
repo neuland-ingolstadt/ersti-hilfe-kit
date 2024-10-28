@@ -1,9 +1,19 @@
 import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 import Link from 'next/link'
 
-export default function Footer() {
+interface FooterProps {
+  className?: string
+}
+
+export default function Footer({ className }: FooterProps) {
   return (
-    <footer className="flex flex-col items-center border-t py-4 md:flex-row md:justify-between">
+    <footer
+      className={cn(
+        'flex flex-col items-center border-t py-4 md:flex-row md:justify-between',
+        className
+      )}
+    >
       <div>
         <p>
           Ein Projekt der{' '}
