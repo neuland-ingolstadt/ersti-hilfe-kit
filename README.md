@@ -17,8 +17,9 @@ version: "3"
 
 services:
   app:
-    #build: https://github.com/neuland-ingolstadt/orientierungsphase.git#main
-    build: ./orientierungsphase
+    build:
+      context: ./orientierungsphase
+      dockerfile: Dockerfile
     restart: always
     init: true
     environment:
@@ -55,4 +56,7 @@ Then add the video / poster URLs to `./data/tour.json`.
 
 ## License
 
-AGPL-3.0, except for the `data/` folder.
+AGPL-3.0
+
+> [!IMPORTANT]  
+> The `/data` folder is not part of the AGPL-3.0 license.
