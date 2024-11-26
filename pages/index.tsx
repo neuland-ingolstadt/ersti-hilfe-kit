@@ -22,7 +22,6 @@ import {
   formatFriendlyDateTime,
   formatFriendlyDateTimeRange,
 } from '@/lib/date-utils'
-import clubs from '@/data/clubs.json'
 import Map from 'react-map-gl/maplibre'
 import { useTheme } from 'next-themes'
 import { ScrollArea } from '@/components/ui/scroll-area'
@@ -33,15 +32,25 @@ interface CLEventsResponse {
   clEvents: CLEvent[]
 }
 
+interface Host {
+  name: string
+  website: string | null
+  instagram: string | null
+}
+
+interface MultiLang {
+  de: string
+  en: string
+}
+
 export interface CLEvent {
   id: string
-  organizer: string
-  title: string
+  title: MultiLang
+  host: Host
   begin: Date | null
   end: Date | null
   location: string | null
-  description: string | null
-  link: string | null
+  eventUrl: string | null
 }
 
 interface HomeProps {
@@ -76,100 +85,97 @@ export default function Home({ events }: HomeProps) {
     const data = [
       ...events,
       {
-        title: 'Mehr in der Neuland.App',
-        organizer: 'Neuland Ingolstadt e.V.',
-        link: 'https://neuland.app',
+        title: {
+          de: 'Mehr in der Neuland.App',
+          en: 'More on Neuland.App',
+        },
+        host: {
+          name: 'Neuland Ingolstadt e.V.',
+        },
+        eventUrl: 'https://neuland.app',
       } as CLEvent,
-    ]
-      .map((event) => {
-        const club = clubs.find((club) => club.club === event.organizer)
+    ].map((event, index) => {
+      return (
+        <Card
+          key={index}
+          className="bg border-0 bg-slate-200 dark:bg-white dark:bg-opacity-5"
+        >
+          <CardHeader className="flex flex-row items-start gap-0">
+            <div className="mt-0 flex flex-1 flex-col">
+              <span className="truncate text-lg font-bold">
+                {event.title.de}
+              </span>
+              <span className="text-muted-foreground">{event.host.name}</span>
+            </div>
 
-        if (club) {
-          return { ...event, club }
-        }
-
-        return event
-      })
-
-      .map((event, index) => {
-        return (
-          <Card
-            key={index}
-            className="bg border-0 bg-slate-200 dark:bg-white dark:bg-opacity-5"
-          >
-            <CardHeader className="flex flex-row items-start gap-3">
-              <div className="mt-0 flex flex-1 flex-col">
-                <span className="truncate text-lg font-bold">
-                  {event.title}
-                </span>
-                <span className="text-muted-foreground">{event.organizer}</span>
-              </div>
-
-              {'club' in event && (
-                <div className="flex flex-shrink-0 items-start gap-1">
-                  <Link
-                    href={event.club.website}
-                    target="_blank"
-                    passHref
-                  >
-                    <Button
-                      variant="secondary"
-                      size="icon"
-                    >
-                      <Globe />
-                    </Button>
-                  </Link>
-
-                  <Link
-                    href={event.club.instagram}
-                    target="_blank"
-                    passHref
-                  >
-                    <Button
-                      variant="secondary"
-                      size="icon"
-                    >
-                      <SiInstagram />
-                    </Button>
-                  </Link>
-                </div>
-              )}
-            </CardHeader>
-
-            <CardContent>
-              {event.begin != null && (
-                <span className="flex items-center gap-1 text-muted-foreground">
-                  <Calendar size={16} />
-                  <span className="truncate">
-                    {event.end != null
-                      ? formatFriendlyDateTimeRange(event.begin, event.end)
-                      : formatFriendlyDateTime(event.begin)}
-                  </span>
-                </span>
-              )}
-
-              {event.location != null && (
-                <span className="flex items-center gap-1 text-muted-foreground">
-                  <MapPin size={16} />
-                  <span>{event.location}</span>
-                </span>
-              )}
-              {event.link != null && (
+            <div className="flex flex-shrink-0 items-start gap-1">
+              {event.host.website != null && (
                 <Link
-                  href={event.link || '/'}
+                  href={event.host.website}
                   target="_blank"
                   passHref
                 >
-                  <Button variant="secondary">
-                    <ExternalLink />
-                    <span>Mehr erfahren</span>
+                  <Button
+                    variant="secondary"
+                    size="icon"
+                  >
+                    <Globe />
                   </Button>
                 </Link>
               )}
-            </CardContent>
-          </Card>
-        )
-      })
+
+              {event.host.instagram != null && (
+                <Link
+                  href={event.host.instagram}
+                  target="_blank"
+                  passHref
+                >
+                  <Button
+                    variant="secondary"
+                    size="icon"
+                  >
+                    <SiInstagram />
+                  </Button>
+                </Link>
+              )}
+            </div>
+          </CardHeader>
+
+          <CardContent>
+            {event.begin != null && (
+              <span className="flex items-center gap-1 text-muted-foreground">
+                <Calendar size={16} />
+                <span className="truncate">
+                  {event.end != null
+                    ? formatFriendlyDateTimeRange(event.begin, event.end)
+                    : formatFriendlyDateTime(event.begin)}
+                </span>
+              </span>
+            )}
+
+            {event.location != null && (
+              <span className="flex items-center gap-1 text-muted-foreground">
+                <MapPin size={16} />
+                <span>{event.location}</span>
+              </span>
+            )}
+
+            {event.eventUrl != null && (
+              <Link
+                href={event.eventUrl || '/'}
+                target="_blank"
+                passHref
+              >
+                <Button variant="secondary">
+                  <ExternalLink />
+                  <span>Mehr erfahren</span>
+                </Button>
+              </Link>
+            )}
+          </CardContent>
+        </Card>
+      )
+    })
 
     return data
   }, [events])
@@ -382,11 +388,20 @@ export async function getServerSideProps() {
       query {
         clEvents {
           id
-          organizer
-          title
-          location
+          host {
+            name
+            website
+            instagram
+          }
+          title {
+            de
+            en
+          }
           begin
           end
+          location
+          eventUrl
+          isMoodleEvent
         }
       }
     `.replace(/\s+/g, ' ')
