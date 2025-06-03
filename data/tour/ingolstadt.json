@@ -343,12 +343,12 @@
     "lon": 11.4317
   },
   {
-    "title": "Studierendenhaus",
+    "title": "Studierendenbüros",
     "description_de": "Büros der [Studierendenvertretung](https://www.thi.de/hochschule/ueber-uns/hochschulgremien/studierendenvertretung) und der [studentischen Vereine](https://www.thi.de/studium/studentisches-leben/studentische-vereine-an-der-thi).",
     "description_en": "Offices of the [student council](https://www.thi.de/en/university/university-profile/organisation/students-council) and the [student associations](https://www.thi.de/en/international/studies/campus-and-student-life/student-clubs-and-initiatives-at-thi).",
     "category": "hochschule",
-    "lat": 48.7676,
-    "lon": 11.43344
+    "lat": 48.76554,
+    "lon": 11.42978
   },
   {
     "title": "Campuswiese",
@@ -421,8 +421,8 @@
   },
   {
     "title": "Parkplatz Festplatz",
-    "description_de": "Kostenpflichtiger Parkplatz. Hier kostet das Tagesticket maximal 2,50 €. Zudem ist das Monatsticket für Studenten mit nur 17 € das billigste. ([Mehr Informationen](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-festplatz))",
-    "description_en": "Paid parking. Here the day ticket costs a maximum of 2.50 €. In addition, the monthly ticket for students is the cheapest at just 17 €. ([more information](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-festplatz))",
+    "description_de": "Kostenpflichtiger Parkplatz. Hier kostet das Tagesticket maximal 3 €. Zudem ist das Monatsticket für Studenten mit nur 22 € das billigste. ([Mehr Informationen](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-festplatz))",
+    "description_en": "Paid parking. Here the day ticket costs a maximum of 3 €. In addition, the monthly ticket for students is the cheapest at just 22 €. ([more information](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-festplatz))",
     "category": "nuetzlich",
     "lat": 48.77098,
     "lon": 11.42356
@@ -453,8 +453,8 @@
   },
   {
     "title": "Parkplatz Hallenbad",
-    "description_de": "Kostenpflichtiger Parkplatz. Man kann hier ab 18 Uhr und am Sonntag gratis parken. Zudem kostet das Studentenmonatsticket 35 €. ([Mehr Informationen](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-hallenbad))",
-    "description_en": "Paid parking. You can park here for free after 6 p.m. and on Sundays. In addition, the monthly student ticket costs 35 €. ([more information](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-hallenbad))",
+    "description_de": "Kostenpflichtiger Parkplatz. Man kann hier ab 18 Uhr und am Sonntag gratis parken. Zudem kostet das Studentenmonatsticket 39 €. ([Mehr Informationen](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-hallenbad))",
+    "description_en": "Paid parking. You can park here for free after 6 p.m. and on Sundays. In addition, the monthly student ticket costs 39 €. ([more information](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-hallenbad))",
     "category": "nuetzlich",
     "lat": 48.76126,
     "lon": 11.4199
