@@ -49,3 +49,5 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            NEXT_PUBLIC_NEULAND_GRAPHQL_ENDPOINT=${{ github.ref_name == 'develop' && env.DEV_GRAPHQL_URL || env.GRAPHQL_URL }}
