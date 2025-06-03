@@ -28,10 +28,7 @@ export default function NavBar({ overlay = false }: NavBarProps) {
     <>
       <div className="fixed left-0 top-0 z-50 mb-16 w-screen border-b bg-background shadow-sm">
         <div className="container flex h-16 items-center">
-          <Link
-            href="/"
-            passHref
-          >
+          <Link href="/" passHref>
             <Image
               src="https://assets.neuland.app/StudVer_Logo_2020_CMYK.svg"
               alt="Neuland e.V. Logo"
@@ -46,18 +43,11 @@ export default function NavBar({ overlay = false }: NavBarProps) {
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button
-                variant="ghost"
-                className="relative h-8 w-8"
-              >
+              <Button variant="ghost" className="relative h-8 w-8">
                 <Settings className="h-6 w-6" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent
-              className="w-56"
-              align="end"
-              forceMount
-            >
+            <DropdownMenuContent className="w-56" align="end" forceMount>
               <DropdownMenuGroup>
                 <DropdownMenuSub>
                   <DropdownMenuSubTrigger>

@@ -1,17 +1,16 @@
-import React, {
-  useState,
-  createRef,
-  useMemo,
-  useCallback,
-  useEffect,
-} from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
+import { createRef, useCallback, useEffect, useMemo, useState } from 'react'
 
-import Map, { MapRef, Marker } from 'react-map-gl/maplibre'
-import { useMediaQuery } from 'usehooks-ts'
-import { ChevronsLeft, ImagePlay, MapPin, Menu } from 'lucide-react'
-import { City, TourData } from '@/pages/tour/[city]'
+import { AttributionControl } from '@/components/map/attributionControl'
+import MapStyleControl from '@/components/map/styleControl'
+import TourDetails from '@/components/tour/tourDetails'
+import { Button } from '@/components/ui/button'
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '@/components/ui/collapsible'
 import {
   Dialog,
   DialogContent,
@@ -19,15 +18,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog'
-import { Button } from '@/components/ui/button'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from '@/components/ui/collapsible'
-import TourDetails from '@/components/tour/tourDetails'
-import { cn } from '@/lib/utils'
 import {
   Drawer,
   DrawerClose,
@@ -37,11 +27,15 @@ import {
   DrawerHeader,
   DrawerTitle,
 } from '@/components/ui/drawer'
-import { AttributionControl } from '@/components/map/attributionControl'
-import MapStyleControl from '@/components/map/styleControl'
-import { useTheme } from 'next-themes'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { cn } from '@/lib/utils'
+import type { City, TourData } from '@/pages/tour/[city]'
+import { ChevronsLeft, ImagePlay, MapPin, Menu } from 'lucide-react'
+import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
+import ReactMap, { type MapRef, Marker } from 'react-map-gl/maplibre'
+import { useMediaQuery } from 'usehooks-ts'
 
 interface CategoryProps {
   fill: string
@@ -132,10 +126,7 @@ export default function TourMap({ center, data }: TourMapProps) {
     return (
       <div className="flex flex-col gap-6 p-6 pt-0">
         {categorizedData.map(({ category, items }) => (
-          <Collapsible
-            key={category}
-            defaultOpen
-          >
+          <Collapsible key={category} defaultOpen>
             <CollapsibleTrigger className="flex w-full items-center gap-2 text-xl font-bold">
               <MapPin
                 size={20}
@@ -198,10 +189,7 @@ export default function TourMap({ center, data }: TourMapProps) {
 
   const tabs = useMemo(() => {
     return (
-      <Tabs
-        defaultValue={city}
-        className="w-full"
-      >
+      <Tabs defaultValue={city} className="w-full">
         <TabsList className="grid grid-cols-2 gap-2">
           <TabsTrigger
             value="ingolstadt"
@@ -209,10 +197,7 @@ export default function TourMap({ center, data }: TourMapProps) {
           >
             Ingolstadt
           </TabsTrigger>
-          <TabsTrigger
-            value="neuburg"
-            onClick={() => selectCity('neuburg')}
-          >
+          <TabsTrigger value="neuburg" onClick={() => selectCity('neuburg')}>
             Neuburg
           </TabsTrigger>
         </TabsList>
@@ -222,10 +207,7 @@ export default function TourMap({ center, data }: TourMapProps) {
 
   return (
     <>
-      <Dialog
-        open={dialogOpen}
-        onOpenChange={showDialog}
-      >
+      <Dialog open={dialogOpen} onOpenChange={showDialog}>
         <DialogContent>
           <DialogHeader>
             <DialogTitle className="mb-0">
@@ -257,24 +239,18 @@ export default function TourMap({ center, data }: TourMapProps) {
             .
           </p>
           <DialogFooter>
-            <Button
-              className="w-full"
-              onClick={() => showDialog(false)}
-            >
+            <Button className="w-full" onClick={() => showDialog(false)}>
               Okay
             </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
 
-      <Drawer
-        open={drawerOpen}
-        onOpenChange={setDrawer}
-      >
+      <Drawer open={drawerOpen} onOpenChange={setDrawer}>
         <DrawerContent>
           <DrawerHeader>
             <DrawerTitle>Virtuelle Stadt- und Campusführung</DrawerTitle>
-            <DrawerDescription></DrawerDescription>
+            <DrawerDescription />
           </DrawerHeader>
 
           <ScrollArea className="flex h-[70vh]">{menuEntries}</ScrollArea>
@@ -287,10 +263,7 @@ export default function TourMap({ center, data }: TourMapProps) {
         </DrawerContent>
       </Drawer>
 
-      <TourDetails
-        popup={popup}
-        setPopup={setPopup}
-      />
+      <TourDetails popup={popup} setPopup={setPopup} />
 
       <div className="flex h-screen max-h-screen w-full flex-row">
         <div
@@ -310,11 +283,7 @@ export default function TourMap({ center, data }: TourMapProps) {
 
             {tabs}
 
-            <Link
-              href="/"
-              passHref
-              className="w-full"
-            >
+            <Link href="/" passHref className="w-full">
               <Button className="flex w-full items-center gap-2">
                 <ChevronsLeft />
                 <span>Zurück</span>
@@ -328,7 +297,7 @@ export default function TourMap({ center, data }: TourMapProps) {
         </div>
 
         <div className="h-full flex-1">
-          <Map
+          <ReactMap
             ref={mapRef}
             mapStyle={`https://tile.neuland.app/styles/${mapStyle}/style.json`}
             attributionControl={false}
@@ -342,9 +311,9 @@ export default function TourMap({ center, data }: TourMapProps) {
             maxZoom={19}
             minZoom={12}
           >
-            {data.map((elem, idx) => (
+            {data.map((elem) => (
               <Marker
-                key={idx}
+                key={elem.title}
                 latitude={elem.lat}
                 longitude={elem.lon}
                 onClick={(e) => {
@@ -376,11 +345,8 @@ export default function TourMap({ center, data }: TourMapProps) {
                 </Link>
               }
             />
-            <MapStyleControl
-              className="mt-10"
-              onStyleChange={setMapStyle}
-            />
-          </Map>
+            <MapStyleControl className="mt-10" onStyleChange={setMapStyle} />
+          </ReactMap>
 
           <div
             className={cn(
@@ -392,15 +358,8 @@ export default function TourMap({ center, data }: TourMapProps) {
           >
             <div className="flex w-full flex-col gap-2">
               <div className="flex gap-2">
-                <Link
-                  href="/"
-                  passHref
-                >
-                  <Button
-                    size="icon"
-                    variant="secondary"
-                    className="shadow"
-                  >
+                <Link href="/" passHref>
+                  <Button size="icon" variant="secondary" className="shadow">
                     <ChevronsLeft />
                   </Button>
                 </Link>

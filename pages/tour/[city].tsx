@@ -1,9 +1,8 @@
-import React from 'react'
 import Head from 'next/head'
 
 import INGOLSTADT from '@/data/tour/ingolstadt.json'
 import NEUBURG from '@/data/tour/neuburg.json'
-import { GetStaticProps } from 'next'
+import type { GetStaticProps } from 'next'
 import dynamic from 'next/dynamic'
 
 const TourMap = dynamic(() => import('@/components/tour/tourMap'), {
@@ -33,7 +32,7 @@ interface MapProps {
   data: TourData[]
 }
 
-export default function Map({ city, data }: MapProps) {
+export default function ReactMap({ city, data }: MapProps) {
   return (
     <>
       <Head>
@@ -44,10 +43,7 @@ export default function Map({ city, data }: MapProps) {
         />
       </Head>
 
-      <TourMap
-        center={CENTERS[city]}
-        data={data}
-      />
+      <TourMap center={CENTERS[city]} data={data} />
     </>
   )
 }

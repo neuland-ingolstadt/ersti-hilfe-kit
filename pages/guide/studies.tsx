@@ -1,10 +1,9 @@
-import React from 'react'
-import Head from 'next/head'
-import guide from '@/data/guide/studies.json'
-import NavBar from '@/components/ui/navbar'
-import Footer from '@/components/ui/footer'
-import GuideTabs from '@/components/guide/guideTabs'
 import GuideAccordion from '@/components/guide/guideAccordion'
+import GuideTabs from '@/components/guide/guideTabs'
+import Footer from '@/components/ui/footer'
+import NavBar from '@/components/ui/navbar'
+import guide from '@/data/guide/studies.json'
+import Head from 'next/head'
 
 export default function StudiesGuide() {
   return (

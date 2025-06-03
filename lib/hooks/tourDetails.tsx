@@ -1,7 +1,7 @@
-import { TourData } from '@/pages/tour/[city]'
+import type { TourData } from '@/pages/tour/[city]'
 import { useMemo } from 'react'
 
-export function useTourDetails(tour: TourData) {
+export function useTourDetails(tour: TourData | undefined) {
   const osmLink = useMemo(() => {
     if (!tour) return ''
 

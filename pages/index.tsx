@@ -1,12 +1,18 @@
-import React, { useMemo } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import { useMemo } from 'react'
 
-import Image from 'next/image'
-import request, { gql } from 'graphql-request'
 import { Button } from '@/components/ui/button'
-import NavBar from '@/components/ui/navbar'
+import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import Footer from '@/components/ui/footer'
+import NavBar from '@/components/ui/navbar'
+import { ScrollArea } from '@/components/ui/scroll-area'
+import clubs from '@/data/clubs.json'
+import {
+  formatFriendlyDateTime,
+  formatFriendlyDateTimeRange,
+} from '@/lib/date-utils'
+import request, { gql } from 'graphql-request'
 import {
   BookText,
   Calendar,
@@ -16,16 +22,10 @@ import {
   Milestone,
   Smartphone,
 } from 'lucide-react'
-import { SiDiscord, SiInstagram } from 'react-icons/si'
-import { Card, CardHeader, CardContent } from '@/components/ui/card'
-import {
-  formatFriendlyDateTime,
-  formatFriendlyDateTimeRange,
-} from '@/lib/date-utils'
-import clubs from '@/data/clubs.json'
-import Map from 'react-map-gl/maplibre'
 import { useTheme } from 'next-themes'
-import { ScrollArea } from '@/components/ui/scroll-area'
+import Image from 'next/image'
+import { SiDiscord, SiInstagram } from 'react-icons/si'
+import ReactMap from 'react-map-gl/maplibre'
 
 const CENTER = [48.76415, 11.42434]
 
@@ -91,10 +91,10 @@ export default function Home({ events }: HomeProps) {
         return event
       })
 
-      .map((event, index) => {
+      .map((event) => {
         return (
           <Card
-            key={index}
+            key={event.id}
             className="bg border-0 bg-slate-200 dark:bg-white dark:bg-opacity-5"
           >
             <CardHeader className="flex flex-row items-start gap-3">
@@ -107,28 +107,14 @@ export default function Home({ events }: HomeProps) {
 
               {'club' in event && (
                 <div className="flex flex-shrink-0 items-start gap-1">
-                  <Link
-                    href={event.club.website}
-                    target="_blank"
-                    passHref
-                  >
-                    <Button
-                      variant="secondary"
-                      size="icon"
-                    >
+                  <Link href={event.club.website} target="_blank" passHref>
+                    <Button variant="secondary" size="icon">
                       <Globe />
                     </Button>
                   </Link>
 
-                  <Link
-                    href={event.club.instagram}
-                    target="_blank"
-                    passHref
-                  >
-                    <Button
-                      variant="secondary"
-                      size="icon"
-                    >
+                  <Link href={event.club.instagram} target="_blank" passHref>
+                    <Button variant="secondary" size="icon">
                       <SiInstagram />
                     </Button>
                   </Link>
@@ -155,11 +141,7 @@ export default function Home({ events }: HomeProps) {
                 </span>
               )}
               {event.link != null && (
-                <Link
-                  href={event.link || '/'}
-                  target="_blank"
-                  passHref
-                >
+                <Link href={event.link || '/'} target="_blank" passHref>
                   <Button variant="secondary">
                     <ExternalLink />
                     <span>Mehr erfahren</span>
@@ -206,10 +188,7 @@ export default function Home({ events }: HomeProps) {
             </Card>
 
             <Card className="cursor-pointer! relative row-span-4 h-[30vh] rounded-xl lg:col-span-2 lg:h-full">
-              <Link
-                href="/tour/ingolstadt"
-                passHref
-              >
+              <Link href="/tour/ingolstadt" passHref>
                 <div className="absolute z-10 h-full w-full rounded-xl p-4">
                   <h3 className="flex w-fit items-center gap-2 rounded-lg bg-secondary px-3 py-1 text-2xl font-bold">
                     <Milestone size={24} />
@@ -218,7 +197,7 @@ export default function Home({ events }: HomeProps) {
                 </div>
               </Link>
 
-              <Map
+              <ReactMap
                 reuseMaps
                 mapStyle={`https://tile.neuland.app/styles/${resolvedTheme}/style.json`}
                 initialViewState={{
@@ -258,14 +237,8 @@ export default function Home({ events }: HomeProps) {
                 eines nicht: <b>Macht euch nicht verrückt!</b>
               </p>
 
-              <Link
-                href="/guide/studies"
-                passHref
-              >
-                <Button
-                  variant="outline"
-                  className="w-full"
-                >
+              <Link href="/guide/studies" passHref>
+                <Button variant="outline" className="w-full">
                   Zum Guide
                 </Button>
               </Link>
@@ -279,11 +252,8 @@ export default function Home({ events }: HomeProps) {
 
               <ScrollArea className="h-[calc(100%-48px)] overflow-y-auto">
                 <div className="flex flex-col gap-2">
-                  {cards.map((card, idx) => (
-                    <div
-                      key={idx}
-                      className="grid grid-cols-1 gap-3"
-                    >
+                  {cards.map((card) => (
+                    <div key={card.key} className="grid grid-cols-1 gap-3">
                       {card}
                     </div>
                   ))}
@@ -351,15 +321,8 @@ export default function Home({ events }: HomeProps) {
 
             <div className="mt-2 flex flex-col">
               {SERVERS.map((server) => (
-                <Link
-                  key={server.name}
-                  href={server.link}
-                  passHref
-                >
-                  <Button
-                    variant="link"
-                    className="flex items-center gap-2"
-                  >
+                <Link key={server.name} href={server.link} passHref>
+                  <Button variant="link" className="flex items-center gap-2">
                     <ExternalLink />
                     <span>{server.name}</span>
                   </Button>
@@ -406,10 +369,9 @@ export async function getServerSideProps() {
       if (x.end != null) {
         const date = new Date(x.end)
         return date > new Date()
-      } else {
-        const date = new Date(x.begin)
-        return date > new Date()
       }
+      const date = new Date(x.begin)
+      return date > new Date()
     })
     .slice(0, 3)
 

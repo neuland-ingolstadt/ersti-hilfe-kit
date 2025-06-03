@@ -1,10 +1,9 @@
-import React from 'react'
-import Head from 'next/head'
-import guide from '@/data/guide/campus.json'
-import Footer from '@/components/ui/footer'
 import GuideAccordion from '@/components/guide/guideAccordion'
 import GuideTabs from '@/components/guide/guideTabs'
+import Footer from '@/components/ui/footer'
 import NavBar from '@/components/ui/navbar'
+import guide from '@/data/guide/campus.json'
+import Head from 'next/head'
 
 export default function Campus() {
   return (

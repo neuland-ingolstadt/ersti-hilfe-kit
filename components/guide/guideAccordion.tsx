@@ -30,15 +30,9 @@ interface GuideAccordionProps {
 
 export default function GuideAccordion({ guide }: GuideAccordionProps) {
   return (
-    <Accordion
-      type="single"
-      collapsible
-    >
+    <Accordion type="single" collapsible>
       {guide.map((item) => (
-        <AccordionItem
-          value={item.title}
-          key={item.title}
-        >
+        <AccordionItem value={item.title} key={item.title}>
           <AccordionTrigger className="max-w-full pt-8">
             <div className="max-w-full truncate pr-6 text-left">
               {item.title}
@@ -47,15 +41,9 @@ export default function GuideAccordion({ guide }: GuideAccordionProps) {
           <AccordionContent>
             <Card>
               <CardContent className="px-6 py-3">
-                <Accordion
-                  type="single"
-                  collapsible
-                >
+                <Accordion type="single" collapsible>
                   {item.content.map((content) => (
-                    <AccordionItem
-                      value={content.title}
-                      key={content.title}
-                    >
+                    <AccordionItem value={content.title} key={content.title}>
                       <AccordionTrigger className="max-w-full pt-8">
                         <div className="max-w-full truncate pr-6 text-left text-base">
                           {content.title}

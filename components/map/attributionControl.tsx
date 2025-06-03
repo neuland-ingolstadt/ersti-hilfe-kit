@@ -1,8 +1,9 @@
 import { useMap } from 'react-map-gl/maplibre'
 import 'maplibre-gl/dist/maplibre-gl.css'
-import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { CircleChevronRight, Info } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { CircleChevronRight, Info } from 'lucide-react'
+import type React from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 interface AttributionControlProps {
   attribution: string | React.ReactNode
@@ -15,6 +16,7 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
   const attributionRef = useRef<HTMLDivElement>(null)
   const [targetWidth, setTargetWidth] = useState(0)
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     function getTargetWidth() {
       if (!attributionRef.current) {
@@ -23,7 +25,7 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
 
       attributionRef.current.style.width = 'auto'
       const width = attributionRef.current.offsetWidth + 6
-      attributionRef.current.style.width = width + 'px'
+      attributionRef.current.style.width = `${width}px`
 
       attributionRef.current.style.transition =
         'width 0.3s ease-in-out, opacity 0.3s ease-in-out'
@@ -49,7 +51,7 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
       }
 
       if (!collapsedTemp) {
-        attributionRef.current.style.width = targetWidth + 'px'
+        attributionRef.current.style.width = `${targetWidth}px`
         attributionRef.current.style.opacity = '1'
       } else {
         attributionRef.current.style.width = '0px'
@@ -59,6 +61,7 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
     [collapsed, targetWidth]
   )
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     if (!map) {
       return
@@ -69,6 +72,7 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
     })
   }, [collapsed, map, toggleCollapsed])
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     // close attribution after 5 seconds
     const timeout = setTimeout(() => {
@@ -76,7 +80,6 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
     }, 5000)
 
     return () => clearTimeout(timeout)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (!map) {
@@ -95,6 +98,13 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
             e.preventDefault()
             toggleCollapsed()
           }}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault()
+              toggleCollapsed()
+            }
+          }}
+          aria-label={collapsed ? 'Show attribution' : 'Hide attribution'}
           className="cursor-pointer text-black dark:text-white"
         >
           <div

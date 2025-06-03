@@ -1,260 +1,264 @@
+import {
+  addWeeks,
+  differenceInMilliseconds,
+  endOfWeek,
+  format,
+  formatDistance,
+  formatDistanceToNow,
+  isSameDay,
+  isSameWeek,
+  isToday,
+  isTomorrow,
+  startOfDay,
+  startOfWeek,
+} from 'date-fns'
+import { de } from 'date-fns/locale'
+
+// --- Constants ---
 const WORD_TODAY = 'Heute'
 const WORD_TOMORROW = 'Morgen'
 const WORD_THIS_WEEK = 'Diese Woche'
 const WORD_NEXT_WEEK = 'Nächste Woche'
 
-export const DATE_LOCALE = 'de-DE'
+// --- Helpers ---
 
 /**
- * Formats a date like "Mo., 1.10.2020"
+ * Ensures the input is a Date object.
+ * For strings, it uses `new Date()` to mimic original flexibility.
+ * For production, consider `parseISO` if strings are ISO 8601, or a more specific parser.
  */
-export function formatFriendlyDate(datetime: Date | string) {
-  if (typeof datetime === 'string') {
-    datetime = new Date(datetime)
+const ensureDate = (date: Date | string | number): Date => {
+  if (date instanceof Date) {
+    return date
   }
-
-  const today = new Date()
-  const tomorrow = new Date()
-  tomorrow.setDate(today.getDate() + 1)
-
-  if (datetime.toDateString() === today.toDateString()) {
-    return WORD_TODAY
-  } else if (datetime.toDateString() === tomorrow.toDateString()) {
-    return WORD_TOMORROW
-  } else {
-    return datetime.toLocaleString(DATE_LOCALE, {
-      weekday: 'short',
-      day: 'numeric',
-      month: '2-digit',
-      year: 'numeric',
-    })
+  if (typeof date === 'number') {
+    // Assuming number is a timestamp
+    return new Date(date)
   }
+  return new Date(date) // Matches original string parsing behavior
+}
+
+// --- Formatting Functions ---
+
+/**
+ * Formats a date like "Mo., 1.10.2020", or "Heute", "Morgen".
+ */
+export function formatFriendlyDate(date: Date | string): string {
+  const dt = ensureDate(date)
+
+  if (isToday(dt)) return WORD_TODAY
+  if (isTomorrow(dt)) return WORD_TOMORROW
+
+  // Original: weekday: 'short', day: 'numeric', month: '2-digit', year: 'numeric'
+  // 'EEE, d.MM.yyyy' -> "Mo., 1.10.2020" with German locale
+  return format(dt, 'EEE, d.MM.yyyy', { locale: de })
 }
 
 /**
- * Formats a date range like "Mo., 1.10.2021 - Di., 2.10.2021"
+ * Formats a date range like "Mo., 1.10.2021 - Di., 2.10.2021".
+ * If begin and end are the same day, only the begin date is shown.
  */
-export function formatFriendlyDateRange(begin: Date, end: Date) {
-  let str = formatFriendlyDate(begin)
-  if (end && begin.toDateString() !== end.toDateString()) {
-    str += ' – ' + formatFriendlyDate(end)
-  }
-  return str
-}
-
-/**
- * Formats a time like "8:15"
- */
-export function formatFriendlyTime(datetime: Date | string) {
-  if (typeof datetime === 'string') {
-    datetime = new Date(datetime)
-  }
-
-  return datetime.toLocaleTimeString(DATE_LOCALE, {
-    hour: '2-digit',
-    minute: '2-digit',
-  })
-}
-
-/**
- * Formats a date range like "Mo., 1.10.2021 08:00 – 12:00" or "Mo., 1.10.2021 08:00 – Do., 2.10.2021 08:00"
- */
-export function formatFriendlyDateTimeRange(
+export function formatFriendlyDateRange(
   begin: Date | string,
   end: Date | string
-) {
-  if (typeof begin === 'string') {
-    begin = new Date(begin)
-  }
+): string {
+  const beginDate = ensureDate(begin)
+  const endDate = ensureDate(end)
 
-  if (typeof end === 'string') {
-    end = new Date(end)
+  const formattedBegin = formatFriendlyDate(beginDate)
+  if (isSameDay(beginDate, endDate)) {
+    return formattedBegin
   }
-
-  let str = formatFriendlyDate(begin) + ', ' + formatFriendlyTime(begin)
-  if (end) {
-    if (begin.toDateString() === end.toDateString()) {
-      str += ' – ' + formatFriendlyTime(end)
-    } else {
-      str += ' – ' + formatFriendlyDate(end) + ', ' + formatFriendlyTime(end)
-    }
-  }
-  return str
+  return `${formattedBegin} - ${formatFriendlyDate(endDate)}`
 }
 
 /**
- * Formats a date and time like "Mo., 1.10.2020, 08:15"
+ * Formats a time like "8:15".
  */
-export function formatFriendlyDateTime(datetime: Date | string) {
-  const date = formatFriendlyDate(datetime)
-  const time = formatFriendlyTime(datetime)
-
-  return `${date}, ${time}`
+export function formatFriendlyTime(date: Date | string): string {
+  const datetime = ensureDate(date)
+  // 'HH:mm' -> "08:15" (24-hour format)
+  return format(datetime, 'HH:mm', { locale: de })
 }
 
 /**
- * Formats a day like "Morgen" or "Montag, 1.10."
+ * Formats a date range like "Mo., 1.10.2021 08:00 – 12:00" or "Mo., 1.10.2021 08:00 – Do., 2.10.2021 08:00".
+ * Note: Assumes endDate is always provided. If optional, adjust signature and logic.
  */
-export function formatNearDate(datetime: Date | string) {
-  if (typeof datetime === 'string') {
-    datetime = new Date(datetime)
-  }
+export function formatFriendlyDateTimeRange(
+  beginDate: Date | string,
+  endDate: Date | string
+): string {
+  const begin = ensureDate(beginDate)
+  const end = ensureDate(endDate)
 
-  const today = new Date()
-  const tomorrow = new Date()
-  tomorrow.setDate(today.getDate() + 1)
+  const formattedBeginDate = formatFriendlyDate(begin)
+  const formattedBeginTime = formatFriendlyTime(begin)
 
-  if (datetime.toDateString() === today.toDateString()) {
-    return WORD_TODAY
-  } else if (datetime.toDateString() === tomorrow.toDateString()) {
-    return WORD_TOMORROW
-  } else {
-    return datetime.toLocaleString(DATE_LOCALE, {
-      weekday: 'long',
-      day: 'numeric',
-      month: 'numeric',
-    })
+  if (isSameDay(begin, end)) {
+    return `${formattedBeginDate}, ${formattedBeginTime} - ${formatFriendlyTime(end)}`
   }
+  return `${formattedBeginDate}, ${formattedBeginTime} - ${formatFriendlyDate(end)}, ${formatFriendlyTime(end)}`
 }
 
-export function formatFriendlyTimeDelta(delta: number) {
-  const rtl = new Intl.RelativeTimeFormat(DATE_LOCALE, {
+/**
+ * Formats a date and time like "Mo., 1.10.2020, 08:15".
+ */
+export function formatFriendlyDateTime(datetime: Date | string): string {
+  const dt = ensureDate(datetime)
+  // formatFriendlyDate handles "Heute", "Morgen" correctly
+  return `${formatFriendlyDate(dt)}, ${formatFriendlyTime(dt)}`
+}
+
+/**
+ * Formats a day like "Morgen" or "Montag, 1.10.".
+ */
+export function formatNearDate(datetime: Date | string): string {
+  const dt = ensureDate(datetime)
+
+  if (isToday(dt)) return WORD_TODAY
+  if (isTomorrow(dt)) return WORD_TOMORROW
+
+  // Original: weekday: 'long', day: 'numeric', month: 'numeric'
+  // 'EEEE, d.M.' -> "Montag, 1.10" with German locale
+  return format(dt, 'EEEE, d.M.', { locale: de })
+}
+
+/**
+ * Formats a time delta using Intl.RelativeTimeFormat.
+ * e.g., "in 1 Woche", "vor 2 Tagen".
+ * The original implementation using Intl.RelativeTimeFormat is robust and standard.
+ */
+export function formatFriendlyTimeDelta(deltaMs: number): string {
+  const rtl = new Intl.RelativeTimeFormat('de-DE', {
+    // Using 'de-DE' for consistency
     numeric: 'auto',
     style: 'long',
   })
 
-  const weeks = (delta / (7 * 24 * 60 * 60 * 1000)) | 0
-  if (Math.abs(weeks) > 0) {
-    return rtl.format(weeks, 'week')
-  }
+  const absDeltaMs = Math.abs(deltaMs)
+  const sign = Math.sign(deltaMs)
 
-  const days = (delta / (24 * 60 * 60 * 1000)) | 0
-  if (Math.abs(days) > 0) {
-    return rtl.format(days, 'day')
-  }
+  // Calculate units based on absolute value
+  const minutes = Math.floor(absDeltaMs / (60 * 1000))
+  const hours = Math.floor(absDeltaMs / (60 * 60 * 1000))
+  const days = Math.floor(absDeltaMs / (24 * 60 * 60 * 1000))
+  const weeks = Math.floor(absDeltaMs / (7 * 24 * 60 * 60 * 1000))
 
-  const hours = (delta / (60 * 60 * 1000)) | 0
-  if (Math.abs(hours) > 0) {
-    return rtl.format(hours, 'hour')
+  if (weeks > 0) {
+    return rtl.format(sign * weeks, 'week')
   }
-
-  const minutes = (delta / (60 * 1000)) | 0
-  return rtl.format(minutes, 'minute')
+  if (days > 0) {
+    return rtl.format(sign * days, 'day')
+  }
+  if (hours > 0) {
+    return rtl.format(sign * hours, 'hour')
+  }
+  return rtl.format(sign * minutes, 'minute')
 }
 
 /**
- * Formats a relative date and time like "in 5 Minuten" or "vor 10 Minuten"
+ * Formats a relative date and time like "in 5 Minuten" or "vor 10 Minuten".
+ * For durations beyond 24 hours, it refers to day differences like "in 2 Tagen".
  */
-export function formatFriendlyRelativeTime(date: Date) {
-  const startOfDay = new Date()
-  startOfDay.setHours(0)
-  startOfDay.setMinutes(0)
-  startOfDay.setSeconds(0)
-  startOfDay.setMilliseconds(0)
+export function formatFriendlyRelativeTime(dateInput: Date | string): string {
+  const date = ensureDate(dateInput)
+  const now = new Date()
 
-  const deltaFromNow = date.getTime() - Date.now()
-  const deltaFromStartOfDay = date.getTime() - startOfDay.getTime()
+  const diffMs = differenceInMilliseconds(date, now)
 
-  // when the event is more than 24h away, use the start of the day as a reference
-  // (because that is how humans measure time, apparently)
-  if (Math.abs(deltaFromNow) < 86400000) {
-    return formatFriendlyTimeDelta(deltaFromNow)
-  } else if (deltaFromNow > 0) {
-    return formatFriendlyTimeDelta(deltaFromStartOfDay)
-  } else {
-    return formatFriendlyTimeDelta(deltaFromStartOfDay - 86400000)
+  if (Math.abs(diffMs) < 24 * 60 * 60 * 1000) {
+    // Less than 24 hours
+    return formatDistanceToNow(date, { locale: de, addSuffix: true })
   }
+  // 24 hours or more
+  // Compare start of days for "in X Tagen" / "vor X Tagen"
+  return formatDistance(startOfDay(date), startOfDay(now), {
+    locale: de,
+    addSuffix: true,
+  })
 }
 
 /**
- * Formats a relative date and time like "5 min"
+ * Formats a relative duration in minutes like "5 min".
+ * Shows 0 min if the datetime is in the past or less than a minute in the future.
  */
-export function formatRelativeMinutes(datetime: Date | string) {
-  if (typeof datetime === 'string') {
-    datetime = new Date(datetime)
-  }
+export function formatRelativeMinutes(datetime: Date | string): string {
+  const dt = ensureDate(datetime)
+  const now = new Date()
 
-  const minutes = Math.max(
-    Math.floor((datetime.getTime() - Date.now()) / 60000),
-    0
-  )
+  const diffMs = differenceInMilliseconds(dt, now)
+  // Calculate minutes; Math.max ensures it's not negative (past dates show 0)
+  const minutes = Math.max(0, Math.floor(diffMs / 60000))
+
   return `${minutes} min`
 }
 
+// --- ISO Formatting ---
+
 /**
- * Formats a date like "2020-10-01"
+ * Formats a date as ISO date string: "2020-10-01".
  */
-export function formatISODate(date: Date) {
-  return (
-    date.getFullYear().toString().padStart(4, '0') +
-    '-' +
-    (date.getMonth() + 1).toString().padStart(2, '0') +
-    '-' +
-    date.getDate().toString().padStart(2, '0')
-  )
+export function formatISODate(date: Date | string): string {
+  return format(ensureDate(date), 'yyyy-MM-dd')
 }
 
 /**
- * Formats a time like "08:15"
+ * Formats a time as ISO time string: "08:15".
  */
-export function formatISOTime(date: Date) {
-  return (
-    date.getHours().toString().padStart(2, '0') +
-    ':' +
-    date.getMinutes().toString().padStart(2, '0')
-  )
+export function formatISOTime(date: Date | string): string {
+  return format(ensureDate(date), 'HH:mm')
+}
+
+// --- Week Utilities ---
+
+/**
+ * Returns the start of the week (Monday, 00:00:00) for the given date.
+ * The `de` locale ensures Monday is the start of the week.
+ */
+export function getMonday(dateInput: Date | string): Date {
+  const date = ensureDate(dateInput)
+  return startOfWeek(date, { locale: de })
 }
 
 /**
- * Returns the start of the week
- * https://stackoverflow.com/a/4156516
+ * Returns an interval representing the week: [Monday 00:00:00 This Week, Monday 00:00:00 Next Week).
+ * The end date is exclusive.
  */
-export function getMonday(date: Date) {
-  date = new Date(date)
-  const day = date.getDay()
-  date.setHours(0, 0, 0, 0)
-  date.setDate(date.getDate() - day + (day === 0 ? -6 : 1))
-  return date
-}
-
-/**
- * Returns the start end the end of the week
- */
-export function getWeek(date: Date) {
-  const start = getMonday(date)
-  const end = getMonday(date)
-  end.setDate(end.getDate() + 7)
+export function getWeek(dateInput: Date | string): [Date, Date] {
+  const date = ensureDate(dateInput)
+  const start = startOfWeek(date, { locale: de }) // Monday 00:00:00
+  const end = addWeeks(start, 1) // Next Monday 00:00:00
   return [start, end]
 }
 
 /**
- * Adds weeks to a date
+ * Adds (or subtracts) a number of weeks to a date. Returns a new Date instance.
  */
-export function addWeek(date: Date, delta: number) {
-  date = new Date(date)
-  date.setDate(date.getDate() + delta * 7)
-  return date
+export function addWeek(dateInput: Date | string, amount: number): Date {
+  return addWeeks(ensureDate(dateInput), amount)
 }
 
 /**
- * Formats a date like 'Nächste Woche' or '17.5. – 23.5.'
+ * Formats a week relative to the current date like 'Diese Woche', 'Nächste Woche',
+ * or as a date range like '17.5. – 23.5.'.
  */
-export function getFriendlyWeek(date: Date) {
-  const [currStart, currEnd] = getWeek(new Date())
-  const [nextStart, nextEnd] = getWeek(addWeek(new Date(), 1))
-  if (date >= currStart && date < currEnd) {
-    return WORD_THIS_WEEK
-  } else if (date >= nextStart && date < nextEnd) {
-    return WORD_NEXT_WEEK
-  } else {
-    const monday = getMonday(date)
-    const sunday = new Date(monday)
-    sunday.setDate(sunday.getDate() + 6)
+export function getFriendlyWeek(dateInput: Date | string): string {
+  const date = ensureDate(dateInput)
+  const now = new Date()
 
-    return (
-      monday.toLocaleString(DATE_LOCALE, { day: 'numeric', month: 'numeric' }) +
-      ' – ' +
-      sunday.toLocaleString(DATE_LOCALE, { day: 'numeric', month: 'numeric' })
-    )
+  if (isSameWeek(date, now, { locale: de })) {
+    return WORD_THIS_WEEK
   }
+  if (isSameWeek(date, addWeeks(now, 1), { locale: de })) {
+    return WORD_NEXT_WEEK
+  }
+
+  // Default format: "17.5. – 23.5." (Start of week to End of week)
+  const mondayOfWeek = startOfWeek(date, { locale: de })
+  const sundayOfWeek = endOfWeek(date, { locale: de }) // Inclusive Sunday
+
+  // 'd.M.' format -> "17.5"
+  const formatPattern = 'd.M.'
+  return `${format(mondayOfWeek, formatPattern, { locale: de })} – ${format(sundayOfWeek, formatPattern, { locale: de })}`
 }

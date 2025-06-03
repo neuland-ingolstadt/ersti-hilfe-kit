@@ -1,16 +1,16 @@
-import React, { useCallback, useMemo, useState } from 'react'
-import Head from 'next/head'
-import rawData from '../../data/guide/glossary.json'
-import GuideTabs from '@/components/guide/guideTabs'
-import NavBar from '@/components/ui/navbar'
 import GlossaryAccordion, {
-  GlossaryItem,
+  type GlossaryItem,
 } from '@/components/guide/glossaryAccordion'
-import { GetServerSideProps } from 'next'
+import GuideTabs from '@/components/guide/guideTabs'
 import Footer from '@/components/ui/footer'
-import { ScrollArea } from '@/components/ui/scroll-area'
 import { Input } from '@/components/ui/input'
+import NavBar from '@/components/ui/navbar'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import { Search } from 'lucide-react'
+import type { GetServerSideProps } from 'next'
+import Head from 'next/head'
+import { useCallback, useMemo, useState } from 'react'
+import rawData from '../../data/guide/glossary.json'
 
 interface GlossaryProps {
   data: GlossaryItem[]

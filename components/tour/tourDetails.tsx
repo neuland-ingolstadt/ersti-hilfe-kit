@@ -15,12 +15,12 @@ import { COMPONENTS } from '@/components/ui/markdownComponents'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { useTourDetails } from '@/lib/hooks/tourDetails'
 import { cn } from '@/lib/utils'
-import { TourData } from '@/pages/tour/[city]'
-import { useMediaQuery } from 'usehooks-ts'
+import type { TourData } from '@/pages/tour/[city]'
 import Link from 'next/link'
 import { useCallback, useMemo } from 'react'
 import { SiApple, SiGooglemaps, SiOpenstreetmap } from 'react-icons/si'
 import ReactMarkdown from 'react-markdown'
+import { useMediaQuery } from 'usehooks-ts'
 
 interface TourDialogProps {
   popup: TourData | undefined
@@ -38,7 +38,7 @@ export default function TourDetails({ popup, setPopup }: TourDialogProps) {
   )
 
   const { osmLink, googleMapsLink, appleMapsLink, description } =
-    useTourDetails(popup!)
+    useTourDetails(popup)
 
   const body = useMemo(() => {
     if (!popup) return null
@@ -51,14 +51,13 @@ export default function TourDetails({ popup, setPopup }: TourDialogProps) {
           </div>
         )}
         {popup.video && (
-          <video
-            poster={popup.poster}
-            controls
-            className="rounded-md"
-          >
-            <source
-              src={popup.video}
-              type="video/mp4"
+          <video poster={popup.poster} controls className="rounded-md">
+            <source src={popup.video} type="video/mp4" />
+            <track
+              kind="captions"
+              src=""
+              label="English captions"
+              srcLang="en"
             />
           </video>
         )}
@@ -70,10 +69,7 @@ export default function TourDetails({ popup, setPopup }: TourDialogProps) {
 
   if (!isDesktop) {
     return (
-      <Drawer
-        open={open}
-        onOpenChange={onOpenChange}
-      >
+      <Drawer open={open} onOpenChange={onOpenChange}>
         <DrawerContent className="!mb-0 !pb-0">
           <DrawerHeader>
             <DrawerTitle>{popup.title}</DrawerTitle>
@@ -93,10 +89,7 @@ export default function TourDetails({ popup, setPopup }: TourDialogProps) {
   }
 
   return (
-    <Dialog
-      open={open}
-      onOpenChange={onOpenChange}
-    >
+    <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
         className={cn({
           'max-w-6xl': popup.video,
@@ -107,43 +100,22 @@ export default function TourDetails({ popup, setPopup }: TourDialogProps) {
         {body}
 
         <DialogFooter className="grid grid-cols-3 gap-3">
-          <Link
-            href={osmLink}
-            target="_blank"
-            passHref
-          >
-            <Button
-              className="w-full"
-              variant="secondary"
-            >
+          <Link href={osmLink} target="_blank" passHref>
+            <Button className="w-full" variant="secondary">
               <SiOpenstreetmap />
               <span>OpenStreetMap</span>
             </Button>
           </Link>
 
-          <Link
-            href={googleMapsLink}
-            target="_blank"
-            passHref
-          >
-            <Button
-              className="w-full"
-              variant="secondary"
-            >
+          <Link href={googleMapsLink} target="_blank" passHref>
+            <Button className="w-full" variant="secondary">
               <SiGooglemaps />
               <span>Google Maps</span>
             </Button>
           </Link>
 
-          <Link
-            href={appleMapsLink}
-            target="_blank"
-            passHref
-          >
-            <Button
-              className="w-full"
-              variant="secondary"
-            >
+          <Link href={appleMapsLink} target="_blank" passHref>
+            <Button className="w-full" variant="secondary">
               <SiApple />
               <span>Maps</span>
             </Button>

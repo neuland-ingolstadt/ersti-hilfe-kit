@@ -1,4 +1,4 @@
-import { MapStyle } from '@/components/tour/tourMap'
+import type { MapStyle } from '@/components/tour/tourMap'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,7 +8,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { cn } from '@/lib/utils'
-import { Map } from 'lucide-react'
+import { Map as MapIcon } from 'lucide-react'
 
 interface MapStyleControlProps {
   className?: string
@@ -25,14 +25,11 @@ export default function MapStyleControl({
         <DropdownMenuTrigger>
           <div className="maplibregl-ctrl flex flex-row items-center !rounded-md bg-background p-2">
             <span className="cursor-pointer text-black dark:text-white">
-              <Map size={20} />
+              <MapIcon size={20} />
             </span>
           </div>
         </DropdownMenuTrigger>
-        <DropdownMenuContent
-          align="end"
-          className="mr-2 mt-0"
-        >
+        <DropdownMenuContent align="end" className="mr-2 mt-0">
           <DropdownMenuLabel>Kartenstil</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuItem onClick={() => onStyleChange('bright')}>

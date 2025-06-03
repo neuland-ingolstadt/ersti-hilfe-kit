@@ -28,16 +28,13 @@ export default function GuideTabs() {
 
   // prefetch all tabs
   useEffect(() => {
-    TABS.forEach((tab) => {
+    for (const tab of TABS) {
       router.prefetch(tab.link)
-    })
+    }
   }, [router])
 
   return (
-    <Tabs
-      defaultValue={pathname}
-      className="mb-6 w-full"
-    >
+    <Tabs defaultValue={pathname} className="mb-6 w-full">
       <TabsList className="grid grid-cols-4">
         {TABS.map((link) => (
           <TabsTrigger

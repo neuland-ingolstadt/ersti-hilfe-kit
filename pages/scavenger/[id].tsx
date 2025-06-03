@@ -1,14 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
-import Head from 'next/head'
-import levenshtein from 'js-levenshtein'
-import ReactMarkdown from 'react-markdown'
-import ScavengerDatabase from '@/lib/ScavengerDatabase'
-import data from '@/lib/data'
-import { GetServerSideProps } from 'next'
-import Footer from '@/components/ui/footer'
-import NavBar from '@/components/ui/navbar'
-import { COMPONENTS } from '@/components/ui/markdownComponents'
-import { MapPin, MessageCircleQuestion, Trophy } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
@@ -16,9 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { useForm } from 'react-hook-form'
-import z from 'zod'
-import { zodResolver } from '@hookform/resolvers/zod'
+import Footer from '@/components/ui/footer'
 import {
   Form,
   FormControl,
@@ -28,9 +16,21 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { useWindowSize } from 'usehooks-ts'
+import { COMPONENTS } from '@/components/ui/markdownComponents'
+import NavBar from '@/components/ui/navbar'
+import ScavengerDatabase from '@/lib/ScavengerDatabase'
+import data from '@/lib/data'
+import { zodResolver } from '@hookform/resolvers/zod'
+import levenshtein from 'js-levenshtein'
+import { MapPin, MessageCircleQuestion, Trophy } from 'lucide-react'
+import type { GetServerSideProps } from 'next'
 import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useForm } from 'react-hook-form'
+import ReactMarkdown from 'react-markdown'
+import { useWindowSize } from 'usehooks-ts'
+import z from 'zod'
 
 const Confetti = dynamic(() => import('react-confetti'), { ssr: false })
 
@@ -229,12 +229,12 @@ export default function Scavenger({ id, entry }: ScavengerProps) {
     if (emptyQuestions) {
       // get all fields and set them to error
       const fields = Object.keys(form.getValues())
-      fields.forEach((field) => {
+      for (const field of fields) {
         form.setError(field, {
           type: 'manual',
           message: 'Bitte gib eine Antwort ein.',
         })
-      })
+      }
     }
   }, [form, handleShowConfetti])
 

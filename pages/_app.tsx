@@ -1,10 +1,9 @@
-import React from 'react'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 
-import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/lib/providers/themeProvider'
+import { Inter } from 'next/font/google'
 
 export const inter = Inter({
   subsets: ['latin'],
@@ -14,11 +13,7 @@ export const inter = Inter({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem={true}
-    >
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
       <main className={`${inter.variable} font-sans`}>
         <Component {...pageProps} />
       </main>

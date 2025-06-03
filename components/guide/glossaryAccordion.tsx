@@ -20,15 +20,9 @@ export default function GlossaryAccordion({
   glossary,
 }: GlossaryAccordionProps) {
   return (
-    <Accordion
-      type="single"
-      collapsible
-    >
+    <Accordion type="single" collapsible>
       {glossary.map((item) => (
-        <AccordionItem
-          value={item.title}
-          key={item.title}
-        >
+        <AccordionItem value={item.title} key={item.title}>
           <AccordionTrigger className="max-w-full py-6">
             <div className="truncate pr-6">{item.title}</div>
           </AccordionTrigger>
