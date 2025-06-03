@@ -12,10 +12,12 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { cn } from '@/lib/utils'
+import { useAptabase } from '@aptabase/react'
 import { Palette, Settings } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useCallback } from 'react'
 
 interface NavBarProps {
   overlay?: boolean
@@ -23,6 +25,17 @@ interface NavBarProps {
 
 export default function NavBar({ overlay = false }: NavBarProps) {
   const { setTheme } = useTheme()
+  const { trackEvent } = useAptabase()
+
+  const updateTheme = useCallback(
+    (theme: 'light' | 'dark' | 'system') => {
+      setTheme(theme)
+      trackEvent('Change Theme', {
+        theme,
+      })
+    },
+    [setTheme, trackEvent]
+  )
 
   return (
     <>
@@ -56,14 +69,14 @@ export default function NavBar({ overlay = false }: NavBarProps) {
                   </DropdownMenuSubTrigger>
                   <DropdownMenuPortal>
                     <DropdownMenuSubContent>
-                      <DropdownMenuItem onClick={() => setTheme('light')}>
+                      <DropdownMenuItem onClick={() => updateTheme('light')}>
                         Hell
                       </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setTheme('dark')}>
+                      <DropdownMenuItem onClick={() => updateTheme('dark')}>
                         Dunkel
                       </DropdownMenuItem>
                       <DropdownMenuSeparator />
-                      <DropdownMenuItem onClick={() => setTheme('system')}>
+                      <DropdownMenuItem onClick={() => updateTheme('system')}>
                         System
                       </DropdownMenuItem>
                     </DropdownMenuSubContent>

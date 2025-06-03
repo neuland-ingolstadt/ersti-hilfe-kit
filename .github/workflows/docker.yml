@@ -50,6 +50,8 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             NEXT_PUBLIC_NEULAND_GRAPHQL_ENDPOINT=${{ github.event.workflow_run.head_branch == 'develop' && env.DEV_GRAPHQL_URL || env.GRAPHQL_URL }}
+            NEXT_PUBLIC_APTABASE_KEY=${{ secrets.APTABASE_KEY }}
+            NEXT_PUBLIC_VERSION: ${{ github.event.workflow_run.head_branch == 'develop' && 'staging' || 'release' }}
 
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v2

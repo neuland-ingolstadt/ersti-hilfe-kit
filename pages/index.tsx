@@ -25,6 +25,7 @@ import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import { SiDiscord, SiInstagram } from 'react-icons/si'
 import ReactMap from 'react-map-gl/maplibre'
+import { useAptabase } from '@aptabase/react'
 
 const CENTER = [48.76415, 11.42434]
 
@@ -166,6 +167,12 @@ export default function Home({ events }: HomeProps) {
   }, [events])
 
   const { resolvedTheme } = useTheme()
+  const { trackEvent } = useAptabase()
+  const trackBadgeClick = (badge: 'Apple' | 'Google') => {
+    trackEvent('Click App Badge', {
+      badge,
+    })
+  }
 
   return (
     <div>
@@ -296,6 +303,7 @@ export default function Home({ events }: HomeProps) {
                   target="_blank"
                   rel="noreferrer"
                   passHref
+                  onClick={() => trackBadgeClick('Apple')}
                 >
                   <Image
                     alt="Download im App Store"
@@ -308,6 +316,7 @@ export default function Home({ events }: HomeProps) {
                   href="https://play.google.com/store/apps/details?id=app.neuland"
                   target="_blank"
                   passHref
+                  onClick={() => trackBadgeClick('Google')}
                 >
                   <Image
                     alt="Get it on Google Play"
