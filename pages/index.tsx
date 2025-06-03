@@ -45,9 +45,9 @@ interface MultiLang {
 
 export interface CLEvent {
   id: string
-  title: MultiLang
+  titles: MultiLang
   host: Host
-  startDateTime: Date | null
+  startDateTime: Date
   endDateTime: Date | null
   location: string | null
   eventUrl: string | null
@@ -85,7 +85,7 @@ export default function Home({ events }: HomeProps) {
     const data = [
       ...events,
       {
-        title: {
+        titles: {
           de: 'Mehr in der Neuland.App',
           en: 'More on Neuland.App',
         },
@@ -103,7 +103,7 @@ export default function Home({ events }: HomeProps) {
           <CardHeader className="flex flex-row items-start gap-0">
             <div className="mt-0 flex flex-1 flex-col">
               <span className="truncate text-lg font-bold">
-                {event.title.de}
+                {event.titles.de}
               </span>
               <span className="text-muted-foreground">{event.host.name}</span>
             </div>
@@ -359,10 +359,10 @@ export async function getServerSideProps() {
 					location
 					eventUrl
 					isMoodleEvent
-					descriptions {
-						de
-						en
-					}
+          titles {
+            de
+            en
+          }
 					host {
 						name
 						website
@@ -376,10 +376,10 @@ export async function getServerSideProps() {
   const eventsData = data.clEvents.map((event) => {
     return {
       ...event,
-      startDateTime: new Date(Number(event.startDateTime)).toISOString(),
+      startDateTime: new Date(event.startDateTime).toISOString(),
       endDateTime:
         event.endDateTime != null
-          ? new Date(Number(event.endDateTime)).toISOString()
+          ? new Date(event.endDateTime).toISOString()
           : null,
     }
   })
