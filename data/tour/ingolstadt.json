@@ -421,8 +421,8 @@
   },
   {
     "title": "Parkplatz Festplatz",
-    "description_de": "Kostenpflichtiger Parkplatz. Hier kostet das Tagesticket maximal 2,50 €. Zudem ist das Monatsticket für Studenten mit nur 17 € das billigste. ([Mehr Informationen](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-festplatz))",
-    "description_en": "Paid parking. Here the day ticket costs a maximum of 2.50 €. In addition, the monthly ticket for students is the cheapest at just 17 €. ([more information](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-festplatz))",
+    "description_de": "Kostenpflichtiger Parkplatz. Hier kostet das Tagesticket maximal 3 €. Zudem ist das Monatsticket für Studenten mit nur 22 € das billigste. ([Mehr Informationen](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-festplatz))",
+    "description_en": "Paid parking. Here the day ticket costs a maximum of 3 €. In addition, the monthly ticket for students is the cheapest at just 22 €. ([more information](https://www.ingolstadt-ifg.de/parkin/parkeinrichtungen-der-ifg/parkplatz-festplatz))",
     "category": "nuetzlich",
     "lat": 48.77098,
     "lon": 11.42356
