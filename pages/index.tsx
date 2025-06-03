@@ -1,12 +1,17 @@
-import { useMemo } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import { useMemo } from 'react'
 
-import Image from 'next/image'
-import request, { gql } from 'graphql-request'
 import { Button } from '@/components/ui/button'
-import NavBar from '@/components/ui/navbar'
+import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import Footer from '@/components/ui/footer'
+import NavBar from '@/components/ui/navbar'
+import { ScrollArea } from '@/components/ui/scroll-area'
+import {
+  formatFriendlyDateTime,
+  formatFriendlyDateTimeRange,
+} from '@/lib/date-utils'
+import request, { gql } from 'graphql-request'
 import {
   BookText,
   Calendar,
@@ -16,15 +21,10 @@ import {
   Milestone,
   Smartphone,
 } from 'lucide-react'
-import { SiDiscord, SiInstagram } from 'react-icons/si'
-import { Card, CardHeader, CardContent } from '@/components/ui/card'
-import {
-  formatFriendlyDateTime,
-  formatFriendlyDateTimeRange,
-} from '@/lib/date-utils'
-import ReactMap from 'react-map-gl/maplibre'
 import { useTheme } from 'next-themes'
-import { ScrollArea } from '@/components/ui/scroll-area'
+import Image from 'next/image'
+import { SiDiscord, SiInstagram } from 'react-icons/si'
+import ReactMap from 'react-map-gl/maplibre'
 
 const CENTER = [48.76415, 11.42434]
 
