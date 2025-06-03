@@ -1,7 +1,7 @@
 import 'maplibre-gl/dist/maplibre-gl.css'
 import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
 import { AptabaseProvider } from '@aptabase/react'
+import type { AppProps } from 'next/app'
 
 import { ThemeProvider } from '@/lib/providers/themeProvider'
 import { Inter } from 'next/font/google'

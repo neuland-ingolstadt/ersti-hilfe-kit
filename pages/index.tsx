@@ -11,6 +11,7 @@ import {
   formatFriendlyDateTime,
   formatFriendlyDateTimeRange,
 } from '@/lib/date-utils'
+import { useAptabase } from '@aptabase/react'
 import request, { gql } from 'graphql-request'
 import {
   BookText,
@@ -25,7 +26,6 @@ import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import { SiDiscord, SiInstagram } from 'react-icons/si'
 import ReactMap from 'react-map-gl/maplibre'
-import { useAptabase } from '@aptabase/react'
 
 const CENTER = [48.76415, 11.42434]
 
