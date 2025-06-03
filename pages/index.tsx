@@ -47,8 +47,8 @@ export interface CLEvent {
   id: string
   title: MultiLang
   host: Host
-  begin: Date | null
-  end: Date | null
+  startDateTime: Date | null
+  endDateTime: Date | null
   location: string | null
   eventUrl: string | null
 }
@@ -128,13 +128,16 @@ export default function Home({ events }: HomeProps) {
           </CardHeader>
 
           <CardContent>
-            {event.begin != null && (
+            {event.startDateTime != null && (
               <span className="flex items-center gap-1 text-muted-foreground">
                 <Calendar size={16} />
                 <span className="truncate">
-                  {event.end != null
-                    ? formatFriendlyDateTimeRange(event.begin, event.end)
-                    : formatFriendlyDateTime(event.begin)}
+                  {event.endDateTime != null
+                    ? formatFriendlyDateTimeRange(
+                        event.startDateTime,
+                        event.endDateTime
+                      )
+                    : formatFriendlyDateTime(event.startDateTime)}
                 </span>
               </span>
             )}
@@ -351,20 +354,20 @@ export async function getServerSideProps() {
       query {
         clEvents {
           id
-          host {
-            name
-            website
-            instagram
-          }
-          title {
-            de
-            en
-          }
-          begin
-          end
-          location
-          eventUrl
-          isMoodleEvent
+					startDateTime
+					endDateTime
+					location
+					eventUrl
+					isMoodleEvent
+					descriptions {
+						de
+						en
+					}
+					host {
+						name
+						website
+						instagram
+					}
         }
       }
     `.replace(/\s+/g, ' ')
@@ -373,19 +376,22 @@ export async function getServerSideProps() {
   const eventsData = data.clEvents.map((event) => {
     return {
       ...event,
-      begin: new Date(Number(event.begin)).toISOString(),
-      end: event.end != null ? new Date(Number(event.end)).toISOString() : null,
+      startDateTime: new Date(Number(event.startDateTime)).toISOString(),
+      endDateTime:
+        event.endDateTime != null
+          ? new Date(Number(event.endDateTime)).toISOString()
+          : null,
     }
   })
 
   const events = eventsData
-    .sort((a, b) => a.begin.localeCompare(b.begin))
+    .sort((a, b) => a.startDateTime.localeCompare(b.startDateTime))
     .filter((x) => {
-      if (x.end != null) {
-        const date = new Date(x.end)
+      if (x.endDateTime != null) {
+        const date = new Date(x.endDateTime)
         return date > new Date()
       }
-      const date = new Date(x.begin)
+      const date = new Date(x.startDateTime)
       return date > new Date()
     })
     .slice(0, 3)
