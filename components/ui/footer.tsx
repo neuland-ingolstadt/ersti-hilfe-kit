@@ -51,12 +51,20 @@ export default function Footer({ className }: FooterProps) {
           <Button variant="link">Quellcode</Button>
         </Link>
         <Link
-          href="https://neuland-ingolstadt.de/impressum.htm"
+          href="https://neuland-ingolstadt.de/legal/impressum"
           target="_blank"
           rel="noreferrer"
           passHref
         >
-          <Button variant="link">Impressum und Datenschutz</Button>
+          <Button variant="link">Impressum</Button>
+        </Link>
+        <Link
+          href="https://neuland-ingolstadt.de/legal/datenschutz"
+          target="_blank"
+          rel="noreferrer"
+          passHref
+        >
+          <Button variant="link">Datenschutz</Button>
         </Link>
       </ul>
     </footer>
