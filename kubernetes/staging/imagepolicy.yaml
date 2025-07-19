@@ -1,0 +1,14 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: ersti-kit-staging
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: ersti-hilfe-kit
+  policy:
+    numerical:
+      order: asc
+  filterTags:
+    pattern: '^develop-([0-9]+)$'
+    extract: '$1'
