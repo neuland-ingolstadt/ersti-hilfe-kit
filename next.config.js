@@ -5,6 +5,8 @@ module.exports = {
   poweredByHeader: false,
   experimental: {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+    webpackMemoryOptimizations: true,
+    reactCompiler: true,
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {

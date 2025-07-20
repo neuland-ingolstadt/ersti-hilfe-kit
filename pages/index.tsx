@@ -286,7 +286,7 @@ export default function Home({ events }: HomeProps) {
               <p className="flex-1 text-muted-foreground">
                 Die{' '}
                 <Link
-                  href="https://next.neuland.app"
+                  href="https://neuland.app"
                   target="_blank"
                   className="text-primary"
                 >
@@ -307,7 +307,7 @@ export default function Home({ events }: HomeProps) {
                 >
                   <Image
                     alt="Download im App Store"
-                    src="https://next.neuland.app/assets/Apple_Badge_DE.svg"
+                    src="https://neuland.app/assets/Apple_Badge_DE.svg"
                     width={150}
                     height={50}
                   />
@@ -320,7 +320,7 @@ export default function Home({ events }: HomeProps) {
                 >
                   <Image
                     alt="Get it on Google Play"
-                    src="https://next.neuland.app/assets/Google_Badge_DE.svg"
+                    src="https://neuland.app/assets/Google_Badge_DE.svg"
                     width={165}
                     height={50}
                   />
