@@ -6,14 +6,20 @@ on:
     types:
       - completed
     branches: ['main', 'develop']
+  push:
+    branches: ['main']
 
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
+  DEV_GRAPHQL_URL: ${{ secrets.DEV_GRAPHQL_URL }}
+  GRAPHQL_URL: ${{ secrets.GRAPHQL_URL }}
 
 jobs:
   build-and-push-image:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: |
+      github.event_name == 'push' || 
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -25,7 +31,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.workflow_run.head_sha }}
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
 
       - name: Log in to the Container registry
         uses: docker/login-action@v3
@@ -43,6 +49,17 @@ jobs:
             type=ref,event=branch
             type=raw,value=${{ github.ref_name }}-${{ github.run_number }}
 
+      - name: Set build environment
+        id: build-env
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_run" && "${{ github.event.workflow_run.head_branch }}" == "develop" ]] || [[ "${{ github.event_name }}" == "push" && "${{ github.ref_name }}" == "develop" ]]; then
+            echo "GRAPHQL_ENDPOINT=${{ env.DEV_GRAPHQL_URL }}" >> $GITHUB_ENV
+            echo "VERSION=staging" >> $GITHUB_ENV
+          else
+            echo "GRAPHQL_ENDPOINT=${{ env.GRAPHQL_URL }}" >> $GITHUB_ENV
+            echo "VERSION=release" >> $GITHUB_ENV
+          fi
+
       - name: Build and push Docker image
         id: push
         uses: docker/build-push-action@v6
@@ -52,13 +69,13 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
-            NEXT_PUBLIC_NEULAND_GRAPHQL_ENDPOINT=${{ github.event.workflow_run.head_branch == 'develop' && env.DEV_GRAPHQL_URL || env.GRAPHQL_URL }}
+            NEXT_PUBLIC_NEULAND_GRAPHQL_ENDPOINT=${{ env.GRAPHQL_ENDPOINT }}
             NEXT_PUBLIC_APTABASE_KEY=${{ secrets.APTABASE_KEY }}
-            NEXT_PUBLIC_VERSION: ${{ github.event.workflow_run.head_branch == 'develop' && 'staging' || 'release' }}
+            NEXT_PUBLIC_VERSION=${{ env.VERSION }}
 
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v2
         with:
           subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}
-          subject-digest: ${{ steps.push.outputs.digest }}
+          subject-digest: ${{ steps.push.digest }}
           push-to-registry: true
