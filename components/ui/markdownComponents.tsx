@@ -1,8 +1,9 @@
 import { ExternalLink } from 'lucide-react'
 import Link from 'next/link'
+import type { Components } from 'react-markdown'
 
-export const COMPONENTS = {
-  a(props: Omit<React.ComponentProps<'a'>, 'ref'>) {
+export const COMPONENTS: Components = {
+  a(props) {
     if (!props.href) {
       return null
     }
@@ -12,6 +13,20 @@ export const COMPONENTS = {
         <ExternalLink size={12} />
         <Link target="_blank" rel="noopener" href={props.href} {...props} />
       </span>
+    )
+  },
+  ol(props) {
+    return (
+      <ol className="list-decimal pl-6" {...props}>
+        {props.children}
+      </ol>
+    )
+  },
+  ul(props) {
+    return (
+      <ul className="list-disc pl-6" {...props}>
+        {props.children}
+      </ul>
     )
   },
 }
