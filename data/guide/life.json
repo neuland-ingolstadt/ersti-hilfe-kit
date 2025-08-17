@@ -20,7 +20,7 @@
       },
       {
         "title": "Musik",
-        "content": "* [Konzerte](https://www.ingolstadt.de/Kultur/Veranstaltungen/Musik-Konzerte/)\n* [Jazz](https://www.ingolstadt.de/Kultur/Kunst-Kultur/Kultur-Museumsverwaltung/Kulturelle-Adressen/index.php?&object=tx,2789.1.1&ModID=9&call=suche&sfort=1&KatID=0&kat=465.238&bn=0&La=1)\n* [Klassische Musik](https://www.ingolstadt.de/Kultur/Kunst-Kultur/Kultur-Museumsverwaltung/Kulturelle-Adressen/index.php?&object=tx,2789.1.1&ModID=9&call=suche&KatID=0&kat=465.242&bn=0&sfort=0&La=1)\n* [Musikschulen und Unterricht](https://www.ingolstadt.de/Kultur/Kunst-Kultur/Kultur-Museumsverwaltung/Kulturelle-Adressen/index.php?&object=tx,2789.1.1&ModID=9&call=suche&KatID=0&kat=465.270&bn=0&sfort=0&La=1)\n* [Rock & Pop](https://www.ingolstadt.de/Kultur/Kunst-Kultur/Kultur-Museumsverwaltung/Kulturelle-Adressen/index.php?&object=tx,2789.1.1&ModID=9&call=suche&KatID=0&kat=465.247&bn=0&sfort=0&La=1)",
+        "content": "* [Konzerte](https://www.ingolstadt.de/Kultur/Veranstaltungen/Musik-Konzerte/)\n* [Jazz](https://www.ingolstadt.de/Kultur/Kunst-Kultur/Kultur-Museumsverwaltung/Kulturelle-Adressen/index.php?&object=tx,2789.1.1&ModID=9&call=suche&sfort=1&KatID=0&kat=465.238&bn=0&La=1)\n* [Klassische Musik](https://www.ingolstadt.de/Kultur/Kunst-Kultur/Kultur-Museumsverwaltung/Kulturelle-Adressen/index.php?&object=tx,2789.1.1&ModID=9&call=suche&KatID=0&kat=465.242&bn=0&sfort=0&La=1)\n* [Musikschulen und Unterricht](https://www.ingolstadt.de/Kultur/Kunst-Kultur/Kultur-Museumsverwaltung/Kulturelle-Adressen/index.php?&object=tx,2789.1.1&ModID=9&call=suche&KatID=0&kat=465.270&bn=0&sfort=0&La=1)\n* [Rock & Pop](https://www.ingolstadt.de/Kultur/Kunst-Kultur/Kultur-Museumsverwaltung/Kulturelle-Adressen/index.php?&object=tx,2789.1.1&ModID=9&call=suche&KatID=0&kat=465.247&bn=0&sfort=0&La=1)\n* [Jugendkammerchor](https://jugendkammerchor-ingolstadt.de/)",
         "link": ""
       },
       {
@@ -47,12 +47,14 @@
       {
         "title": "Semesteranfangsparty (SAP)",
         "content": "",
-        "link": ""
+        "link": "https://students-life.de/events/",
+        "linktitle": "Zur Webseite von Student's Life"
       },
       {
         "title": "Kneipentour",
         "content": "",
-        "link": ""
+        "link": "https://students-life.de/events/",
+        "linktitle": "Zur Webseite von Student's Life"
       },
       {
         "title": "Eiskeller",
@@ -140,7 +142,7 @@
       },
       {
         "title": "Neuland Ingolstadt e.V.",
-        "content": "",
+        "content": "Hol dir die Neuland Next App :)",
         "link": "https://neuland-ingolstadt.de",
         "linktitle": "Zur Webseite von Neuland Ingolstadt e.V."
       },
@@ -279,7 +281,7 @@
       },
       {
         "title": "Neuburg - Innenstadt",
-        "content": "Alles was du brauchst an Läden von Lebensmittelläden bis runter zu Schokoladengeschäften und wieder rauf zu einem Computerfachgeschäft findet ihr hier auch viel. \n\n Schaut einfach mal durch!",
+        "content": "Alles was du brauchst an Läden von Lebensmittelläden bis runter zu Schokoladengeschäften und wieder rauf zu einem Computerfachgeschäft findet ihr hier auch viel. Schaut einfach mal durch!",
         "link": ""
       }
     ]
