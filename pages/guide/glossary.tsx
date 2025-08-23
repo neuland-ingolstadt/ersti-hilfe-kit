@@ -1,3 +1,7 @@
+import { Search } from 'lucide-react'
+import type { GetServerSideProps } from 'next'
+import Head from 'next/head'
+import { useCallback, useMemo, useState } from 'react'
 import GlossaryAccordion, {
   type GlossaryItem,
 } from '@/components/guide/glossaryAccordion'
@@ -6,10 +10,6 @@ import Footer from '@/components/ui/footer'
 import { Input } from '@/components/ui/input'
 import NavBar from '@/components/ui/navbar'
 import { ScrollArea } from '@/components/ui/scroll-area'
-import { Search } from 'lucide-react'
-import type { GetServerSideProps } from 'next'
-import Head from 'next/head'
-import { useCallback, useMemo, useState } from 'react'
 import rawData from '../../data/guide/glossary.json'
 
 interface GlossaryProps {

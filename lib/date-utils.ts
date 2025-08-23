@@ -5,9 +5,7 @@ const WORD_TODAY = 'Heute'
 const WORD_TOMORROW = 'Morgen'
 
 const toDate = (date: Date | string | number): Date =>
-  typeof date === 'string'
-    ? parseISO(date)
-    : new Date(date)
+  typeof date === 'string' ? parseISO(date) : new Date(date)
 
 function formatFriendlyDate(date: Date | string): string {
   const dt = toDate(date)

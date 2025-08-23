@@ -1,3 +1,4 @@
+import { Map as MapIcon } from 'lucide-react'
 import type { MapStyle } from '@/components/tour/tourMap'
 import {
   DropdownMenu,
@@ -8,7 +9,6 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { cn } from '@/lib/utils'
-import { Map as MapIcon } from 'lucide-react'
 
 interface MapStyleControlProps {
   className?: string

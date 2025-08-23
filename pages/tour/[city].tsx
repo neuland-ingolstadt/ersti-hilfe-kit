@@ -1,9 +1,8 @@
-import Head from 'next/head'
-
-import INGOLSTADT from '@/data/tour/ingolstadt.json'
-import NEUBURG from '@/data/tour/neuburg.json'
 import type { GetStaticProps } from 'next'
 import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import INGOLSTADT from '@/data/tour/ingolstadt.json'
+import NEUBURG from '@/data/tour/neuburg.json'
 
 const TourMap = dynamic(() => import('@/components/tour/tourMap'), {
   ssr: false,

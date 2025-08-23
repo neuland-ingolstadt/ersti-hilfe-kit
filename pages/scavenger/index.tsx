@@ -1,8 +1,8 @@
+import Head from 'next/head'
+import { useEffect, useState } from 'react'
 import Footer from '@/components/ui/footer'
 import NavBar from '@/components/ui/navbar'
 import ScavengerDatabase from '@/lib/ScavengerDatabase'
-import Head from 'next/head'
-import { useEffect, useState } from 'react'
 
 export default function Scavenger() {
   const [score, setScore] = useState()

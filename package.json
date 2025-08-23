@@ -46,7 +46,7 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "2.0.6",
     "@tailwindcss/postcss": "^4.1.12",
     "@types/bun": "^1.2.20",
     "@types/js-levenshtein": "^1.1.3",
@@ -57,5 +57,8 @@
     "tailwindcss": "^4.1.12",
     "typescript": "^5.9.2"
   },
-  "trustedDependencies": ["@biomejs/biome", "unrs-resolver"]
+  "trustedDependencies": [
+    "@biomejs/biome",
+    "unrs-resolver"
+  ]
 }
