@@ -1,4 +1,3 @@
-import { inter } from '@/pages/_app'
 import { Head, Html, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -14,7 +13,7 @@ export default function Document() {
           href="https://assets.neuland.app/StudVer_Logo_ohne%20Schrift.svg"
         />
       </Head>
-      <body className={`${inter.variable} font-sans`}>
+      <body>
         <Main />
         <NextScript />
       </body>
