@@ -2,7 +2,7 @@ import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
-export const TABS = [
+const TABS = [
   {
     title: 'Studium',
     link: '/guide/studies',
