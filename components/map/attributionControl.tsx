@@ -88,7 +88,7 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
 
   return (
     <div className="maplibregl-ctrl-top-right">
-      <div className="maplibregl-ctrl flex flex-row items-center !rounded-md bg-background p-2">
+      <div className="maplibregl-ctrl flex flex-row items-center rounded-md! bg-background p-2">
         <div className="overflow-x-hidden whitespace-nowrap text-opacity-100 transition-all duration-300">
           <div ref={attributionRef}>{attribution}</div>
         </div>

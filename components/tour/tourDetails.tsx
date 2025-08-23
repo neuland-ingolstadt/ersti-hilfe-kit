@@ -70,7 +70,7 @@ export default function TourDetails({ popup, setPopup }: TourDialogProps) {
   if (!isDesktop) {
     return (
       <Drawer open={open} onOpenChange={onOpenChange}>
-        <DrawerContent className="!mb-0 !pb-0">
+        <DrawerContent className="mb-0! pb-0!">
           <DrawerHeader>
             <DrawerTitle>{popup.title}</DrawerTitle>
           </DrawerHeader>

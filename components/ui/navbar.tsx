@@ -39,7 +39,7 @@ export default function NavBar({ overlay = false }: NavBarProps) {
 
   return (
     <>
-      <div className="fixed left-0 top-0 z-50 mb-16 w-screen border-b bg-background shadow-sm">
+      <div className="fixed left-0 top-0 z-50 mb-16 w-screen border-b bg-background shadow-xs">
         <div className="container flex h-16 items-center">
           <Link href="/" passHref>
             <Image
@@ -48,7 +48,7 @@ export default function NavBar({ overlay = false }: NavBarProps) {
               priority
               width={120}
               height={35}
-              className="flex-shrink-0 cursor-pointer"
+              className="shrink-0 cursor-pointer"
             />
           </Link>
 

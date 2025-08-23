@@ -160,7 +160,7 @@ export default function TourMap({ center, data }: TourMapProps) {
                     {elem.video && (
                       <ImagePlay
                         size={20}
-                        className="flex-shrink-0 text-muted-foreground"
+                        className="shrink-0 text-muted-foreground"
                       />
                     )}
                   </Button>
