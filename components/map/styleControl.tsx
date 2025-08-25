@@ -1,3 +1,4 @@
+import { Map as MapIcon } from 'lucide-react'
 import type { MapStyle } from '@/components/tour/tourMap'
 import {
   DropdownMenu,
@@ -8,7 +9,6 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { cn } from '@/lib/utils'
-import { Map as MapIcon } from 'lucide-react'
 
 interface MapStyleControlProps {
   className?: string
@@ -23,7 +23,7 @@ export default function MapStyleControl({
     <div className={cn('maplibregl-ctrl-top-right', className)}>
       <DropdownMenu>
         <DropdownMenuTrigger>
-          <div className="maplibregl-ctrl flex flex-row items-center !rounded-md bg-background p-2">
+          <div className="maplibregl-ctrl flex flex-row items-center rounded-md! bg-background p-2">
             <span className="cursor-pointer text-black dark:text-white">
               <MapIcon size={20} />
             </span>

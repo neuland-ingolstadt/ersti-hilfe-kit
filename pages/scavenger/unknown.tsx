@@ -1,6 +1,6 @@
+import Head from 'next/head'
 import Footer from '@/components/ui/footer'
 import NavBar from '@/components/ui/navbar'
-import Head from 'next/head'
 
 export default function Unknown() {
   return (

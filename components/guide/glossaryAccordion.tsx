@@ -1,3 +1,4 @@
+import ReactMarkdown from 'react-markdown'
 import {
   Accordion,
   AccordionContent,
@@ -5,7 +6,6 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { COMPONENTS } from '@/components/ui/markdownComponents'
-import ReactMarkdown from 'react-markdown'
 
 export interface GlossaryItem {
   title: string

@@ -1,16 +1,3 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import { useMemo } from 'react'
-
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader } from '@/components/ui/card'
-import Footer from '@/components/ui/footer'
-import NavBar from '@/components/ui/navbar'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import {
-  formatFriendlyDateTime,
-  formatFriendlyDateTimeRange,
-} from '@/lib/date-utils'
 import { useAptabase } from '@aptabase/react'
 import request, { gql } from 'graphql-request'
 import {
@@ -22,10 +9,22 @@ import {
   Milestone,
   Smartphone,
 } from 'lucide-react'
-import { useTheme } from 'next-themes'
+import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
+import { useTheme } from 'next-themes'
+import { useMemo } from 'react'
 import { SiDiscord, SiInstagram } from 'react-icons/si'
 import ReactMap from 'react-map-gl/maplibre'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import Footer from '@/components/ui/footer'
+import NavBar from '@/components/ui/navbar'
+import { ScrollArea } from '@/components/ui/scroll-area'
+import {
+  formatFriendlyDateTime,
+  formatFriendlyDateTimeRange,
+} from '@/lib/date-utils'
 
 const CENTER = [48.76415, 11.42434]
 
@@ -109,7 +108,7 @@ export default function Home({ events }: HomeProps) {
               <span className="text-muted-foreground">{event.host.name}</span>
             </div>
 
-            <div className="flex flex-shrink-0 items-start gap-1">
+            <div className="flex shrink-0 items-start gap-1">
               {event.host.website != null && (
                 <Link href={event.host.website} target="_blank" passHref>
                   <Button variant="secondary" size="icon">
@@ -188,7 +187,7 @@ export default function Home({ events }: HomeProps) {
               <h1 className="text-4xl font-bold md:text-5xl">
                 <span>Willkommen an der </span>
                 <br />
-                <span className="bg-gradient-to-r from-blue-800 via-indigo-500 to-blue-400 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-blue-800 via-indigo-500 to-blue-400 bg-clip-text text-transparent">
                   Technischen Hochschule Ingolstadt!
                 </span>
               </h1>

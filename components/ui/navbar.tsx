@@ -1,3 +1,9 @@
+import { useAptabase } from '@aptabase/react'
+import { Palette, Settings } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useTheme } from 'next-themes'
+import { useCallback } from 'react'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
@@ -12,12 +18,6 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { cn } from '@/lib/utils'
-import { useAptabase } from '@aptabase/react'
-import { Palette, Settings } from 'lucide-react'
-import { useTheme } from 'next-themes'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useCallback } from 'react'
 
 interface NavBarProps {
   overlay?: boolean
@@ -39,7 +39,7 @@ export default function NavBar({ overlay = false }: NavBarProps) {
 
   return (
     <>
-      <div className="fixed left-0 top-0 z-50 mb-16 w-screen border-b bg-background shadow-sm">
+      <div className="fixed left-0 top-0 z-50 mb-16 w-screen border-b bg-background shadow-xs">
         <div className="container flex h-16 items-center">
           <Link href="/" passHref>
             <Image
@@ -48,7 +48,7 @@ export default function NavBar({ overlay = false }: NavBarProps) {
               priority
               width={120}
               height={35}
-              className="flex-shrink-0 cursor-pointer"
+              className="shrink-0 cursor-pointer"
             />
           </Link>
 

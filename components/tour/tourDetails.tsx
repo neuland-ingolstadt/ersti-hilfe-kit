@@ -1,3 +1,8 @@
+import Link from 'next/link'
+import { useCallback, useMemo } from 'react'
+import { SiApple, SiGooglemaps, SiOpenstreetmap } from 'react-icons/si'
+import ReactMarkdown from 'react-markdown'
+import { useMediaQuery } from 'usehooks-ts'
 import { Button } from '@/components/ui/button'
 import {
   Dialog,
@@ -16,11 +21,6 @@ import { ScrollArea } from '@/components/ui/scroll-area'
 import { useTourDetails } from '@/lib/hooks/tourDetails'
 import { cn } from '@/lib/utils'
 import type { TourData } from '@/pages/tour/[city]'
-import Link from 'next/link'
-import { useCallback, useMemo } from 'react'
-import { SiApple, SiGooglemaps, SiOpenstreetmap } from 'react-icons/si'
-import ReactMarkdown from 'react-markdown'
-import { useMediaQuery } from 'usehooks-ts'
 
 interface TourDialogProps {
   popup: TourData | undefined
@@ -70,17 +70,15 @@ export default function TourDetails({ popup, setPopup }: TourDialogProps) {
   if (!isDesktop) {
     return (
       <Drawer open={open} onOpenChange={onOpenChange}>
-        <DrawerContent className="!mb-0 !pb-0">
+        <DrawerContent className="mb-0! pb-0!">
           <DrawerHeader>
             <DrawerTitle>{popup.title}</DrawerTitle>
           </DrawerHeader>
 
           <div className="px-6">
             <ScrollArea className="h-[70vh]">
-              <>
-                {body}
-                <span className="block h-16" />
-              </>
+              {body}
+              <span className="block h-16" />
             </ScrollArea>
           </div>
         </DrawerContent>

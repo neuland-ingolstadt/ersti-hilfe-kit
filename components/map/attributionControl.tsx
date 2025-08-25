@@ -1,9 +1,9 @@
 import { useMap } from 'react-map-gl/maplibre'
 import 'maplibre-gl/dist/maplibre-gl.css'
-import { cn } from '@/lib/utils'
 import { CircleChevronRight, Info } from 'lucide-react'
 import type React from 'react'
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { cn } from '@/lib/utils'
 
 interface AttributionControlProps {
   attribution: string | React.ReactNode
@@ -16,7 +16,7 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
   const attributionRef = useRef<HTMLDivElement>(null)
   const [targetWidth, setTargetWidth] = useState(0)
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  // biome-ignore lint/correctness/useExhaustiveDependencies: Ref only used to measure width on mount
   useEffect(() => {
     function getTargetWidth() {
       if (!attributionRef.current) {
@@ -61,26 +61,26 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
     [collapsed, targetWidth]
   )
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  // Collapse attribution when the map moves
   useEffect(() => {
-    if (!map) {
-      return
+    if (!map) return
+
+    const handleMove = () => toggleCollapsed(true)
+    map.on('move', handleMove)
+
+    return () => {
+      map.off('move', handleMove)
     }
+  }, [map, toggleCollapsed])
 
-    map.on('move', () => {
-      toggleCollapsed(true)
-    })
-  }, [collapsed, map, toggleCollapsed])
-
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  // Collapse attribution after 5 seconds
   useEffect(() => {
-    // close attribution after 5 seconds
     const timeout = setTimeout(() => {
       toggleCollapsed(true)
     }, 5000)
 
     return () => clearTimeout(timeout)
-  }, [])
+  }, [toggleCollapsed])
 
   if (!map) {
     return null
@@ -88,24 +88,19 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
 
   return (
     <div className="maplibregl-ctrl-top-right">
-      <div className="maplibregl-ctrl flex flex-row items-center !rounded-md bg-background p-2">
+      <div className="maplibregl-ctrl flex flex-row items-center rounded-md! bg-background p-2">
         <div className="overflow-x-hidden whitespace-nowrap text-opacity-100 transition-all duration-300">
           <div ref={attributionRef}>{attribution}</div>
         </div>
 
-        <span
+        <button
+          type="button"
           onClick={(e) => {
             e.preventDefault()
             toggleCollapsed()
           }}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault()
-              toggleCollapsed()
-            }
-          }}
           aria-label={collapsed ? 'Show attribution' : 'Hide attribution'}
-          className="cursor-pointer text-black dark:text-white"
+          className="cursor-pointer text-black dark:text-white bg-transparent border-none p-0 m-0"
         >
           <div
             className={cn('rotate-180 transition-all duration-300', {
@@ -114,7 +109,7 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
           >
             {collapsed ? <Info size={20} /> : <CircleChevronRight size={20} />}
           </div>
-        </span>
+        </button>
       </div>
     </div>
   )

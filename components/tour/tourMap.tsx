@@ -1,7 +1,11 @@
+import { ChevronsLeft, ImagePlay, MapPin, Menu } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useTheme } from 'next-themes'
 import { createRef, useCallback, useEffect, useMemo, useState } from 'react'
-
+import ReactMap, { type MapRef, Marker } from 'react-map-gl/maplibre'
+import { useMediaQuery } from 'usehooks-ts'
 import { AttributionControl } from '@/components/map/attributionControl'
 import MapStyleControl from '@/components/map/styleControl'
 import TourDetails from '@/components/tour/tourDetails'
@@ -31,11 +35,6 @@ import { ScrollArea } from '@/components/ui/scroll-area'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { cn } from '@/lib/utils'
 import type { City, TourData } from '@/pages/tour/[city]'
-import { ChevronsLeft, ImagePlay, MapPin, Menu } from 'lucide-react'
-import { useTheme } from 'next-themes'
-import { useRouter } from 'next/router'
-import ReactMap, { type MapRef, Marker } from 'react-map-gl/maplibre'
-import { useMediaQuery } from 'usehooks-ts'
 
 interface CategoryProps {
   fill: string
@@ -160,7 +159,7 @@ export default function TourMap({ center, data }: TourMapProps) {
                     {elem.video && (
                       <ImagePlay
                         size={20}
-                        className="flex-shrink-0 text-muted-foreground"
+                        className="shrink-0 text-muted-foreground"
                       />
                     )}
                   </Button>

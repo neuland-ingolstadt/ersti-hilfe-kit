@@ -2,13 +2,12 @@ import 'maplibre-gl/dist/maplibre-gl.css'
 import '@/styles/globals.css'
 import { AptabaseProvider } from '@aptabase/react'
 import type { AppProps } from 'next/app'
-
+import { Inter as GoogleFont } from 'next/font/google'
 import { ThemeProvider } from '@/lib/providers/themeProvider'
-import { Inter } from 'next/font/google'
+import { cn } from '@/lib/utils'
 
-export const inter = Inter({
+const font = GoogleFont({
   subsets: ['latin'],
-  variable: '--font-inter',
   display: 'swap',
 })
 
@@ -30,7 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
         defaultTheme="system"
         enableSystem={true}
       >
-        <main className={`${inter.variable} font-sans`}>
+        <main className={cn(font.className, 'font-sans')}>
           <Component {...pageProps} />
         </main>
       </ThemeProvider>

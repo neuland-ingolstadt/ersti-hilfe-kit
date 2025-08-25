@@ -1,3 +1,6 @@
+import { ExternalLink } from 'lucide-react'
+import Link from 'next/link'
+import ReactMarkdown from 'react-markdown'
 import {
   Accordion,
   AccordionContent,
@@ -7,9 +10,6 @@ import {
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { COMPONENTS } from '@/components/ui/markdownComponents'
-import { ExternalLink } from 'lucide-react'
-import Link from 'next/link'
-import ReactMarkdown from 'react-markdown'
 
 export interface GuideSection {
   category: string
