@@ -1,3 +1,14 @@
+import { zodResolver } from '@hookform/resolvers/zod'
+import levenshtein from 'js-levenshtein'
+import { MapPin, MessageCircleQuestion, Trophy } from 'lucide-react'
+import type { GetServerSideProps } from 'next'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useForm } from 'react-hook-form'
+import ReactMarkdown from 'react-markdown'
+import { useWindowSize } from 'usehooks-ts'
+import z from 'zod'
 import { Button } from '@/components/ui/button'
 import {
   Card,
@@ -18,19 +29,8 @@ import {
 import { Input } from '@/components/ui/input'
 import { COMPONENTS } from '@/components/ui/markdownComponents'
 import NavBar from '@/components/ui/navbar'
-import ScavengerDatabase from '@/lib/ScavengerDatabase'
 import data from '@/lib/data'
-import { zodResolver } from '@hookform/resolvers/zod'
-import levenshtein from 'js-levenshtein'
-import { MapPin, MessageCircleQuestion, Trophy } from 'lucide-react'
-import type { GetServerSideProps } from 'next'
-import dynamic from 'next/dynamic'
-import Head from 'next/head'
-import { useCallback, useEffect, useMemo, useState } from 'react'
-import { useForm } from 'react-hook-form'
-import ReactMarkdown from 'react-markdown'
-import { useWindowSize } from 'usehooks-ts'
-import z from 'zod'
+import ScavengerDatabase from '@/lib/ScavengerDatabase'
 
 const Confetti = dynamic(() => import('react-confetti'), { ssr: false })
 

@@ -132,6 +132,7 @@ const Carousel = React.forwardRef<
           canScrollNext,
         }}
       >
+        {/** biome-ignore lint/a11y/useAriaPropsSupportedByRole: desc by shadcn/ui */}
         <section
           ref={ref}
           onKeyDownCapture={handleKeyDown}

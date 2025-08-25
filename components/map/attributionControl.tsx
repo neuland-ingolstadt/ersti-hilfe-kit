@@ -1,9 +1,9 @@
 import { useMap } from 'react-map-gl/maplibre'
 import 'maplibre-gl/dist/maplibre-gl.css'
-import { cn } from '@/lib/utils'
 import { CircleChevronRight, Info } from 'lucide-react'
 import type React from 'react'
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { cn } from '@/lib/utils'
 
 interface AttributionControlProps {
   attribution: string | React.ReactNode
@@ -16,7 +16,7 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
   const attributionRef = useRef<HTMLDivElement>(null)
   const [targetWidth, setTargetWidth] = useState(0)
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  // biome-ignore lint/correctness/useExhaustiveDependencies: only on initial render
   useEffect(() => {
     function getTargetWidth() {
       if (!attributionRef.current) {
@@ -61,7 +61,7 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
     [collapsed, targetWidth]
   )
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  // biome-ignore lint/correctness/useExhaustiveDependencies: toggle on map move only
   useEffect(() => {
     if (!map) {
       return
@@ -72,7 +72,7 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
     })
   }, [collapsed, map, toggleCollapsed])
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  // biome-ignore lint/correctness/useExhaustiveDependencies: only close after initial render
   useEffect(() => {
     // close attribution after 5 seconds
     const timeout = setTimeout(() => {
@@ -93,7 +93,8 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
           <div ref={attributionRef}>{attribution}</div>
         </div>
 
-        <span
+        <button
+          type="button"
           onClick={(e) => {
             e.preventDefault()
             toggleCollapsed()
@@ -114,7 +115,7 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
           >
             {collapsed ? <Info size={20} /> : <CircleChevronRight size={20} />}
           </div>
-        </span>
+        </button>
       </div>
     </div>
   )

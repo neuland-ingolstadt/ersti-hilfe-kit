@@ -1,3 +1,9 @@
+import { useAptabase } from '@aptabase/react'
+import { Palette, Settings } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useTheme } from 'next-themes'
+import { useCallback } from 'react'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
@@ -12,12 +18,6 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { cn } from '@/lib/utils'
-import { useAptabase } from '@aptabase/react'
-import { Palette, Settings } from 'lucide-react'
-import { useTheme } from 'next-themes'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useCallback } from 'react'
 
 interface NavBarProps {
   overlay?: boolean

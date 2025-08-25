@@ -1,5 +1,5 @@
-import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import { NextResponse } from 'next/server'
 
 const SCAVENGER_HUNT_DISABLED = process.env.SCAVENGER_HUNT_DISABLED === 'true'
 

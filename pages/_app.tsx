@@ -2,9 +2,8 @@ import 'maplibre-gl/dist/maplibre-gl.css'
 import '@/styles/globals.css'
 import { AptabaseProvider } from '@aptabase/react'
 import type { AppProps } from 'next/app'
-
-import { ThemeProvider } from '@/lib/providers/themeProvider'
 import { Inter } from 'next/font/google'
+import { ThemeProvider } from '@/lib/providers/themeProvider'
 
 export const inter = Inter({
   subsets: ['latin'],
