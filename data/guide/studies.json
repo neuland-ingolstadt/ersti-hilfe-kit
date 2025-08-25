@@ -5,7 +5,7 @@
     "content": [
       {
         "title": "Terminplan/Semestertermine",
-        "content": "Du kannst die Semestertermine auf verschiedenen Wegen erhalten. Sowohl in der Neuland Next App (https://neuland.app) als auch auf der Website der Hochschule.",
+        "content": "Du kannst die Semestertermine auf verschiedenen Wegen erhalten. Sowohl in der [Neuland Next App](https://neuland.app) als auch auf der Website der Hochschule.",
         "link": "https://www.thi.de/studium/pruefung/semestertermine/",
         "linktitle": "Mehr Informationen auf www.thi.de"
       },
@@ -46,7 +46,7 @@
     "content": [
       {
         "title": "Neuland Next App",
-        "content": "Diese App hilft dir dein Studium zu organisieren. Die Neuland Next App ist eine inoffizielle App des Vereins Neuland Ingolstadt e.V. mit mehr nützlichen Funktionen. Sie ist sowohl in vielen verschiedenen App Stores als auch als Web Version verfügbar\n* [Jetzt auf iOS installieren](https://apps.apple.com/app/apple-store/id1617096811?pt=124486931&ct=web&mt=8)\n* [Jetzt auf Android installieren](https://play.google.com/store/apps/details?id=app.neuland)",
+        "content": "Diese App hilft dir dein Studium zu organisieren. Die Neuland Next App ist eine inoffizielle App des Vereins Neuland Ingolstadt e.V. mit mehr nützlichen Funktionen. Sie ist sowohl in vielen verschiedenen App Stores als auch als Web Version verfügbar\n\n* [Jetzt auf iOS installieren](https://apps.apple.com/app/apple-store/id1617096811?pt=124486931&ct=web&mt=8)\n\n* [Jetzt auf Android installieren](https://play.google.com/store/apps/details?id=app.neuland)",
         "link": "",
         "linktitle": ""
       },
@@ -88,7 +88,7 @@
       },
       {
         "title": "Programme & Lizenzen",
-        "content": "* [Citavi](https://www.thi.de/service/it-service/softwareangebote/citavi-literaturverwaltung/)\n* [MATLAB](https://www.thi.de/service/it-service/softwareangebote/matlab/)\n* [Microsoft Imagine nur für Studierende von MINT-Studiengängen](https://www.thi.de/service/it-service/softwareangebote/microsoft-imagine/)\n* [Microsoft Office](https://www.thi.de/service/it-service/softwareangebote/office/)\n* [Mindmanager](https://www.thi.de/service/it-service/softwareangebote/mindmanager/)",
+        "content": "* [Citavi](https://www.thi.de/service/it-service/softwareangebote/citavi-literaturverwaltung/)\n\n* [MATLAB](https://www.thi.de/service/it-service/softwareangebote/matlab/)\n\n* [Microsoft Imagine nur für Studierende von MINT-Studiengängen](https://www.thi.de/service/it-service/softwareangebote/microsoft-imagine/)\n\n* [Microsoft Office](https://www.thi.de/service/it-service/softwareangebote/office/)\n\n* [Mindmanager](https://www.thi.de/service/it-service/softwareangebote/mindmanager/)",
         "link": ""
       },
       {
