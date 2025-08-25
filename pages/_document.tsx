@@ -1,4 +1,5 @@
 import { Head, Html, Main, NextScript } from 'next/document'
+import { inter } from '@/pages/_app'
 
 export default function Document() {
   return (

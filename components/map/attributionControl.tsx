@@ -73,14 +73,14 @@ export function AttributionControl({ attribution }: AttributionControlProps) {
     }
   }, [map, toggleCollapsed])
 
-  // Collapse attribution after 5 seconds
+  // biome-ignore lint/correctness/useExhaustiveDependencies: only auto-close after initial mount
   useEffect(() => {
     const timeout = setTimeout(() => {
       toggleCollapsed(true)
     }, 5000)
 
     return () => clearTimeout(timeout)
-  }, [toggleCollapsed])
+  }, [])
 
   if (!map) {
     return null
