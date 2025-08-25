@@ -49,7 +49,7 @@
   },
   {
     "title": "Studierendenausweis",
-    "content": "Diese Karte mit schickem Lichtbild weist euch als Studierende der Technischen Hochschule Ingolstadt aus. Ihr könnt mit dem Ausweis in der Mensa bezahlen, drucken und Türen öffnen – wenn sie für euch freigeschalten sind, wie z.B. die Schleuse der Bibliothek, Labore, etc. Bei Verlust müsst ihr für Ersatz zahlen, bei Diebstahl (mit Anzeige) oder\nDefekt wird er euch kostenfrei durch das SCS kostenfrei erstattet. In jedem Fall solltet ihr zeitnah bei der Bibliothek und ggf. bei der Hochschule den Verlust/Diebstahl melden, damit kein Missbrauch mit eurem Ausweis betrieben werden kann. Das Guthaben wird euch in solchen Fällen leider nicht erstattet."
+    "content": "Diese Karte mit schickem Lichtbild weist euch als Studierende der Technischen Hochschule Ingolstadt aus. Ihr könnt mit dem Ausweis in der Mensa bezahlen, drucken und Türen öffnen – wenn sie für euch freigeschalten sind, wie z.B. die Schleuse der Bibliothek, Labore, etc. Bei Verlust müsst ihr für Ersatz zahlen, bei Diebstahl (mit Anzeige) oder Defekt wird er euch kostenfrei durch das SCS kostenfrei erstattet. In jedem Fall solltet ihr zeitnah bei der Bibliothek und ggf. bei der Hochschule den Verlust/Diebstahl melden, damit kein Missbrauch mit eurem Ausweis betrieben werden kann. Das Guthaben wird euch in solchen Fällen leider nicht erstattet."
   },
   {
     "title": "SCS",
@@ -113,7 +113,7 @@
   },
   {
     "title": "Altklausuren",
-    "content": "Prüfungen aus vergangenen Semestern (sehr hilfreich bei der\nPrüfungsvorbereitung!)"
+    "content": "Prüfungen aus vergangenen Semestern (sehr hilfreich bei der Prüfungsvorbereitung!)"
   },
   {
     "title": "Bayern Mentoring",
@@ -137,7 +137,7 @@
   },
   {
     "title": "eduroam / Bayern WLAN",
-    "content": "Eure möglichen Verbindungen zum Internet an der THI \n\n -> eduroam (gesichert) ist nicht nur an der THI, sondern an vielen anderen Bildungseinrichtungen verfügbar \n\n -> Das @BayernWLAN ist ein unverschlüsseltes, offenes WLAN des Freistaates Bayern."
+    "content": "Eure möglichen Verbindungen zum Internet an der THI ist eduroam (gesichert), es ist nicht nur an der THI, sondern an vielen anderen Bildungseinrichtungen verfügbar oder das @BayernWLAN, es ist ein unverschlüsseltes, offenes WLAN des Freistaates Bayern."
   },
   {
     "title": "Evaluation",
@@ -225,11 +225,11 @@
   },
   {
     "title": "Wohnheim",
-    "content": "Es gibt private, gemeinnützige und die vom Studierendenwerk. Wer noch auf der Suche ist, sollte mal hier vorbeischauen: \n www.thi.de>Studium> Studentisches Leben>Wohnen im Wohnheim oder privat [Website](https://www.thi.de/studium/studentisches-leben/wohnen-im-wohnheim-oder-privat/)"
+    "content": "Es gibt private, gemeinnützige und die vom Studierendenwerk. Wer noch auf der Suche ist, sollte mal hier vorbeischauen: www.thi.de>Studium> Studentisches Leben>Wohnen im Wohnheim oder privat [Website](https://www.thi.de/studium/studentisches-leben/wohnen-im-wohnheim-oder-privat/)"
   },
   {
     "title": "Warteseemster",
-    "content": "Als Wartesemester zählt die Zeit zwischen Abitur und Beginn des Studiums. Wer etwas studieren möchte, wofür die eigene Abschlussnote nicht ausreicht (schlechter als der Numerus clausus, kurz NC – schlechteste Abschlussnote, mit welcher jemand zum Studium in der laufenden\nBewerbungsphase zugelassen wurde), kann ins Wartesemester gehen. Übrigens sind sehr viele Bachelorstudiengänge an der THI nicht mehr zulassungsbeschränkt, d. h. es gibt keinen NC und man wird meist unabhängig von der Abschlussnote der Hocshchulzugangsberechtigung zugelassen."
+    "content": "Als Wartesemester zählt die Zeit zwischen Abitur und Beginn des Studiums. Wer etwas studieren möchte, wofür die eigene Abschlussnote nicht ausreicht (schlechter als der Numerus clausus, kurz NC – schlechteste Abschlussnote, mit welcher jemand zum Studium in der laufenden Bewerbungsphase zugelassen wurde), kann ins Wartesemester gehen. Übrigens sind sehr viele Bachelorstudiengänge an der THI nicht mehr zulassungsbeschränkt, d. h. es gibt keinen NC und man wird meist unabhängig von der Abschlussnote der Hocshchulzugangsberechtigung zugelassen."
   },
   {
     "title": "ZITS (Zentraler IT-Service",
