@@ -1,3 +1,4 @@
+import { useAptabase } from '@aptabase/react'
 import ReactMarkdown from 'react-markdown'
 import {
   Accordion,
@@ -19,8 +20,17 @@ interface GlossaryAccordionProps {
 export default function GlossaryAccordion({
   glossary,
 }: GlossaryAccordionProps) {
+  const { trackEvent } = useAptabase()
+
   return (
-    <Accordion type="single" collapsible>
+    <Accordion
+      type="single"
+      collapsible
+      onValueChange={(value) => {
+        if (!value) return
+        trackEvent('Glossary Accordion', { term: value })
+      }}
+    >
       {glossary.map((item) => (
         <AccordionItem value={item.title} key={item.title}>
           <AccordionTrigger className="max-w-full py-6">

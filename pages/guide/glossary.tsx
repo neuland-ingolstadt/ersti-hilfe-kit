@@ -1,7 +1,9 @@
+import { useAptabase } from '@aptabase/react'
 import { Search } from 'lucide-react'
 import type { GetServerSideProps } from 'next'
 import Head from 'next/head'
 import { useCallback, useMemo, useState } from 'react'
+import { useDebounceCallback } from 'usehooks-ts'
 import GlossaryAccordion, {
   type GlossaryItem,
 } from '@/components/guide/glossaryAccordion'
@@ -43,6 +45,13 @@ export default function GlossaryGuide({ data, searchQuery }: GlossaryProps) {
     )
   }, [data, search])
 
+  const { trackEvent } = useAptabase()
+
+  const debouncedTrackEvent = useDebounceCallback((value: string) => {
+    if (!value) return
+    trackEvent('Glossary Search', { query: value })
+  }, 500)
+
   return (
     <div className="container flex h-screen max-h-screen flex-col gap-3">
       <Head>
@@ -66,7 +75,10 @@ export default function GlossaryGuide({ data, searchQuery }: GlossaryProps) {
           placeholder="Suche im Glossar"
           value={search}
           className="my-3"
-          onChange={(e) => handleSearch(e.target.value)}
+          onChange={(e) => {
+            handleSearch(e.target.value)
+            debouncedTrackEvent(e.target.value)
+          }}
           icon={<Search size={16} />}
         />
 

@@ -1,5 +1,6 @@
+import { useAptabase } from '@aptabase/react'
 import Link from 'next/link'
-import { useCallback, useMemo } from 'react'
+import { useCallback, useEffect, useMemo } from 'react'
 import { SiApple, SiGooglemaps, SiOpenstreetmap } from 'react-icons/si'
 import ReactMarkdown from 'react-markdown'
 import { useMediaQuery } from 'usehooks-ts'
@@ -28,6 +29,7 @@ interface TourDialogProps {
 }
 
 export default function TourDetails({ popup, setPopup }: TourDialogProps) {
+  const { trackEvent } = useAptabase()
   const open = useMemo(() => !!popup, [popup])
   const isDesktop = useMediaQuery('(min-width: 1024px)')
   const onOpenChange = useCallback(
@@ -39,6 +41,15 @@ export default function TourDetails({ popup, setPopup }: TourDialogProps) {
 
   const { osmLink, googleMapsLink, appleMapsLink, description } =
     useTourDetails(popup)
+
+  const trackPOI = useCallback(() => {
+    if (!popup) return
+    trackEvent('POI Opened', { title: popup.title })
+  }, [popup, trackEvent])
+
+  useEffect(() => {
+    trackPOI()
+  }, [trackPOI])
 
   const body = useMemo(() => {
     if (!popup) return null

@@ -3,6 +3,7 @@ import '@/styles/globals.css'
 import { AptabaseProvider } from '@aptabase/react'
 import type { AppProps } from 'next/app'
 import { Inter as GoogleFont } from 'next/font/google'
+import TrackAnalytics from '@/components/analytics/trackAnalytics'
 import { ThemeProvider } from '@/lib/providers/themeProvider'
 import { cn } from '@/lib/utils'
 
@@ -24,6 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
         host: 'https://analytics.neuland.app',
       }}
     >
+      <TrackAnalytics />
       <ThemeProvider
         attribute="class"
         defaultTheme="system"

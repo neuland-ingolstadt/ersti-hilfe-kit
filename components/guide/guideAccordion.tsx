@@ -1,5 +1,8 @@
+import { useAptabase } from '@aptabase/react'
 import { ExternalLink } from 'lucide-react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useMemo } from 'react'
 import ReactMarkdown from 'react-markdown'
 import {
   Accordion,
@@ -29,8 +32,22 @@ interface GuideAccordionProps {
 }
 
 export default function GuideAccordion({ guide }: GuideAccordionProps) {
+  const { trackEvent } = useAptabase()
+  const router = useRouter()
+  const page = useMemo(
+    () => router.pathname.replace('/guide/', ''),
+    [router.pathname]
+  )
+
   return (
-    <Accordion type="single" collapsible>
+    <Accordion
+      type="single"
+      collapsible
+      onValueChange={(value) => {
+        if (!value) return
+        trackEvent('Guide Accordion', { page, section: value })
+      }}
+    >
       {guide.map((item) => (
         <AccordionItem value={item.title} key={item.title}>
           <AccordionTrigger className="max-w-full pt-8">
@@ -41,7 +58,14 @@ export default function GuideAccordion({ guide }: GuideAccordionProps) {
           <AccordionContent>
             <Card>
               <CardContent className="px-6 py-3">
-                <Accordion type="single" collapsible>
+                <Accordion
+                  type="single"
+                  collapsible
+                  onValueChange={() => {
+                    if (!item.title) return
+                    trackEvent('Guide Sub Accordion', { section: item.title })
+                  }}
+                >
                   {item.content.map((content) => (
                     <AccordionItem value={content.title} key={content.title}>
                       <AccordionTrigger className="max-w-full pt-8">
