@@ -241,12 +241,6 @@ We welcome contributions from the community! Whether you're a student, faculty m
 - [Fachschaft Wiwi, University of Göttingen](https://hochschulforumdigitalisierung.de/de/blog/o-phase-online) - Campus tour concept
 - [StuV OTH Regensburg](https://stuv.othr.de/dein-studienguide/) - Study guide structure
 
-**Special Thanks:**
-
-- All student volunteers who contributed content and testing
-- THI administration for supporting digital innovation
-- The open-source community for the amazing tools and libraries
-
 ## 📄 License
 
 This project is licensed under the **GNU Affero General Public License v3.0** - see the [LICENSE.md](LICENSE.md) file for details.
