@@ -36,8 +36,14 @@ export default function Footer({ className }: FooterProps) {
           </Link>
         </p>
         <p>
-          Wir würden uns über euer Feedback freuen &ndash; entweder über Discord
-          oder <a href="mailto:info@neuland-ingolstadt.de">per E-Mail</a>.
+          Wir würden uns über euer Feedback{' '}
+          <Link
+            href="mailto:info@neuland-ingolstadt.de"
+            className="text-primary"
+          >
+            per E-Mail
+          </Link>{' '}
+          freuen.
         </p>
       </div>
 

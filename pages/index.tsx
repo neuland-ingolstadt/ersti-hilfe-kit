@@ -14,7 +14,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { useMemo } from 'react'
-import { SiDiscord, SiInstagram } from 'react-icons/si'
+import { SiInstagram } from 'react-icons/si'
 import ReactMap from 'react-map-gl/maplibre'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
@@ -60,25 +60,6 @@ interface HomeProps {
 const GRAPHQL_ENDPOINT =
   process.env.NEXT_PUBLIC_NEULAND_GRAPHQL_ENDPOINT ||
   'https://api.neuland.app/graphql'
-
-const SERVERS = [
-  {
-    name: 'Fakultät Informatik',
-    link: 'https://discord.gg/pTvQEZpga7',
-  },
-  {
-    name: 'Fakultät Elektro- und Informationstechnik',
-    link: 'https://discord.gg/2gzsCD744V',
-  },
-  {
-    name: 'Fakultät Maschinenbau',
-    link: 'https://discord.gg/gP4hQaxmRS',
-  },
-  {
-    name: 'Fakultät Wirtschaftsingenieurwesen',
-    link: 'https://discord.gg/geebhm5UKF',
-  },
-]
 
 export default function Home({ events }: HomeProps) {
   const cards = useMemo(() => {
@@ -327,29 +308,9 @@ export default function Home({ events }: HomeProps) {
               </div>
             </Card>
           </div>
-
-          <div className="container my-6">
-            <h4 className="flex items-center gap-2 text-2xl font-bold">
-              <SiDiscord size={24} />
-              <span>Discord</span>
-            </h4>
-
-            <p>Hier könnt Ihr die Discord-Server der Fakultäten finden:</p>
-
-            <div className="mt-2 flex flex-col">
-              {SERVERS.map((server) => (
-                <Link key={server.name} href={server.link} passHref>
-                  <Button variant="link" className="flex items-center gap-2">
-                    <ExternalLink />
-                    <span>{server.name}</span>
-                  </Button>
-                </Link>
-              ))}
-            </div>
-          </div>
         </main>
 
-        <Footer className="container" />
+        <Footer className="container border-t-0" />
       </div>
     </div>
   )
