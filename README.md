@@ -68,8 +68,7 @@ A comprehensive digital orientation platform for freshmen at the **Technische Ho
 
 ### Prerequisites
 
-- [Bun](https://bun.sh/) (recommended) or Node.js 18+
-- Modern web browser with JavaScript enabled
+- [Bun](https://bun.sh/)
 
 ### Quick Start
 
@@ -84,16 +83,12 @@ A comprehensive digital orientation platform for freshmen at the **Technische Ho
 
    ```bash
    bun install
-   # or
-   npm install
    ```
 
 3. **Start development server**
 
    ```bash
-   bun run dev
-   # or
-   npm run dev
+   bun dev
    ```
 
 4. **Open your browser**
