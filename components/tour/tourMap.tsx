@@ -178,13 +178,14 @@ export default function TourMap({ center, data }: TourMapProps) {
     [router]
   )
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: only run when city changes
   useEffect(() => {
     mapRef.current?.getMap().easeTo({
       center: [center[1], center[0]],
       zoom: 15,
       animate: false,
     })
-  }, [center, mapRef])
+  }, [city])
 
   const tabs = useMemo(() => {
     return (
@@ -297,6 +298,7 @@ export default function TourMap({ center, data }: TourMapProps) {
 
         <div className="h-full flex-1">
           <ReactMap
+            key={mapStyle}
             ref={mapRef}
             mapStyle={`https://tile.neuland.app/styles/${mapStyle}/style.json`}
             attributionControl={false}
