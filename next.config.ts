@@ -1,12 +1,13 @@
-/** @type {import('next').NextConfig} */
-module.exports = {
+import type { NextConfig } from 'next'
+
+const nextConfig: NextConfig = {
   output: 'standalone',
   reactStrictMode: true,
   poweredByHeader: false,
+  reactCompiler: true,
   experimental: {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
     webpackMemoryOptimizations: true,
-    reactCompiler: true,
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -15,3 +16,5 @@ module.exports = {
     return config
   },
 }
+
+export default nextConfig

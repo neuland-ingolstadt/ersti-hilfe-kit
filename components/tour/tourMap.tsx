@@ -151,7 +151,7 @@ export default function TourMap({ center, data }: TourMapProps) {
                       })
                       setPopup(elem)
                     }}
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 lg:max-w-xs!"
                   >
                     <span className="flex-1 truncate text-left">
                       {elem.title}

@@ -1,26 +1,36 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.0.6/schema.json",
-  "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
+  "$schema": "https://biomejs.dev/schemas/2.4.4/schema.json",
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": false
+  },
   "files": {
     "ignoreUnknown": false,
     "includes": [
       "**",
-      "!**/node_modules/**",
-      "!**/.next/**",
-      "!**/out/**",
-      "!**/build/**",
+      "!**/node_modules",
+      "!**/.next",
+      "!**/out",
+      "!**/build",
       "!**/pnpm-lock.yaml",
-      "!**/logs/**",
+      "!**/logs",
       "!**/*.log",
-      "!**/pids/**",
+      "!**/pids",
       "!**/*.pid",
       "!**/*.seed",
-      "!**/coverage/**",
+      "!**/coverage",
       "!**/.DS_Store",
+      "!**/.idea",
       "!**/npm-debug.log.*",
       "!**/*.css.d.ts",
+      "!**/*.sass.d.ts",
+      "!**/*.scss.d.ts",
       "!**/tailwind.config.js",
-      "!**/postcss.config.js"
+      "!**/postcss.config.js",
+      "!**/assets",
+      "!**/functions/**/*.js",
+      "!**/.firebase"
     ]
   },
   "formatter": {
@@ -34,16 +44,17 @@
     "attributePosition": "auto",
     "bracketSpacing": true
   },
-  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
-      "correctness": {
-        "noUnusedImports": "error",
-        "noUnusedVariables": "error",
-        "noUnusedLabels": "error"
-      },
       "style": {
         "noParameterAssign": "error",
         "useAsConstAssertion": "error",
@@ -71,5 +82,10 @@
       "bracketSpacing": true
     },
     "globals": []
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
   }
 }

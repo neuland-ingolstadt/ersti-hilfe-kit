@@ -79,7 +79,7 @@ export default function Home({ events }: HomeProps) {
       return (
         <Card
           key={event.id}
-          className="bg border-0 bg-slate-200 dark:bg-white dark:bg-opacity-5"
+          className="bg border-0 bg-slate-200 dark:bg-slate-900"
         >
           <CardHeader className="flex flex-row items-start gap-0">
             <div className="mt-0 flex flex-1 flex-col">
